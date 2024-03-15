@@ -25,6 +25,16 @@ cameras:
       events:
         required_zones:
           - entire_yard
+    zones:
+      entire_yard:
+        coordinates: ...
+```
+
+### Restricting snapshots to specific zones
+
+```yaml
+cameras:
+  name_of_your_camera:
     snapshots:
       required_zones:
         - entire_yard
