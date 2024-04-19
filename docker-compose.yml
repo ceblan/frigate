@@ -27,15 +27,29 @@ services:
     devices:
       - /dev/bus/usb:/dev/bus/usb
       # - /dev/dri:/dev/dri # for intel hwaccel, needs to be updated for your hardware
+      - /dev/dri/renderD128 # for intel hwaccel, needs to be updated for your hardware
     volumes:
       - .:/workspace/frigate:cached
       - ./web/dist:/opt/frigate/web:cached
-      - /etc/localtime:/etc/localtime:ro
+      - /usr/share/zoneinfo/America/Puerto_Rico:/etc/localtime:ro
+      # - /etc/localtime:/etc/localtime:ro
       - ./config:/config
       - ./debug:/media/frigate
       - /dev/bus/usb:/dev/bus/usb
-  mqtt:
-    container_name: mqtt
-    image: eclipse-mosquitto:1.6
+      - type: tmpfs # Optional: 1GB of memory, reduces SSD/SD Card wear
+        target: /tmp/cache
+        tmpfs:
+          size: 1000000000
     ports:
-      - "1883:1883"
+      - "5000:5000"
+      - "8554:8554" # RTSP feeds
+      - "8555:8555/tcp" # WebRTC over tcp
+      - "8555:8555/udp" # WebRTC over udp
+    environment:
+      FRIGATE_RTSP_PASSWORD: "password"
+
+  # mqtt:
+  #   container_name: mqtt
+  #   image: eclipse-mosquitto:1.6
+  #   ports:
+  #     - "1883:1883"

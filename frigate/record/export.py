@@ -30,7 +30,7 @@ class PlaybackFactorEnum(str, Enum):
     realtime = "realtime"
     timelapse_25x = "timelapse_25x"
 
-
+# aqui tb ha chicha
 class RecordingExporter(threading.Thread):
     """Exports a specific set of recordings for a camera to storage as a single file."""
 

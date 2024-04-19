@@ -74,6 +74,44 @@ class Recordings(Model):  # type: ignore[misc]
     objects = IntegerField(null=True)
     dBFS = IntegerField(null=True)
     segment_size = FloatField(default=0)  # this should be stored as MB
+    regions = IntegerField(null=True)
+
+class Exports(Model):  # type: ignore[misc]
+    id = CharField(null=False, primary_key=True, max_length=30)
+    camera = CharField(index=True, max_length=20)
+    path = CharField(unique=True)
+    start_time = DateTimeField()
+    end_time = DateTimeField()
+    start_segment = CharField(index=True, max_length=20)
+    start_segment_ts = DateTimeField()
+    end_segment = CharField(index=True, max_length=20)
+    end_segment_ts = DateTimeField()
+    duration = FloatField()
+    motion = IntegerField(null=True)
+    objects = IntegerField(null=True)
+    dBFS = IntegerField(null=True)
+    segment_size = FloatField(default=0)  # this should be stored as MB
+    regions = IntegerField(null=True)
+
+
+class ReviewSegment(Model):  # type: ignore[misc]
+    id = CharField(null=False, primary_key=True, max_length=30)
+    camera = CharField(index=True, max_length=20)
+    start_time = DateTimeField()
+    end_time = DateTimeField()
+    has_been_reviewed = BooleanField(default=False)
+    severity = CharField(max_length=30)  # alert, detection, significant_motion
+    thumb_path = CharField(unique=True)
+    data = JSONField()  # additional data about detection like list of labels, zone, areas of significant motion
+
+
+class Previews(Model):  # type: ignore[misc]
+    id = CharField(null=False, primary_key=True, max_length=30)
+    camera = CharField(index=True, max_length=20)
+    path = CharField(unique=True)
+    start_time = DateTimeField()
+    end_time = DateTimeField()
+    duration = FloatField()
 
 
 # Used for temporary table in record/cleanup.py

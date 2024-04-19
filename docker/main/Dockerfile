@@ -201,7 +201,7 @@ ENV S6_LOGGING_SCRIPT="T 1 n0 s10000000 T"
 ENTRYPOINT ["/init"]
 CMD []
 
-HEALTHCHECK --start-period=120s --start-interval=5s --interval=15s --timeout=5s --retries=3 \
+HEALTHCHECK --start-period=120s --interval=15s --timeout=5s --retries=3 \
     CMD curl --fail --silent --show-error http://127.0.0.1:5000/api/version || exit 1
 
 # Frigate deps with Node.js and NPM for devcontainer
