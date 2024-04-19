@@ -18,3 +18,4 @@ web/coverage
 core
 !/web/**/*.ts
 .idea/*
+/docker/main/go2rtc_linux_amd64
