@@ -8,6 +8,9 @@ import re
 import subprocess as sp
 import time
 import traceback
+import pdb
+import time
+
 from datetime import datetime, timedelta, timezone
 from functools import reduce
 from pathlib import Path
@@ -1782,7 +1785,7 @@ def recording_clip(camera_name, start_ts, end_ts):
 @bp.route("/vod/<camera_name>/start/<float:start_ts>/end/<float:end_ts>")
 def vod_ts(camera_name, start_ts, end_ts):
     recordings = (
-        Recordings.select(Recordings.path, Recordings.duration, Recordings.end_time)
+        Recordings.select(Recordings.path, Recordings.duration, Recordings.start_time, Recordings.end_time)
         .where(
             Recordings.start_time.between(start_ts, end_ts)
             | Recordings.end_time.between(start_ts, end_ts)
@@ -1793,9 +1796,12 @@ def vod_ts(camera_name, start_ts, end_ts):
         .iterator()
     )
 
+    # pdb.set_trace()
     clips = []
     durations = []
     max_duration_ms = MAX_SEGMENT_DURATION * 1000
+    min_start_time = start_ts
+    max_end_time = end_ts
 
     recording: Recordings
     for recording in recordings:
@@ -1806,13 +1812,20 @@ def vod_ts(camera_name, start_ts, end_ts):
         if recording.end_time > end_ts:
             duration -= int((recording.end_time - end_ts) * 1000)
 
+
+        # pdb.set_trace()
         if 0 < duration < max_duration_ms:
             clip["keyFrameDurations"] = [duration]
+            if int(recording.start_time) <  start_ts:
+                min_start_time = int(recording.start_time)
+            if int(recording.end_time) > end_ts:
+                max_end_time = int(recording.end_time)
             clips.append(clip)
             durations.append(duration)
         else:
             logger.warning(f"Recording clip is missing or empty: {recording.path}")
 
+    # pdb.set_trace()
     if not clips:
         logger.error("No recordings found for the requested time range")
         return make_response(
@@ -1834,6 +1847,8 @@ def vod_ts(camera_name, start_ts, end_ts):
             "durations": durations,
             "segment_duration": max(durations),
             "sequences": [{"clips": clips}],
+            "start_time": int(min_start_time),
+            "end_time": int(max_end_time),
         }
     )
 
@@ -1946,6 +1961,7 @@ def export_recording(camera_name: str, start_time, end_time):
         .count()
     )
 
+
     if recordings_count <= 0:
         return make_response(
             jsonify(
@@ -1953,6 +1969,43 @@ def export_recording(camera_name: str, start_time, end_time):
             ),
             400,
         )
+
+    recordings = (
+        Recordings.select(Recordings.duration, Recordings.start_time, Recordings.end_time)
+        .where(
+            Recordings.start_time.between(start_time, end_time)
+            | Recordings.end_time.between(start_time, end_time)
+            | ((start_time > Recordings.start_time) & (end_time < Recordings.end_time))
+        )
+        .where(Recordings.camera == camera_name)
+        .order_by(Recordings.start_time.asc())
+        .iterator()
+    )
+
+    duration = 0
+    min_start_time = start_time
+    max_end_time = end_time
+    max_duration_ms = MAX_SEGMENT_DURATION * 1000
+
+
+    recording: Recordings
+    for recording in recordings:
+        duration += int(recording.duration * 1000)
+
+        # Determine if we need to end the last clip early
+        # if recording.end_time > end_ts:
+        #     duration -= int((recording.end_time - end_ts) * 1000)
+
+
+        # pdb.set_trace()
+        if 0 < duration < max_duration_ms:
+            if int(recording.start_time) <  start_time:
+                min_start_time = int(recording.start_time)
+            if int(recording.end_time) > end_time:
+                max_end_time = int(recording.end_time)
+        else:
+            logger.warning(f"Recording clip is missing or empty: {recording.path}")
+
 
     exporter = RecordingExporter(
         current_app.frigate_config,
@@ -1962,6 +2015,9 @@ def export_recording(camera_name: str, start_time, end_time):
         PlaybackFactorEnum[playback_factor]
         if playback_factor in PlaybackFactorEnum.__members__.values()
         else PlaybackFactorEnum.realtime,
+        min_start_time,
+        max_end_time,
+        duration,
     )
     exporter.start()
     return make_response(
@@ -1969,6 +2025,9 @@ def export_recording(camera_name: str, start_time, end_time):
             {
                 "success": True,
                 "message": "Starting export of recording.",
+                "duration": duration,
+                "start_time": min_start_time,
+                "end_time": max_end_time,
             }
         ),
         200,

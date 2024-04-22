@@ -1,5 +1,6 @@
 """Export recordings to storage."""
 
+import pdb
 import datetime
 import logging
 import os
@@ -41,6 +42,9 @@ class RecordingExporter(threading.Thread):
         start_time: int,
         end_time: int,
         playback_factor: PlaybackFactorEnum,
+        min_start_time: int,
+        max_end_time: int,
+        duration: int,
     ) -> None:
         threading.Thread.__init__(self)
         self.config = config
@@ -48,6 +52,9 @@ class RecordingExporter(threading.Thread):
         self.start_time = start_time
         self.end_time = end_time
         self.playback_factor = playback_factor
+        self.min_start_time = min_start_time
+        self.max_end_time = max_end_time
+        self.duration = duration
 
     def get_datetime_from_timestamp(self, timestamp: int) -> str:
         """Convenience fun to get a simple date time from timestamp."""
@@ -125,6 +132,28 @@ class RecordingExporter(threading.Thread):
             Path(file_name).unlink(missing_ok=True)
             return
 
+        cut_ffmpeg_cmd = (
+            f"ffmpeg -hide_banner -ss {abs(self.start_time - self.min_start_time)} -i {file_name} -to {self.duration/1000 - abs(self.end_time - self.max_end_time)} -c copy {final_file_name}").split(" ")
+
+        # pdb.set_trace()
+
+        r = sp.run(
+            cut_ffmpeg_cmd,
+            input= "",
+            encoding="ascii",
+            preexec_fn=lower_priority,
+            capture_output=True,
+        )
+
+        if r.returncode != 0:
+            logger.error(
+                f"Failed to cut recording for command {' '.join(cut_ffmpeg_cmd)}"
+            )
+            logger.error(p.stderr)
+            Path(final_file_name).unlink(missing_ok=True)
+            return
+
         logger.debug(f"Updating finalized export {file_name}")
-        os.rename(file_name, final_file_name)
+        # os.rename(file_name, final_file_name)
+        Path(file_name).unlink(missing_ok=True)
         logger.debug(f"Finished exporting {file_name}")
