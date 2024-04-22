@@ -51,7 +51,8 @@ ARG DEBIAN_FRONTEND
 # Install OpenVino Runtime and Dev library
 COPY docker/main/requirements-ov.txt /requirements-ov.txt
 RUN apt-get -qq update \
-    && apt-get -qq install -y wget python3 python3-distutils \
+    # && apt-get -qq install -y vim curl wget python3 python3-distutils \
+    && apt-get -qq install -y vim curl wget python3 gdb python3.9-dbg python3-distutils \
     && wget -q https://bootstrap.pypa.io/get-pip.py -O get-pip.py \
     && python3 get-pip.py "pip" \
     && pip install -r /requirements-ov.txt
@@ -130,7 +131,10 @@ RUN apt-get -qq update \
     && apt-get -qq install -y \
     python3.9 \
     python3.9-dev \
-    # opencv dependencies
+    python3.9-dbg \
+    gdb \
+    gdbserver \
+    ## opencv dependencies
     build-essential cmake git pkg-config libgtk-3-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
     libxvidcore-dev libx264-dev libjpeg-dev libpng-dev libtiff-dev \
@@ -143,6 +147,7 @@ RUN apt-get -qq update \
 
 # Ensure python3 defaults to python3.9
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
+# RUN update-alternatives --install /usr/bin/gdb gdb /usr/bin/gdb
 
 RUN wget -q https://bootstrap.pypa.io/get-pip.py -O get-pip.py \
     && python3 get-pip.py "pip"
@@ -167,6 +172,10 @@ COPY docker/main/rootfs/ /
 # Frigate deps (ffmpeg, python, nginx, go2rtc, s6-overlay, etc)
 FROM slim-base AS deps
 ARG TARGETARCH
+RUN apt-get -qq update \
+    && apt-get -qq install -y vim curl wget gdb python3.9-dbg
+
+
 
 ARG DEBIAN_FRONTEND
 # http://stackoverflow.com/questions/48162574/ddg#49462622
@@ -214,6 +223,10 @@ COPY docker/main/fake_frigate_run /etc/s6-overlay/s6-rc.d/frigate/run
 # Create symbolic link to the frigate source code, as go2rtc's create_config.sh uses it
 RUN mkdir -p /opt/frigate \
     && ln -svf /workspace/frigate/frigate /opt/frigate/frigate
+
+## [CEB] Create symbolic link to the frigate source code
+# RUN mkdir -p /opt/frigate \
+    # && ln -svf /workspace/frigate/frigate /opt/frigate/frigate
 
 # Install Node 20
 RUN curl -SLO https://deb.nodesource.com/nsolid_setup_deb.sh && \

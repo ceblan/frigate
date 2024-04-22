@@ -9,11 +9,16 @@ services:
       - "44"  # video
       - "46"  # plugdev
     shm_size: "256mb"
-    build:
-      context: .
-      dockerfile: docker/main/Dockerfile
-      # Use target devcontainer-trt for TensorRT dev
-      target: devcontainer
+
+    image:  macetero.iterando.net/frigate-dvas:gdb
+
+    # # comento lo de build
+    # build:
+    #   context: .
+    #   dockerfile: docker/main/Dockerfile
+    #   # Use target devcontainer-trt for TensorRT dev
+    #   target: devcontainer
+
     ## Uncomment this block for nvidia gpu support
     # deploy:
     #       resources:
@@ -22,6 +27,7 @@ services:
     #                   - driver: nvidia
     #                     count: 1
     #                     capabilities: [gpu]
+
     environment:
       YOLO_MODELS: yolov7-320
     devices:
@@ -42,6 +48,7 @@ services:
           size: 1000000000
     ports:
       - "5000:5000"
+      - "5100:5173" # vite dev webserver
       - "8554:8554" # RTSP feeds
       - "8555:8555/tcp" # WebRTC over tcp
       - "8555:8555/udp" # WebRTC over udp
