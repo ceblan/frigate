@@ -67,93 +67,112 @@ class RecordingExporter(threading.Thread):
         file_name = f"{EXPORT_DIR}/in_progress.{self.camera}@{self.get_datetime_from_timestamp(self.start_time)}__{self.get_datetime_from_timestamp(self.end_time)}.mp4"
         final_file_name = f"{EXPORT_DIR}/{self.camera}_{self.get_datetime_from_timestamp(self.start_time)}__{self.get_datetime_from_timestamp(self.end_time)}.mp4"
 
-        if (self.end_time - self.start_time) <= MAX_PLAYLIST_SECONDS:
-            playlist_lines = f"http://127.0.0.1:5000/vod/{self.camera}/start/{self.start_time}/end/{self.end_time}/index.m3u8"
-            ffmpeg_input = (
-                f"-y -protocol_whitelist pipe,file,http,tcp -i {playlist_lines}"
-            )
-        else:
-            playlist_lines = []
+        if not os.path.exists(final_file_name): # si no existe la creamos
 
-            # get full set of recordings
-            export_recordings = (
-                Recordings.select()
-                .where(
-                    Recordings.start_time.between(self.start_time, self.end_time)
-                    | Recordings.end_time.between(self.start_time, self.end_time)
-                    | (
-                        (self.start_time > Recordings.start_time)
-                        & (self.end_time < Recordings.end_time)
+            if (self.end_time - self.start_time) <= MAX_PLAYLIST_SECONDS:
+                playlist_lines = f"http://127.0.0.1:5000/vod/{self.camera}/start/{self.start_time}/end/{self.end_time}/index.m3u8"
+                ffmpeg_input = (
+                    f"-y -protocol_whitelist pipe,file,http,tcp -i {playlist_lines}"
+                )
+
+                logger.debug(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                for line in playlist_lines:
+                    logger.debug(f"Playlist Line (Long Duration): {line}")
+
+            else:
+                playlist_lines = []
+
+                # get full set of recordings
+                export_recordings = (
+                    Recordings.select()
+                    .where(
+                        Recordings.start_time.between(self.start_time, self.end_time)
+                        | Recordings.end_time.between(self.start_time, self.end_time)
+                        | (
+                            (self.start_time > Recordings.start_time)
+                            & (self.end_time < Recordings.end_time)
+                        )
                     )
+                    .where(Recordings.camera == self.camera)
+                    .order_by(Recordings.start_time.asc())
                 )
-                .where(Recordings.camera == self.camera)
-                .order_by(Recordings.start_time.asc())
+
+                # Use pagination to process records in chunks
+                page_size = 1000
+                num_pages = (export_recordings.count() + page_size - 1) // page_size
+
+                for page in range(1, num_pages + 1):
+                    playlist = export_recordings.paginate(page, page_size)
+                    playlist_lines.append(
+                        f"file 'http://127.0.0.1:5000/vod/{self.camera}/start/{float(playlist[0].start_time)}/end/{float(playlist[-1].end_time)}/index.m3u8'"
+                    )
+
+                logger.debug(f"?????????????????????????????????????????????")
+                for line in playlist_lines:
+                    logger.debug(f"Playlist Line (Long Duration): {line}")
+
+                ffmpeg_input = "-y -protocol_whitelist pipe,file,http,tcp -f concat -safe 0 -i /dev/stdin"
+
+            if self.playback_factor == PlaybackFactorEnum.realtime:
+                ffmpeg_cmd = (
+                    f"ffmpeg -hide_banner {ffmpeg_input} -c copy {file_name}"
+                ).split(" ")
+            elif self.playback_factor == PlaybackFactorEnum.timelapse_25x:
+                ffmpeg_cmd = (
+                    parse_preset_hardware_acceleration_encode(
+                        self.config.ffmpeg.hwaccel_args,
+                        f"{TIMELAPSE_DATA_INPUT_ARGS} {ffmpeg_input}",
+                        f"{self.config.cameras[self.camera].record.export.timelapse_args} {file_name}",
+                        EncodeTypeEnum.timelapse,
+                    )
+                ).split(" ")
+
+            p = sp.run(
+                ffmpeg_cmd,
+                input="\n".join(playlist_lines),
+                encoding="ascii",
+                preexec_fn=lower_priority,
+                capture_output=True,
             )
 
-            # Use pagination to process records in chunks
-            page_size = 1000
-            num_pages = (export_recordings.count() + page_size - 1) // page_size
-
-            for page in range(1, num_pages + 1):
-                playlist = export_recordings.paginate(page, page_size)
-                playlist_lines.append(
-                    f"file 'http://127.0.0.1:5000/vod/{self.camera}/start/{float(playlist[0].start_time)}/end/{float(playlist[-1].end_time)}/index.m3u8'"
+            if p.returncode != 0:
+                logger.error(
+                    f"Failed to export recording for command {' '.join(ffmpeg_cmd)}"
                 )
+                logger.error(p.stderr)
+                Path(file_name).unlink(missing_ok=True)
+                return
 
-            ffmpeg_input = "-y -protocol_whitelist pipe,file,http,tcp -f concat -safe 0 -i /dev/stdin"
 
-        if self.playback_factor == PlaybackFactorEnum.realtime:
-            ffmpeg_cmd = (
-                f"ffmpeg -hide_banner {ffmpeg_input} -c copy {file_name}"
-            ).split(" ")
-        elif self.playback_factor == PlaybackFactorEnum.timelapse_25x:
-            ffmpeg_cmd = (
-                parse_preset_hardware_acceleration_encode(
-                    self.config.ffmpeg.hwaccel_args,
-                    f"{TIMELAPSE_DATA_INPUT_ARGS} {ffmpeg_input}",
-                    f"{self.config.cameras[self.camera].record.export.timelapse_args} {file_name}",
-                    EncodeTypeEnum.timelapse,
-                )
-            ).split(" ")
+            logger.debug(f">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+            cut_ffmpeg_cmd = (
+                f"ffmpeg -hide_banner -ss {abs(self.start_time - self.min_start_time)} -i {file_name} -to {self.duration/1000 - abs(self.end_time - self.max_end_time)} -c copy {final_file_name}").split(" ")
 
-        p = sp.run(
-            ffmpeg_cmd,
-            input="\n".join(playlist_lines),
-            encoding="ascii",
-            preexec_fn=lower_priority,
-            capture_output=True,
-        )
+            # pdb.set_trace()
+            logger.debug(f"******** cut_ffmpeg: {cut_ffmpeg_cmd}")
 
-        if p.returncode != 0:
-            logger.error(
-                f"Failed to export recording for command {' '.join(ffmpeg_cmd)}"
+
+            r = sp.run(
+                cut_ffmpeg_cmd,
+                input= "",
+                encoding="ascii",
+                preexec_fn=lower_priority,
+                capture_output=True,
             )
-            logger.error(p.stderr)
+
+            if r.returncode != 0:
+                logger.error(
+                    f"Failed to cut recording for command {' '.join(cut_ffmpeg_cmd)}"
+                )
+                logger.error(p.stderr)
+                Path(final_file_name).unlink(missing_ok=True)
+                return
+
+            logger.debug(f"Updating finalized export {file_name}")
+            # os.rename(file_name, final_file_name)
             Path(file_name).unlink(missing_ok=True)
-            return
+            logger.debug(f"Finished exporting {final_file_name}")
 
-        cut_ffmpeg_cmd = (
-            f"ffmpeg -hide_banner -ss {abs(self.start_time - self.min_start_time)} -i {file_name} -to {self.duration/1000 - abs(self.end_time - self.max_end_time)} -c copy {final_file_name}").split(" ")
+        else: # si ya existe nos vamos
 
-        # pdb.set_trace()
-
-        r = sp.run(
-            cut_ffmpeg_cmd,
-            input= "",
-            encoding="ascii",
-            preexec_fn=lower_priority,
-            capture_output=True,
-        )
-
-        if r.returncode != 0:
-            logger.error(
-                f"Failed to cut recording for command {' '.join(cut_ffmpeg_cmd)}"
-            )
-            logger.error(p.stderr)
-            Path(final_file_name).unlink(missing_ok=True)
-            return
-
-        logger.debug(f"Updating finalized export {file_name}")
-        # os.rename(file_name, final_file_name)
-        Path(file_name).unlink(missing_ok=True)
-        logger.debug(f"Finished exporting {file_name}")
+            logger.debug(f"File already exists {final_file_name}")
