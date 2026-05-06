@@ -661,8 +661,8 @@ async def get_video_properties(
 ) -> dict[str, Any]:
     async def probe_with_ffprobe(
         url: str,
-    ) -> tuple[bool, int, int, Optional[str], float]:
-        """Fallback using ffprobe: returns (valid, width, height, codec, duration)."""
+    ) -> tuple[bool, int, int, Optional[str], float, float]:
+        """Fallback using ffprobe: returns (valid, width, height, codec, duration, start_time)."""
         cmd = [
             ffmpeg.ffprobe_path,
             "-v",
@@ -679,14 +679,14 @@ async def get_video_properties(
             )
             stdout, _ = await proc.communicate()
             if proc.returncode != 0:
-                return False, 0, 0, None, -1
+                return False, 0, 0, None, -1, 0.0
 
             data = json.loads(stdout.decode())
             video_streams = [
                 s for s in data.get("streams", []) if s.get("codec_type") == "video"
             ]
             if not video_streams:
-                return False, 0, 0, None, -1
+                return False, 0, 0, None, -1, 0.0
 
             v = video_streams[0]
             width = int(v.get("width", 0))
@@ -696,9 +696,12 @@ async def get_video_properties(
             duration_str = data.get("format", {}).get("duration")
             duration = float(duration_str) if duration_str else -1.0
 
-            return True, width, height, codec, duration
+            start_time_str = v.get("start_time")
+            start_time = float(start_time_str) if start_time_str else 0.0
+
+            return True, width, height, codec, duration, start_time
         except (json.JSONDecodeError, ValueError, KeyError, asyncio.SubprocessError):
-            return False, 0, 0, None, -1
+            return False, 0, 0, None, -1, 0.0
 
     def probe_with_cv2(url: str) -> tuple[bool, int, int, Optional[str], float]:
         """Primary attempt using cv2: returns (valid, width, height, fourcc, duration)."""
@@ -728,10 +731,13 @@ async def get_video_properties(
 
     # try cv2 first
     has_video, width, height, fourcc, duration = probe_with_cv2(url)
+    probe_start_time = 0.0
 
     # fallback to ffprobe if needed
     if not has_video or (get_duration and duration < 0):
-        has_video, width, height, fourcc, duration = await probe_with_ffprobe(url)
+        has_video, width, height, fourcc, duration, probe_start_time = (
+            await probe_with_ffprobe(url)
+        )
 
     result: dict[str, Any] = {"has_valid_video": has_video}
     if has_video:
@@ -740,6 +746,7 @@ async def get_video_properties(
             result["fourcc"] = fourcc
     if get_duration:
         result["duration"] = duration
+        result["start_time"] = probe_start_time
 
     return result
 

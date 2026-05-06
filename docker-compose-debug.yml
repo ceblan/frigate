@@ -1,0 +1,46 @@
+version: "3"
+services:
+  devcontainer:
+    container_name: frigate-devcontainer
+    # add groups from host for render, plugdev, video
+    group_add:
+      - "109" # render
+      - "110" # render
+      - "44"  # video
+      - "46"  # plugdev
+    shm_size: "256mb"
+
+    image:  localhost/frigate:v0.17.1-ceb
+    # image:  macetero.iterando.net/frigate-dvas:gdb
+
+    # environment:
+      # YOLO_MODELS: yolov7-320
+    devices:
+      # - /dev/bus/usb:/dev/bus/usb
+      # - /dev/dri:/dev/dri # for intel hwaccel, needs to be updated for your hardware
+      - /dev/dri/renderD128 # for intel hwaccel, needs to be updated for your hardware
+    volumes:
+      - .:/workspace/frigate:cached
+      - ./web/dist:/opt/frigate/web:cached
+      - /usr/share/zoneinfo/Europe/Madrid:/etc/localtime:ro
+      - ./config:/config
+      - ./debug:/media/frigate
+      - /dev/bus/usb:/dev/bus/usb
+      - type: tmpfs # Optional: 1GB of memory, reduces SSD/SD Card wear
+        target: /tmp/cache
+        tmpfs:
+          size: 1000000000
+    ports:
+      - "5000:5000"
+      - "5100:5173" # vite dev webserver
+      - "8554:8554" # RTSP feeds
+      - "8555:8555/tcp" # WebRTC over tcp
+      - "8555:8555/udp" # WebRTC over udp
+    environment:
+      FRIGATE_RTSP_PASSWORD: "password"
+
+  # mqtt:
+  #   container_name: mqtt
+  #   image: eclipse-mosquitto:1.6
+  #   ports:
+  #     - "1883:1883"

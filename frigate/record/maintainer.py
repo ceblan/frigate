@@ -96,7 +96,7 @@ class RecordingMaintainer(threading.Thread):
         self.stop_event = stop_event
         self.object_recordings_info: dict[str, list] = defaultdict(list)
         self.audio_recordings_info: dict[str, list] = defaultdict(list)
-        self.end_time_cache: dict[str, Tuple[datetime.datetime, float]] = {}
+        self.end_time_cache: dict[str, Tuple[datetime.datetime, datetime.datetime, float]] = {}
         self.unexpected_cache_files_logged: bool = False
 
     async def move_files(self) -> None:
@@ -326,7 +326,7 @@ class RecordingMaintainer(threading.Thread):
             return None
 
         if cache_path in self.end_time_cache:
-            end_time, duration = self.end_time_cache[cache_path]
+            start_time, end_time, duration = self.end_time_cache[cache_path]
         else:
             segment_info = await get_video_properties(
                 self.config.ffmpeg, cache_path, get_duration=True
@@ -345,10 +345,29 @@ class RecordingMaintainer(threading.Thread):
 
             duration = float(segment_info.get("duration", -1))
 
+            # Use ffprobe start_time if valid Unix epoch within 24h of now
+            probe_start_time = float(segment_info.get("start_time", 0.0))
+            now_ts = datetime.datetime.now(datetime.timezone.utc).timestamp()
+            if probe_start_time > 0 and abs(probe_start_time - now_ts) < 86400:
+                start_time = datetime.datetime.fromtimestamp(
+                    probe_start_time, tz=datetime.timezone.utc
+                )
+                logger.debug(
+                    f"Using ffprobe start_time for {cache_path}: {probe_start_time:.3f} "
+                    f"(filename delta: {probe_start_time - recording['start_time'].timestamp():.3f}s)"
+                )
+            else:
+                if probe_start_time != 0.0:
+                    logger.warning(
+                        f"ffprobe start_time {probe_start_time} out of valid range for "
+                        f"{cache_path}, falling back to filename time"
+                    )
+                # start_time remains as filename-derived value
+
             # ensure duration is within expected length
             if 0 < duration < MAX_SEGMENT_DURATION:
                 end_time = start_time + datetime.timedelta(seconds=duration)
-                self.end_time_cache[cache_path] = (end_time, duration)
+                self.end_time_cache[cache_path] = (start_time, end_time, duration)
             else:
                 if duration == -1:
                     logger.warning(f"Failed to probe corrupt segment {cache_path}")

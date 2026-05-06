@@ -86,7 +86,7 @@ RUN apt-get -qq update \
 RUN --mount=type=bind,source=docker/main/build_ov_model.py,target=/build_ov_model.py \
     mkdir /models && cd /models \
     && wget http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz \
-    && tar -xvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz \
+    && tar --no-same-owner -xvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz \
     && python3 /build_ov_model.py
 
 ####
@@ -126,8 +126,8 @@ RUN /bin/mkdir -p '/usr/local/lib' && \
 FROM wget AS models
 
 # Get model and labels
-RUN wget -qO edgetpu_model.tflite https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite
-RUN wget -qO cpu_model.tflite https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite
+RUN wget -4 -q --tries=10 --waitretry=2 --retry-connrefused --timeout=30 --read-timeout=20 -O edgetpu_model.tflite https://raw.githubusercontent.com/google-coral/test_data/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite
+RUN wget -4 -q --tries=10 --waitretry=2 --retry-connrefused --timeout=30 --read-timeout=20 -O cpu_model.tflite https://raw.githubusercontent.com/google-coral/test_data/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite
 COPY labelmap.txt .
 # Copy OpenVino model
 COPY --from=ov-converter /models/ssdlite_mobilenet_v2.xml openvino-model/
@@ -135,7 +135,7 @@ COPY --from=ov-converter /models/ssdlite_mobilenet_v2.bin openvino-model/
 RUN wget -q https://github.com/openvinotoolkit/open_model_zoo/raw/master/data/dataset_classes/coco_91cl_bkgr.txt -O openvino-model/coco_91cl_bkgr.txt && \
     sed -i 's/truck/car/g' openvino-model/coco_91cl_bkgr.txt
 # Get Audio Model and labels
-RUN wget -qO - https://www.kaggle.com/api/v1/models/google/yamnet/tfLite/classification-tflite/1/download | tar xvz && mv 1.tflite cpu_audio_model.tflite
+RUN wget -qO - https://www.kaggle.com/api/v1/models/google/yamnet/tfLite/classification-tflite/1/download | tar --no-same-owner -xvzf - && mv 1.tflite cpu_audio_model.tflite
 COPY audio-labelmap.txt .
 
 
@@ -256,8 +256,8 @@ ENV PATH="/usr/local/go2rtc/bin:/usr/local/tempio/bin:/usr/local/nginx/sbin:${PA
 RUN --mount=type=bind,source=docker/main/install_deps.sh,target=/deps/install_deps.sh \
     /deps/install_deps.sh
 
-ENV DEFAULT_FFMPEG_VERSION="7.0"
-ENV INCLUDED_FFMPEG_VERSIONS="${DEFAULT_FFMPEG_VERSION}:5.0"
+ENV DEFAULT_FFMPEG_VERSION="8.0"
+ENV INCLUDED_FFMPEG_VERSIONS="${DEFAULT_FFMPEG_VERSION}:7.0"
 
 RUN wget -q https://bootstrap.pypa.io/get-pip.py -O get-pip.py \
     && sed -i 's/args.append("setuptools")/args.append("setuptools==77.0.3")/' get-pip.py \

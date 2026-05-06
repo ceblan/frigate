@@ -573,8 +573,8 @@ class FrigateApp:
                     self.event_metadata_updater,
                     self.inter_config_updater,
                 ),
-                host="127.0.0.1",
-                port=5001,
+                host=os.environ.get("FRIGATE_API_HOST", "127.0.0.1"),
+                port=int(os.environ.get("FRIGATE_API_PORT", "5001")),
                 log_level="error",
             )
         finally:
