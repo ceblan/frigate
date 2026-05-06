@@ -1,0 +1,21 @@
+{
+  "include": [
+    "frigate",
+    "migrations"
+  ],
+  "exclude": [
+    "docker",
+    "docs",
+    "web",
+    "notebooks",
+    "debug",
+    "config",
+    "lat.md",
+    "ceblan-config",
+    "**/node_modules"
+  ],
+  "pythonVersion": "3.11",
+  "pythonPlatform": "Linux",
+  "typeCheckingMode": "basic",
+  "venv": "frigate_py311"
+}
