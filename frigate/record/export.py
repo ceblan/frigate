@@ -64,6 +64,9 @@ class RecordingExporter(threading.Thread):
         end_time: int,
         playback_factor: PlaybackFactorEnum,
         playback_source: PlaybackSourceEnum,
+        min_start_time: Optional[float] = None,
+        max_end_time: Optional[float] = None,
+        total_duration: Optional[float] = None,
     ) -> None:
         super().__init__()
         self.config = config
@@ -75,6 +78,9 @@ class RecordingExporter(threading.Thread):
         self.end_time = end_time
         self.playback_factor = playback_factor
         self.playback_source = playback_source
+        self.min_start_time = min_start_time
+        self.max_end_time = max_end_time
+        self.total_duration = total_duration
 
         # ensure export thumb dir
         Path(os.path.join(CLIPS_DIR, "export")).mkdir(exist_ok=True)
@@ -386,6 +392,72 @@ class RecordingExporter(threading.Thread):
             Path(thumb_path).unlink(missing_ok=True)
             return
         else:
+            # Two-pass trim for recordings (compensates for keyframe snap in vod_ts)
+            if (
+                self.playback_source == PlaybackSourceEnum.recordings
+                and self.min_start_time is not None
+                and self.total_duration is not None
+                and self.total_duration > 0
+            ):
+                ffmpeg_ss = round(
+                    abs(float(self.start_time) - self.min_start_time), 3
+                )
+                ffmpeg_to = round(
+                    self.total_duration
+                    - abs(float(self.end_time) - self.max_end_time),
+                    3,
+                )
+
+                # Only run pass 2 if there's actually content to trim
+                if ffmpeg_ss > 0 or ffmpeg_to < self.total_duration:
+                    intermediate_path = video_path.replace(
+                        ".mp4", "_intermediate.mp4"
+                    )
+                    os.rename(video_path, intermediate_path)
+
+                    cut_cmd = [
+                        self.config.ffmpeg.ffmpeg_path,
+                        "-hide_banner",
+                        "-y",
+                        "-ss",
+                        str(ffmpeg_ss),
+                        "-i",
+                        intermediate_path,
+                        "-to",
+                        str(ffmpeg_to),
+                        "-c",
+                        "copy",
+                        "-movflags",
+                        "+faststart",
+                        video_path,
+                    ]
+                    logger.debug(
+                        "Two-pass cut: ss=%s to=%s cmd=%s",
+                        ffmpeg_ss,
+                        ffmpeg_to,
+                        " ".join(cut_cmd),
+                    )
+
+                    r = sp.run(
+                        cut_cmd,
+                        capture_output=True,
+                        preexec_fn=lower_priority,
+                    )
+                    Path(intermediate_path).unlink(missing_ok=True)
+
+                    if r.returncode != 0:
+                        logger.error(
+                            "Two-pass cut failed for %s: %s",
+                            video_path,
+                            r.stderr.decode() if isinstance(r.stderr, bytes) else r.stderr,
+                        )
+                        Path(video_path).unlink(missing_ok=True)
+                        Export.delete().where(
+                            Export.id == self.export_id
+                        ).execute()
+                        Path(thumb_path).unlink(missing_ok=True)
+                        return
+
             Export.update({Export.in_progress: False}).where(
                 Export.id == self.export_id
             ).execute()

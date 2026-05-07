@@ -28,7 +28,7 @@ from frigate.api.defs.response.export_response import (
 )
 from frigate.api.defs.response.generic_response import GenericResponse
 from frigate.api.defs.tags import Tags
-from frigate.const import CLIPS_DIR, EXPORT_DIR
+from frigate.const import CLIPS_DIR, EXPORT_DIR, MAX_SEGMENT_DURATION
 from frigate.models import Export, Previews, Recordings
 from frigate.record.export import (
     PlaybackFactorEnum,
@@ -142,6 +142,39 @@ def export_recording(
                 status_code=400,
             )
 
+    # Compute actual recording boundaries for two-pass trim
+    min_start_time_f: float = float(start_time)
+    max_end_time_f: float = float(end_time)
+    total_duration: float = 0.0
+
+    if playback_source == "recordings":
+        recordings_for_bounds = (
+            Recordings.select(
+                Recordings.duration, Recordings.start_time, Recordings.end_time
+            )
+            .where(
+                Recordings.start_time.between(start_time, end_time)
+                | Recordings.end_time.between(start_time, end_time)
+                | (
+                    (start_time > Recordings.start_time)
+                    & (end_time < Recordings.end_time)
+                )
+            )
+            .where(Recordings.camera == camera_name)
+            .order_by(Recordings.start_time.asc())
+            .namedtuples()
+            .iterator()
+        )
+
+        for rec in recordings_for_bounds:
+            total_duration += round(float(rec.duration), 3)
+            if float(rec.start_time) < start_time:
+                min_start_time_f = min(
+                    min_start_time_f, round(float(rec.start_time), 3)
+                )
+            if float(rec.end_time) > end_time:
+                max_end_time_f = max(max_end_time_f, round(float(rec.end_time), 3))
+
     export_id = f"{camera_name}_{''.join(random.choices(string.ascii_lowercase + string.digits, k=6))}"
     exporter = RecordingExporter(
         request.app.frigate_config,
@@ -161,6 +194,9 @@ def export_recording(
             if playback_source in PlaybackSourceEnum.__members__.values()
             else PlaybackSourceEnum.recordings
         ),
+        min_start_time=min_start_time_f if playback_source == "recordings" else None,
+        max_end_time=max_end_time_f if playback_source == "recordings" else None,
+        total_duration=total_duration if playback_source == "recordings" else None,
     )
     exporter.start()
     return JSONResponse(
