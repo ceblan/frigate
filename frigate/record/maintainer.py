@@ -560,6 +560,7 @@ class RecordingMaintainer(threading.Thread):
                     self.config.ffmpeg.ffmpeg_path,
                     "-hide_banner",
                     "-y",
+                    "-copyts",
                     "-i",
                     cache_path,
                     "-c",
