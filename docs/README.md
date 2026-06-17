@@ -8,3 +8,4 @@ For installation and contributing instructions, please follow the [Contributing 
 
 1. Run `npm i` to install dependencies
 2. Run `npm run start` to start the website
+ 
