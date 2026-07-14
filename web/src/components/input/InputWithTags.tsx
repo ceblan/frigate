@@ -892,7 +892,7 @@ export default function InputWithTags({
                           {filterType === "event_id"
                             ? t("trackedObjectId")
                             : filterType === "is_submitted"
-                              ? t("features.submittedToFrigatePlus.label", {
+                              ? t("features.submittedToBisiaPlus.label", {
                                   ns: "components/filter",
                                 })
                               : t("filter.label." + filterType)}

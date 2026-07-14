@@ -1,7 +1,7 @@
 {
   "time": {
     "untilForTime": "Iki {{time}}",
-    "untilForRestart": "Iki kol Frigate persikraus.",
+    "untilForRestart": "Iki kol BIS-IA persikraus.",
     "untilRestart": "Iki perkrovimo",
     "ago": "prieš {{timeAgo}}",
     "justNow": "Ką tik",
@@ -223,9 +223,9 @@
     "help": "Pagalba",
     "documentation": {
       "title": "Dokumentacija",
-      "label": "Frigate dokumentacija"
+      "label": "BIS-IA dokumentacija"
     },
-    "restart": "Perkrauti Frigate",
+    "restart": "Perkrauti BIS-IA",
     "live": {
       "title": "Tiesiogiai",
       "allCameras": "Visos Kameros",
@@ -265,7 +265,7 @@
     "title": "Rolė",
     "admin": "Adminas",
     "viewer": "Žiūrėtojas",
-    "desc": "Adminai turi pilną prieigą prie visų Frigate vartotojo sąsajos fukncijų. Žiūrėtojai yra apriboti peržiūrėti kameras, peržiūrų įrašus ir istorinius įrašus."
+    "desc": "Adminai turi pilną prieigą prie visų BIS-IA vartotojo sąsajos fukncijų. Žiūrėtojai yra apriboti peržiūrėti kameras, peržiūrų įrašus ir istorinius įrašus."
   },
   "pagination": {
     "label": "puslapiavimas",
@@ -280,12 +280,12 @@
     "more": "Daugiau puslapių"
   },
   "accessDenied": {
-    "documentTitle": "Priegai Nesuteikta - Frigate",
+    "documentTitle": "Priegai Nesuteikta - BIS-IA",
     "title": "Prieiga Nesuteikta",
     "desc": "Jūs neturite leidimo žiūrėti šį puslapį."
   },
   "notFound": {
-    "documentTitle": "Nerasta - Frigate",
+    "documentTitle": "Nerasta - BIS-IA",
     "title": "404",
     "desc": "Puslapis nerastas"
   },
@@ -301,6 +301,6 @@
   },
   "field": {
     "optional": "Pasirinktinis",
-    "internalID": "Vidinį ID Frigate naudoja konfiguracijoje ir duombazėje"
+    "internalID": "Vidinį ID BIS-IA naudoja konfiguracijoje ir duombazėje"
   }
 }

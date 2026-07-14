@@ -1,13 +1,13 @@
 {
   "documentTitle": {
-    "cameras": "Statistiche telecamere - Frigate",
-    "enrichments": "Statistiche di miglioramento - Frigate",
-    "storage": "Statistiche archiviazione - Frigate",
-    "general": "Statistiche generali - Frigate",
+    "cameras": "Statistiche telecamere - BIS-IA",
+    "enrichments": "Statistiche di miglioramento - BIS-IA",
+    "storage": "Statistiche archiviazione - BIS-IA",
+    "general": "Statistiche generali - BIS-IA",
     "logs": {
-      "frigate": "Registri Frigate - Frigate",
-      "go2rtc": "Registri Go2RTC - Frigate",
-      "nginx": "Registri Nginx - Frigate"
+      "bisia": "Registri BIS-IA - BIS-IA",
+      "go2rtc": "Registri Go2RTC - BIS-IA",
+      "nginx": "Registri Nginx - BIS-IA"
     }
   },
   "logs": {
@@ -69,7 +69,7 @@
       "intelGpuWarning": {
         "title": "Avviso statistiche GPU Intel",
         "message": "Statistiche GPU non disponibili",
-        "description": "Si tratta di un problema noto negli strumenti di reportistica delle statistiche GPU di Intel (intel_gpu_top), che si interrompe e restituisce ripetutamente un utilizzo della GPU pari a 0% anche nei casi in cui l'accelerazione hardware e il rilevamento degli oggetti funzionano correttamente sulla (i)GPU. Non si tratta di un problema di Frigate. È possibile riavviare il sistema per risolvere temporaneamente il problema e verificare che la GPU funzioni correttamente. Ciò non influisce sulle prestazioni."
+        "description": "Si tratta di un problema noto negli strumenti di reportistica delle statistiche GPU di Intel (intel_gpu_top), che si interrompe e restituisce ripetutamente un utilizzo della GPU pari a 0% anche nei casi in cui l'accelerazione hardware e il rilevamento degli oggetti funzionano correttamente sulla (i)GPU. Non si tratta di un problema di BIS-IA. È possibile riavviare il sistema per risolvere temporaneamente il problema e verificare che la GPU funzioni correttamente. Ciò non influisce sulle prestazioni."
       }
     },
     "detector": {
@@ -184,7 +184,7 @@
     "overview": "Sommario",
     "recordings": {
       "title": "Registrazioni",
-      "tips": "Questo valore rappresenta lo spazio di archiviazione totale utilizzato dalle registrazioni nel database di Frigate. Frigate non tiene traccia dell'utilizzo dello spazio di archiviazione per tutti i file presenti sul disco.",
+      "tips": "Questo valore rappresenta lo spazio di archiviazione totale utilizzato dalle registrazioni nel database di BIS-IA. BIS-IA non tiene traccia dell'utilizzo dello spazio di archiviazione per tutti i file presenti sul disco.",
       "earliestRecording": "Prima registrazione disponibile:"
     },
     "cameraStorage": {
@@ -196,7 +196,7 @@
       "bandwidth": "Larghezza di banda",
       "unused": {
         "title": "Liberi",
-        "tips": "Questo valore potrebbe non rappresentare accuratamente lo spazio libero disponibile per Frigate se nel disco sono archiviati altri file oltre alle registrazioni di Frigate. Frigate non tiene traccia dell'utilizzo dello spazio di archiviazione al di fuori delle sue registrazioni."
+        "tips": "Questo valore potrebbe non rappresentare accuratamente lo spazio libero disponibile per BIS-IA se nel disco sono archiviati altri file oltre alle registrazioni di BIS-IA. BIS-IA non tiene traccia dell'utilizzo dello spazio di archiviazione al di fuori delle sue registrazioni."
       }
     },
     "shm": {

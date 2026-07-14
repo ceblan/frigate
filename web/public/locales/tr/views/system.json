@@ -1,14 +1,14 @@
 {
   "documentTitle": {
     "logs": {
-      "frigate": "Frigate Günlükleri - Frigate",
-      "go2rtc": "Go2RTC Günlükleri - Frigate",
-      "nginx": "Nginx Günlükleri - Frigate"
+      "bisia": "BIS-IA Günlükleri - BIS-IA",
+      "go2rtc": "Go2RTC Günlükleri - BIS-IA",
+      "nginx": "Nginx Günlükleri - BIS-IA"
     },
-    "general": "Genel İstatistikler - Frigate",
-    "storage": "Depolama İstatistikleri - Frigate",
-    "cameras": "Kamera İstatistikleri - Frigate",
-    "enrichments": "Zenginleştirme İstatistikleri - Frigate"
+    "general": "Genel İstatistikler - BIS-IA",
+    "storage": "Depolama İstatistikleri - BIS-IA",
+    "cameras": "Kamera İstatistikleri - BIS-IA",
+    "enrichments": "Zenginleştirme İstatistikleri - BIS-IA"
   },
   "metrics": "Sistem metrikleri",
   "general": {
@@ -47,7 +47,7 @@
       "intelGpuWarning": {
         "title": "Intel GPU İstatistik Uyarısı",
         "message": "GPU istatistikleri kullanılamıyor",
-        "description": "Bu durum, donanımsal hızlandırma ve nesne tespiti (i)GPU üzerinde sorunsuz çalışıyor olsa bile, Intel’in GPU istatistik raporlama aracındaki (intel_gpu_top) bilinen bir hatadan ötürü GPU kullanımının %0 olarak bildirilmesinden kaynaklanmakta olup, Frigate hatası değildir. Sorunu geçici olarak düzeltmek ve (i)GPU’nun doğru çalıştığını doğrulamak için ana makineyi yeniden başlatabilirsiniz. Bu durum performansı etkilememektedir."
+        "description": "Bu durum, donanımsal hızlandırma ve nesne tespiti (i)GPU üzerinde sorunsuz çalışıyor olsa bile, Intel’in GPU istatistik raporlama aracındaki (intel_gpu_top) bilinen bir hatadan ötürü GPU kullanımının %0 olarak bildirilmesinden kaynaklanmakta olup, BIS-IA hatası değildir. Sorunu geçici olarak düzeltmek ve (i)GPU’nun doğru çalıştığını doğrulamak için ana makineyi yeniden başlatabilirsiniz. Bu durum performansı etkilememektedir."
       }
     },
     "otherProcesses": {
@@ -78,13 +78,13 @@
     "recordings": {
       "title": "Kayıtlar",
       "earliestRecording": "Mevcut en erken kayıt:",
-      "tips": "Burada gösterilen değer, Frigate’in veritabanına göre kayıtların diskinizde kullandığı toplam alanı ifade eder. Frigate, diskinizdeki tüm dosyaların alan kullanımını takip etmez."
+      "tips": "Burada gösterilen değer, BIS-IA’in veritabanına göre kayıtların diskinizde kullandığı toplam alanı ifade eder. BIS-IA, diskinizdeki tüm dosyaların alan kullanımını takip etmez."
     },
     "cameraStorage": {
       "title": "Kamera Depolaması",
       "camera": "Kamera",
       "unused": {
-        "tips": "Eğer diskinizde Frigate'in kayıtları dışında dosyalar varsa bu değer diskinizdeki boş alanı doğru olarak göstermeyebilir. Frigate kendi kayıtları dışındaki dosyaların disk kullanımını takip etmez.",
+        "tips": "Eğer diskinizde BIS-IA'in kayıtları dışında dosyalar varsa bu değer diskinizdeki boş alanı doğru olarak göstermeyebilir. BIS-IA kendi kayıtları dışındaki dosyaların disk kullanımını takip etmez.",
         "title": "Kullanılmayan"
       },
       "percentageOfTotalUsed": "Toplam Yüzde",

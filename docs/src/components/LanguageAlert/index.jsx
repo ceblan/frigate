@@ -18,7 +18,7 @@ export default function LanguageAlert() {
   return (
     <div className={styles.alert}>
       <span>检测到您的主要语言为中文，您可以访问由中文社区翻译的</span>
-      <a href={'https://docs.frigate-cn.video'+pathname}>中文文档</a>
+      <a href={'https://docs.bisia-cn.video'+pathname}>中文文档</a>
       <span> 以获得更好的体验</span>
     </div>
   );

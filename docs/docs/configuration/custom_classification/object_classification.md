@@ -3,7 +3,7 @@ id: object_classification
 title: Object Classification
 ---
 
-Object classification allows you to train a custom MobileNetV2 classification model to run on tracked objects (persons, cars, animals, etc.) to identify a finer category or attribute for that object. Classification results are visible in the Tracked Object Details pane in Explore, through the `frigate/tracked_object_details` MQTT topic, in Home Assistant sensors via the official Frigate integration, or through the event endpoints in the HTTP API.
+Object classification allows you to train a custom MobileNetV2 classification model to run on tracked objects (persons, cars, animals, etc.) to identify a finer category or attribute for that object. Classification results are visible in the Tracked Object Details pane in Explore, through the `bisia/tracked_object_details` MQTT topic, in Home Assistant sensors via the official BIS-IA integration, or through the event endpoints in the HTTP API.
 
 ## Minimum System Requirements
 
@@ -32,7 +32,7 @@ For object classification:
   - Example: `cat` → `Leo`, `Charlie`, `None`.
 
 - **Attribute**:
-  - Added as metadata to the object, visible in the Tracked Object Details pane in Explore, `frigate/events` MQTT messages, and the HTTP API response as `<model_name>: <predicted_value>`.
+  - Added as metadata to the object, visible in the Tracked Object Details pane in Explore, `bisia/events` MQTT messages, and the HTTP API response as `<model_name>: <predicted_value>`.
   - Ideal when multiple attributes can coexist independently.
   - Example: Detecting if a `person` in a construction yard is wearing a helmet or not, and if they are wearing a yellow vest or not.
 
@@ -84,11 +84,11 @@ An optional config, `save_attempts`, can be set as a key under the model name. T
 
 ## Training the model
 
-Creating and training the model is done within the Frigate UI using the `Classification` page. The process consists of two steps:
+Creating and training the model is done within the BIS-IA UI using the `Classification` page. The process consists of two steps:
 
 ### Step 1: Name and Define
 
-Enter a name for your model, select the object label to classify (e.g., `person`, `dog`, `car`), choose the classification type (sub label or attribute), and define your classes. Frigate will automatically include a `none` class for objects that don't fit any specific category.
+Enter a name for your model, select the object label to classify (e.g., `person`, `dog`, `car`), choose the classification type (sub label or attribute), and define your classes. BIS-IA will automatically include a `none` class for objects that don't fit any specific category.
 
 For example: To classify your two cats, create a model named "Our Cats" and create two classes, "Charlie" and "Leo". A third class, "none", will be created automatically for other neighborhood cats that are not your own.
 
@@ -104,7 +104,7 @@ If examples for some of your classes do not appear in the grid, you can continue
 
 - **Problem framing**: Keep classes visually distinct and relevant to the chosen object types.
 - **Data collection**: Use the model’s Recent Classification tab to gather balanced examples across times of day, weather, and distances.
-- **Preprocessing**: Ensure examples reflect object crops similar to Frigate’s boxes; keep the subject centered.
+- **Preprocessing**: Ensure examples reflect object crops similar to BIS-IA’s boxes; keep the subject centered.
 - **Labels**: Keep label names short and consistent; include a `none` class if you plan to ignore uncertain predictions for sub labels.
 - **Threshold**: Tune `threshold` per model to reduce false assignments. Start at `0.8` and adjust based on validation.
 
@@ -112,14 +112,14 @@ If examples for some of your classes do not appear in the grid, you can continue
 
 To troubleshoot issues with object classification models, enable debug logging to see detailed information about classification attempts, scores, and consensus calculations.
 
-Enable debug logs for classification models by adding `frigate.data_processing.real_time.custom_classification: debug` to your `logger` configuration. These logs are verbose, so only keep this enabled when necessary. Restart Frigate after this change.
+Enable debug logs for classification models by adding `bisia.data_processing.real_time.custom_classification: debug` to your `logger` configuration. These logs are verbose, so only keep this enabled when necessary. Restart BIS-IA after this change.
 
 ```yaml
 logger:
   default: info
   logs:
     # highlight-next-line
-    frigate.data_processing.real_time.custom_classification: debug
+    bisia.data_processing.real_time.custom_classification: debug
 ```
 
 The debug logs will show:

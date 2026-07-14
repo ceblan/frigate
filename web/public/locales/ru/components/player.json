@@ -1,8 +1,8 @@
 {
   "noRecordingsFoundForThisTime": "Не найдено ни одной записи",
   "noPreviewFound": "Предпросмотр не найден",
-  "submitFrigatePlus": {
-    "title": "Отправить этот кадр в Frigate+?",
+  "submitBisiaPlus": {
+    "title": "Отправить этот кадр в BIS-IA+?",
     "submit": "Отправить"
   },
   "noPreviewFoundFor": "Не найдено предпросмотра для {{cameraName}}",
@@ -42,10 +42,10 @@
   },
   "toast": {
     "error": {
-      "submitFrigatePlusFailed": "Не удалось отправить кадр в Frigate+"
+      "submitBisiaPlusFailed": "Не удалось отправить кадр в BIS-IA+"
     },
     "success": {
-      "submittedFrigatePlus": "Кадр успешно загружен в Frigate+"
+      "submittedBisiaPlus": "Кадр успешно загружен в BIS-IA+"
     }
   }
 }

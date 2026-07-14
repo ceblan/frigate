@@ -1,18 +1,18 @@
 {
   "documentTitle": {
-    "default": "Pengaturan - Frigate",
-    "camera": "Pengaturan Kamera - Frigate",
-    "classification": "Pengaturan Klasifikasi - Frigate",
-    "authentication": "Pengaturan Autentikasi - Frigate",
-    "masksAndZones": "Editor Mask dan Zona - Frigate",
-    "motionTuner": "Penyetel Gerakan - Frigate",
-    "general": "Frigate - Pengaturan Umum",
-    "object": "Debug - Frigate",
-    "enrichments": "Frigate - Pengaturan Pengayaan",
-    "cameraManagement": "Pengaturan Kamera - Frigate",
-    "cameraReview": "Pengaturan Ulasan Kamera - Frigate",
-    "frigatePlus": "Pengaturan Frigate+ - Frigate",
-    "notifications": "Pengaturan Notifikasi - Frigate"
+    "default": "Pengaturan - BIS-IA",
+    "camera": "Pengaturan Kamera - BIS-IA",
+    "classification": "Pengaturan Klasifikasi - BIS-IA",
+    "authentication": "Pengaturan Autentikasi - BIS-IA",
+    "masksAndZones": "Editor Mask dan Zona - BIS-IA",
+    "motionTuner": "Penyetel Gerakan - BIS-IA",
+    "general": "BIS-IA - Pengaturan Umum",
+    "object": "Debug - BIS-IA",
+    "enrichments": "BIS-IA - Pengaturan Pengayaan",
+    "cameraManagement": "Pengaturan Kamera - BIS-IA",
+    "cameraReview": "Pengaturan Ulasan Kamera - BIS-IA",
+    "bisiaPlus": "Pengaturan BIS-IA+ - BIS-IA",
+    "notifications": "Pengaturan Notifikasi - BIS-IA"
   },
   "menu": {
     "cameraManagement": "Manajemen",
@@ -24,7 +24,7 @@
     "triggers": "Pemicu",
     "users": "Pengguna",
     "roles": "Peran",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "masksAndZones": "Mask / Zona",
     "debug": "Debug"
   },

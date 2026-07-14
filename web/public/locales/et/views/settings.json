@@ -169,15 +169,15 @@
     }
   },
   "documentTitle": {
-    "default": "Seadistused - Frigate",
-    "authentication": "Autentimise seadistused - Frigate",
-    "cameraReview": "Kaamerate kordusvaatuste seadistused - Frigate",
-    "general": "Kasutajaliidese seadistused - Frigate",
-    "frigatePlus": "Frigate+ seadistused - Frigate",
-    "notifications": "Teavituste seadistused - Frigate",
-    "cameraManagement": "Kaamerate haldus - Frigate",
-    "masksAndZones": "Maskide ja tsoonide haldus - Frigate",
-    "object": "Silumine ja veaotsing - Frigate"
+    "default": "Seadistused - BIS-IA",
+    "authentication": "Autentimise seadistused - BIS-IA",
+    "cameraReview": "Kaamerate kordusvaatuste seadistused - BIS-IA",
+    "general": "Kasutajaliidese seadistused - BIS-IA",
+    "bisiaPlus": "BIS-IA+ seadistused - BIS-IA",
+    "notifications": "Teavituste seadistused - BIS-IA",
+    "cameraManagement": "Kaamerate haldus - BIS-IA",
+    "masksAndZones": "Maskide ja tsoonide haldus - BIS-IA",
+    "object": "Silumine ja veaotsing - BIS-IA"
   },
   "general": {
     "title": "Kasutajaliidese seadistused",
@@ -239,11 +239,11 @@
       "suspend": "Peata arvuti töö"
     }
   },
-  "frigatePlus": {
-    "title": "Frigate+ seadistused",
-    "unsavedChanges": "Frigate+ seadistuste muudatused on salvestamata",
+  "bisiaPlus": {
+    "title": "BIS-IA+ seadistused",
+    "unsavedChanges": "BIS-IA+ seadistuste muudatused on salvestamata",
     "toast": {
-      "success": "Frigate+ seadistuste muudatused on salvestatud. Muudatuste kasutuselevõtmiseks käivita Frigate uuesti."
+      "success": "BIS-IA+ seadistuste muudatused on salvestatud. Muudatuste kasutuselevõtmiseks käivita BIS-IA uuesti."
     },
     "snapshotConfig": {
       "title": "Hetkvõtte seadistused",
@@ -328,7 +328,7 @@
     "users": "Kasutajad",
     "roles": "Rollid",
     "notifications": "Teavitused",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "cameraReview": "Ülevaatamine"
   },
   "dialog": {

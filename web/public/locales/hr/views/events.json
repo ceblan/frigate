@@ -41,9 +41,9 @@
     "trackedPoint": "Praćena točka",
     "clickToSeek": "Kliknite za pomicanje na ovo vrijeme"
   },
-  "documentTitle": "Pregled - Frigate",
+  "documentTitle": "Pregled - BIS-IA",
   "recordings": {
-    "documentTitle": "Snimke - Frigate"
+    "documentTitle": "Snimke - BIS-IA"
   },
   "calendarFilter": {
     "last24Hours": "Zadnja 24 sata"

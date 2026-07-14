@@ -30,8 +30,8 @@
   },
   "noPreviewFound": "Ingen forhåndsvisning funnet",
   "noPreviewFoundFor": "Ingen forhåndsvisning funnet for {{cameraName}}",
-  "submitFrigatePlus": {
-    "title": "Send dette bildet til Frigate+?",
+  "submitBisiaPlus": {
+    "title": "Send dette bildet til BIS-IA+?",
     "submit": "Send"
   },
   "livePlayerRequiredIOSVersion": "iOS 17.1 eller høyere kreves for denne typen direkte-strømming.",
@@ -42,10 +42,10 @@
   "cameraDisabled": "Kameraet er deaktivert",
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Bildet ble sendt til Frigate+"
+      "submittedBisiaPlus": "Bildet ble sendt til BIS-IA+"
     },
     "error": {
-      "submitFrigatePlusFailed": "Kunne ikke sende bildet til Frigate+"
+      "submitBisiaPlusFailed": "Kunne ikke sende bildet til BIS-IA+"
     }
   }
 }

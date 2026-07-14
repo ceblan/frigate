@@ -3,7 +3,7 @@ id: recordings
 title: Recordings Errors
 ---
 
-## I have Frigate configured for motion recording only, but it still seems to be recording even with no motion. Why?
+## I have BIS-IA configured for motion recording only, but it still seems to be recording even with no motion. Why?
 
 You'll want to:
 
@@ -18,13 +18,13 @@ This error can be caused by a number of different issues. The first step in trou
 ```yaml
 logger:
   logs:
-    frigate.record.maintainer: debug
+    bisia.record.maintainer: debug
 ```
 
 This will include logs like:
 
 ```
-DEBUG   : Copied /media/frigate/recordings/{segment_path} in 0.2 seconds.
+DEBUG   : Copied /media/bisia/recordings/{segment_path} in 0.2 seconds.
 ```
 
 It is important to let this run until the errors begin to happen, to confirm that there is not a slow down in the disk at the time of the error.
@@ -35,7 +35,7 @@ If the storage is too slow to keep up with the recordings then the maintainer wi
 
 ##### Check RAM, swap, cache utilization, and disk utilization
 
-If CPU, RAM, disk throughput, or bus I/O is insufficient, nothing inside frigate will help. It is important to review each aspect of available system resources.
+If CPU, RAM, disk throughput, or bus I/O is insufficient, nothing inside bisia will help. It is important to review each aspect of available system resources.
 
 On linux, some helpful tools/commands in diagnosing would be:
 
@@ -51,7 +51,7 @@ On modern linux kernels, the system will utilize some swap if enabled. Setting v
 
 ```yaml
 services:
-  frigate:
+  bisia:
     ...
     mem_swappiness: 0
     memswap_limit: <MAXSWAP>
@@ -71,7 +71,7 @@ NOTE: These are hard-limits for the container, be sure there is enough headroom 
 
 ##### Check Storage Type
 
-Mounting a network share is a popular option for storing Recordings, but this can lead to reduced copy times and cause problems. Some users have found that using `NFS` instead of `SMB` considerably decreased the copy times and fixed the issue. It is also important to ensure that the network connection between the device running Frigate and the network share is stable and fast.
+Mounting a network share is a popular option for storing Recordings, but this can lead to reduced copy times and cause problems. Some users have found that using `NFS` instead of `SMB` considerably decreased the copy times and fixed the issue. It is also important to ensure that the network connection between the device running BIS-IA and the network share is stable and fast.
 
 ##### Check mount options
 
@@ -79,4 +79,4 @@ Some users found that mounting a drive via `fstab` with the `sync` option caused
 
 #### Copy Times < 1 second
 
-If the storage is working quickly then this error may be caused by CPU load on the machine being too high for Frigate to have the resources to keep up. Try temporarily shutting down other services to see if the issue improves.
+If the storage is working quickly then this error may be caused by CPU load on the machine being too high for BIS-IA to have the resources to keep up. Try temporarily shutting down other services to see if the issue improves.

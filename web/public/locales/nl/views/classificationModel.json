@@ -1,5 +1,5 @@
 {
-  "documentTitle": "Classificatiemodellen - Frigate",
+  "documentTitle": "Classificatiemodellen - BIS-IA",
   "button": {
     "deleteClassificationAttempts": "Classificatieafbeeldingen verwijderen",
     "renameCategory": "Klasse hernoemen",
@@ -26,7 +26,7 @@
       "deleteImageFailed": "Verwijderen mislukt: {{errorMessage}}",
       "deleteCategoryFailed": "Het verwijderen van de klasse is mislukt: {{errorMessage}}",
       "categorizeFailed": "Afbeelding categoriseren mislukt: {{errorMessage}}",
-      "trainingFailed": "Modeltraining mislukt. Raadpleeg de Frigate-logs voor details.",
+      "trainingFailed": "Modeltraining mislukt. Raadpleeg de BIS-IA-logs voor details.",
       "deleteModelFailed": "Model verwijderen mislukt: {{errorMessage}}",
       "updateModelFailed": "Bijwerken van model mislukt: {{errorMessage}}",
       "renameCategoryFailed": "Hernoemen van klasse mislukt: {{errorMessage}}",
@@ -130,7 +130,7 @@
       "selectImagesDescription": "Klik op afbeeldingen om ze te selecteren. Klik op doorgaan wanneer je klaar bent met deze klasse.",
       "generating": {
         "title": "Voorbeeldafbeeldingen genereren",
-        "description": "Frigate haalt representatieve afbeeldingen uit je opnames. Dit kan even duren..."
+        "description": "BIS-IA haalt representatieve afbeeldingen uit je opnames. Dit kan even duren..."
       },
       "training": {
         "title": "Model trainen",

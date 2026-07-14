@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Frigate - Live",
-  "documentTitle.withCamera": "{{camera}} - Frigate - Live",
+  "documentTitle": "BIS-IA - Live",
+  "documentTitle.withCamera": "{{camera}} - BIS-IA - Live",
   "lowBandwidthMode": "Mod Latime de Banda Limitata",
   "twoWayTalk": {
     "enable": "Activare dialog",
@@ -179,7 +179,7 @@
   },
   "noCameras": {
     "title": "Nicio Cameră Configurată",
-    "description": "Începe prin a conecta o cameră la Frigate.",
+    "description": "Începe prin a conecta o cameră la BIS-IA.",
     "buttonText": "Adaugă cameră",
     "restricted": {
       "title": "Nicio Cameră Disponibilă",
@@ -187,7 +187,7 @@
     },
     "default": {
       "title": "Nicio cameră configurată",
-      "description": "Începe prin a conecta o cameră la Frigate.",
+      "description": "Începe prin a conecta o cameră la BIS-IA.",
       "buttonText": "Adaugă cameră"
     },
     "group": {

@@ -1,10 +1,10 @@
 {
   "restart": {
-    "title": "Are you sure you want to restart Frigate?",
-    "description": "This will briefly stop Frigate while it restarts.",
+    "title": "Are you sure you want to restart BIS-IA?",
+    "description": "This will briefly stop BIS-IA while it restarts.",
     "button": "Restart",
     "restarting": {
-      "title": "Frigate is Restarting",
+      "title": "BIS-IA is Restarting",
       "content": "This page will reload in {{countdown}} seconds.",
       "button": "Force Reload Now"
     }
@@ -12,12 +12,12 @@
   "explore": {
     "plus": {
       "submitToPlus": {
-        "label": "Submit To Frigate+",
+        "label": "Submit To BIS-IA+",
         "desc": "Objects in locations you want to avoid are not false positives. Submitting them as false positives will confuse the model."
       },
       "review": {
         "question": {
-          "label": "Confirm this label for Frigate Plus",
+          "label": "Confirm this label for BIS-IA Plus",
           "ask_a": "Is this object a <code>{{label}}</code>?",
           "ask_an": "Is this object an <code>{{label}}</code>?",
           "ask_full": "Is this object a <code>{{untranslatedLabel}}</code> ({{translatedLabel}})?"

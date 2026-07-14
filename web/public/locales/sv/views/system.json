@@ -1,14 +1,14 @@
 {
   "documentTitle": {
-    "storage": "Lagringsstatistik - Frigate",
-    "general": "Allmän statistik - Frigate",
-    "cameras": "Kamerastatistik - Frigate",
+    "storage": "Lagringsstatistik - BIS-IA",
+    "general": "Allmän statistik - BIS-IA",
+    "cameras": "Kamerastatistik - BIS-IA",
     "logs": {
-      "frigate": "Frigate-loggar - Frigate",
-      "go2rtc": "Go2RTC loggar - Frigate",
-      "nginx": "Nginx loggar - Frigate"
+      "bisia": "BIS-IA-loggar - BIS-IA",
+      "go2rtc": "Go2RTC loggar - BIS-IA",
+      "nginx": "Nginx loggar - BIS-IA"
     },
-    "enrichments": "Förbättringsstatistik - Frigate"
+    "enrichments": "Förbättringsstatistik - BIS-IA"
   },
   "logs": {
     "copy": {
@@ -80,7 +80,7 @@
       "intelGpuWarning": {
         "title": "Intel GPU statistik varning",
         "message": "GPU statistik otillgänglig",
-        "description": "Detta är en känd bugg i Intels GPU-statistikrapporteringsverktyg (intel_gpu_top) där den slutar fungera och upprepade gånger returnerar en GPU-användning på 0 %, även i fall där hårdvaruacceleration och objektdetektering körs korrekt på (i)GPU:n. Detta är inte en Frigate-bugg. Du kan starta om värden för att tillfälligt åtgärda problemet och bekräfta att GPU:n fungerar korrekt. Detta påverkar inte prestandan."
+        "description": "Detta är en känd bugg i Intels GPU-statistikrapporteringsverktyg (intel_gpu_top) där den slutar fungera och upprepade gånger returnerar en GPU-användning på 0 %, även i fall där hårdvaruacceleration och objektdetektering körs korrekt på (i)GPU:n. Detta är inte en BIS-IA-bugg. Du kan starta om värden för att tillfälligt åtgärda problemet och bekräfta att GPU:n fungerar korrekt. Detta påverkar inte prestandan."
       }
     },
     "otherProcesses": {
@@ -103,7 +103,7 @@
       "bandwidth": "Bandbredd",
       "unused": {
         "title": "Oanvänt",
-        "tips": "Det här värdet kanske inte korrekt representerar det lediga utrymmet tillgängligt för Frigate om du har andra filer lagrade på din hårddisk utöver Frigates inspelningar. Frigate spårar inte lagringsanvändning utanför sina egna inspelningar."
+        "tips": "Det här värdet kanske inte korrekt representerar det lediga utrymmet tillgängligt för BIS-IA om du har andra filer lagrade på din hårddisk utöver BIS-IAs inspelningar. BIS-IA spårar inte lagringsanvändning utanför sina egna inspelningar."
       },
       "title": "Kamera lagring",
       "camera": "Kamera",
@@ -113,7 +113,7 @@
     "overview": "Översikt",
     "recordings": {
       "title": "Inspelningar",
-      "tips": "Detta värde representerar den totala lagringsmängden som används av inspelningarna i Frigates databas. Frigate spårar inte lagringsanvändningen för alla filer på din disk.",
+      "tips": "Detta värde representerar den totala lagringsmängden som används av inspelningarna i BIS-IAs databas. BIS-IA spårar inte lagringsanvändningen för alla filer på din disk.",
       "earliestRecording": "Tidigast tillgängliga inspelning:"
     },
     "shm": {

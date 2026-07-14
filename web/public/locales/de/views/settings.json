@@ -1,18 +1,18 @@
 {
   "documentTitle": {
-    "default": "Einstellungen - Frigate",
-    "authentication": "Authentifizierungseinstellungen – Frigate",
-    "camera": "Kameraeinstellungen - Frigate",
-    "masksAndZones": "Masken- und Zoneneditor – Frigate",
-    "object": "Debug - Frigate",
-    "general": "UI-Einstellungen - Frigate",
-    "frigatePlus": "Frigate+ Einstellungen – Frigate",
-    "classification": "Klassifizierungseinstellungen – Frigate",
-    "motionTuner": "Bewegungserkennungs-Optimierer – Frigate",
+    "default": "Einstellungen - BIS-IA",
+    "authentication": "Authentifizierungseinstellungen – BIS-IA",
+    "camera": "Kameraeinstellungen - BIS-IA",
+    "masksAndZones": "Masken- und Zoneneditor – BIS-IA",
+    "object": "Debug - BIS-IA",
+    "general": "UI-Einstellungen - BIS-IA",
+    "bisiaPlus": "BIS-IA+ Einstellungen – BIS-IA",
+    "classification": "Klassifizierungseinstellungen – BIS-IA",
+    "motionTuner": "Bewegungserkennungs-Optimierer – BIS-IA",
     "notifications": "Benachrichtigungseinstellungen",
-    "enrichments": "Erweiterte Statistiken - Frigate",
-    "cameraManagement": "Kameras verwalten - Frigate",
-    "cameraReview": "Kameraeinstellungen prüfen - Frigate"
+    "enrichments": "Erweiterte Statistiken - BIS-IA",
+    "cameraManagement": "Kameras verwalten - BIS-IA",
+    "cameraReview": "Kameraeinstellungen prüfen - BIS-IA"
   },
   "menu": {
     "ui": "Benutzeroberfläche",
@@ -21,7 +21,7 @@
     "masksAndZones": "Maskierungen / Zonen",
     "motionTuner": "Bewegungserkennungs-Optimierer",
     "debug": "Debug",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "users": "Benutzer",
     "notifications": "Benachrichtigungen",
     "enrichments": "Erkennungsfunktionen",
@@ -102,7 +102,7 @@
     "title": "Klassifizierungseinstellungen",
     "semanticSearch": {
       "title": "Semantische Suche",
-      "desc": "Die semantische Suche in Frigate ermöglicht es, verfolgte Objekte innerhalb der Überprüfungselemente zu finden, indem entweder das Bild selbst, eine benutzerdefinierte Textbeschreibung oder eine automatisch generierte Beschreibung verwendet wird.",
+      "desc": "Die semantische Suche in BIS-IA ermöglicht es, verfolgte Objekte innerhalb der Überprüfungselemente zu finden, indem entweder das Bild selbst, eine benutzerdefinierte Textbeschreibung oder eine automatisch generierte Beschreibung verwendet wird.",
       "readTheDocumentation": "Lesen Sie die Dokumentation",
       "reindexNow": {
         "alreadyInProgress": "Neu-Indizierung läufts bereits.",
@@ -134,7 +134,7 @@
     "licensePlateRecognition": {
       "readTheDocumentation": "Lies die Dokumentation",
       "title": "Nummernschilderkennung",
-      "desc": "Frigate kann Nummernschilder an Fahrzeugen erkennen und die erkannten Zeichen automatisch dem Feld „recognized_license_plate“ oder einem bekannten Namen als Unterbezeichnung für Objekte vom Typ „Auto“ hinzufügen. Ein häufiger Anwendungsfall ist das Lesen der Nummernschilder von Autos, die in eine Einfahrt einfahren oder auf einer Straße vorbeifahren."
+      "desc": "BIS-IA kann Nummernschilder an Fahrzeugen erkennen und die erkannten Zeichen automatisch dem Feld „recognized_license_plate“ oder einem bekannten Namen als Unterbezeichnung für Objekte vom Typ „Auto“ hinzufügen. Ein häufiger Anwendungsfall ist das Lesen der Nummernschilder von Autos, die in eine Einfahrt einfahren oder auf einer Straße vorbeifahren."
     },
     "faceRecognition": {
       "readTheDocumentation": "Lies die Dokumentation",
@@ -151,11 +151,11 @@
         "desc": "Die Größe des für die Gesichtserkennung verwendeten Modells."
       },
       "title": "Gesichtserkennung",
-      "desc": "Mithilfe der Gesichtserkennung können Personen Namen zugewiesen werden. Sobald das Gesicht erkannt wird, weist Frigate den Namen der Person als Unterbezeichnung zu. Diese Informationen werden in die Benutzeroberfläche, Filter und Benachrichtigungen integriert."
+      "desc": "Mithilfe der Gesichtserkennung können Personen Namen zugewiesen werden. Sobald das Gesicht erkannt wird, weist BIS-IA den Namen der Person als Unterbezeichnung zu. Diese Informationen werden in die Benutzeroberfläche, Filter und Benachrichtigungen integriert."
     },
     "toast": {
       "error": "Sichern der Konfigurationsänderungen fehlgeschlagen: {{errorMessage}}",
-      "success": "Die Klassifizierungseinstellungen wurden gespeichert. Starten Sie Frigate neu, um die Änderungen zu übernehmen."
+      "success": "Die Klassifizierungseinstellungen wurden gespeichert. Starten Sie BIS-IA neu, um die Änderungen zu übernehmen."
     },
     "restart_required": "Neustart erforderlich (Klassifizierungseinstellungen geändert)",
     "unsavedChanges": "Nicht gespeicherte Änderungen der Klassifizierungseinstellungen"
@@ -163,7 +163,7 @@
   "camera": {
     "reviewClassification": {
       "toast": {
-        "success": "Die Konfiguration der Klassifizierung wurde gespeichert. Starte Frigate neu, um die Änderungen zu übernehmen."
+        "success": "Die Konfiguration der Klassifizierung wurde gespeichert. Starte BIS-IA neu, um die Änderungen zu übernehmen."
       },
       "title": "Überprüfung der Klassifikation",
       "selectAlertsZones": "Zonen für Warnungen auswählen",
@@ -172,7 +172,7 @@
       "noDefinedZones": "Für diese Kamera sind keine Zonen definiert.",
       "selectDetectionsZones": "Zonen für Erkennungen auswählen",
       "objectAlertsTips": "Alle {{alertsLabels}} -Objekte auf {{cameraName}} werden als Warnungen angezeigt.",
-      "desc": "Frigate kategorisiert Überprüfungselemente als Warnungen und Erkennungen. Standardmäßig werden alle Objekte vom Typ <em> Person </em> und <em> Auto </em> als Warnungen betrachtet. Sie können die Kategorisierung Ihrer Überprüfungselemente verfeinern, indem Sie die erforderlichen Zonen dafür konfigurieren.",
+      "desc": "BIS-IA kategorisiert Überprüfungselemente als Warnungen und Erkennungen. Standardmäßig werden alle Objekte vom Typ <em> Person </em> und <em> Auto </em> als Warnungen betrachtet. Sie können die Kategorisierung Ihrer Überprüfungselemente verfeinern, indem Sie die erforderlichen Zonen dafür konfigurieren.",
       "zoneObjectAlertsTips": "Alle {{alertsLabels}} Objekte, die in {{zone}} auf {{cameraName}} erkannt werden , werden als Warnungen angezeigt.",
       "objectDetectionsTips": "Alle {{detectionsLabels}} Objekte, die auf {{cameraName}} nicht kategorisiert sind, werden unabhängig von der Zone, in der sie sich befinden, als Erkennungen angezeigt.",
       "zoneObjectDetectionsTips": {
@@ -184,13 +184,13 @@
     },
     "streams": {
       "title": "Streams",
-      "desc": "Deaktiviere eine Kamera vorübergehend, bis Frigate neu gestartet wird. Das Deaktivieren einer Kamera stoppt die Verarbeitung der Streams dieser Kamera durch Frigate vollständig. Erkennung, Aufzeichnung und Debugging sind dann nicht mehr möglich.<br /> <em>Hinweis: Go2RTC-Restreams werden dadurch nicht deaktiviert.</em>"
+      "desc": "Deaktiviere eine Kamera vorübergehend, bis BIS-IA neu gestartet wird. Das Deaktivieren einer Kamera stoppt die Verarbeitung der Streams dieser Kamera durch BIS-IA vollständig. Erkennung, Aufzeichnung und Debugging sind dann nicht mehr möglich.<br /> <em>Hinweis: Go2RTC-Restreams werden dadurch nicht deaktiviert.</em>"
     },
     "review": {
       "title": "Überprüfung",
       "alerts": "Warnungen ",
       "detections": "Erkennungen ",
-      "desc": "Aktiviere/deaktiviere Benachrichtigungen und Erkennungen für diese Kamera vorübergehend, bis Frigate neu gestartet wird. Wenn deaktiviert, werden keine neuen Überprüfungseinträge erstellt. "
+      "desc": "Aktiviere/deaktiviere Benachrichtigungen und Erkennungen für diese Kamera vorübergehend, bis BIS-IA neu gestartet wird. Wenn deaktiviert, werden keine neuen Überprüfungseinträge erstellt. "
     },
     "title": "Kameraeinstellungen",
     "object_descriptions": {
@@ -320,7 +320,7 @@
         "lineCDistance": "Spur C Distanz ({{unit}})"
       },
       "label": "Zonen",
-      "documentTitle": "Zone bearbeiten - Frigate",
+      "documentTitle": "Zone bearbeiten - BIS-IA",
       "add": "Zone hinzufügen",
       "name": {
         "title": "Name",
@@ -358,7 +358,7 @@
         "documentation": "Dokumentation",
         "title": "Bewegungsmasken werden verwendet, um zu verhindern, dass unerwünschte Bewegungsarten eine Erkennung auslösen. Zu starkes Maskieren erschwert das Nachverfolgen von Objekten."
       },
-      "documentTitle": "Bewegungsmaske bearbeiten – Frigate",
+      "documentTitle": "Bewegungsmaske bearbeiten – BIS-IA",
       "context": {
         "documentation": "Lies die Dokumentation",
         "title": "Bewegungsmasken werden verwendet, um unerwünschte Bewegungen (z. B. Baumäste, Kamerazeitstempel) daran zu hindern, eine Erkennung auszulösen. Bewegungsmasken sollten <em>sehr sparsam</em> eingesetzt werden – zu starkes Maskieren erschwert das Nachverfolgen von Objekten."
@@ -384,7 +384,7 @@
     "restart_required": "Neustart erforderlich (Maske/Zone hat sich geändert)",
     "objectMasks": {
       "label": "Objektmasken",
-      "documentTitle": "Objektmaske bearbeiten – Frigate",
+      "documentTitle": "Objektmaske bearbeiten – BIS-IA",
       "toast": {
         "success": {
           "noName": "Objektmaske wurde gespeichert.",
@@ -445,7 +445,7 @@
       "desc": "Bewegungsmasken-Polygone anzeigen",
       "title": "Bewegungsmasken"
     },
-    "detectorDesc": "Frigate verwendet deine Detektoren ({{detectors}}), um Objekte im Videostream deiner Kamera zu erkennen.",
+    "detectorDesc": "BIS-IA verwendet deine Detektoren ({{detectors}}), um Objekte im Videostream deiner Kamera zu erkennen.",
     "debugging": "Fehlersuche",
     "objectList": "Objektliste",
     "noObjects": "Keine Objekte",
@@ -484,7 +484,7 @@
     },
     "desc": {
       "documentation": "Lies die Anleitung zur Bewegungsoptimierung",
-      "title": "Frigate verwendet die Bewegungserkennung als erste Überprüfung, um festzustellen, ob im Bildausschnitt etwas passiert, das eine Objekterkennung rechtfertigt."
+      "title": "BIS-IA verwendet die Bewegungserkennung als erste Überprüfung, um festzustellen, ob im Bildausschnitt etwas passiert, das eine Objekterkennung rechtfertigt."
     },
     "contourArea": {
       "title": "Konturfläche",
@@ -513,7 +513,7 @@
     "title": "Benutzer",
     "management": {
       "title": "Benutzerverwaltung",
-      "desc": "Verwalte die Benutzerkonten dieser Frigate-Instanz."
+      "desc": "Verwalte die Benutzerkonten dieser BIS-IA-Instanz."
     },
     "table": {
       "changeRole": "Benutzerrolle ändern",
@@ -591,7 +591,7 @@
       },
       "createUser": {
         "title": "Neuen Benutzer anlegen",
-        "desc": "Füge ein neues Benutzerkonto hinzu und lege eine Rolle für den Zugriff auf Bereiche der Frigate-Benutzeroberfläche fest.",
+        "desc": "Füge ein neues Benutzerkonto hinzu und lege eine Rolle für den Zugriff auf Bereiche der BIS-IA-Benutzeroberfläche fest.",
         "usernameOnlyInclude": "Der Benutzername darf nur Buchstaben, Zahlen, . oder _ enthalten",
         "confirmPassword": "Bitte bestätige dein Passwort"
       },
@@ -617,13 +617,13 @@
     },
     "notificationSettings": {
       "title": "Einstellungen für Benachrichtigungen",
-      "desc": "Frigate kann von Haus aus Push-Benachrichtigungen an ein Gerät senden, wenn es im Browser läuft oder als PWA installiert ist.",
+      "desc": "BIS-IA kann von Haus aus Push-Benachrichtigungen an ein Gerät senden, wenn es im Browser läuft oder als PWA installiert ist.",
       "documentation": "Lese die Dokumentation"
     },
     "title": "Benachrichtigungen",
     "notificationUnavailable": {
       "title": "Benachrichtigungen nicht verfügbar",
-      "desc": "Web Push Benachrichtigungen erfordern einen sicheren Kontext (<code>https://…</code>). Das ist eine Vorgabe des Browsers. Greife auf Frigate gesichert zu um Benachrichtigungen zu nutzen.",
+      "desc": "Web Push Benachrichtigungen erfordern einen sicheren Kontext (<code>https://…</code>). Das ist eine Vorgabe des Browsers. Greife auf BIS-IA gesichert zu um Benachrichtigungen zu nutzen.",
       "documentation": "Dokumentation lesen"
     },
     "cameras": {
@@ -645,7 +645,7 @@
         "registerFailed": "Speichern der Benachrichtigungsregistrierung fehlgeschlagen."
       },
       "success": {
-        "registered": "Erfolgreich für Benachrichtigungen registriert. Starte Frigate neu bevor Benachrichtigungen (inklusive Testbenachrichtigung) gesendet werden können.",
+        "registered": "Erfolgreich für Benachrichtigungen registriert. Starte BIS-IA neu bevor Benachrichtigungen (inklusive Testbenachrichtigung) gesendet werden können.",
         "settingSaved": "Benachrichtigungseinstellungen wurden gespeichert."
       }
     },
@@ -664,18 +664,18 @@
     "unsavedChanges": "Nicht gespeicherte Änderungen an den Benachrichtigungen",
     "unsavedRegistrations": "Nicht gespeicherte Benachrichtigungsanmeldungen"
   },
-  "frigatePlus": {
-    "title": "Frigate+ Einstellungen",
+  "bisiaPlus": {
+    "title": "BIS-IA+ Einstellungen",
     "apiKey": {
-      "title": "Frigate+ API Key",
-      "desc": "Der Frigate+ API Key aktiviert die Integration des Frigate+ Dienstes.",
-      "validated": "Frigate+ API Key erkannt und validiert",
-      "notValidated": "Frigate+ API Key nicht erkannt und validiert",
-      "plusLink": "Lese mehr zu Frigate+"
+      "title": "BIS-IA+ API Key",
+      "desc": "Der BIS-IA+ API Key aktiviert die Integration des BIS-IA+ Dienstes.",
+      "validated": "BIS-IA+ API Key erkannt und validiert",
+      "notValidated": "BIS-IA+ API Key nicht erkannt und validiert",
+      "plusLink": "Lese mehr zu BIS-IA+"
     },
     "snapshotConfig": {
-      "desc": "Für die Übermittlung an Frigate+ muss in der Konfiguration sowohl Snapshots als auch <code>clean_copy</code>-Snapshots aktiviert sein.",
-      "cleanCopyWarning": "Einige Kameras haben Snapshots aktiviert aber clean copy deaktiviert. Aktiviere <code>clean_copy</code> in der Snapshot Konfiguration um Bilder an Frigate+ zu senden.",
+      "desc": "Für die Übermittlung an BIS-IA+ muss in der Konfiguration sowohl Snapshots als auch <code>clean_copy</code>-Snapshots aktiviert sein.",
+      "cleanCopyWarning": "Einige Kameras haben Snapshots aktiviert aber clean copy deaktiviert. Aktiviere <code>clean_copy</code> in der Snapshot Konfiguration um Bilder an BIS-IA+ zu senden.",
       "documentation": "die Dokumentation lesen",
       "table": {
         "camera": "Kamera",
@@ -688,7 +688,7 @@
       "modelType": "Model Typ",
       "trainDate": "Trainings Datum",
       "supportedDetectors": "Unterstützte Detektoren",
-      "modelSelect": "Die verfügbaren Modelle auf Frigate+ können hier ausgewählt werden. Beachte, dass nur Modelle kompatibel mit deiner aktuellen Detektorkonfiguration zur Auswahl stehen.",
+      "modelSelect": "Die verfügbaren Modelle auf BIS-IA+ können hier ausgewählt werden. Beachte, dass nur Modelle kompatibel mit deiner aktuellen Detektorkonfiguration zur Auswahl stehen.",
       "plusModelType": {
         "baseModel": "Basis Model",
         "userModel": "Feinabgestimmt"
@@ -703,10 +703,10 @@
     },
     "toast": {
       "error": "Speichern der Konfigurationsänderungen fehlgeschlagen: {{errorMessage}}",
-      "success": "Frigate+ Einstellungen wurden gespeichert. Starte Frigate neu um Änderungen anzuwenden."
+      "success": "BIS-IA+ Einstellungen wurden gespeichert. Starte BIS-IA neu um Änderungen anzuwenden."
     },
-    "restart_required": "Neustart erforderlich (Frigate+ Model geändert)",
-    "unsavedChanges": "Nicht gespeicherte Änderungen an den Frigate+-Einstellungen"
+    "restart_required": "Neustart erforderlich (BIS-IA+ Model geändert)",
+    "unsavedChanges": "Nicht gespeicherte Änderungen an den BIS-IA+-Einstellungen"
   },
   "enrichments": {
     "birdClassification": {
@@ -739,12 +739,12 @@
         }
       },
       "title": "Semantische Suche",
-      "desc": "Die semantische Suche in Frigate ermöglicht es Ihnen, verfolgte Objekte innerhalb Ihrer Überprüfungselemente zu finden, indem Sie entweder das Bild selbst, eine benutzerdefinierte Textbeschreibung oder eine automatisch generierte Beschreibung verwenden.",
+      "desc": "Die semantische Suche in BIS-IA ermöglicht es Ihnen, verfolgte Objekte innerhalb Ihrer Überprüfungselemente zu finden, indem Sie entweder das Bild selbst, eine benutzerdefinierte Textbeschreibung oder eine automatisch generierte Beschreibung verwenden.",
       "readTheDocumentation": "Lies die Dokumentation"
     },
     "faceRecognition": {
       "title": "Gesichtserkennung",
-      "desc": "Die Gesichtserkennung ermöglicht es, Personen Namen zuzuweisen. Wenn ein Gesicht erkannt wird, ordnet Frigate den Namen der Person als Untertitel zu. Diese Informationen sind in der Benutzeroberfläche, den Filtern und in den Benachrichtigungen enthalten.",
+      "desc": "Die Gesichtserkennung ermöglicht es, Personen Namen zuzuweisen. Wenn ein Gesicht erkannt wird, ordnet BIS-IA den Namen der Person als Untertitel zu. Diese Informationen sind in der Benutzeroberfläche, den Filtern und in den Benachrichtigungen enthalten.",
       "readTheDocumentation": "Lies die Dokumentation",
       "modelSize": {
         "label": "Modellgröße",
@@ -761,12 +761,12 @@
     },
     "licensePlateRecognition": {
       "title": "Kennzeichenerkennung",
-      "desc": "Frigate kann Kennzeichen an Fahrzeugen erkennen und die erkannten Zeichen automatisch in das Feld recognized_license_plate oder einen bekannten Namen als sub_label zu Objekten vom Typ car hinzufügen. Ein häufiger Anwendungsfall ist das Lesen der Kennzeichen von Autos, die in eine Einfahrt einfahren oder auf einer Straße vorbeifahren.",
+      "desc": "BIS-IA kann Kennzeichen an Fahrzeugen erkennen und die erkannten Zeichen automatisch in das Feld recognized_license_plate oder einen bekannten Namen als sub_label zu Objekten vom Typ car hinzufügen. Ein häufiger Anwendungsfall ist das Lesen der Kennzeichen von Autos, die in eine Einfahrt einfahren oder auf einer Straße vorbeifahren.",
       "readTheDocumentation": "Lies die Dokumentation"
     },
     "restart_required": "Neustart erforderlich (Verbesserungseinstellungen geändert)",
     "toast": {
-      "success": "Die Einstellungen für die Verbesserungen wurden gespeichert. Starten Sie Frigate neu, um Ihre Änderungen zu übernehmen.",
+      "success": "Die Einstellungen für die Verbesserungen wurden gespeichert. Starten Sie BIS-IA neu, um Ihre Änderungen zu übernehmen.",
       "error": "Konfigurationsänderungen konnten nicht gespeichert werden: {{errorMessage}}"
     }
   },
@@ -851,7 +851,7 @@
         },
         "actions": {
           "title": "Aktionen",
-          "desc": "Standardmäßig sendet Frigate für alle Trigger eine MQTT-Nachricht. Unterbezeichnungen fügen den Triggernamen zur Objektbezeichnung hinzu. Attribute sind durchsuchbare Metadaten, die separat in den Metadaten des verfolgten Objekts gespeichert werden.",
+          "desc": "Standardmäßig sendet BIS-IA für alle Trigger eine MQTT-Nachricht. Unterbezeichnungen fügen den Triggernamen zur Objektbezeichnung hinzu. Attribute sind durchsuchbare Metadaten, die separat in den Metadaten des verfolgten Objekts gespeichert werden.",
           "error": {
             "min": "Mindesten eine Aktion muss ausgewählt sein."
           }
@@ -931,7 +931,7 @@
     },
     "management": {
       "title": "Zuschauer Rollenverwaltung",
-      "desc": "Verwalten Sie benutzerdefinierte Zuschauerrollen und ihre Kamerazugriffsberechtigungen für diese Frigate-Instanz."
+      "desc": "Verwalten Sie benutzerdefinierte Zuschauerrollen und ihre Kamerazugriffsberechtigungen für diese BIS-IA-Instanz."
     },
     "addRole": "Rolle hinzufügen",
     "table": {
@@ -960,7 +960,7 @@
   },
   "cameraWizard": {
     "title": "Kamera hinzufügen",
-    "description": "Folge den Anweisungen unten, um eine neue Kamera zu deiner Frigate-Installation hinzuzufügen.",
+    "description": "Folge den Anweisungen unten, um eine neue Kamera zu deiner BIS-IA-Installation hinzuzufügen.",
     "steps": {
       "nameAndConnection": "Name & Verbindung",
       "streamConfiguration": "Stream Konfiguration",
@@ -1017,7 +1017,7 @@
         "customUrlRtspRequired": "Benutzerdefinierte URLs müssen mit „rtsp://“ beginnen. Für Nicht-RTSP-Kamerastreams ist eine manuelle Konfiguration erforderlich."
       },
       "docs": {
-        "reolink": "https://docs.frigate.video/configuration/camera_specific.html#reolink-cameras"
+        "reolink": "https://docs.bisia.video/configuration/camera_specific.html#reolink-cameras"
       },
       "connectionSettings": "Verbindungseinstellungen",
       "detectionMethod": "Stream Erkennungsmethode",
@@ -1196,7 +1196,7 @@
       "estimatedBandwidth": "Voraussichtliche Bandbreite",
       "roles": "Rollen",
       "ffmpegModule": "Stream-Kompatibilitätsmodus verwenden",
-      "ffmpegModuleDescription": "Wenn der Stream nach mehreren Versuchen nicht geladen wird, versuchen Sie, diese Option zu aktivieren. Wenn diese Option aktiviert ist, verwendet Frigate das ffmpeg-Modul mit go2rtc. Dies kann zu einer besseren Kompatibilität mit einigen Kamerastreams führen.",
+      "ffmpegModuleDescription": "Wenn der Stream nach mehreren Versuchen nicht geladen wird, versuchen Sie, diese Option zu aktivieren. Wenn diese Option aktiviert ist, verwendet BIS-IA das ffmpeg-Modul mit go2rtc. Dies kann zu einer besseren Kompatibilität mit einigen Kamerastreams führen.",
       "none": "keiner",
       "error": "Fehler",
       "streamValidated": "Steam {{number}} erfolgreich validiert",
@@ -1234,7 +1234,7 @@
     "backToSettings": "Zurück zu Kameraeinstellungen",
     "streams": {
       "title": "Kameras aktivieren / deaktivieren",
-      "desc": "Deaktiviere eine Kamera vorübergehend, bis Frigate neu gestartet wird. Deaktivierung einer Kamera stoppt die Verarbeitung der Streams dieser Kamera durch Frigate vollständig. Erkennung, Aufzeichnung und Debugging sind dann nicht mehr verfügbar. <br /> <em>Hinweis: Dies deaktiviert nicht die go2rtc restreams.</em>"
+      "desc": "Deaktiviere eine Kamera vorübergehend, bis BIS-IA neu gestartet wird. Deaktivierung einer Kamera stoppt die Verarbeitung der Streams dieser Kamera durch BIS-IA vollständig. Erkennung, Aufzeichnung und Debugging sind dann nicht mehr verfügbar. <br /> <em>Hinweis: Dies deaktiviert nicht die go2rtc restreams.</em>"
     },
     "cameraConfig": {
       "add": "Kamera hinzufügen",
@@ -1274,17 +1274,17 @@
     },
     "review_descriptions": {
       "title": "Generative KI Review Beschreibungen",
-      "desc": "Aktivieren/deaktivieren Sie vorübergehend die generativen KI-Überprüfungsbeschreibungen für diese Kamera, bis Frigate neu gestartet wird. Wenn diese Option deaktiviert ist, werden für Überprüfungselemente auf dieser Kamera keine KI-generierten Beschreibungen angefordert."
+      "desc": "Aktivieren/deaktivieren Sie vorübergehend die generativen KI-Überprüfungsbeschreibungen für diese Kamera, bis BIS-IA neu gestartet wird. Wenn diese Option deaktiviert ist, werden für Überprüfungselemente auf dieser Kamera keine KI-generierten Beschreibungen angefordert."
     },
     "review": {
       "title": "Überprüfung",
-      "desc": "Aktivieren/deaktivieren Sie vorübergehend Warnmeldungen und Erkennungen für diese Kamera, bis Frigate neu gestartet wird. Wenn diese Funktion deaktiviert ist, werden keine neuen Überprüfungselemente generiert. ",
+      "desc": "Aktivieren/deaktivieren Sie vorübergehend Warnmeldungen und Erkennungen für diese Kamera, bis BIS-IA neu gestartet wird. Wenn diese Funktion deaktiviert ist, werden keine neuen Überprüfungselemente generiert. ",
       "alerts": "Warnungen ",
       "detections": "Erkennungen "
     },
     "reviewClassification": {
       "title": "Bewertungsklassifizierung",
-      "desc": "Frigate kategorisiert zu überprüfende Elemente als Warnmeldungen und Erkennungen. Standardmäßig werden alle Objekte vom Typ <em>Person</em> und <em>Auto</em> als Warnmeldungen betrachtet. Sie können die Kategorisierung der zu überprüfenden Elemente verfeinern, indem Sie die erforderlichen Zonen für sie konfigurieren.",
+      "desc": "BIS-IA kategorisiert zu überprüfende Elemente als Warnmeldungen und Erkennungen. Standardmäßig werden alle Objekte vom Typ <em>Person</em> und <em>Auto</em> als Warnmeldungen betrachtet. Sie können die Kategorisierung der zu überprüfenden Elemente verfeinern, indem Sie die erforderlichen Zonen für sie konfigurieren.",
       "noDefinedZones": "Für diese Kamera sind keine Zonen definiert.",
       "objectAlertsTips": "Alle {{alertsLabels}}-Objekte auf {{cameraName}} werden als Warnmeldungen angezeigt.",
       "zoneObjectAlertsTips": "Alle {{alertsLabels}}-Objekte, die in {{zone}} auf {{cameraName}} erkannt wurden, werden als Warnmeldungen angezeigt.",
@@ -1299,7 +1299,7 @@
       "selectDetectionsZones": "Zonen für Erkennungen auswählen",
       "limitDetections": "Erkennungen auf bestimmte Zonen beschränken",
       "toast": {
-        "success": "Die Konfiguration der Bewertungsklassifizierung wurde gespeichert. Starten Sie Frigate neu, um die Änderungen zu übernehmen."
+        "success": "Die Konfiguration der Bewertungsklassifizierung wurde gespeichert. Starten Sie BIS-IA neu, um die Änderungen zu übernehmen."
       }
     }
   }

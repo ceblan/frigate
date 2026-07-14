@@ -3,53 +3,53 @@ id: memory
 title: Memory Usage
 ---
 
-Frigate includes built-in memory profiling using [memray](https://bloomberg.github.io/memray/) to help diagnose memory issues. This feature allows you to profile specific Frigate modules to identify memory leaks, excessive allocations, or other memory-related problems.
+BIS-IA includes built-in memory profiling using [memray](https://bloomberg.github.io/memray/) to help diagnose memory issues. This feature allows you to profile specific BIS-IA modules to identify memory leaks, excessive allocations, or other memory-related problems.
 
 ## Enabling Memory Profiling
 
-Memory profiling is controlled via the `FRIGATE_MEMRAY_MODULES` environment variable. Set it to a comma-separated list of module names you want to profile:
+Memory profiling is controlled via the `BIS_IA_MEMRAY_MODULES` environment variable. Set it to a comma-separated list of module names you want to profile:
 
 ```yaml
 # docker-compose example
 services:
-  frigate:
+  bisia:
     ...
     environment:
-      - FRIGATE_MEMRAY_MODULES=frigate.embeddings,frigate.capture
+      - BIS_IA_MEMRAY_MODULES=bisia.embeddings,bisia.capture
 ```
 
 ```bash
 # docker run example
-docker run -e FRIGATE_MEMRAY_MODULES="frigate.embeddings" \
+docker run -e BIS_IA_MEMRAY_MODULES="bisia.embeddings" \
    ...
-   --name frigate <frigate_image>
+   --name bisia <bisia_image>
 ```
 
 ### Module Names
 
-Frigate processes are named using a module-based naming scheme. Common module names include:
+BIS-IA processes are named using a module-based naming scheme. Common module names include:
 
-- `frigate.review_segment_manager` - Review segment processing
-- `frigate.recording_manager` - Recording management
-- `frigate.capture` - Camera capture processes (all cameras with this module name)
-- `frigate.process` - Camera processing/tracking (all cameras with this module name)
-- `frigate.output` - Output processing
-- `frigate.audio_manager` - Audio processing
-- `frigate.embeddings` - Embeddings processing
+- `bisia.review_segment_manager` - Review segment processing
+- `bisia.recording_manager` - Recording management
+- `bisia.capture` - Camera capture processes (all cameras with this module name)
+- `bisia.process` - Camera processing/tracking (all cameras with this module name)
+- `bisia.output` - Output processing
+- `bisia.audio_manager` - Audio processing
+- `bisia.embeddings` - Embeddings processing
 
 You can also specify the full process name (including camera-specific identifiers) if you want to profile a specific camera:
 
 ```bash
-FRIGATE_MEMRAY_MODULES=frigate.capture:front_door
+BIS_IA_MEMRAY_MODULES=bisia.capture:front_door
 ```
 
-When you specify a module name (e.g., `frigate.capture`), all processes with that module prefix will be profiled. For example, `frigate.capture` will profile all camera capture processes.
+When you specify a module name (e.g., `bisia.capture`), all processes with that module prefix will be profiled. For example, `bisia.capture` will profile all camera capture processes.
 
 ## How It Works
 
 1. **Binary File Creation**: When profiling is enabled, memray creates a binary file (`.bin`) in `/config/memray_reports/` that is updated continuously in real-time as the process runs.
 
-2. **Automatic HTML Generation**: On normal process exit, Frigate automatically:
+2. **Automatic HTML Generation**: On normal process exit, BIS-IA automatically:
 
    - Stops memray tracking
    - Generates an HTML flamegraph report
@@ -67,10 +67,10 @@ After a process exits normally, you'll find HTML reports in `/config/memray_repo
 
 If a process crashes or you want to generate a report from an existing binary file, you can manually create the HTML report:
 
-- Run `memray` inside the Frigate container:
+- Run `memray` inside the BIS-IA container:
 
 ```bash
-docker-compose exec frigate memray flamegraph /config/memray_reports/<module_name>.bin
+docker-compose exec bisia memray flamegraph /config/memray_reports/<module_name>.bin
 # or
 docker exec -it <container_name_or_id> memray flamegraph /config/memray_reports/<module_name>.bin
 ```
@@ -128,7 +128,7 @@ The interactive HTML reports allow you to:
 ### Reports Show No Data
 
 - Ensure the process ran long enough to generate meaningful data
-- Check that memray is properly installed (included by default in Frigate)
+- Check that memray is properly installed (included by default in BIS-IA)
 - Verify the process actually started and ran (check process logs)
 
 For more information about memray and interpreting reports, see the [official memray documentation](https://bloomberg.github.io/memray/).

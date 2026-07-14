@@ -27,9 +27,9 @@
   },
   "allCameras": "Alle kameraer",
   "timeline.aria": "Velg tidslinje",
-  "documentTitle": "Inspeksjon - Frigate",
+  "documentTitle": "Inspeksjon - BIS-IA",
   "recordings": {
-    "documentTitle": "Opptak - Frigate"
+    "documentTitle": "Opptak - BIS-IA"
   },
   "calendarFilter": {
     "last24Hours": "Siste 24 timer"

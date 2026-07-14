@@ -3,7 +3,7 @@ id: glossary
 title: Glossary
 ---
 
-The glossary explains terms commonly used in Frigate's documentation.
+The glossary explains terms commonly used in BIS-IA's documentation.
 
 ## Bounding Box
 
@@ -22,11 +22,11 @@ An incorrect detection of an object type. For example a dog being detected as a 
 
 ## Mask
 
-There are two types of masks in Frigate. [See the mask docs for more info](/configuration/masks)
+There are two types of masks in BIS-IA. [See the mask docs for more info](/configuration/masks)
 
 ### Motion Mask
 
-Motion masks prevent detection of [motion](#motion) in masked areas from triggering Frigate to run object detection, but do not prevent objects from being detected if object detection runs due to motion in nearby areas. For example: camera timestamps, skies, the tops of trees, etc.
+Motion masks prevent detection of [motion](#motion) in masked areas from triggering BIS-IA to run object detection, but do not prevent objects from being detected if object detection runs due to motion in nearby areas. For example: camera timestamps, skies, the tops of trees, etc.
 
 ### Object Mask
 
@@ -66,4 +66,4 @@ The time period starting when a tracked object entered the frame and ending when
 
 ## Zone
 
-Zones are areas of interest, zones can be used for notifications and for limiting the areas where Frigate will create a [review item](#review-item). [See the zone docs for more info](/configuration/zones)
+Zones are areas of interest, zones can be used for notifications and for limiting the areas where BIS-IA will create a [review item](#review-item). [See the zone docs for more info](/configuration/zones)

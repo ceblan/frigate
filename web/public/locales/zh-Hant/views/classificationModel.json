@@ -15,7 +15,7 @@
       "deleteCategoryFailed": "刪除分類標籤失敗: {{errorMessage}}",
       "deleteModelFailed": "刪除模型失敗: {{errorMessage}}",
       "categorizeFailed": "圖片分類失敗: {{errorMessage}}",
-      "trainingFailed": "模型訓練失敗。請至Frigate 日誌查看詳情。",
+      "trainingFailed": "模型訓練失敗。請至BIS-IA 日誌查看詳情。",
       "trainingFailedToStart": "模型訓練啟動失敗: {{errorMessage}}",
       "updateModelFailed": "模型更新失敗: {{errorMessage}}",
       "renameCategoryFailed": "類別重新命名失敗: {{errorMessage}}"

@@ -1,8 +1,8 @@
 {
   "noRecordingsFoundForThisTime": "Ebben az időpontban nem található felvétel",
   "noPreviewFound": "Nincs elérhető előkép",
-  "submitFrigatePlus": {
-    "title": "Elküldi ezt a képet a Frigate+-nak?",
+  "submitBisiaPlus": {
+    "title": "Elküldi ezt a képet a BIS-IA+-nak?",
     "submit": "Küldés"
   },
   "noPreviewFoundFor": "Nem található előnézet {{cameraName}}-hoz/-hez/-höz",
@@ -42,10 +42,10 @@
   },
   "toast": {
     "error": {
-      "submitFrigatePlusFailed": "Kép küldése a Frigate+-hoz meghiúsult"
+      "submitBisiaPlusFailed": "Kép küldése a BIS-IA+-hoz meghiúsult"
     },
     "success": {
-      "submittedFrigatePlus": "Kép sikeresen elküldve a Frigate+-nak"
+      "submittedBisiaPlus": "Kép sikeresen elküldve a BIS-IA+-nak"
     }
   }
 }

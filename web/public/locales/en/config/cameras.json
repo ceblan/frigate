@@ -5,7 +5,7 @@
       "label": "Camera name."
     },
     "friendly_name": {
-      "label": "Camera friendly name used in the Frigate UI."
+      "label": "Camera friendly name used in the BIS-IA UI."
     },
     "enabled": {
       "label": "Enable camera."
@@ -655,7 +655,7 @@
               "label": "Enable PTZ object autotracking."
             },
             "calibrate_on_startup": {
-              "label": "Perform a camera calibration when Frigate starts."
+              "label": "Perform a camera calibration when BIS-IA starts."
             },
             "zooming": {
               "label": "Autotracker zooming mode."
@@ -698,7 +698,7 @@
           "label": "Order of camera in UI."
         },
         "dashboard": {
-          "label": "Show this camera in Frigate dashboard UI."
+          "label": "Show this camera in BIS-IA dashboard UI."
         }
       }
     },

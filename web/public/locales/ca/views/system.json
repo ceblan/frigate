@@ -1,14 +1,14 @@
 {
   "documentTitle": {
-    "cameras": "Estadístiques de càmera - Frigate",
-    "storage": "Estadístiques d'emmagatzematge - Frigate",
-    "general": "Estadístiques generals - Frigate",
+    "cameras": "Estadístiques de càmera - BIS-IA",
+    "storage": "Estadístiques d'emmagatzematge - BIS-IA",
+    "general": "Estadístiques generals - BIS-IA",
     "logs": {
-      "frigate": "Registres de Frigate - Frigate",
-      "go2rtc": "Registres de Go2RTC - Frigate",
-      "nginx": "Registres de Nginix - Frigate"
+      "bisia": "Registres de BIS-IA - BIS-IA",
+      "go2rtc": "Registres de Go2RTC - BIS-IA",
+      "nginx": "Registres de Nginix - BIS-IA"
     },
-    "enrichments": "Estadístiques complementàries - Frigate"
+    "enrichments": "Estadístiques complementàries - BIS-IA"
   },
   "title": "Sistema",
   "metrics": "Mètriques del sistema",
@@ -101,7 +101,7 @@
     "recordings": {
       "title": "Gravacions",
       "earliestRecording": "Gravació més antiga disponible:",
-      "tips": "Aquest valor representa l'emmagatzematge total utilitzat per les gravacions a la base de dades de Frigate. Frigate no registre l'ús de tots els arxius del disc."
+      "tips": "Aquest valor representa l'emmagatzematge total utilitzat per les gravacions a la base de dades de BIS-IA. BIS-IA no registre l'ús de tots els arxius del disc."
     },
     "cameraStorage": {
       "camera": "Càmera",
@@ -111,7 +111,7 @@
       "title": "Emmagatzematge de càmera",
       "unused": {
         "title": "Sense utilitzar",
-        "tips": "Aquest valor pot no de forma exacta representar l'espai lliure disponible a Frigate si tens altres fitxers emmagatzemats en la vostra unitat més enllà dels registres de Frigate. Frigate no rastreja l'ús d'emmagatzematge extern als seus registres."
+        "tips": "Aquest valor pot no de forma exacta representar l'espai lliure disponible a BIS-IA si tens altres fitxers emmagatzemats en la vostra unitat més enllà dels registres de BIS-IA. BIS-IA no rastreja l'ús d'emmagatzematge extern als seus registres."
       },
       "percentageOfTotalUsed": "Percentatge del total"
     },

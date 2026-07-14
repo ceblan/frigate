@@ -1,5 +1,5 @@
 {
-  "documentTitle": "Notikumu meklēšana - Frigate",
+  "documentTitle": "Notikumu meklēšana - BIS-IA",
   "generativeAI": "Ģeneratīvs AI",
   "exploreMore": "Paskatīt vairāk objektu{{label}}",
   "details": {
@@ -20,8 +20,8 @@
       "aria": "Atrast līdzīgus izsekotos priekšmetus"
     },
     "submitToPlus": {
-      "label": "Iesniegt Frigate+",
-      "aria": "Iesniegt Frigate Plus"
+      "label": "Iesniegt BIS-IA+",
+      "aria": "Iesniegt BIS-IA Plus"
     },
     "viewInHistory": {
       "label": "Atrast vēsturē"

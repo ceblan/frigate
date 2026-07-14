@@ -2,17 +2,17 @@
   "restart": {
     "button": "Starta om",
     "restarting": {
-      "title": "Frigate startar om",
+      "title": "BIS-IA startar om",
       "content": "Sidan uppdateras om {{countdown}} sekunder.",
       "button": "Tvinga omladdning nu"
     },
-    "title": "Är du säker på att du vill starta om Frigate?",
-    "description": "Detta kommer att stoppa Frigate kort medan det startar om."
+    "title": "Är du säker på att du vill starta om BIS-IA?",
+    "description": "Detta kommer att stoppa BIS-IA kort medan det startar om."
   },
   "explore": {
     "plus": {
       "submitToPlus": {
-        "label": "Skicka till Frigate+",
+        "label": "Skicka till BIS-IA+",
         "desc": "Objekt på platser du vill undvika är inte falska positiva resultat. Att skicka in dem som falska positiva resultat kommer att förvirra modellen."
       },
       "review": {
@@ -20,7 +20,7 @@
           "ask_a": "Är detta objektet <code>{{label}}</code>?",
           "ask_an": "Är detta objektet en <code>{{label}}</code>?",
           "ask_full": "Är detta objektet <code>{{untranslatedLabel}}</code> ({{translatedLabel}})?",
-          "label": "Bekräfta denna etikett för Frigate Plus"
+          "label": "Bekräfta denna etikett för BIS-IA Plus"
         },
         "state": {
           "submitted": "Inskickad"

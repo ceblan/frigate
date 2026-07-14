@@ -35,7 +35,7 @@ import RolesView from "@/views/settings/RolesView";
 import NotificationView from "@/views/settings/NotificationsSettingsView";
 import EnrichmentsSettingsView from "@/views/settings/EnrichmentsSettingsView";
 import UiSettingsView from "@/views/settings/UiSettingsView";
-import FrigatePlusSettingsView from "@/views/settings/FrigatePlusSettingsView";
+import BisiaPlusSettingsView from "@/views/settings/BisiaPlusSettingsView";
 import { useSearchEffect } from "@/hooks/use-overlay-state";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useInitialCameraState } from "@/api/ws";
@@ -80,7 +80,7 @@ const allSettingsViews = [
   "users",
   "roles",
   "notifications",
-  "frigateplus",
+  "bisiaPlus",
 ] as const;
 type SettingsType = (typeof allSettingsViews)[number];
 
@@ -117,8 +117,8 @@ const settingsGroups = [
     ],
   },
   {
-    label: "frigateplus",
-    items: [{ key: "frigateplus", component: FrigatePlusSettingsView }],
+    label: "bisiaPlus",
+    items: [{ key: "bisiaPlus", component: BisiaPlusSettingsView }],
   },
 ];
 

@@ -1,8 +1,8 @@
 {
-  "documentTitle": "Konfigurācijas rediģēšana - Frigate",
+  "documentTitle": "Konfigurācijas rediģēšana - BIS-IA",
   "configEditor": "Konfigurācijas redaktors",
   "safeConfigEditor": "Konfigurācijas redaktors (drošais režīms)",
-  "safeModeDescription": "Frigate ir drošajā režīmā konfigurācijas pārbaudes kļūdas dēļ.",
+  "safeModeDescription": "BIS-IA ir drošajā režīmā konfigurācijas pārbaudes kļūdas dēļ.",
   "copyConfig": "Kopēt konfigurāciju",
   "saveAndRestart": "Saglabāt un pārstartēt",
   "saveOnly": "Tikai saglabāt",

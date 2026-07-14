@@ -2,8 +2,8 @@
   "noRecordingsFoundForThisTime": "Δεν βρέθηκαν εγγραφές για αυτήν την ώρα",
   "noPreviewFound": "Δεν βρέθηκε προεπισκόπηση",
   "noPreviewFoundFor": "Δεν βρέθηκε προεπισκόπηση για {{cameraName}}",
-  "submitFrigatePlus": {
-    "title": "Να υποβληθεί αυτό το καρέ στο Frigate+;",
+  "submitBisiaPlus": {
+    "title": "Να υποβληθεί αυτό το καρέ στο BIS-IA+;",
     "submit": "Υποβολή"
   },
   "livePlayerRequiredIOSVersion": "iOS 17.1 ή μεγαλύτερο χρειάζεται για αυτό τον τύπο του live stream.",
@@ -42,10 +42,10 @@
   },
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Επιτυχής αποστολή εικόνας στο Frigate+"
+      "submittedBisiaPlus": "Επιτυχής αποστολή εικόνας στο BIS-IA+"
     },
     "error": {
-      "submitFrigatePlusFailed": "Αποτυχία αποστολής εικόνας στο Frigate+"
+      "submitBisiaPlusFailed": "Αποτυχία αποστολής εικόνας στο BIS-IA+"
     }
   }
 }

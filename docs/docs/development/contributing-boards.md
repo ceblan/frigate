@@ -5,9 +5,9 @@ title: Community Supported Boards
 
 ## About Community Supported Boards
 
-There are many SBCs (small board computers) that have a passionate community behind them, Jetson Nano for example. These SBCs often have dedicated hardware that can greatly accelerate Frigate's AI and video workloads, but this hardware requires very specific frameworks for interfacing with it.
+There are many SBCs (small board computers) that have a passionate community behind them, Jetson Nano for example. These SBCs often have dedicated hardware that can greatly accelerate BIS-IA's AI and video workloads, but this hardware requires very specific frameworks for interfacing with it.
 
-This means it would be very difficult for Frigate's maintainers to support these different boards especially given the relatively low userbase.
+This means it would be very difficult for BIS-IA's maintainers to support these different boards especially given the relatively low userbase.
 
 The community support boards framework allows a user in the community to be the codeowner to add support for an SBC or other detector by providing the code, maintenance, and user support.
 
@@ -33,7 +33,7 @@ The `board.mk` file is what allows automated and configurable Make targets to be
 BOARDS += board # Replace `board` with the board suffix ex: rpi
 
 local-rpi: version
-	docker buildx bake --load --file=docker/board/board.hcl --set board.tags=frigate:latest-board bake-target # Replace `board` with the board suffix ex: rpi. Bake target is the target in the board.hcl file ex: board
+	docker buildx bake --load --file=docker/board/board.hcl --set board.tags=bisia:latest-board bake-target # Replace `board` with the board suffix ex: rpi. Bake target is the target in the board.hcl file ex: board
 
 build-rpi: version
 	docker buildx bake --file=docker/board/board.hcl --set board.tags=$(IMAGE_REPO):${GITHUB_REF_NAME}-$(COMMIT_HASH)-board bake-target # Replace `board` with the board suffix ex: rpi. Bake target is the target in the board.hcl file ex: board
@@ -59,9 +59,9 @@ FROM deps AS board-deps
 # to the board
 
 # set workdir
-WORKDIR /opt/frigate/
+WORKDIR /opt/bisia/
 
-# copies base files from the main frigate build
+# copies base files from the main bisia build
 COPY --from=rootfs / /
 ```
 
@@ -69,7 +69,7 @@ COPY --from=rootfs / /
 
 ### CI/CD
 
-The images for each board will be built for each Frigate release, this is done in the `.github/workflows/ci.yml` file. The board build workflow will need to be added here.
+The images for each board will be built for each BIS-IA release, this is done in the `.github/workflows/ci.yml` file. The board build workflow will need to be added here.
 
 ```yml
 - name: Build and push board build

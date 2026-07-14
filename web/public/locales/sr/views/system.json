@@ -1,13 +1,13 @@
 {
   "documentTitle": {
-    "cameras": "Statusi kamera - Frigate",
-    "storage": "Statistika skladištenja - Frigate",
+    "cameras": "Statusi kamera - BIS-IA",
+    "storage": "Statistika skladištenja - BIS-IA",
     "general": "Општа статистика - Фригејт",
-    "enrichments": "Statistika obogaćivanja - Frigate",
+    "enrichments": "Statistika obogaćivanja - BIS-IA",
     "logs": {
-      "frigate": "Frigate logovi - Frigate",
-      "go2rtc": "Go2RTC dnevnici - Frigate",
-      "nginx": "Nginx logovi - Frigate"
+      "bisia": "BIS-IA logovi - BIS-IA",
+      "go2rtc": "Go2RTC dnevnici - BIS-IA",
+      "nginx": "Nginx logovi - BIS-IA"
     }
   },
   "title": "Sistem",

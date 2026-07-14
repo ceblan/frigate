@@ -3,7 +3,7 @@ id: audio_detectors
 title: Audio Detectors
 ---
 
-Frigate provides a builtin audio detector which runs on the CPU. Compared to object detection in images, audio detection is a relatively lightweight operation so the only option is to run the detection on a CPU.
+BIS-IA provides a builtin audio detector which runs on the CPU. Compared to object detection in images, audio detection is a relatively lightweight operation so the only option is to run the detection on a CPU.
 
 ## Configuration
 
@@ -50,7 +50,7 @@ cameras:
 
 ### Configuring Minimum Volume
 
-The audio detector uses volume levels in the same way that motion in a camera feed is used for object detection. This means that Frigate will not run audio detection unless the audio volume is above the configured level in order to reduce resource usage. Audio levels can vary widely between camera models so it is important to run tests to see what volume levels are. The Debug view in the Frigate UI has an Audio tab for cameras that have the `audio` role assigned where a graph and the current levels are is displayed. The `min_volume` parameter should be set to the minimum the `RMS` level required to run audio detection.
+The audio detector uses volume levels in the same way that motion in a camera feed is used for object detection. This means that BIS-IA will not run audio detection unless the audio volume is above the configured level in order to reduce resource usage. Audio levels can vary widely between camera models so it is important to run tests to see what volume levels are. The Debug view in the BIS-IA UI has an Audio tab for cameras that have the `audio` role assigned where a graph and the current levels are is displayed. The `min_volume` parameter should be set to the minimum the `RMS` level required to run audio detection.
 
 :::tip
 
@@ -60,7 +60,7 @@ Volume is considered motion for recordings, this means when the `record -> retai
 
 ### Configuring Audio Events
 
-The included audio model has over [500 different types](https://github.com/blakeblackshear/frigate/blob/dev/audio-labelmap.txt) of audio that can be detected, many of which are not practical. By default `bark`, `fire_alarm`, `scream`, `speech`, and `yell` are enabled but these can be customized.
+The included audio model has over [500 different types](https://github.com/blakeblackshear/bisia/blob/dev/audio-labelmap.txt) of audio that can be detected, many of which are not practical. By default `bark`, `fire_alarm`, `scream`, `speech`, and `yell` are enabled but these can be customized.
 
 ```yaml
 audio:
@@ -75,7 +75,7 @@ audio:
 
 ### Audio Transcription
 
-Frigate supports fully local audio transcription using either `sherpa-onnx` or OpenAI’s open-source Whisper models via `faster-whisper`. The goal of this feature is to support Semantic Search for `speech` audio events. Frigate is not intended to act as a continuous, fully-automatic speech transcription service — automatically transcribing all speech (or queuing many audio events for transcription) requires substantial CPU (or GPU) resources and is impractical on most systems. For this reason, transcriptions for events are initiated manually from the UI or the API rather than being run continuously in the background.
+BIS-IA supports fully local audio transcription using either `sherpa-onnx` or OpenAI’s open-source Whisper models via `faster-whisper`. The goal of this feature is to support Semantic Search for `speech` audio events. BIS-IA is not intended to act as a continuous, fully-automatic speech transcription service — automatically transcribing all speech (or queuing many audio events for transcription) requires substantial CPU (or GPU) resources and is impractical on most systems. For this reason, transcriptions for events are initiated manually from the UI or the API rather than being run continuously in the background.
 
 Transcription accuracy also depends heavily on the quality of your camera's microphone and recording conditions. Many cameras use inexpensive microphones, and distance to the speaker, low audio bitrate, or background noise can significantly reduce transcription quality. If you need higher accuracy, more robust long-running queues, or large-scale automatic transcription, consider using the HTTP API in combination with an automation platform and a cloud transcription service.
 
@@ -128,7 +128,7 @@ The only field that is valid at the camera level is `enabled`.
 
 #### Live transcription
 
-The single camera Live view in the Frigate UI supports live transcription of audio for streams defined with the `audio` role. Use the Enable/Disable Live Audio Transcription button/switch to toggle transcription processing. When speech is heard, the UI will display a black box over the top of the camera stream with text. The MQTT topic `frigate/<camera_name>/audio/transcription` will also be updated in real-time with transcribed text.
+The single camera Live view in the BIS-IA UI supports live transcription of audio for streams defined with the `audio` role. Use the Enable/Disable Live Audio Transcription button/switch to toggle transcription processing. When speech is heard, the UI will display a black box over the top of the camera stream with text. The MQTT topic `bisia/<camera_name>/audio/transcription` will also be updated in real-time with transcribed text.
 
 Results can be error-prone due to a number of factors, including:
 
@@ -152,7 +152,7 @@ The transcribed/translated speech will appear in the description box in the Trac
 
 :::note
 
-Only one `speech` event may be transcribed at a time. Frigate does not automatically transcribe `speech` events or implement a queue for long-running transcription model inference.
+Only one `speech` event may be transcribed at a time. BIS-IA does not automatically transcribe `speech` events or implement a queue for long-running transcription model inference.
 
 :::
 
@@ -160,18 +160,18 @@ Recorded `speech` events will always use a `whisper` model, regardless of the `m
 
 #### FAQ
 
-1. Why doesn't Frigate automatically transcribe all `speech` events?
+1. Why doesn't BIS-IA automatically transcribe all `speech` events?
 
-   Frigate does not implement a queue mechanism for speech transcription, and adding one is not trivial. A proper queue would need backpressure, prioritization, memory/disk buffering, retry logic, crash recovery, and safeguards to prevent unbounded growth when events outpace processing. That’s a significant amount of complexity for a feature that, in most real-world environments, would mostly just churn through low-value noise.
+   BIS-IA does not implement a queue mechanism for speech transcription, and adding one is not trivial. A proper queue would need backpressure, prioritization, memory/disk buffering, retry logic, crash recovery, and safeguards to prevent unbounded growth when events outpace processing. That’s a significant amount of complexity for a feature that, in most real-world environments, would mostly just churn through low-value noise.
 
    Because transcription is **serialized (one event at a time)** and speech events can be generated far faster than they can be processed, an auto-transcribe toggle would very quickly create an ever-growing backlog and degrade core functionality. For the amount of engineering and risk involved, it adds **very little practical value** for the majority of deployments, which are often on low-powered, edge hardware.
 
    If you hear speech that’s actually important and worth saving/indexing for the future, **just press the transcribe button in Explore** on that specific `speech` event - that keeps things explicit, reliable, and under your control.
 
-   Other options are being considered for future versions of Frigate to add transcription options that support external `whisper` Docker containers. A single transcription service could then be shared by Frigate and other applications (for example, Home Assistant Voice), and run on more powerful machines when available.
+   Other options are being considered for future versions of BIS-IA to add transcription options that support external `whisper` Docker containers. A single transcription service could then be shared by BIS-IA and other applications (for example, Home Assistant Voice), and run on more powerful machines when available.
 
 2. Why don't you save live transcription text and use that for `speech` events?
 
    There’s no guarantee that a `speech` event is even created from the exact audio that went through the transcription model. Live transcription and `speech` event creation are **separate, asynchronous processes**. Even when both are correctly configured, trying to align the **precise start and end time of a speech event** with whatever audio the model happened to be processing at that moment is unreliable.
 
-   Automatically persisting that data would often result in **misaligned, partial, or irrelevant transcripts**, while still incurring all of the CPU, storage, and privacy costs of transcription. That’s why Frigate treats transcription as an **explicit, user-initiated action** rather than an automatic side-effect of every `speech` event.
+   Automatically persisting that data would often result in **misaligned, partial, or irrelevant transcripts**, while still incurring all of the CPU, storage, and privacy costs of transcription. That’s why BIS-IA treats transcription as an **explicit, user-initiated action** rather than an automatic side-effect of every `speech` event.

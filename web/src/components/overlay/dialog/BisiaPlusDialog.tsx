@@ -22,19 +22,19 @@ import { getTranslatedLabel } from "@/utils/i18n";
 import useImageLoaded from "@/hooks/use-image-loaded";
 import { useIsAdmin } from "@/hooks/use-is-admin";
 
-export type FrigatePlusDialogProps = {
+export type BisiaPlusDialogProps = {
   upload?: Event;
   dialog?: boolean;
   onClose: () => void;
   onEventUploaded: () => void;
 };
 
-export function FrigatePlusDialog({
+export function BisiaPlusDialog({
   upload,
   dialog = true,
   onClose,
   onEventUploaded,
-}: FrigatePlusDialogProps) {
+}: BisiaPlusDialogProps) {
   const { t, i18n } = useTranslation(["components/dialog"]);
 
   type SubmissionState = "reviewing" | "uploading" | "submitted";
@@ -80,9 +80,9 @@ export function FrigatePlusDialog({
         )}
       >
         <DialogHeader>
-          <DialogTitle className="sr-only">Submit to Frigate+</DialogTitle>
+          <DialogTitle className="sr-only">Submit to BIS-IA+</DialogTitle>
           <DialogDescription className="sr-only">
-            Submit this snapshot to Frigate+
+            Submit this snapshot to BIS-IA+
           </DialogDescription>
         </DialogHeader>
 

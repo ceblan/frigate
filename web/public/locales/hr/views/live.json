@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Uživo - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Uživo - Frigate",
+  "documentTitle": "Uživo - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Uživo - BIS-IA",
   "twoWayTalk": {
     "enable": "Omogući dvosmjerni razgovor",
     "disable": "Onemogući dvosmjerni razgovor"
@@ -176,7 +176,7 @@
   },
   "noCameras": {
     "title": "Nema konfiguriranih kamera",
-    "description": "Započnite povezivanjem kamere na Frigate.",
+    "description": "Započnite povezivanjem kamere na BIS-IA.",
     "buttonText": "Dodaj kameru",
     "restricted": {
       "title": "Nema dostupnih kamera",
@@ -184,7 +184,7 @@
     },
     "default": {
       "title": "Nema konfiguriranih kamera",
-      "description": "Započnite povezivanjem kamere na Frigate.",
+      "description": "Započnite povezivanjem kamere na BIS-IA.",
       "buttonText": "Dodaj kameru"
     },
     "group": {

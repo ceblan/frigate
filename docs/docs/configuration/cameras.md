@@ -7,7 +7,7 @@ title: Camera Configuration
 
 Several inputs can be configured for each camera and the role of each input can be mixed and matched based on your needs. This allows you to use a lower resolution stream for object detection, but create recordings from a higher resolution stream, or vice versa.
 
-A camera is enabled by default but can be disabled by using `enabled: False`. Cameras that are disabled through the configuration file will not appear in the Frigate UI and will not consume system resources.
+A camera is enabled by default but can be disabled by using `enabled: False`. Cameras that are disabled through the configuration file will not appear in the BIS-IA UI and will not consume system resources.
 
 Each role can only be assigned to one input per camera. The options for roles are as follows:
 
@@ -25,15 +25,15 @@ cameras:
     enabled: True
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:{FRIGATE_RTSP_PASSWORD}@10.0.10.10:554/cam/realmonitor?channel=1&subtype=2
+        - path: rtsp://viewer:{BIS_IA_RTSP_PASSWORD}@10.0.10.10:554/cam/realmonitor?channel=1&subtype=2
           roles:
             - detect
-        - path: rtsp://viewer:{FRIGATE_RTSP_PASSWORD}@10.0.10.10:554/live
+        - path: rtsp://viewer:{BIS_IA_RTSP_PASSWORD}@10.0.10.10:554/live
           roles:
             - record
     detect:
-      width: 1280 # <- optional, by default Frigate tries to automatically detect resolution
-      height: 720 # <- optional, by default Frigate tries to automatically detect resolution
+      width: 1280 # <- optional, by default BIS-IA tries to automatically detect resolution
+      height: 720 # <- optional, by default BIS-IA tries to automatically detect resolution
 ```
 
 Additional cameras are simply added to the config under the `cameras` entry.
@@ -48,9 +48,9 @@ cameras:
 
 :::note
 
-If you only define one stream in your `inputs` and do not assign a `detect` role to it, Frigate will automatically assign it the `detect` role. Frigate will always decode a stream to support motion detection, Birdseye, the API image endpoints, and other features, even if you have disabled object detection with `enabled: False` in your config's `detect` section.
+If you only define one stream in your `inputs` and do not assign a `detect` role to it, BIS-IA will automatically assign it the `detect` role. BIS-IA will always decode a stream to support motion detection, Birdseye, the API image endpoints, and other features, even if you have disabled object detection with `enabled: False` in your config's `detect` section.
 
-If you plan to use Frigate for recording only, it is still recommended to define a `detect` role for a low resolution stream to minimize resource usage from the required stream decoding.
+If you plan to use BIS-IA for recording only, it is still recommended to define a `detect` role for a low resolution stream to minimize resource usage from the required stream decoding.
 
 :::
 
@@ -60,7 +60,7 @@ For camera model specific settings check the [camera specific](camera_specific.m
 
 :::warning
 
-Not every PTZ supports ONVIF, which is the standard protocol Frigate uses to communicate with your camera. Check the [official list of ONVIF conformant products](https://www.onvif.org/conformant-products/), your camera documentation, or camera manufacturer's website to ensure your PTZ supports ONVIF. Also, ensure your camera is running the latest firmware.
+Not every PTZ supports ONVIF, which is the standard protocol BIS-IA uses to communicate with your camera. Check the [official list of ONVIF conformant products](https://www.onvif.org/conformant-products/), your camera documentation, or camera manufacturer's website to ensure your PTZ supports ONVIF. Also, ensure your camera is running the latest firmware.
 
 :::
 
@@ -97,7 +97,7 @@ An ONVIF-capable camera that supports relative movement within the field of view
 
 This list of working and non-working PTZ cameras is based on user feedback. If you'd like to report specific quirks or issues with a manufacturer or camera that would be helpful for other users, open a pull request to add to this list.
 
-The FeatureList on the [ONVIF Conformant Products Database](https://www.onvif.org/conformant-products/) can provide a starting point to determine a camera's compatibility with Frigate's autotracking. Look to see if a camera lists `PTZRelative`, `PTZRelativePanTilt` and/or `PTZRelativeZoom`. These features are required for autotracking, but some cameras still fail to respond even if they claim support. If they are missing, autotracking will not work (though basic PTZ in the WebUI might). Avoid cameras with no database entry unless they are confirmed as working below.
+The FeatureList on the [ONVIF Conformant Products Database](https://www.onvif.org/conformant-products/) can provide a starting point to determine a camera's compatibility with BIS-IA's autotracking. Look to see if a camera lists `PTZRelative`, `PTZRelativePanTilt` and/or `PTZRelativeZoom`. These features are required for autotracking, but some cameras still fail to respond even if they claim support. If they are missing, autotracking will not work (though basic PTZ in the WebUI might). Avoid cameras with no database entry unless they are confirmed as working below.
 
 | Brand or specific camera     | PTZ Controls | Autotracking | Notes                                                                                                                                                                                                                                                             |
 | ---------------------------- | :----------: | :----------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

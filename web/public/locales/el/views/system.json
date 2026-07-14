@@ -1,13 +1,13 @@
 {
   "documentTitle": {
-    "cameras": "Στατιστικά Καμερών - Frigate",
-    "storage": "Στατιστικά αποθήκευσης - Frigate",
-    "general": "Γενικά στατιστικά - Frigate",
-    "enrichments": "Στατιστικά Εμπλουτισμού - Frigate",
+    "cameras": "Στατιστικά Καμερών - BIS-IA",
+    "storage": "Στατιστικά αποθήκευσης - BIS-IA",
+    "general": "Γενικά στατιστικά - BIS-IA",
+    "enrichments": "Στατιστικά Εμπλουτισμού - BIS-IA",
     "logs": {
-      "frigate": "Frigate αρχέιο καταγραφών - Frigate",
-      "go2rtc": "Αρχείο καταγραφής Go2RTC - Frigate",
-      "nginx": "Αρχείο καταγραφών Nginx - Frigate"
+      "bisia": "BIS-IA αρχέιο καταγραφών - BIS-IA",
+      "go2rtc": "Αρχείο καταγραφής Go2RTC - BIS-IA",
+      "nginx": "Αρχείο καταγραφών Nginx - BIS-IA"
     }
   },
   "title": "Σύστημα",

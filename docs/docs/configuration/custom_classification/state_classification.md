@@ -3,7 +3,7 @@ id: state_classification
 title: State Classification
 ---
 
-State classification allows you to train a custom MobileNetV2 classification model on a fixed region of your camera frame(s) to determine a current state. The model can be configured to run on a schedule and/or when motion is detected in that region. Classification results are available through the `frigate/<camera_name>/classification/<model_name>` MQTT topic and in Home Assistant sensors via the official Frigate integration.
+State classification allows you to train a custom MobileNetV2 classification model on a fixed region of your camera frame(s) to determine a current state. The model can be configured to run on a schedule and/or when motion is detected in that region. Classification results are available through the `bisia/<camera_name>/classification/<model_name>` MQTT topic and in Home Assistant sensors via the official BIS-IA integration.
 
 ## Minimum System Requirements
 
@@ -52,7 +52,7 @@ An optional config, `save_attempts`, can be set as a key under the model name. T
 
 ## Training the model
 
-Creating and training the model is done within the Frigate UI using the `Classification` page. The process consists of three steps:
+Creating and training the model is done within the BIS-IA UI using the `Classification` page. The process consists of three steps:
 
 ### Step 1: Name and Define
 
@@ -79,14 +79,14 @@ Once some images are assigned, training will begin automatically.
 
 To troubleshoot issues with state classification models, enable debug logging to see detailed information about classification attempts, scores, and state verification.
 
-Enable debug logs for classification models by adding `frigate.data_processing.real_time.custom_classification: debug` to your `logger` configuration. These logs are verbose, so only keep this enabled when necessary. Restart Frigate after this change.
+Enable debug logs for classification models by adding `bisia.data_processing.real_time.custom_classification: debug` to your `logger` configuration. These logs are verbose, so only keep this enabled when necessary. Restart BIS-IA after this change.
 
 ```yaml
 logger:
   default: info
   logs:
     # highlight-next-line
-    frigate.data_processing.real_time.custom_classification: debug
+    bisia.data_processing.real_time.custom_classification: debug
 ```
 
 The debug logs will show:

@@ -5,9 +5,9 @@ title: Restream
 
 ## RTSP
 
-Frigate can restream your video feed as an RTSP feed for other applications such as Home Assistant to utilize it at `rtsp://<frigate_host>:8554/<camera_name>`. Port 8554 must be open. [This allows you to use a video feed for detection in Frigate and Home Assistant live view at the same time without having to make two separate connections to the camera](#reduce-connections-to-camera). The video feed is copied from the original video feed directly to avoid re-encoding. This feed does not include any annotation by Frigate.
+BIS-IA can restream your video feed as an RTSP feed for other applications such as Home Assistant to utilize it at `rtsp://<bisia_host>:8554/<camera_name>`. Port 8554 must be open. [This allows you to use a video feed for detection in BIS-IA and Home Assistant live view at the same time without having to make two separate connections to the camera](#reduce-connections-to-camera). The video feed is copied from the original video feed directly to avoid re-encoding. This feed does not include any annotation by BIS-IA.
 
-Frigate uses [go2rtc](https://github.com/AlexxIT/go2rtc/tree/v1.9.10) to provide its restream and MSE/WebRTC capabilities. The go2rtc config is hosted at the `go2rtc` in the config, see [go2rtc docs](https://github.com/AlexxIT/go2rtc/tree/v1.9.10#configuration) for more advanced configurations and features.
+BIS-IA uses [go2rtc](https://github.com/AlexxIT/go2rtc/tree/v1.9.10) to provide its restream and MSE/WebRTC capabilities. The go2rtc config is hosted at the `go2rtc` in the config, see [go2rtc docs](https://github.com/AlexxIT/go2rtc/tree/v1.9.10#configuration) for more advanced configurations and features.
 
 :::note
 
@@ -17,7 +17,7 @@ You can access the go2rtc stream info at `/api/go2rtc/streams` which can be help
 
 ### Birdseye Restream
 
-Birdseye RTSP restream can be accessed at `rtsp://<frigate_host>:8554/birdseye`. Enabling the birdseye restream will cause birdseye to run 24/7 which may increase CPU usage somewhat.
+Birdseye RTSP restream can be accessed at `rtsp://<bisia_host>:8554/birdseye`. Enabling the birdseye restream will cause birdseye to run 24/7 which may increase CPU usage somewhat.
 
 ```yaml
 birdseye:
@@ -26,7 +26,7 @@ birdseye:
 
 :::tip
 
-To improve connection speed when using Birdseye via restream you can enable a small idle heartbeat by setting `birdseye.idle_heartbeat_fps` to a low value (e.g. `1–2`). This makes Frigate periodically push the last frame even when no motion is detected, reducing initial connection latency.
+To improve connection speed when using Birdseye via restream you can enable a small idle heartbeat by setting `birdseye.idle_heartbeat_fps` to a low value (e.g. `1–2`). This makes BIS-IA periodically push the last frame even when no motion is detected, reducing initial connection latency.
 
 :::
 
@@ -42,7 +42,7 @@ go2rtc:
   streams: ...
 ```
 
-**NOTE:** This does not apply to localhost requests, there is no need to provide credentials when using the restream as a source for frigate cameras.
+**NOTE:** This does not apply to localhost requests, there is no need to provide credentials when using the restream as a source for bisia cameras.
 
 ## Reduce Connections To Camera
 
@@ -164,12 +164,12 @@ See [this comment](https://github.com/AlexxIT/go2rtc/issues/1217#issuecomment-22
 
 ## Preventing go2rtc from blocking two-way audio {#two-way-talk-restream}
 
-For cameras that support two-way talk, go2rtc will automatically establish an audio output backchannel when connecting to an RTSP stream. This backchannel blocks access to the camera's audio output for two-way talk functionality, preventing both Frigate and other applications from using it.
+For cameras that support two-way talk, go2rtc will automatically establish an audio output backchannel when connecting to an RTSP stream. This backchannel blocks access to the camera's audio output for two-way talk functionality, preventing both BIS-IA and other applications from using it.
 
 To prevent this, you must configure two separate stream instances:
 
-1. One stream instance with `#backchannel=0` for Frigate's viewing, recording, and detection (prevents go2rtc from establishing the blocking backchannel)
-2. A second stream instance without `#backchannel=0` for two-way talk functionality (can be used by Frigate's WebRTC viewer or other applications)
+1. One stream instance with `#backchannel=0` for BIS-IA's viewing, recording, and detection (prevents go2rtc from establishing the blocking backchannel)
+2. A second stream instance without `#backchannel=0` for two-way talk functionality (can be used by BIS-IA's WebRTC viewer or other applications)
 
 Configuration example:
 
@@ -184,8 +184,8 @@ go2rtc:
 
 In this configuration:
 
-- `front_door` stream is used by Frigate for viewing, recording, and detection. The `#backchannel=0` parameter prevents go2rtc from establishing the audio output backchannel, so it won't block two-way talk access.
-- `front_door_twoway` stream is used for two-way talk functionality. This stream can be used by Frigate's WebRTC viewer when two-way talk is enabled, or by other applications (like Home Assistant Advanced Camera Card) that need access to the camera's audio output channel.
+- `front_door` stream is used by BIS-IA for viewing, recording, and detection. The `#backchannel=0` parameter prevents go2rtc from establishing the audio output backchannel, so it won't block two-way talk access.
+- `front_door_twoway` stream is used for two-way talk functionality. This stream can be used by BIS-IA's WebRTC viewer when two-way talk is enabled, or by other applications (like Home Assistant Advanced Camera Card) that need access to the camera's audio output channel.
 
 ## Security: Restricted Stream Sources
 

@@ -3,11 +3,11 @@ id: ffmpeg_presets
 title: FFmpeg presets
 ---
 
-Some presets of FFmpeg args are provided by default to make the configuration easier. All presets can be seen in [this file](https://github.com/blakeblackshear/frigate/blob/master/frigate/ffmpeg_presets.py).
+Some presets of FFmpeg args are provided by default to make the configuration easier. All presets can be seen in [this file](https://github.com/blakeblackshear/bisia/blob/master/bisia/ffmpeg_presets.py).
 
 ### Hwaccel Presets
 
-It is highly recommended to use hwaccel presets in the config. These presets not only replace the longer args, but they also give Frigate hints of what hardware is available and allows Frigate to make other optimizations using the GPU such as when encoding the birdseye restream or when scaling a stream that has a size different than the native stream size.
+It is highly recommended to use hwaccel presets in the config. These presets not only replace the longer args, but they also give BIS-IA hints of what hardware is available and allows BIS-IA to make other optimizations using the GPU such as when encoding the birdseye restream or when scaling a stream that has a size different than the native stream size.
 
 See [the hwaccel docs](/configuration/hardware_acceleration_video.md) for more info on how to setup hwaccel for your GPU / iGPU.
 
@@ -27,7 +27,7 @@ See [the hwaccel docs](/configuration/hardware_acceleration_video.md) for more i
 
 Input args presets help make the config more readable and handle use cases for different types of streams to ensure maximum compatibility.
 
-See [the camera specific docs](/configuration/camera_specific.md) for more info on non-standard cameras and recommendations for using them in Frigate.
+See [the camera specific docs](/configuration/camera_specific.md) for more info on non-standard cameras and recommendations for using them in BIS-IA.
 
 | Preset                           | Usage                     | Other Notes                                                                                      |
 | -------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -36,8 +36,8 @@ See [the camera specific docs](/configuration/camera_specific.md) for more info 
 | preset-http-reolink              | Reolink HTTP-FLV Stream   | Only for reolink http, not when restreaming as rtsp                                              |
 | preset-rtmp-generic              | RTMP Stream               |                                                                                                  |
 | preset-rtsp-generic              | RTSP Stream               | This is the default when nothing is specified                                                    |
-| preset-rtsp-restream             | RTSP Stream from restream | Use for rtsp restream as source for frigate                                                      |
-| preset-rtsp-restream-low-latency | RTSP Stream from restream | Use for rtsp restream as source for frigate to lower latency, may cause issues with some cameras |
+| preset-rtsp-restream             | RTSP Stream from restream | Use for rtsp restream as source for bisia                                                      |
+| preset-rtsp-restream-low-latency | RTSP Stream from restream | Use for rtsp restream as source for bisia to lower latency, may cause issues with some cameras |
 | preset-rtsp-udp                  | RTSP Stream via UDP       | Use when camera is UDP only                                                                      |
 | preset-rtsp-blue-iris            | Blue Iris RTSP Stream     | Use when consuming a stream from Blue Iris                                                       |
 

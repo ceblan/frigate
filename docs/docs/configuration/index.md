@@ -1,15 +1,15 @@
 ---
 id: index
-title: Frigate Configuration
+title: BIS-IA Configuration
 ---
 
-For Home Assistant App installations, the config file should be at `/addon_configs/<addon_directory>/config.yml`, where `<addon_directory>` is specific to the variant of the Frigate App you are running. See the list of directories [here](#accessing-app-config-dir).
+For Home Assistant App installations, the config file should be at `/addon_configs/<addon_directory>/config.yml`, where `<addon_directory>` is specific to the variant of the BIS-IA App you are running. See the list of directories [here](#accessing-app-config-dir).
 
 For all other installation types, the config file should be mapped to `/config/config.yml` inside the container.
 
 It can be named `config.yml` or `config.yaml`, but if both files exist `config.yml` will be preferred and `config.yaml` will be ignored.
 
-It is recommended to start with a minimal configuration and add to it as described in [this guide](../guides/getting_started.md) and use the built in configuration editor in Frigate's UI which supports validation.
+It is recommended to start with a minimal configuration and add to it as described in [this guide](../guides/getting_started.md) and use the built in configuration editor in BIS-IA's UI which supports validation.
 
 ```yaml
 mqtt:
@@ -27,56 +27,56 @@ cameras:
 
 ## Accessing the Home Assistant App configuration directory {#accessing-app-config-dir}
 
-When running Frigate through the HA App, the Frigate `/config` directory is mapped to `/addon_configs/<addon_directory>` in the host, where `<addon_directory>` is specific to the variant of the Frigate App you are running.
+When running BIS-IA through the HA App, the BIS-IA `/config` directory is mapped to `/addon_configs/<addon_directory>` in the host, where `<addon_directory>` is specific to the variant of the BIS-IA App you are running.
 
 | App Variant                | Configuration directory                   |
 | -------------------------- | ----------------------------------------- |
-| Frigate                    | `/addon_configs/ccab4aaf_frigate`         |
-| Frigate (Full Access)      | `/addon_configs/ccab4aaf_frigate-fa`      |
-| Frigate Beta               | `/addon_configs/ccab4aaf_frigate-beta`    |
-| Frigate Beta (Full Access) | `/addon_configs/ccab4aaf_frigate-fa-beta` |
+| BIS-IA                    | `/addon_configs/ccab4aaf_bisia`         |
+| BIS-IA (Full Access)      | `/addon_configs/ccab4aaf_bisia-fa`      |
+| BIS-IA Beta               | `/addon_configs/ccab4aaf_bisia-beta`    |
+| BIS-IA Beta (Full Access) | `/addon_configs/ccab4aaf_bisia-fa-beta` |
 
 **Whenever you see `/config` in the documentation, it refers to this directory.**
 
-If for example you are running the standard App variant and use the [VS Code App](https://github.com/hassio-addons/addon-vscode) to browse your files, you can click _File_ > _Open folder..._ and navigate to `/addon_configs/ccab4aaf_frigate` to access the Frigate `/config` directory and edit the `config.yaml` file. You can also use the built-in file editor in the Frigate UI to edit the configuration file.
+If for example you are running the standard App variant and use the [VS Code App](https://github.com/hassio-addons/addon-vscode) to browse your files, you can click _File_ > _Open folder..._ and navigate to `/addon_configs/ccab4aaf_bisia` to access the BIS-IA `/config` directory and edit the `config.yaml` file. You can also use the built-in file editor in the BIS-IA UI to edit the configuration file.
 
 ## VS Code Configuration Schema
 
-VS Code supports JSON schemas for automatically validating configuration files. You can enable this feature by adding `# yaml-language-server: $schema=http://frigate_host:5000/api/config/schema.json` to the beginning of the configuration file. Replace `frigate_host` with the IP address or hostname of your Frigate server. If you're using both VS Code and Frigate as an App, you should use `ccab4aaf-frigate` instead. Make sure to expose the internal unauthenticated port `5000` when accessing the config from VS Code on another machine.
+VS Code supports JSON schemas for automatically validating configuration files. You can enable this feature by adding `# yaml-language-server: $schema=http://bisia_host:5000/api/config/schema.json` to the beginning of the configuration file. Replace `bisia_host` with the IP address or hostname of your BIS-IA server. If you're using both VS Code and BIS-IA as an App, you should use `ccab4aaf-bisia` instead. Make sure to expose the internal unauthenticated port `5000` when accessing the config from VS Code on another machine.
 
 ## Environment Variable Substitution
 
-Frigate supports the use of environment variables starting with `FRIGATE_` **only** where specifically indicated in the [reference config](./reference.md). For example, the following values can be replaced at runtime by using environment variables:
+BIS-IA supports the use of environment variables starting with `BIS_IA_` **only** where specifically indicated in the [reference config](./reference.md). For example, the following values can be replaced at runtime by using environment variables:
 
 ```yaml
 mqtt:
-  host: "{FRIGATE_MQTT_HOST}"
-  user: "{FRIGATE_MQTT_USER}"
-  password: "{FRIGATE_MQTT_PASSWORD}"
+  host: "{BIS_IA_MQTT_HOST}"
+  user: "{BIS_IA_MQTT_USER}"
+  password: "{BIS_IA_MQTT_PASSWORD}"
 ```
 
 ```yaml
-- path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.0.10.10:8554/unicast
+- path: rtsp://{BIS_IA_RTSP_USER}:{BIS_IA_RTSP_PASSWORD}@10.0.10.10:8554/unicast
 ```
 
 ```yaml
 onvif:
   host: "192.168.1.12"
   port: 8000
-  user: "{FRIGATE_RTSP_USER}"
-  password: "{FRIGATE_RTSP_PASSWORD}"
+  user: "{BIS_IA_RTSP_USER}"
+  password: "{BIS_IA_RTSP_PASSWORD}"
 ```
 
 ```yaml
 go2rtc:
   rtsp:
-    username: "{FRIGATE_GO2RTC_RTSP_USERNAME}"
-    password: "{FRIGATE_GO2RTC_RTSP_PASSWORD}"
+    username: "{BIS_IA_GO2RTC_RTSP_USERNAME}"
+    password: "{BIS_IA_GO2RTC_RTSP_PASSWORD}"
 ```
 
 ```yaml
 genai:
-  api_key: "{FRIGATE_GENAI_API_KEY}"
+  api_key: "{BIS_IA_GENAI_API_KEY}"
 ```
 
 ## Common configuration examples

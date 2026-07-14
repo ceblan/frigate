@@ -152,7 +152,7 @@
   "selectItem": "Vybrat {{item}}",
   "menu": {
     "documentation": {
-      "label": "Dokumentace Frigate",
+      "label": "Dokumentace BIS-IA",
       "title": "Dokumentace"
     },
     "live": {
@@ -224,7 +224,7 @@
       "red": "Červená"
     },
     "help": "Nápověda",
-    "restart": "Restartovat Frigate",
+    "restart": "Restartovat BIS-IA",
     "user": {
       "logout": "Odhlásit",
       "setPassword": "Nastavit heslo",
@@ -265,13 +265,13 @@
     "more": "Více stran"
   },
   "accessDenied": {
-    "documentTitle": "Přístup odepřen - Frigate",
+    "documentTitle": "Přístup odepřen - BIS-IA",
     "title": "Přístup odepřen",
     "desc": "Nemáte oprávnění zobrazit tuto stránku."
   },
   "notFound": {
     "desc": "Stránka nenalezena",
-    "documentTitle": "Nenalezeno - Frigate",
+    "documentTitle": "Nenalezeno - BIS-IA",
     "title": "404"
   },
   "toast": {
@@ -288,7 +288,7 @@
     "title": "Role",
     "admin": "Správce",
     "viewer": "Divák",
-    "desc": "Správci mají plný přístup ke všem funkcím v uživatelském rozhraní Frigate. Diváci jsou omezeni na sledování kamer, položek přehledu a historických záznamů v UI."
+    "desc": "Správci mají plný přístup ke všem funkcím v uživatelském rozhraní BIS-IA. Diváci jsou omezeni na sledování kamer, položek přehledu a historických záznamů v UI."
   },
   "readTheDocumentation": "Přečtěte si dokumentaci",
   "list": {
@@ -298,7 +298,7 @@
   },
   "field": {
     "optional": "Volitelné",
-    "internalID": "Interní ID Frigate používá v konfiguraci a databázi"
+    "internalID": "Interní ID BIS-IA používá v konfiguraci a databázi"
   },
   "information": {
     "pixels": "{{area}}px"

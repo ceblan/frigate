@@ -1,13 +1,13 @@
 {
   "restart": {
-    "title": "Kas oled kindel, et soovid Frigate'i uuesti käivitada?",
+    "title": "Kas oled kindel, et soovid BIS-IA'i uuesti käivitada?",
     "button": "Käivita uuesti",
     "restarting": {
-      "title": "Frigate käivitub uuesti",
+      "title": "BIS-IA käivitub uuesti",
       "content": "See leht laaditakse uuesti {{countdown}} sekundi pärast.",
       "button": "Laadi uuesti kohe"
     },
-    "description": "Järgnevaga Frigate uuesti käivitamise ajaks lõpetab korraks töö."
+    "description": "Järgnevaga BIS-IA uuesti käivitamise ajaks lõpetab korraks töö."
   },
   "search": {
     "saveSearch": {
@@ -36,11 +36,11 @@
           "ask_a": "Kas see objekt on <code>{{label}}</code>?",
           "ask_an": "Kas see objekt on <code>{{label}}</code>?",
           "ask_full": "Kas see objekt on <code>{{untranslatedLabel}}</code> ({{translatedLabel}})?",
-          "label": "Kinnita see silt Frigate+ teenuse jaoks"
+          "label": "Kinnita see silt BIS-IA+ teenuse jaoks"
         }
       },
       "submitToPlus": {
-        "label": "Saada teenusesse Frigate+",
+        "label": "Saada teenusesse BIS-IA+",
         "desc": "Objektid asukohtades, mida sa tahad vältida, pole valepositiivsed. Kui sa neid sellistena saadad teenusele, siis see ainult ajab tehisaru mudeli sassi."
       }
     }

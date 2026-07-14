@@ -21,9 +21,9 @@
     "aria": "Sélectionner les événements",
     "noFoundForTimePeriod": "Aucun événement n'a été trouvé pour cette plage de temps."
   },
-  "documentTitle": "Activités - Frigate",
+  "documentTitle": "Activités - BIS-IA",
   "recordings": {
-    "documentTitle": "Enregistrements - Frigate"
+    "documentTitle": "Enregistrements - BIS-IA"
   },
   "calendarFilter": {
     "last24Hours": "Dernières 24 heures"

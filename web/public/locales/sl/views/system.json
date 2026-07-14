@@ -1,14 +1,14 @@
 {
   "documentTitle": {
-    "cameras": "Statistika kamer - Frigate",
-    "storage": "Statistika prostora - Frigate",
-    "general": "Statistika - Frigate",
+    "cameras": "Statistika kamer - BIS-IA",
+    "storage": "Statistika prostora - BIS-IA",
+    "general": "Statistika - BIS-IA",
     "logs": {
-      "frigate": "Frigate dnevniki - Frigate",
-      "go2rtc": "Go2RTC dnevniki - Frigate",
-      "nginx": "Nginx dnevniki - Frigate"
+      "bisia": "BIS-IA dnevniki - BIS-IA",
+      "go2rtc": "Go2RTC dnevniki - BIS-IA",
+      "nginx": "Nginx dnevniki - BIS-IA"
     },
-    "enrichments": "Statistika Obogatitev - Frigate"
+    "enrichments": "Statistika Obogatitev - BIS-IA"
   },
   "logs": {
     "download": {
@@ -36,7 +36,7 @@
   "storage": {
     "recordings": {
       "title": "Posnetki",
-      "tips": "Ta vrednost predstavlja velikost podatkovne zbirke posnetkov Frigate. Frigate ne spremlja velikost drugih datotek na disku.",
+      "tips": "Ta vrednost predstavlja velikost podatkovne zbirke posnetkov BIS-IA. BIS-IA ne spremlja velikost drugih datotek na disku.",
       "earliestRecording": "Najstarejši posnetki:"
     },
     "title": "Hramba",
@@ -50,7 +50,7 @@
       "bandwidth": "Pasovna širina",
       "unused": {
         "title": "Neporabljeno",
-        "tips": "Ta vrednost ne predstavlja dejanske proste kapacitete za Frigate posnetke, če na disku shranjujete še druge datoteke. Frigate ne spremlja velikost drugih datotek na disku."
+        "tips": "Ta vrednost ne predstavlja dejanske proste kapacitete za BIS-IA posnetke, če na disku shranjujete še druge datoteke. BIS-IA ne spremlja velikost drugih datotek na disku."
       }
     },
     "shm": {
@@ -93,7 +93,7 @@
       "npuUsage": "Poraba NPE",
       "intelGpuWarning": {
         "message": "GPU status nerazpoložljiv",
-        "description": "To je znana napaka v orodjih za poročanje statistike Intelovega GPU-ja (intel_gpu_top), kjer se orodje pokvari in ponavljajoče javlja 0 % uporabe GPU-ja, tudi kadar strojna pospešitev in detekcija objektov pravilno tečeta na (i)GPU-ju. To ni napaka v Frigateu. Lahko ponovno zaženeš gostitelja (host), da začasno odpraviš težavo in potrdiš, da GPU dejansko deluje pravilno. Na zmogljivost to ne vpliva.",
+        "description": "To je znana napaka v orodjih za poročanje statistike Intelovega GPU-ja (intel_gpu_top), kjer se orodje pokvari in ponavljajoče javlja 0 % uporabe GPU-ja, tudi kadar strojna pospešitev in detekcija objektov pravilno tečeta na (i)GPU-ju. To ni napaka v BIS-IAu. Lahko ponovno zaženeš gostitelja (host), da začasno odpraviš težavo in potrdiš, da GPU dejansko deluje pravilno. Na zmogljivost to ne vpliva.",
         "title": "Opozorilo statistike Intel GPU-ja"
       }
     },

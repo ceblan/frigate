@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Ao Vivo - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Ao vivo - Frigate",
+  "documentTitle": "Ao Vivo - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Ao vivo - BIS-IA",
   "lowBandwidthMode": "Modo de baixa largura de banda",
   "twoWayTalk": {
     "enable": "Habilitar Fala em Dois Sentidos",
@@ -173,7 +173,7 @@
   },
   "noCameras": {
     "title": "Nenhuma Câmera Configurada",
-    "description": "Inicie conectando uma câmera ao Frigate.",
+    "description": "Inicie conectando uma câmera ao BIS-IA.",
     "buttonText": "Adicionar Câmera"
   },
   "snapshot": {

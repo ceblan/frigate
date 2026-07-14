@@ -1,17 +1,17 @@
 {
   "documentTitle": {
-    "enrichments": "Parmàmetres complementaris - Frigate",
-    "motionTuner": "Ajust de moviment - Frigate",
-    "object": "Depurar - Frigate",
-    "default": "Paràmetres - Frigate",
-    "authentication": "Configuració d'autenticació - Frigate",
-    "camera": "Paràmetres de càmera - Frigate",
-    "masksAndZones": "Editor de màscares i zones - Frigate",
+    "enrichments": "Parmàmetres complementaris - BIS-IA",
+    "motionTuner": "Ajust de moviment - BIS-IA",
+    "object": "Depurar - BIS-IA",
+    "default": "Paràmetres - BIS-IA",
+    "authentication": "Configuració d'autenticació - BIS-IA",
+    "camera": "Paràmetres de càmera - BIS-IA",
+    "masksAndZones": "Editor de màscares i zones - BIS-IA",
     "general": "Configuració de la interfície d'usuari - Fragata",
-    "frigatePlus": "Paràmetres de Frigate+ - Frigate",
-    "notifications": "Paràmetres de notificació - Frigate",
-    "cameraManagement": "Gestionar càmeres - Frigate",
-    "cameraReview": "Configuració Revisió de Càmeres - Frigate"
+    "bisiaPlus": "Paràmetres de BIS-IA+ - BIS-IA",
+    "notifications": "Paràmetres de notificació - BIS-IA",
+    "cameraManagement": "Gestionar càmeres - BIS-IA",
+    "cameraReview": "Configuració Revisió de Càmeres - BIS-IA"
   },
   "menu": {
     "ui": "Interfície d'usuari",
@@ -21,7 +21,7 @@
     "users": "Usuaris",
     "notifications": "Notificacions",
     "debug": "Depuració",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "enrichments": "Enriquiments",
     "triggers": "Disparadors",
     "cameraManagement": "Gestió",
@@ -191,7 +191,7 @@
         "desc": "Estableix el temps mínim, en segons, que l'objecte ha d'estar dins la zona perquè s'activi. <em>Per defecte: 0</em>"
       },
       "allObjects": "Tots els objectes",
-      "documentTitle": "Edita zona - Frigate",
+      "documentTitle": "Edita zona - BIS-IA",
       "speedThreshold": {
         "title": "Llindar de velocitat ({{unit}})",
         "toast": {
@@ -230,7 +230,7 @@
       "label": "Màscara de moviment",
       "add": "Nova màscara de moviment",
       "edit": "Edita la màscara de moviment",
-      "documentTitle": "Editar la màscara de moviment - Frigate",
+      "documentTitle": "Editar la màscara de moviment - BIS-IA",
       "clickDrawPolygon": "Fes click per a dibuixar un polígon a la imatge.",
       "toast": {
         "success": {
@@ -240,7 +240,7 @@
       }
     },
     "objectMasks": {
-      "documentTitle": "Editar la màscara d'objecte - Frigate",
+      "documentTitle": "Editar la màscara d'objecte - BIS-IA",
       "label": "Màscares d'objecte",
       "edit": "Editar la màscara d'objecte",
       "point_one": "{{count}} punt",
@@ -286,7 +286,7 @@
     "notificationSettings": {
       "documentation": "Llegir la documentació",
       "title": "Paràmetres de notificació",
-      "desc": "Frigate pot enviar notificacions push directament al teu dispositiu quan s’executa des del navegador o està instal·lat com a PWA (aplicació web progressiva)."
+      "desc": "BIS-IA pot enviar notificacions push directament al teu dispositiu quan s’executa des del navegador o està instal·lat com a PWA (aplicació web progressiva)."
     },
     "deviceSpecific": "Paràmetres específics del dispositiu",
     "registerDevice": "Registrar aquest dispositiu",
@@ -305,7 +305,7 @@
     "toast": {
       "success": {
         "settingSaved": "Els paràmetres de notificacions s'han desat.",
-        "registered": "Registre de notificacions realitzat amb èxit. Cal reiniciar Frigate perquè es puguin enviar notificacions (inclosa una notificació de prova)."
+        "registered": "Registre de notificacions realitzat amb èxit. Cal reiniciar BIS-IA perquè es puguin enviar notificacions (inclosa una notificació de prova)."
       },
       "error": {
         "registerFailed": "No s'ha pogut desar el registre de notificacions."
@@ -320,7 +320,7 @@
     "notificationUnavailable": {
       "title": "Notificacions no disponibles",
       "documentation": "Llegir la documentació",
-      "desc": "Les notificacions push web requereixen un context segur (<code>https://…</code>). Aquesta és una limitació del navegador. Accedeix a Frigate de manera segura per utilitzar les notificacions."
+      "desc": "Les notificacions push web requereixen un context segur (<code>https://…</code>). Aquesta és una limitació del navegador. Accedeix a BIS-IA de manera segura per utilitzar les notificacions."
     },
     "unsavedChanges": "Canvis de notificació no desats",
     "globalSettings": {
@@ -335,7 +335,7 @@
   "camera": {
     "streams": {
       "title": "Transmissions",
-      "desc": "Desactiva temporalment una càmera fins que es reiniciï Frigate. La desactivació d'una càmera atura completament el processament de les transmissions d'aquesta càmera per part de Frigate. La detecció, gravació i depuració no estaran disponibles.<br /><em>Nota: Això no desactiva les retransmissions de go2rtc.</em>"
+      "desc": "Desactiva temporalment una càmera fins que es reiniciï BIS-IA. La desactivació d'una càmera atura completament el processament de les transmissions d'aquesta càmera per part de BIS-IA. La detecció, gravació i depuració no estaran disponibles.<br /><em>Nota: Això no desactiva les retransmissions de go2rtc.</em>"
     },
     "title": "Paràmetres de la càmera",
     "reviewClassification": {
@@ -349,7 +349,7 @@
       "objectAlertsTips": "Tots els objectes {{alertsLabels}} a {{cameraName}} es mostraràn com a Alertes.",
       "zoneObjectAlertsTips": "Tots els objectes {{alertsLabels}} detectats a la {{zone}} de {{cameraName}} es mostraràn com a Alertes.",
       "toast": {
-        "success": "S'ha desat la configuració de la classificació de revisió. Reinicia Frigate per aplicar els canvis."
+        "success": "S'ha desat la configuració de la classificació de revisió. Reinicia BIS-IA per aplicar els canvis."
       },
       "zoneObjectDetectionsTips": {
         "text": "Tots els objectes {{detectionsLabels}} no classificats a la {{zone}} de {{cameraName}} es mostraràn com a Deteccions.",
@@ -357,13 +357,13 @@
         "regardlessOfZoneObjectDetectionsTips": "Tots els objectes {{detectionsLabels}} no categoritzats a {{cameraName}} es mostraran com a Deteccions independentment de la zona en què es trobin."
       },
       "objectDetectionsTips": "Tots els objectes {{detectionsLabels}} no categoritzats a {{cameraName}} es mostraran com a Deteccions independentment de la zona en què es trobin.",
-      "desc": "Frigate categoritza els elements de revisió com a Alertes i Deteccions. Per defecte, tots els objectes de tipus <em>persona</em> i <em>cotxe</em> es consideren Alertes. Pots afinar la categorització dels teus elements de revisió configurant zones requerides per a aquests."
+      "desc": "BIS-IA categoritza els elements de revisió com a Alertes i Deteccions. Per defecte, tots els objectes de tipus <em>persona</em> i <em>cotxe</em> es consideren Alertes. Pots afinar la categorització dels teus elements de revisió configurant zones requerides per a aquests."
     },
     "review": {
       "alerts": "Alertes ",
       "detections": "Deteccions ",
       "title": "Revisar",
-      "desc": "Habilita o deshabilita temporalment les alertes i deteccions per a aquesta càmera fins que es reiniciï Frigate. Quan estigui desactivat, no es generaran nous elements de revisió. "
+      "desc": "Habilita o deshabilita temporalment les alertes i deteccions per a aquesta càmera fins que es reiniciï BIS-IA. Quan estigui desactivat, no es generaran nous elements de revisió. "
     },
     "object_descriptions": {
       "title": "Descripció d'objectes per IA generativa",
@@ -414,7 +414,7 @@
     },
     "desc": {
       "documentation": "Llegeix la guia d'ajust de detecció de moviment",
-      "title": "Frigate utilitza la detecció de moviment com a primer filtre per comprovar si hi ha alguna activitat a la imatge que valgui la pena analitzar amb la detecció d’objectes."
+      "title": "BIS-IA utilitza la detecció de moviment com a primer filtre per comprovar si hi ha alguna activitat a la imatge que valgui la pena analitzar amb la detecció d’objectes."
     },
     "improveContrast": {
       "title": "Millorar contrast",
@@ -470,7 +470,7 @@
       "desc": "Mostra requadres al voltant de les àrees on s'ha detectat moviment",
       "tips": "<p><strong>Caixes de moviment</strong></p><br><p>Es sobreposaran requadres vermells a les àrees del fotograma on actualment s’estigui detectant moviment.</p>"
     },
-    "detectorDesc": "Frigate fa servir els teus detectors ({{detectors}}) per a detectar objectes a les imatges de la teva càmera.",
+    "detectorDesc": "BIS-IA fa servir els teus detectors ({{detectors}}) per a detectar objectes a les imatges de la teva càmera.",
     "desc": "La vista de depuració mostra en temps real els objectes rastrejats i les seves estadístiques. La llista d’objectes mostra un resum amb retard temporal dels objectes detectats.",
     "openCameraWebUI": "Obrir la interficie d'usuari de {{camera}}",
     "audio": {
@@ -591,18 +591,18 @@
         "title": "Crear un nou usuari",
         "confirmPassword": "Siusplau, confirma la contrasenya",
         "usernameOnlyInclude": "El nom d'usuari només pot contenir lletres, números, . o _",
-        "desc": "Afegeix un nou compte d'usuari i especifica un rol per accedir a àrees de la interfície de Frigate."
+        "desc": "Afegeix un nou compte d'usuari i especifica un rol per accedir a àrees de la interfície de BIS-IA."
       }
     },
     "title": "Usuaris",
     "addUser": "Afegir usuari",
     "management": {
       "title": "Gestió d'usuaris",
-      "desc": "Gestioneu els comptes d'usuari d'aquesta instància de Frigate."
+      "desc": "Gestioneu els comptes d'usuari d'aquesta instància de BIS-IA."
     },
     "updatePassword": "Restableix la contrasenya"
   },
-  "frigatePlus": {
+  "bisiaPlus": {
     "snapshotConfig": {
       "table": {
         "camera": "Càmera",
@@ -611,8 +611,8 @@
       },
       "title": "Configuració d'instantànies",
       "documentation": "Llegir la documentació",
-      "desc": "Per a enviar a Frigate+ fa falta que tan la instantània com la instantània <code>clean_copy</code> estiguin habilitades a la configuració.",
-      "cleanCopyWarning": "Algunes càmeres tenen les captures d'imatge activades però la còpia neta desactivada. Cal habilitar <code>clean_copy</code> a la configuració de captures per poder enviar imatges d’aquestes càmeres a Frigate+."
+      "desc": "Per a enviar a BIS-IA+ fa falta que tan la instantània com la instantània <code>clean_copy</code> estiguin habilitades a la configuració.",
+      "cleanCopyWarning": "Algunes càmeres tenen les captures d'imatge activades però la còpia neta desactivada. Cal habilitar <code>clean_copy</code> a la configuració de captures per poder enviar imatges d’aquestes càmeres a BIS-IA+."
     },
     "modelInfo": {
       "baseModel": "Model base",
@@ -629,22 +629,22 @@
       "loadingAvailableModels": "Carregant models disponibles…",
       "loading": "Carregant informació del model…",
       "error": "No s'ha pogut carregar la informació del model",
-      "modelSelect": "Els models disponibles a Frigate+ es poden seleccionar aquí. Tingues en compte que només es poden triar els models compatibles amb la configuració actual del detector."
+      "modelSelect": "Els models disponibles a BIS-IA+ es poden seleccionar aquí. Tingues en compte que només es poden triar els models compatibles amb la configuració actual del detector."
     },
     "apiKey": {
-      "plusLink": "Llegeix més sobre Frigate+",
-      "title": "Clau API de Frigate+",
-      "validated": "La clau API de Frigate+ ha estat detectada i validada",
-      "notValidated": "La clau API de Frigate+ no ha estat detectada o no ha estat validada",
-      "desc": "La clau API de Frigate+ habilita la integració amb el servei Frigate+."
+      "plusLink": "Llegeix més sobre BIS-IA+",
+      "title": "Clau API de BIS-IA+",
+      "validated": "La clau API de BIS-IA+ ha estat detectada i validada",
+      "notValidated": "La clau API de BIS-IA+ no ha estat detectada o no ha estat validada",
+      "desc": "La clau API de BIS-IA+ habilita la integració amb el servei BIS-IA+."
     },
-    "unsavedChanges": "Canvis dels paràmetres de Frigate+ sense desar",
-    "title": "Paràmetres de Frigate+",
+    "unsavedChanges": "Canvis dels paràmetres de BIS-IA+ sense desar",
+    "title": "Paràmetres de BIS-IA+",
     "toast": {
       "error": "No s'han pogut guardar els canvis de configuració: {{errorMessage}}",
-      "success": "Els paràmetres de Frigate+ han estat desats. Reincia Frigate per aplicar els canvis."
+      "success": "Els paràmetres de BIS-IA+ han estat desats. Reincia BIS-IA per aplicar els canvis."
     },
-    "restart_required": "Es necessari un reinici (El model de Frigate+ ha cambiat)"
+    "restart_required": "Es necessari un reinici (El model de BIS-IA+ ha cambiat)"
   },
   "enrichments": {
     "semanticSearch": {
@@ -672,7 +672,7 @@
       },
       "readTheDocumentation": "Llegir la documentació",
       "title": "Cerca semàntica",
-      "desc": "La cerca semàntica a Frigate permet trobar objectes rastrejats dins dels elements de revisió utilitzant la pròpia imatge, una descripció de text definida per l'usuari o una de generada automàticament."
+      "desc": "La cerca semàntica a BIS-IA permet trobar objectes rastrejats dins dels elements de revisió utilitzant la pròpia imatge, una descripció de text definida per l'usuari o una de generada automàticament."
     },
     "faceRecognition": {
       "modelSize": {
@@ -689,13 +689,13 @@
       },
       "readTheDocumentation": "Llegir la documentació",
       "title": "Reconeixement de rostres",
-      "desc": "El reconeixement facial permet a les persones assignar noms i quan es reconeix la seva cara Frigate assignarà el nom de la persona com a subetiqueta. Aquesta informació s'inclou en la interfície d'usuari, filtres, així com en les notificacions."
+      "desc": "El reconeixement facial permet a les persones assignar noms i quan es reconeix la seva cara BIS-IA assignarà el nom de la persona com a subetiqueta. Aquesta informació s'inclou en la interfície d'usuari, filtres, així com en les notificacions."
     },
     "unsavedChanges": "Canvis dels paràmetres complementaris sense desar",
     "licensePlateRecognition": {
       "readTheDocumentation": "Llegir la documentació",
       "title": "Reconeixement de matrícules",
-      "desc": "Frigate pot reconèixer les plaques de matrícula en vehicles i afegir automàticament els caràcters detectats al camp de la placa reconeguda o un nom conegut com a sub_etiqueta en objectes que són de tipus cotxe. Un cas d'ús comú pot ser llegir les plaques de matrícula dels cotxes que entren en un lloc o els cotxes que passen per un carrer."
+      "desc": "BIS-IA pot reconèixer les plaques de matrícula en vehicles i afegir automàticament els caràcters detectats al camp de la placa reconeguda o un nom conegut com a sub_etiqueta en objectes que són de tipus cotxe. Un cas d'ús comú pot ser llegir les plaques de matrícula dels cotxes que entren en un lloc o els cotxes que passen per un carrer."
     },
     "birdClassification": {
       "title": "Classificació d'ocells",
@@ -704,7 +704,7 @@
     "title": "Configuració dels enriquiments",
     "toast": {
       "error": "No s'han pogut guardar els canvis de configuració: {{errorMessage}}",
-      "success": "Els paràmetres complementaris s'han desat. Reinicia Frigate per aplicar els canvis."
+      "success": "Els paràmetres complementaris s'han desat. Reinicia BIS-IA per aplicar els canvis."
     },
     "restart_required": "És necessari reiniciar (Han cambiat paràmetres complementaris)"
   },
@@ -783,7 +783,7 @@
         },
         "actions": {
           "title": "Accions",
-          "desc": "Per defecte, Frigate dispara un missatge MQTT per a tots els activadors. Subetiquetes afegeix el nom de l'activador a l'etiqueta de l'objecte. Els atributs són metadades cercables emmagatzemades per separat a les metadades de l'objecte rastrejat.",
+          "desc": "Per defecte, BIS-IA dispara un missatge MQTT per a tots els activadors. Subetiquetes afegeix el nom de l'activador a l'etiqueta de l'objecte. Els atributs són metadades cercables emmagatzemades per separat a les metadades de l'objecte rastrejat.",
           "error": {
             "min": "S'ha de seleccionar una acció com a mínim."
           }
@@ -869,7 +869,7 @@
     },
     "management": {
       "title": "Gestió del Rols de Visors",
-      "desc": "Gestiona els rols visors personalitzats y els seus permisos d'accés per aquesta instancia de Frigate."
+      "desc": "Gestiona els rols visors personalitzats y els seus permisos d'accés per aquesta instancia de BIS-IA."
     },
     "addRole": "Afegir Rol",
     "table": {
@@ -942,7 +942,7 @@
       "selectBrand": "Seleccioneu la marca de la càmera per a la plantilla d'URL",
       "customUrl": "URL de flux personalitzat",
       "docs": {
-        "reolink": "https://docs.frigate.video/configuration/camera_specific.html#reolink-cameras"
+        "reolink": "https://docs.bisia.video/configuration/camera_specific.html#reolink-cameras"
       },
       "testing": {
         "probingMetadata": "S'estan provant les metadades de la càmera...",
@@ -1085,7 +1085,7 @@
       "streamValidated": "El flux {{number}} s'ha validat correctament",
       "streamValidationFailed": "Ha fallat la validació del flux {{number}}",
       "ffmpegModule": "Usa el mode de compatibilitat del flux",
-      "ffmpegModuleDescription": "Si el flux no es carrega després de diversos intents, proveu d'activar-ho. Quan està activat, Frigate utilitzarà el mòdul ffmpeg amb go2rtc. Això pot proporcionar una millor compatibilitat amb alguns fluxos de càmera.",
+      "ffmpegModuleDescription": "Si el flux no es carrega després de diversos intents, proveu d'activar-ho. Quan està activat, BIS-IA utilitzarà el mòdul ffmpeg amb go2rtc. Això pot proporcionar una millor compatibilitat amb alguns fluxos de càmera.",
       "streamsTitle": "Fluxos de la càmera",
       "addStream": "Afegeix un flux",
       "addAnotherStream": "Afegeix un altre flux",
@@ -1143,7 +1143,7 @@
       "estimatedBandwidth": "Amplada de banda estimada",
       "roles": "Roles",
       "ffmpegModule": "Usa el mode de compatibilitat del flux",
-      "ffmpegModuleDescription": "Si el flux no es carrega després de diversos intents, proveu d'activar-ho. Quan està activat, Frigate utilitzarà el mòdul ffmpeg amb go2rtc. Això pot proporcionar una millor compatibilitat amb alguns fluxos de càmera.",
+      "ffmpegModuleDescription": "Si el flux no es carrega després de diversos intents, proveu d'activar-ho. Quan està activat, BIS-IA utilitzarà el mòdul ffmpeg amb go2rtc. Això pot proporcionar una millor compatibilitat amb alguns fluxos de càmera.",
       "none": "Cap",
       "error": "Error",
       "streamValidated": "El flux {{number}} s'ha validat correctament",
@@ -1181,7 +1181,7 @@
     "backToSettings": "Torna a la configuració de la càmera",
     "streams": {
       "title": "Habilita / Inhabilita les càmeres",
-      "desc": "Inhabilita temporalment una càmera fins que es reiniciï la fragata. La inhabilitació d'una càmera atura completament el processament de Frigate dels fluxos d'aquesta càmera. La detecció, l'enregistrament i la depuració no estaran disponibles.<br /> <em>Nota: això no desactiva les retransmissions de go2rtc.</em>"
+      "desc": "Inhabilita temporalment una càmera fins que es reiniciï la fragata. La inhabilitació d'una càmera atura completament el processament de BIS-IA dels fluxos d'aquesta càmera. La detecció, l'enregistrament i la depuració no estaran disponibles.<br /> <em>Nota: això no desactiva les retransmissions de go2rtc.</em>"
     },
     "cameraConfig": {
       "add": "Afegeix una càmera",
@@ -1216,21 +1216,21 @@
   "cameraReview": {
     "object_descriptions": {
       "title": "Descripcions d'objectes generadors d'IA",
-      "desc": "Activa/desactiva temporalment les descripcions d'objectes generatius d'IA per a aquesta càmera fins que es reiniciï Frigate. Quan està desactivat, les descripcions generades per IA no se sol·licitaran per als objectes rastrejats en aquesta càmera."
+      "desc": "Activa/desactiva temporalment les descripcions d'objectes generatius d'IA per a aquesta càmera fins que es reiniciï BIS-IA. Quan està desactivat, les descripcions generades per IA no se sol·licitaran per als objectes rastrejats en aquesta càmera."
     },
     "review_descriptions": {
       "title": "Descripcions de la IA generativa",
-      "desc": "Activa/desactiva temporalment les descripcions de la IA Generativa per a aquesta càmera fins que es reiniciï Frigate. Quan està desactivat, les descripcions generades per IA no se sol·licitaran per als elements de revisió d'aquesta càmera."
+      "desc": "Activa/desactiva temporalment les descripcions de la IA Generativa per a aquesta càmera fins que es reiniciï BIS-IA. Quan està desactivat, les descripcions generades per IA no se sol·licitaran per als elements de revisió d'aquesta càmera."
     },
     "review": {
       "title": "Revisió",
-      "desc": "Activa/desactiva temporalment les alertes i deteccions d'aquesta càmera fins que es reiniciï Frigate. Si està desactivat, no es generaran nous elements de revisió. ",
+      "desc": "Activa/desactiva temporalment les alertes i deteccions d'aquesta càmera fins que es reiniciï BIS-IA. Si està desactivat, no es generaran nous elements de revisió. ",
       "alerts": "Alertes. ",
       "detections": "Deteccions. "
     },
     "reviewClassification": {
       "title": "Revisió de la classificació",
-      "desc": "Frigate categoritza els articles de revisió com Alertes i Deteccions. Per defecte, tots els objectes <em>persona</em> i <em>cotxe</em> es consideren Alertes. Podeu refinar la categorització dels elements de revisió configurant-los les zones requerides.",
+      "desc": "BIS-IA categoritza els articles de revisió com Alertes i Deteccions. Per defecte, tots els objectes <em>persona</em> i <em>cotxe</em> es consideren Alertes. Podeu refinar la categorització dels elements de revisió configurant-los les zones requerides.",
       "noDefinedZones": "No hi ha zones definides per a aquesta càmera.",
       "selectAlertsZones": "Selecciona zones per a les alertes",
       "selectDetectionsZones": "Selecció de zones per a les deteccions",

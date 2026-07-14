@@ -1,17 +1,17 @@
 {
   "documentTitle": {
-    "authentication": "認証設定 - Frigate",
-    "camera": "カメラ設定 - Frigate",
-    "default": "設定 - Frigate",
-    "enrichments": "高度解析設定 - Frigate",
-    "masksAndZones": "マスク／ゾーンエディタ - Frigate",
-    "motionTuner": "モーションチューナー - Frigate",
-    "object": "デバッグ - Frigate",
-    "general": "UI設定 - Frigate",
-    "frigatePlus": "Frigate+ 設定 - Frigate",
-    "notifications": "通知設定 - Frigate",
-    "cameraManagement": "カメラ設定 - Frigate",
-    "cameraReview": "カメラレビュー設定 - Frigate"
+    "authentication": "認証設定 - BIS-IA",
+    "camera": "カメラ設定 - BIS-IA",
+    "default": "設定 - BIS-IA",
+    "enrichments": "高度解析設定 - BIS-IA",
+    "masksAndZones": "マスク／ゾーンエディタ - BIS-IA",
+    "motionTuner": "モーションチューナー - BIS-IA",
+    "object": "デバッグ - BIS-IA",
+    "general": "UI設定 - BIS-IA",
+    "bisiaPlus": "BIS-IA+ 設定 - BIS-IA",
+    "notifications": "通知設定 - BIS-IA",
+    "cameraManagement": "カメラ設定 - BIS-IA",
+    "cameraReview": "カメラレビュー設定 - BIS-IA"
   },
   "menu": {
     "ui": "UI",
@@ -23,7 +23,7 @@
     "debug": "デバッグ",
     "users": "ユーザー",
     "notifications": "通知",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "cameraManagement": "管理",
     "cameraReview": "レビュー",
     "roles": "区分"
@@ -105,7 +105,7 @@
     },
     "semanticSearch": {
       "title": "セマンティック検索",
-      "desc": "Frigate のセマンティック検索では、画像そのもの、ユーザー定義のテキスト説明、または自動生成された説明を用いて、レビュー項目内の追跡オブジェクトを検索できます。",
+      "desc": "BIS-IA のセマンティック検索では、画像そのもの、ユーザー定義のテキスト説明、または自動生成された説明を用いて、レビュー項目内の追跡オブジェクトを検索できます。",
       "reindexNow": {
         "label": "今すぐ再インデックス",
         "desc": "再インデックスは、すべての追跡オブジェクトの埋め込みを再生成します。バックグラウンドで実行され、追跡オブジェクト数によっては CPU を使い切り、相応の時間がかかる場合があります。",
@@ -151,7 +151,7 @@
     },
     "restart_required": "再起動が必要です（高度解析設定を変更）",
     "toast": {
-      "success": "高度解析設定を保存しました。変更を適用するには Frigate を再起動してください。",
+      "success": "高度解析設定を保存しました。変更を適用するには BIS-IA を再起動してください。",
       "error": "設定変更の保存に失敗しました: {{errorMessage}}"
     }
   },
@@ -159,7 +159,7 @@
     "title": "カメラ設定",
     "streams": {
       "title": "ストリーム",
-      "desc": "Frigate の再起動まで、カメラを一時的に無効化します。無効化すると、このカメラのストリーム処理は完全に停止します。検出、録画、デバッグは利用できません。<br /> <em>注: これは go2rtc のリストリームは無効化しません。</em>"
+      "desc": "BIS-IA の再起動まで、カメラを一時的に無効化します。無効化すると、このカメラのストリーム処理は完全に停止します。検出、録画、デバッグは利用できません。<br /> <em>注: これは go2rtc のリストリームは無効化しません。</em>"
     },
     "object_descriptions": {
       "title": "生成 AI オブジェクト説明",
@@ -171,13 +171,13 @@
     },
     "review": {
       "title": "レビュー",
-      "desc": "Frigate の再起動まで、このカメラのアラートと検出を一時的に有効／無効にします。無効時は新しいレビュー項目は生成されません。 ",
+      "desc": "BIS-IA の再起動まで、このカメラのアラートと検出を一時的に有効／無効にします。無効時は新しいレビュー項目は生成されません。 ",
       "alerts": "アラート ",
       "detections": "検出 "
     },
     "reviewClassification": {
       "title": "レビュー分類",
-      "desc": "Frigate はレビュー項目をアラートと検出に分類します。既定では <em>person</em> と <em>car</em> はアラートです。必要ゾーンを設定することで分類を細かく調整できます。",
+      "desc": "BIS-IA はレビュー項目をアラートと検出に分類します。既定では <em>person</em> と <em>car</em> はアラートです。必要ゾーンを設定することで分類を細かく調整できます。",
       "noDefinedZones": "このカメラにはゾーンが定義されていません。",
       "objectAlertsTips": "{{cameraName}} 上の {{alertsLabels}} はすべてアラートとして表示されます。",
       "zoneObjectAlertsTips": "{{cameraName}} の {{zone}} で検出された {{alertsLabels}} はすべてアラートとして表示されます。",
@@ -192,7 +192,7 @@
       "selectDetectionsZones": "検出のゾーンを選択",
       "limitDetections": "検出を特定ゾーンに制限",
       "toast": {
-        "success": "レビュー分類設定を保存しました。変更を適用するには Frigate を再起動してください。"
+        "success": "レビュー分類設定を保存しました。変更を適用するには BIS-IA を再起動してください。"
       }
     },
     "addCamera": "新しいカメラを追加",
@@ -298,7 +298,7 @@
     },
     "zones": {
       "label": "ゾーン",
-      "documentTitle": "ゾーンを編集 - Frigate",
+      "documentTitle": "ゾーンを編集 - BIS-IA",
       "desc": {
         "title": "ゾーンを使うと、フレーム内の特定領域を定義し、オブジェクトがその領域内にいるかどうかを判断できます。",
         "documentation": "ドキュメント"
@@ -349,7 +349,7 @@
     },
     "motionMasks": {
       "label": "モーションマスク",
-      "documentTitle": "モーションマスクを編集 - Frigate",
+      "documentTitle": "モーションマスクを編集 - BIS-IA",
       "desc": {
         "title": "モーションマスクは、望ましくない種類の動きで検出がトリガーされるのを防ぎます。過度なマスクはオブジェクト追跡を困難にします。",
         "documentation": "ドキュメント"
@@ -374,7 +374,7 @@
     },
     "objectMasks": {
       "label": "オブジェクトマスク",
-      "documentTitle": "オブジェクトマスクを編集 - Frigate",
+      "documentTitle": "オブジェクトマスクを編集 - BIS-IA",
       "desc": {
         "title": "オブジェクトフィルタマスクは、位置に基づいて特定のオブジェクトタイプの誤検出を除外するために使用します。",
         "documentation": "ドキュメント"
@@ -401,7 +401,7 @@
     "title": "モーション検出チューナー",
     "unsavedChanges": "未保存のモーションチューナーの変更（{{camera}}）",
     "desc": {
-      "title": "Frigate は、フレーム内に物体検出で確認すべき動きがあるかの一次チェックとしてモーション検出を使用します。",
+      "title": "BIS-IA は、フレーム内に物体検出で確認すべき動きがあるかの一次チェックとしてモーション検出を使用します。",
       "documentation": "モーション調整ガイドを読む"
     },
     "Threshold": {
@@ -422,7 +422,7 @@
   },
   "debug": {
     "title": "デバッグ",
-    "detectorDesc": "Frigate は検出器（{{detectors}}）を使用して、カメラの映像ストリーム内のオブジェクトを検出します。",
+    "detectorDesc": "BIS-IA は検出器（{{detectors}}）を使用して、カメラの映像ストリーム内のオブジェクトを検出します。",
     "desc": "デバッグビューは、追跡オブジェクトとその統計をリアルタイムに表示します。オブジェクト一覧には、検出オブジェクトの時差サマリが表示されます。",
     "openCameraWebUI": "{{camera}} の Web UI を開く",
     "debugging": "デバッグ",
@@ -483,7 +483,7 @@
     "title": "ユーザー",
     "management": {
       "title": "ユーザー管理",
-      "desc": "この Frigate インスタンスのユーザーアカウントを管理します。"
+      "desc": "この BIS-IA インスタンスのユーザーアカウントを管理します。"
     },
     "addUser": "ユーザーを追加",
     "updatePassword": "パスワードをリセット",
@@ -559,7 +559,7 @@
       },
       "createUser": {
         "title": "新規ユーザーを作成",
-        "desc": "新しいユーザーアカウントを追加し、Frigate UI へのアクセスロールを指定します。",
+        "desc": "新しいユーザーアカウントを追加し、BIS-IA UI へのアクセスロールを指定します。",
         "usernameOnlyInclude": "ユーザー名に使用できるのは英数字、.、_ のみです",
         "confirmPassword": "パスワードを確認してください"
       },
@@ -598,7 +598,7 @@
   "roles": {
     "management": {
       "title": "閲覧者ロール管理",
-      "desc": "この Frigate インスタンスのカスタム閲覧者ロールと、そのカメラアクセス権を管理します。"
+      "desc": "この BIS-IA インスタンスのカスタム閲覧者ロールと、そのカメラアクセス権を管理します。"
     },
     "addRole": "ロールを追加",
     "table": {
@@ -659,11 +659,11 @@
     "title": "通知",
     "notificationSettings": {
       "title": "通知設定",
-      "desc": "Frigate はブラウザで実行中、または PWA としてインストールされている場合に、端末へネイティブのプッシュ通知を送信できます。"
+      "desc": "BIS-IA はブラウザで実行中、または PWA としてインストールされている場合に、端末へネイティブのプッシュ通知を送信できます。"
     },
     "notificationUnavailable": {
       "title": "通知は利用できません",
-      "desc": "Web プッシュ通知にはセキュアコンテキスト（<code>https://…</code>）が必要です。これはブラウザの制限です。通知を利用するには、セキュアに Frigate へアクセスしてください。"
+      "desc": "Web プッシュ通知にはセキュアコンテキスト（<code>https://…</code>）が必要です。これはブラウザの制限です。通知を利用するには、セキュアに BIS-IA へアクセスしてください。"
     },
     "globalSettings": {
       "title": "グローバル設定",
@@ -700,7 +700,7 @@
     "cancelSuspension": "一時停止を解除",
     "toast": {
       "success": {
-        "registered": "通知の登録に成功しました。通知（テスト通知を含む）を送信するには Frigate の再起動が必要です。",
+        "registered": "通知の登録に成功しました。通知（テスト通知を含む）を送信するには BIS-IA の再起動が必要です。",
         "settingSaved": "通知設定を保存しました。"
       },
       "error": {
@@ -708,19 +708,19 @@
       }
     }
   },
-  "frigatePlus": {
-    "title": "Frigate+ 設定",
+  "bisiaPlus": {
+    "title": "BIS-IA+ 設定",
     "apiKey": {
-      "title": "Frigate+ API キー",
-      "validated": "Frigate+ API キーが検出され、検証されました",
-      "notValidated": "Frigate+ API キーが検出されないか、検証されていません",
-      "desc": "Frigate+ API キーは Frigate+ サービスとの統合を有効にします。",
-      "plusLink": "Frigate+ の詳細を読む"
+      "title": "BIS-IA+ API キー",
+      "validated": "BIS-IA+ API キーが検出され、検証されました",
+      "notValidated": "BIS-IA+ API キーが検出されないか、検証されていません",
+      "desc": "BIS-IA+ API キーは BIS-IA+ サービスとの統合を有効にします。",
+      "plusLink": "BIS-IA+ の詳細を読む"
     },
     "snapshotConfig": {
       "title": "スナップショット設定",
-      "desc": "Frigate+ への送信には、設定でスナップショットと <code>clean_copy</code> スナップショットの両方を有効にする必要があります。",
-      "cleanCopyWarning": "一部のカメラではスナップショットは有効ですが、クリーンコピーが無効です。これらのカメラから Frigate+ へ画像を送信するには、スナップショット設定で <code>clean_copy</code> を有効にしてください。",
+      "desc": "BIS-IA+ への送信には、設定でスナップショットと <code>clean_copy</code> スナップショットの両方を有効にする必要があります。",
+      "cleanCopyWarning": "一部のカメラではスナップショットは有効ですが、クリーンコピーが無効です。これらのカメラから BIS-IA+ へ画像を送信するには、スナップショット設定で <code>clean_copy</code> を有効にしてください。",
       "table": {
         "camera": "カメラ",
         "snapshots": "スナップショット",
@@ -742,12 +742,12 @@
       "error": "モデル情報の読み込みに失敗しました",
       "availableModels": "利用可能なモデル",
       "loadingAvailableModels": "利用可能なモデルを読み込み中…",
-      "modelSelect": "ここで Frigate+ 上の利用可能なモデルを選択できます。現在の検出器構成と互換性のあるモデルのみ選択可能です。"
+      "modelSelect": "ここで BIS-IA+ 上の利用可能なモデルを選択できます。現在の検出器構成と互換性のあるモデルのみ選択可能です。"
     },
-    "unsavedChanges": "未保存の Frigate+ 設定の変更",
-    "restart_required": "再起動が必要です（Frigate+ モデルを変更）",
+    "unsavedChanges": "未保存の BIS-IA+ 設定の変更",
+    "restart_required": "再起動が必要です（BIS-IA+ モデルを変更）",
     "toast": {
-      "success": "Frigate+ 設定を保存しました。変更を適用するには Frigate を再起動してください。",
+      "success": "BIS-IA+ 設定を保存しました。変更を適用するには BIS-IA を再起動してください。",
       "error": "設定変更の保存に失敗しました: {{errorMessage}}"
     }
   },
@@ -832,7 +832,7 @@
         },
         "actions": {
           "title": "アクション",
-          "desc": "デフォルトでは、Frigate はすべてのトリガーに対して MQTT メッセージを送信します。サブラベルは、トリガー名をオブジェクトのラベルに追加します。属性（Attributes）は、追跡オブジェクトのメタデータとは別に保存される検索可能なメタデータです。",
+          "desc": "デフォルトでは、BIS-IA はすべてのトリガーに対して MQTT メッセージを送信します。サブラベルは、トリガー名をオブジェクトのラベルに追加します。属性（Attributes）は、追跡オブジェクトのメタデータとは別に保存される検索可能なメタデータです。",
           "error": {
             "min": "少なくとも1つのアクションを選択してください。"
           }
@@ -957,7 +957,7 @@
       }
     },
     "title": "カメラを追加",
-    "description": "以下の手順に従って、Frigate に新しいカメラを追加します。",
+    "description": "以下の手順に従って、BIS-IA に新しいカメラを追加します。",
     "steps": {
       "nameAndConnection": "名称と接続",
       "streamConfiguration": "ストリーム設定",
@@ -1014,7 +1014,7 @@
         "customUrlRtspRequired": "カスタム URL は「rtsp://」で始まる必要があります。非 RTSP カメラ ストリームの場合は手動構成が必要です。"
       },
       "docs": {
-        "reolink": "https://docs.frigate.video/configuration/camera_specific.html#reolink-cameras"
+        "reolink": "https://docs.bisia.video/configuration/camera_specific.html#reolink-cameras"
       },
       "connectionSettings": "接続設定",
       "detectionMethod": "ストリーム検出方法",
@@ -1143,7 +1143,7 @@
         },
         "noAudioWarning": "このストリームでは音声が検出されていません。録画には音声が含まれません。"
       },
-      "ffmpegModuleDescription": "何度か試してもストリームが読み込まれない場合は、このオプションを有効にしてください。有効にすると、Frigate は go2rtc と併用して ffmpeg モジュールを使用します。一部のカメラストリームでは、互換性が向上する場合があります。"
+      "ffmpegModuleDescription": "何度か試してもストリームが読み込まれない場合は、このオプションを有効にしてください。有効にすると、BIS-IA は go2rtc と併用して ffmpeg モジュールを使用します。一部のカメラストリームでは、互換性が向上する場合があります。"
     }
   },
   "cameraManagement": {
@@ -1154,7 +1154,7 @@
     "backToSettings": "カメラ設定に戻る",
     "streams": {
       "title": "カメラの有効化／無効化",
-      "desc": "Frigate を再起動するまで一時的にカメラを無効化します。無効化すると、このカメラのストリーム処理は完全に停止し、検出・録画・デバッグは利用できません。<br /> <em>注: これは go2rtc のリストリームを無効にはしません。</em>"
+      "desc": "BIS-IA を再起動するまで一時的にカメラを無効化します。無効化すると、このカメラのストリーム処理は完全に停止し、検出・録画・デバッグは利用できません。<br /> <em>注: これは go2rtc のリストリームを無効にはしません。</em>"
     },
     "cameraConfig": {
       "add": "カメラを追加",
@@ -1190,21 +1190,21 @@
     "title": "カメラレビュー設定",
     "object_descriptions": {
       "title": "生成AIによるオブジェクト説明",
-      "desc": "Frigateが再起動するまで、このカメラの生成AIによる物体説明を一時的に有効/無効にします。無効にすると、このカメラで追跡された物体に対してAI生成の説明は生成されません。"
+      "desc": "BIS-IAが再起動するまで、このカメラの生成AIによる物体説明を一時的に有効/無効にします。無効にすると、このカメラで追跡された物体に対してAI生成の説明は生成されません。"
     },
     "review_descriptions": {
       "title": "生成AIによるレビュー説明",
-      "desc": "Frigateが再起動するまで、このカメラの生成AIによるレビュー説明を一時的に有効/無効にします。無効にすると、このカメラのレビュー項目に対してAI生成の説明は生成されません。"
+      "desc": "BIS-IAが再起動するまで、このカメラの生成AIによるレビュー説明を一時的に有効/無効にします。無効にすると、このカメラのレビュー項目に対してAI生成の説明は生成されません。"
     },
     "review": {
       "title": "レビュー",
-      "desc": "Frigate を再起動するまで、このカメラのアラートと検出を一時的に有効／無効にします。無効にすると、新しいレビュー項目は生成されません。 ",
+      "desc": "BIS-IA を再起動するまで、このカメラのアラートと検出を一時的に有効／無効にします。無効にすると、新しいレビュー項目は生成されません。 ",
       "alerts": "アラート ",
       "detections": "検出 "
     },
     "reviewClassification": {
       "title": "レビュー分類",
-      "desc": "Frigate はレビュー項目をアラートと検出に分類します。既定では、すべての <em>person</em> と <em>car</em> オブジェクトはアラートとして扱われます。必須ゾーンを設定することで、分類をより細かく調整できます。",
+      "desc": "BIS-IA はレビュー項目をアラートと検出に分類します。既定では、すべての <em>person</em> と <em>car</em> オブジェクトはアラートとして扱われます。必須ゾーンを設定することで、分類をより細かく調整できます。",
       "noDefinedZones": "このカメラにはゾーンが定義されていません。",
       "objectAlertsTips": "すべての {{alertsLabels}} オブジェクトは {{cameraName}} でアラートとして表示されます。",
       "zoneObjectAlertsTips": "{{cameraName}} の {{zone}} で検出されたすべての {{alertsLabels}} オブジェクトはアラートとして表示されます。",
@@ -1219,7 +1219,7 @@
       "selectDetectionsZones": "検出用のゾーンを選択",
       "limitDetections": "特定のゾーンに検出を限定する",
       "toast": {
-        "success": "レビュー分類の設定を保存しました。変更を適用するには Frigate を再起動してください。"
+        "success": "レビュー分類の設定を保存しました。変更を適用するには BIS-IA を再起動してください。"
       }
     }
   }

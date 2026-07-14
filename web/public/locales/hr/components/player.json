@@ -1,7 +1,7 @@
 {
   "noRecordingsFoundForThisTime": "Nisu pronađene snimke za ovo vrijeme",
-  "submitFrigatePlus": {
-    "title": "Pošalji ovaj kadar u Frigate+?",
+  "submitBisiaPlus": {
+    "title": "Pošalji ovaj kadar u BIS-IA+?",
     "submit": "Pošalji"
   },
   "cameraDisabled": "Kamera je onemogućena",
@@ -42,10 +42,10 @@
   },
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Kadar je uspješno poslan u Frigate+"
+      "submittedBisiaPlus": "Kadar je uspješno poslan u BIS-IA+"
     },
     "error": {
-      "submitFrigatePlusFailed": "Neuspješno slanje kadra u Frigate+"
+      "submitBisiaPlusFailed": "Neuspješno slanje kadra u BIS-IA+"
     }
   }
 }

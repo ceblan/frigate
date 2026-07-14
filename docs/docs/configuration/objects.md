@@ -5,7 +5,7 @@ title: Available Objects
 
 import labels from "../../../labelmap.txt";
 
-Frigate includes the object labels listed below from the Google Coral test data.
+BIS-IA includes the object labels listed below from the Google Coral test data.
 
 Please note:
 

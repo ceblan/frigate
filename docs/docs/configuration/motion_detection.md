@@ -5,7 +5,7 @@ title: Motion Detection
 
 # Tuning Motion Detection
 
-Frigate uses motion detection as a first line check to see if there is anything happening in the frame worth checking with object detection.
+BIS-IA uses motion detection as a first line check to see if there is anything happening in the frame worth checking with object detection.
 
 Once motion is detected, it tries to group up nearby areas of motion together in hopes of identifying a rectangle in the image that will capture the area worth inspecting. These are the red "motion boxes" you see in the debug viewer.
 
@@ -21,7 +21,7 @@ First, mask areas with regular motion not caused by the objects you want to dete
 
 ## Prepare For Testing
 
-The easiest way to tune motion detection is to use the Frigate UI under Settings > Motion Tuner. This screen allows the changing of motion detection values live to easily see the immediate effect on what is detected as motion.
+The easiest way to tune motion detection is to use the BIS-IA UI under Settings > Motion Tuner. This screen allows the changing of motion detection values live to easily see the immediate effect on what is detected as motion.
 
 ## Tuning Motion Detection During The Day
 
@@ -67,7 +67,7 @@ motion:
 
 Once the threshold calculation is run, the pixels that have changed are grouped together. The contour area value is used to decide which groups of changed pixels qualify as motion. Smaller values are more sensitive meaning people that are far away, small animals, etc. are more likely to be detected as motion, but it also means that small changes in shadows, leaves, etc. are detected as motion. Higher values are less sensitive meaning these things won't be detected as motion but with the risk that desired motion won't be detected until closer to the camera.
 
-Watching the motion boxes in the debug view, adjust the contour area until there are no motion boxes smaller than the smallest you'd expect frigate to detect something moving.
+Watching the motion boxes in the debug view, adjust the contour area until there are no motion boxes smaller than the smallest you'd expect bisia to detect something moving.
 
 ### Improve Contrast
 

@@ -1,37 +1,37 @@
 {
   "documentTitle": {
-    "authentication": "Impostazioni di autenticazione - Frigate",
-    "default": "Impostazioni - Frigate",
-    "classification": "Impostazioni di classificazione - Frigate",
-    "camera": "Impostazioni telecamera - Frigate",
-    "masksAndZones": "Editor di maschere e zone - Frigate",
-    "motionTuner": "Regolatore di movimento - Frigate",
-    "object": "Correzioni - Frigate",
-    "general": "Impostazioni interfaccia - Frigate",
-    "frigatePlus": "Impostazioni Frigate+ - Frigate",
-    "notifications": "Impostazioni di notifiche - Frigate",
-    "enrichments": "Impostazioni di miglioramento - Frigate",
-    "cameraManagement": "Gestisci telecamere - Frigate",
-    "cameraReview": "Impostazioni revisione telecamera - Frigate"
+    "authentication": "Impostazioni di autenticazione - BIS-IA",
+    "default": "Impostazioni - BIS-IA",
+    "classification": "Impostazioni di classificazione - BIS-IA",
+    "camera": "Impostazioni telecamera - BIS-IA",
+    "masksAndZones": "Editor di maschere e zone - BIS-IA",
+    "motionTuner": "Regolatore di movimento - BIS-IA",
+    "object": "Correzioni - BIS-IA",
+    "general": "Impostazioni interfaccia - BIS-IA",
+    "bisiaPlus": "Impostazioni BIS-IA+ - BIS-IA",
+    "notifications": "Impostazioni di notifiche - BIS-IA",
+    "enrichments": "Impostazioni di miglioramento - BIS-IA",
+    "cameraManagement": "Gestisci telecamere - BIS-IA",
+    "cameraReview": "Impostazioni revisione telecamera - BIS-IA"
   },
-  "frigatePlus": {
+  "bisiaPlus": {
     "snapshotConfig": {
-      "cleanCopyWarning": "Alcune telecamere hanno le istantanee abilitate ma la copia pulita disabilitata. È necessario abilitare <code>clean_copy</code> nella configurazione delle istantanee per poter inviare le immagini da queste telecamere a Frigate+.",
+      "cleanCopyWarning": "Alcune telecamere hanno le istantanee abilitate ma la copia pulita disabilitata. È necessario abilitare <code>clean_copy</code> nella configurazione delle istantanee per poter inviare le immagini da queste telecamere a BIS-IA+.",
       "table": {
         "snapshots": "Istantanee",
         "camera": "Telecamera",
         "cleanCopySnapshots": "Istantanee <code>clean_copy</code>"
       },
-      "desc": "Per inviare a Frigate+ è necessario che nella configurazione siano abilitate sia le istantanee che le istantanee <code>clean_copy</code>.",
+      "desc": "Per inviare a BIS-IA+ è necessario che nella configurazione siano abilitate sia le istantanee che le istantanee <code>clean_copy</code>.",
       "documentation": "Leggi la documentazione",
       "title": "Configurazione istantanee"
     },
     "apiKey": {
-      "title": "Chiave API Frigate+",
-      "validated": "La chiave API Frigate+ è stata rilevata e convalidata",
-      "notValidated": "La chiave API Frigate+ non è stata rilevata o non è stata convalidata",
-      "desc": "La chiave API Frigate+ consente l'integrazione con il servizio Frigate+.",
-      "plusLink": "Scopri di più su Frigate+"
+      "title": "Chiave API BIS-IA+",
+      "validated": "La chiave API BIS-IA+ è stata rilevata e convalidata",
+      "notValidated": "La chiave API BIS-IA+ non è stata rilevata o non è stata convalidata",
+      "desc": "La chiave API BIS-IA+ consente l'integrazione con il servizio BIS-IA+.",
+      "plusLink": "Scopri di più su BIS-IA+"
     },
     "modelInfo": {
       "trainDate": "Data addestramento",
@@ -46,17 +46,17 @@
       "supportedDetectors": "Rilevatori supportati",
       "error": "Impossibile caricare le informazioni sul modello",
       "modelType": "Tipo di modello",
-      "modelSelect": "Qui puoi selezionare i modelli disponibili su Frigate+. Nota: puoi selezionare solo i modelli compatibili con la configurazione attuale del tuo rilevatore.",
+      "modelSelect": "Qui puoi selezionare i modelli disponibili su BIS-IA+. Nota: puoi selezionare solo i modelli compatibili con la configurazione attuale del tuo rilevatore.",
       "title": "Informazioni sul modello",
       "loading": "Caricamento informazioni sul modello…"
     },
     "toast": {
       "error": "Impossibile salvare le modifiche alla configurazione: {{errorMessage}}",
-      "success": "Le impostazioni di Frigate+ sono state salvate. Riavvia Frigate per applicare le modifiche."
+      "success": "Le impostazioni di BIS-IA+ sono state salvate. Riavvia BIS-IA per applicare le modifiche."
     },
-    "title": "Impostazioni Frigate+",
-    "restart_required": "Riavvio richiesto (modello Frigate+ modificato)",
-    "unsavedChanges": "Modifiche alle impostazioni di Frigate+ non salvate"
+    "title": "Impostazioni BIS-IA+",
+    "restart_required": "Riavvio richiesto (modello BIS-IA+ modificato)",
+    "unsavedChanges": "Modifiche alle impostazioni di BIS-IA+ non salvate"
   },
   "debug": {
     "timestamp": {
@@ -72,7 +72,7 @@
       "score": "Punteggio",
       "ratio": "Rapporto"
     },
-    "detectorDesc": "Frigate utilizza i tuoi rilevatori ({{detectors}}) per rilevare oggetti nel flusso video della tua telecamera.",
+    "detectorDesc": "BIS-IA utilizza i tuoi rilevatori ({{detectors}}) per rilevare oggetti nel flusso video della tua telecamera.",
     "boundingBoxes": {
       "colors": {
         "info": "<li>All'avvio, a ciascuna etichetta dell'oggetto verranno assegnati colori diversi</li><li>Una linea sottile blu scuro indica che l'oggetto non è stato rilevato in questo momento</li><li>Una linea sottile grigia indica che l'oggetto è stato rilevato come stazionario</li><li>Una linea spessa indica che l'oggetto è oggetto di tracciamento automatico (se abilitato)</li>",
@@ -139,7 +139,7 @@
       "point_one": "{{count}} punto",
       "point_many": "{{count}} punti",
       "point_other": "{{count}} punti",
-      "documentTitle": "Modifica maschera movimento - Frigate",
+      "documentTitle": "Modifica maschera movimento - BIS-IA",
       "add": "Nuova maschera di movimento",
       "toast": {
         "success": {
@@ -251,7 +251,7 @@
       "point_many": "{{count}} punti",
       "point_other": "{{count}} punti",
       "label": "Zone",
-      "documentTitle": "Modifica zona - Frigate",
+      "documentTitle": "Modifica zona - BIS-IA",
       "inertia": {
         "title": "Inerzia",
         "desc": "Specifica quanti fotogrammi deve avere un oggetto in una zona prima di essere considerato nella zona. <em>Predefinito: 3</em>"
@@ -293,7 +293,7 @@
         }
       },
       "label": "Maschere di oggetti",
-      "documentTitle": "Modifica maschera oggetti - Frigate"
+      "documentTitle": "Modifica maschera oggetti - BIS-IA"
     },
     "restart_required": "Riavvio richiesto (maschere/zone modificate)",
     "motionMaskLabel": "Maschera di movimento {{number}}",
@@ -313,10 +313,10 @@
         "regardlessOfZoneObjectDetectionsTips": "Tutti gli oggetti {{detectionsLabels}} non categorizzati su {{cameraName}} verranno mostrati come Rilevamenti, indipendentemente dalla zona in cui si trovano."
       },
       "title": "Classificazione della revisione",
-      "desc": "Frigate categorizza gli elementi di revisione come Avvisi e Rilevamenti. Per impostazione predefinita, tutti gli oggetti <em>persona</em> e <em>automobile</em> sono considerati Avvisi. Puoi perfezionare la categorizzazione degli elementi di revisione configurando le zone desiderate.",
+      "desc": "BIS-IA categorizza gli elementi di revisione come Avvisi e Rilevamenti. Per impostazione predefinita, tutti gli oggetti <em>persona</em> e <em>automobile</em> sono considerati Avvisi. Puoi perfezionare la categorizzazione degli elementi di revisione configurando le zone desiderate.",
       "objectAlertsTips": "Tutti gli oggetti {{alertsLabels}} su {{cameraName}} verranno mostrati come Avvisi.",
       "toast": {
-        "success": "La configurazione della classificazione di revisione è stata salvata. Riavvia Frigate per applicare le modifiche."
+        "success": "La configurazione della classificazione di revisione è stata salvata. Riavvia BIS-IA per applicare le modifiche."
       },
       "readTheDocumentation": "Leggi la documentazione",
       "noDefinedZones": "Per questa telecamera non sono definite zone.",
@@ -326,13 +326,13 @@
       "unsavedChanges": "Impostazioni di classificazione delle revisioni non salvate per {{camera}}"
     },
     "streams": {
-      "desc": "Disattiva temporaneamente una telecamera fino al riavvio di Frigate. La disattivazione completa di una telecamera interrompe l'elaborazione dei flussi da parte di Frigate. Rilevamenti, registrazioni e correzioni non saranno disponibili.<br /> <em>Nota: questa operazione non disabilita le ritrasmissioni di go2rtc.</em>",
+      "desc": "Disattiva temporaneamente una telecamera fino al riavvio di BIS-IA. La disattivazione completa di una telecamera interrompe l'elaborazione dei flussi da parte di BIS-IA. Rilevamenti, registrazioni e correzioni non saranno disponibili.<br /> <em>Nota: questa operazione non disabilita le ritrasmissioni di go2rtc.</em>",
       "title": "Flussi"
     },
     "title": "Impostazioni telecamera",
     "review": {
       "title": "Rivedi",
-      "desc": "Abilita/disabilita temporaneamente avvisi e rilevamenti per questa telecamera fino al riavvio di Frigate. Se disabilitati, non verranno generati nuovi elementi di revisione. ",
+      "desc": "Abilita/disabilita temporaneamente avvisi e rilevamenti per questa telecamera fino al riavvio di BIS-IA. Se disabilitati, non verranno generati nuovi elementi di revisione. ",
       "alerts": "Avvisi ",
       "detections": "Rilevamenti "
     },
@@ -384,7 +384,7 @@
     "masksAndZones": "Maschere / Zone",
     "debug": "Correzioni",
     "users": "Utenti",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "enrichments": "Miglioramenti",
     "triggers": "Inneschi",
     "roles": "Ruoli",
@@ -458,7 +458,7 @@
         }
       },
       "createUser": {
-        "desc": "Aggiungi un nuovo account utente e specifica un ruolo per l'accesso alle aree dell'interfaccia utente di Frigate.",
+        "desc": "Aggiungi un nuovo account utente e specifica un ruolo per l'accesso alle aree dell'interfaccia utente di BIS-IA.",
         "title": "Crea nuovo utente",
         "usernameOnlyInclude": "Il nome utente può contenere solo lettere, numeri, . o _",
         "confirmPassword": "Conferma la password"
@@ -502,7 +502,7 @@
     "title": "Utenti",
     "management": {
       "title": "Gestione utenti",
-      "desc": "Gestisci gli account utente di questa istanza Frigate."
+      "desc": "Gestisci gli account utente di questa istanza BIS-IA."
     },
     "addUser": "Aggiungi utente",
     "updatePassword": "Reimposta password"
@@ -567,14 +567,14 @@
   },
   "classification": {
     "licensePlateRecognition": {
-      "desc": "Frigate può riconoscere le targhe dei veicoli e aggiungere automaticamente i caratteri rilevati al campo recognized_license_plate o un nome noto come sub_label agli oggetti di tipo \"automobile\". Un caso d'uso comune potrebbe essere la lettura delle targhe delle auto che entrano in un vialetto o che transitano lungo una strada.",
+      "desc": "BIS-IA può riconoscere le targhe dei veicoli e aggiungere automaticamente i caratteri rilevati al campo recognized_license_plate o un nome noto come sub_label agli oggetti di tipo \"automobile\". Un caso d'uso comune potrebbe essere la lettura delle targhe delle auto che entrano in un vialetto o che transitano lungo una strada.",
       "title": "Riconoscimento della targa",
       "readTheDocumentation": "Leggi la documentazione"
     },
     "title": "Impostazioni di classificazione",
     "semanticSearch": {
       "title": "Ricerca semantica",
-      "desc": "La ricerca semantica in Frigate consente di trovare gli oggetti tracciati all'interno degli elementi della recensione utilizzando l'immagine stessa, una descrizione testuale definita dall'utente o una generata automaticamente.",
+      "desc": "La ricerca semantica in BIS-IA consente di trovare gli oggetti tracciati all'interno degli elementi della recensione utilizzando l'immagine stessa, una descrizione testuale definita dall'utente o una generata automaticamente.",
       "readTheDocumentation": "Leggi la documentazione",
       "modelSize": {
         "large": {
@@ -601,7 +601,7 @@
     },
     "faceRecognition": {
       "title": "Riconoscimento facciale",
-      "desc": "Il riconoscimento facciale consente di assegnare un nome alle persone e, quando il volto viene riconosciuto, Frigate assegnerà il nome della persona come sottoetichetta. Queste informazioni sono incluse nell'interfaccia utente, nei filtri e nelle notifiche.",
+      "desc": "Il riconoscimento facciale consente di assegnare un nome alle persone e, quando il volto viene riconosciuto, BIS-IA assegnerà il nome della persona come sottoetichetta. Queste informazioni sono incluse nell'interfaccia utente, nei filtri e nelle notifiche.",
       "modelSize": {
         "desc": "Dimensioni del modello utilizzato per il riconoscimento facciale.",
         "small": {
@@ -618,7 +618,7 @@
     },
     "toast": {
       "error": "Impossibile salvare le modifiche alla configurazione: {{errorMessage}}",
-      "success": "Le impostazioni di classificazione sono state salvate. Riavvia Frigate per applicare le modifiche."
+      "success": "Le impostazioni di classificazione sono state salvate. Riavvia BIS-IA per applicare le modifiche."
     },
     "birdClassification": {
       "desc": "La classificazione degli uccelli identifica gli uccelli noti utilizzando un modello Tensorflow quantizzato. Quando un uccello noto viene riconosciuto, il suo nome comune viene aggiunto come sub_label. Queste informazioni sono incluse nell'interfaccia utente, nei filtri e nelle notifiche.",
@@ -639,7 +639,7 @@
       "desc": "Migliora il contrasto nelle scene più scure. <em>Predefinito: ATTIVO</em>"
     },
     "desc": {
-      "title": "Frigate utilizza il rilevamento del movimento come primo controllo per verificare se nell'inquadratura si verifica qualcosa che valga la pena verificare tramite il rilevamento degli oggetti.",
+      "title": "BIS-IA utilizza il rilevamento del movimento come primo controllo per verificare se nell'inquadratura si verifica qualcosa che valga la pena verificare tramite il rilevamento degli oggetti.",
       "documentation": "Leggi la Guida alla Regolazione del Movimento"
     },
     "title": "Regolatore di rilevamento del movimento",
@@ -687,14 +687,14 @@
     },
     "registerDevice": "Registra questo dispositivo",
     "notificationUnavailable": {
-      "desc": "Le notifiche push web richiedono un contesto sicuro (<code>https://...</code>). Questa è una limitazione del browser. Accedi a Frigate in modo sicuro per utilizzare le notifiche.",
+      "desc": "Le notifiche push web richiedono un contesto sicuro (<code>https://...</code>). Questa è una limitazione del browser. Accedi a BIS-IA in modo sicuro per utilizzare le notifiche.",
       "documentation": "Leggi la documentazione",
       "title": "Notifiche non disponibili"
     },
     "deviceSpecific": "Impostazioni specifiche del dispositivo",
     "toast": {
       "success": {
-        "registered": "Registrazione per le notifiche completata con successo. È necessario riavviare Frigate prima di poter inviare qualsiasi notifica (inclusa una notifica di prova).",
+        "registered": "Registrazione per le notifiche completata con successo. È necessario riavviare BIS-IA prima di poter inviare qualsiasi notifica (inclusa una notifica di prova).",
         "settingSaved": "Le impostazioni di notifica sono state salvate."
       },
       "error": {
@@ -704,7 +704,7 @@
     "title": "Notifiche",
     "notificationSettings": {
       "title": "Impostazioni notifiche",
-      "desc": "Frigate può inviare notifiche push in modo nativo al tuo dispositivo quando è in esecuzione nel browser o installato come PWA.",
+      "desc": "BIS-IA può inviare notifiche push in modo nativo al tuo dispositivo quando è in esecuzione nel browser o installato come PWA.",
       "documentation": "Leggi la documentazione"
     },
     "cancelSuspension": "Annulla sospensione",
@@ -713,7 +713,7 @@
   },
   "enrichments": {
     "toast": {
-      "success": "Le impostazioni di miglioramento sono state salvate. Riavvia Frigate per applicare le modifiche.",
+      "success": "Le impostazioni di miglioramento sono state salvate. Riavvia BIS-IA per applicare le modifiche.",
       "error": "Impossibile salvare le modifiche alla configurazione: {{errorMessage}}"
     },
     "title": "Impostazioni di miglioramento",
@@ -741,11 +741,11 @@
         }
       },
       "title": "Ricerca semantica",
-      "desc": "La ricerca semantica in Frigate consente di trovare gli oggetti tracciati all'interno degli elementi della recensione utilizzando l'immagine stessa, una descrizione testuale definita dall'utente o una generata automaticamente.",
+      "desc": "La ricerca semantica in BIS-IA consente di trovare gli oggetti tracciati all'interno degli elementi della recensione utilizzando l'immagine stessa, una descrizione testuale definita dall'utente o una generata automaticamente.",
       "readTheDocumentation": "Leggi la documentazione"
     },
     "faceRecognition": {
-      "desc": "Il riconoscimento facciale consente di assegnare un nome alle persone e, quando il volto viene riconosciuto, Frigate assegnerà il nome della persona come sottoetichetta. Queste informazioni sono incluse nell'interfaccia utente, nei filtri e nelle notifiche.",
+      "desc": "Il riconoscimento facciale consente di assegnare un nome alle persone e, quando il volto viene riconosciuto, BIS-IA assegnerà il nome della persona come sottoetichetta. Queste informazioni sono incluse nell'interfaccia utente, nei filtri e nelle notifiche.",
       "title": "Riconoscimento facciale",
       "readTheDocumentation": "Leggi la documentazione",
       "modelSize": {
@@ -766,7 +766,7 @@
       "title": "Classificazione degli uccelli"
     },
     "licensePlateRecognition": {
-      "desc": "Frigate può riconoscere le targhe dei veicoli e aggiungere automaticamente i caratteri rilevati al campo recognized_license_plate o un nome noto come sub_label agli oggetti di tipo automobile (car). Un caso d'uso comune potrebbe essere la lettura delle targhe delle auto che entrano in un vialetto o che transitano lungo una strada.",
+      "desc": "BIS-IA può riconoscere le targhe dei veicoli e aggiungere automaticamente i caratteri rilevati al campo recognized_license_plate o un nome noto come sub_label agli oggetti di tipo automobile (car). Un caso d'uso comune potrebbe essere la lettura delle targhe delle auto che entrano in un vialetto o che transitano lungo una strada.",
       "title": "Riconoscimento targhe",
       "readTheDocumentation": "Leggi la documentazione"
     },
@@ -854,7 +854,7 @@
         },
         "actions": {
           "title": "Azioni",
-          "desc": "Per impostazione predefinita, Frigate invia un messaggio MQTT per tutti gli inneschi. Le sottoetichette aggiungono il nome dell'innesco all'etichetta dell'oggetto. Gli attributi sono metadati ricercabili, memorizzati separatamente nei metadati dell'oggetto tracciato.",
+          "desc": "Per impostazione predefinita, BIS-IA invia un messaggio MQTT per tutti gli inneschi. Le sottoetichette aggiungono il nome dell'innesco all'etichetta dell'oggetto. Gli attributi sono metadati ricercabili, memorizzati separatamente nei metadati dell'oggetto tracciato.",
           "error": {
             "min": "È necessario selezionare almeno un'azione."
           }
@@ -903,7 +903,7 @@
   "roles": {
     "management": {
       "title": "Gestione del ruolo di spettatore",
-      "desc": "Gestisci i ruoli di spettatori personalizzati e le relative autorizzazioni di accesso alla telecamera per questa istanza Frigate."
+      "desc": "Gestisci i ruoli di spettatori personalizzati e le relative autorizzazioni di accesso alla telecamera per questa istanza BIS-IA."
     },
     "addRole": "Aggiungi ruolo",
     "table": {
@@ -966,21 +966,21 @@
     "title": "Impostazioni revisione telecamera",
     "object_descriptions": {
       "title": "Descrizioni oggetti IA generativa",
-      "desc": "Abilita/disabilita temporaneamente le descrizioni degli oggetti generate dall'IA per questa telecamera fino al riavvio di Frigate. Se disabilitate, le descrizioni generate dall'IA non verranno richieste per gli oggetti tracciati su questa telecamera."
+      "desc": "Abilita/disabilita temporaneamente le descrizioni degli oggetti generate dall'IA per questa telecamera fino al riavvio di BIS-IA. Se disabilitate, le descrizioni generate dall'IA non verranno richieste per gli oggetti tracciati su questa telecamera."
     },
     "review_descriptions": {
       "title": "Descrizioni revisioni IA generativa",
-      "desc": "Abilita/disabilita temporaneamente le descrizioni di revisione generate dall'IA per questa telecamera fino al riavvio di Frigate. Se disabilitate, le descrizioni generate dall'IA non saranno richieste per gli elementi di revisione su questa telecamera."
+      "desc": "Abilita/disabilita temporaneamente le descrizioni di revisione generate dall'IA per questa telecamera fino al riavvio di BIS-IA. Se disabilitate, le descrizioni generate dall'IA non saranno richieste per gli elementi di revisione su questa telecamera."
     },
     "review": {
       "title": "Rivedi",
-      "desc": "Abilita/disabilita temporaneamente avvisi e rilevamenti per questa telecamera fino al riavvio di Frigate. Se disabilitato, non verranno generati nuovi elementi di revisione. ",
+      "desc": "Abilita/disabilita temporaneamente avvisi e rilevamenti per questa telecamera fino al riavvio di BIS-IA. Se disabilitato, non verranno generati nuovi elementi di revisione. ",
       "alerts": "Avvisi ",
       "detections": "Rilevamenti "
     },
     "reviewClassification": {
       "title": "Classificazione revisione",
-      "desc": "Frigate categorizza gli elementi di revisione come Avvisi e Rilevamenti. Per impostazione predefinita, tutti gli oggetti <em>persona</em> e <em>auto</em> sono considerati Avvisi. È possibile perfezionare la categorizzazione degli elementi di revisione configurando le zone richieste per ciascuno di essi.",
+      "desc": "BIS-IA categorizza gli elementi di revisione come Avvisi e Rilevamenti. Per impostazione predefinita, tutti gli oggetti <em>persona</em> e <em>auto</em> sono considerati Avvisi. È possibile perfezionare la categorizzazione degli elementi di revisione configurando le zone richieste per ciascuno di essi.",
       "noDefinedZones": "Per questa telecamera non sono definite zone.",
       "objectAlertsTips": "Tutti gli oggetti {{alertsLabels}} su {{cameraName}} verranno mostrati come Avvisi.",
       "zoneObjectAlertsTips": "Tutti gli oggetti {{alertsLabels}} rilevati in {{zone}} su {{cameraName}} verranno mostrati come Avvisi.",
@@ -995,7 +995,7 @@
       "selectDetectionsZones": "Seleziona le zone per i Rilevamenti",
       "limitDetections": "Limita i rilevamenti a zone specifiche",
       "toast": {
-        "success": "La configurazione della classificazione di revisione è stata salvata. Riavvia Frigate per applicare le modifiche."
+        "success": "La configurazione della classificazione di revisione è stata salvata. Riavvia BIS-IA per applicare le modifiche."
       }
     }
   },
@@ -1042,7 +1042,7 @@
         "resolutionLow": "Una risoluzione di {{resolution}} potrebbe essere troppo bassa per un rilevamento affidabile di oggetti di piccole dimensioni."
       },
       "ffmpegModule": "Utilizza la modalità di compatibilità della trasmissione",
-      "ffmpegModuleDescription": "Se il flusso non si carica dopo diversi tentativi, prova ad abilitare questa opzione. Se abilitata, Frigate utilizzerà il modulo ffmpeg con go2rtc. Questo potrebbe garantire una migliore compatibilità con alcuni flussi di telecamere.",
+      "ffmpegModuleDescription": "Se il flusso non si carica dopo diversi tentativi, prova ad abilitare questa opzione. Se abilitata, BIS-IA utilizzerà il modulo ffmpeg con go2rtc. Questo potrebbe garantire una migliore compatibilità con alcuni flussi di telecamere.",
       "streamsTitle": "Flussi della telecamera",
       "addStream": "Aggiungi flusso",
       "addAnotherStream": "Aggiungi un altro flusso",
@@ -1082,7 +1082,7 @@
       }
     },
     "title": "Aggiungi telecamera",
-    "description": "Per aggiungere una nuova telecamera alla tua installazione Frigate, segui i passaggi indicati di seguito.",
+    "description": "Per aggiungere una nuova telecamera alla tua installazione BIS-IA, segui i passaggi indicati di seguito.",
     "steps": {
       "nameAndConnection": "Nome e connessione",
       "streamConfiguration": "Configurazione flusso",
@@ -1139,7 +1139,7 @@
         "customUrlRtspRequired": "Gli URL personalizzati devono iniziare con \"rtsp://\". Per i flussi di telecamere non RTSP è richiesta la configurazione manuale."
       },
       "docs": {
-        "reolink": "https://docs.frigate.video/configuration/camera_specific.html#reolink-cameras"
+        "reolink": "https://docs.bisia.video/configuration/camera_specific.html#reolink-cameras"
       },
       "testing": {
         "probingMetadata": "Analisi dei metadati della telecamera in corso...",
@@ -1245,7 +1245,7 @@
       "estimatedBandwidth": "Larghezza di banda stimata",
       "roles": "Ruoli",
       "ffmpegModule": "Utilizza la modalità di compatibilità del flusso",
-      "ffmpegModuleDescription": "Se il flusso non si carica dopo diversi tentativi, prova ad abilitare questa opzione. Se abilitata, Frigate utilizzerà il modulo ffmpeg con go2rtc. Questo potrebbe garantire una migliore compatibilità con alcuni flussi di telecamere.",
+      "ffmpegModuleDescription": "Se il flusso non si carica dopo diversi tentativi, prova ad abilitare questa opzione. Se abilitata, BIS-IA utilizzerà il modulo ffmpeg con go2rtc. Questo potrebbe garantire una migliore compatibilità con alcuni flussi di telecamere.",
       "none": "Nessuno",
       "error": "Errore",
       "streamValidated": "Flusso {{number}} convalidato con successo",
@@ -1283,7 +1283,7 @@
     "backToSettings": "Torna alle impostazioni della telecamera",
     "streams": {
       "title": "Abilita/Disabilita telecamere",
-      "desc": "Disattiva temporaneamente una telecamera fino al riavvio di Frigate. La disattivazione completa di una telecamera interrompe l'elaborazione dei flussi di questa telecamera da parte di Frigate. Rilevamento, registrazione e correzioni non saranno disponibili.<br /> <em>Nota: questa operazione non disattiva le ritrasmissioni di go2rtc.</em>"
+      "desc": "Disattiva temporaneamente una telecamera fino al riavvio di BIS-IA. La disattivazione completa di una telecamera interrompe l'elaborazione dei flussi di questa telecamera da parte di BIS-IA. Rilevamento, registrazione e correzioni non saranno disponibili.<br /> <em>Nota: questa operazione non disattiva le ritrasmissioni di go2rtc.</em>"
     },
     "cameraConfig": {
       "add": "Aggiungi telecamera",

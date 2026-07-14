@@ -1,7 +1,7 @@
 {
   "time": {
     "untilForTime": "Till {{time}}",
-    "untilForRestart": "Tills Frigate startar om.",
+    "untilForRestart": "Tills BIS-IA startar om.",
     "untilRestart": "Tills omstart",
     "ago": "{{timeAgo}} sedan",
     "justNow": "Just nu",
@@ -207,10 +207,10 @@
     "help": "Hjälp",
     "documentation": {
       "title": "Dokumentation",
-      "label": "Frigate dokumentation"
+      "label": "BIS-IA dokumentation"
     },
     "uiPlayground": "UI Testmiljö",
-    "restart": "Starta om Frigate",
+    "restart": "Starta om BIS-IA",
     "review": "Granska",
     "languages": "Språk",
     "configurationEditor": "Konfigurationsredigerare",
@@ -233,16 +233,16 @@
   "accessDenied": {
     "title": "Åtkomst Förbjuden",
     "desc": "Du har inte rättigheter att visa den här sidan.",
-    "documentTitle": "Åtkomst Förbjuden - Frigate"
+    "documentTitle": "Åtkomst Förbjuden - BIS-IA"
   },
   "role": {
     "admin": "Admin",
     "viewer": "Tittare",
-    "desc": "Administratörer har fullständig åtkomst till alla funktioner i Frigates gränssnitt. Tittare kan endast visa kameror, granska objekt och se historiskt videomaterial.",
+    "desc": "Administratörer har fullständig åtkomst till alla funktioner i BIS-IAs gränssnitt. Tittare kan endast visa kameror, granska objekt och se historiskt videomaterial.",
     "title": "Roll"
   },
   "notFound": {
-    "documentTitle": "Hittades Inte - Frigate",
+    "documentTitle": "Hittades Inte - BIS-IA",
     "desc": "Sidan hittades inte",
     "title": "404"
   },
@@ -295,6 +295,6 @@
   },
   "field": {
     "optional": "Valfritt",
-    "internalID": "Det interna ID som Frigate använder i konfigurationen och databasen"
+    "internalID": "Det interna ID som BIS-IA använder i konfigurationen och databasen"
   }
 }

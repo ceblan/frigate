@@ -1,18 +1,18 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 import { PropSidebarItemLink } from "@docusaurus/plugin-content-docs";
-import frigateHttpApiSidebar from "./docs/integrations/api/sidebar";
+import bisiaHttpApiSidebar from "./docs/integrations/api/sidebar";
 
 const sidebars: SidebarsConfig = {
   docs: {
-    Frigate: [
-      "frigate/index",
-      "frigate/hardware",
-      "frigate/planning_setup",
-      "frigate/installation",
-      "frigate/updating",
-      "frigate/camera_setup",
-      "frigate/video_pipeline",
-      "frigate/glossary",
+    "BIS-IA": [
+      "bisia/index",
+      "bisia/hardware",
+      "bisia/planning_setup",
+      "bisia/installation",
+      "bisia/updating",
+      "bisia/camera_setup",
+      "bisia/video_pipeline",
+      "bisia/glossary",
     ],
     Guides: [
       "guides/getting_started",
@@ -109,18 +109,18 @@ const sidebars: SidebarsConfig = {
         label: "HTTP API",
         link: {
           type: "generated-index",
-          title: "Frigate HTTP API",
+          title: "BIS-IA HTTP API",
           description: "HTTP API",
-          slug: "/integrations/api/frigate-http-api",
+          slug: "/integrations/api/bisia-http-api",
         },
-        items: frigateHttpApiSidebar,
+        items: bisiaHttpApiSidebar,
       },
       "integrations/mqtt",
       "integrations/homekit",
       "configuration/metrics",
       "integrations/third_party_extensions",
     ],
-    "Frigate+": [
+    "BIS-IA+": [
       "plus/index",
       "plus/annotating",
       "plus/first_model",

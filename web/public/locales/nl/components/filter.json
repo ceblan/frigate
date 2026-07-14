@@ -27,9 +27,9 @@
     "hasVideoClip": "Heeft een videoclip",
     "label": "Functies",
     "hasSnapshot": "Heeft een snapshot",
-    "submittedToFrigatePlus": {
-      "label": "Ingediend bij Frigate+",
-      "tips": "Je moet eerst filteren op gevolgde objecten met een snapshot.<br /><br />Gevolgde objecten zonder snapshot kunnen niet worden verzonden naar Frigate+."
+    "submittedToBisiaPlus": {
+      "label": "Ingediend bij BIS-IA+",
+      "tips": "Je moet eerst filteren op gevolgde objecten met een snapshot.<br /><br />Gevolgde objecten zonder snapshot kunnen niet worden verzonden naar BIS-IA+."
     }
   },
   "review": {

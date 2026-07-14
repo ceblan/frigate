@@ -3,20 +3,20 @@ id: home-assistant
 title: Home Assistant Integration
 ---
 
-The best way to integrate with Home Assistant is to use the [official integration](https://github.com/blakeblackshear/frigate-hass-integration).
+The best way to integrate with Home Assistant is to use the [official integration](https://github.com/blakeblackshear/bisia-hass-integration).
 
 ## Installation
 
 ### Preparation
 
-The Frigate integration requires the `mqtt` integration to be installed and
+The BIS-IA integration requires the `mqtt` integration to be installed and
 manually configured first.
 
 See the [MQTT integration
 documentation](https://www.home-assistant.io/integrations/mqtt/) for more
 details.
 
-In addition, MQTT must be enabled in your Frigate configuration file and Frigate must be connected to the same MQTT server as Home Assistant for many of the entities created by the integration to function, e.g.:
+In addition, MQTT must be enabled in your BIS-IA configuration file and BIS-IA must be connected to the same MQTT server as Home Assistant for many of the entities created by the integration to function, e.g.:
 
 ```yaml
 mqtt:
@@ -33,14 +33,14 @@ Available via HACS as a default repository. To install:
 - Use [HACS](https://hacs.xyz/) to install the integration:
 
 ```
-Home Assistant > HACS > Click in the Search bar and type "Frigate" > Frigate
+Home Assistant > HACS > Click in the Search bar and type "BIS-IA" > BIS-IA
 ```
 
 - Restart Home Assistant.
 - Then add/configure the integration:
 
 ```
-Home Assistant > Settings > Devices & Services > Add Integration > Frigate
+Home Assistant > Settings > Devices & Services > Add Integration > BIS-IA
 ```
 
 Note: You will also need
@@ -50,20 +50,20 @@ in your Home Assistant configuration for the Media Browser to appear.
 ### (Optional) Lovelace Card Installation
 
 To install the optional companion Lovelace card, please see the [separate
-installation instructions](https://github.com/dermotduffy/frigate-hass-card) for
+installation instructions](https://github.com/dermotduffy/bisia-hass-card) for
 that card.
 
 ## Configuration
 
-When configuring the integration, you will be asked for the `URL` of your Frigate instance which can be pointed at the internal unauthenticated port (`5000`) or the authenticated port (`8971`) for your instance. This may look like `http://<host>:5000/`.
+When configuring the integration, you will be asked for the `URL` of your BIS-IA instance which can be pointed at the internal unauthenticated port (`5000`) or the authenticated port (`8971`) for your instance. This may look like `http://<host>:5000/`.
 
 ### Docker Compose Examples
 
-If you are running Home Assistant and Frigate with Docker Compose on the same device, here are some examples.
+If you are running Home Assistant and BIS-IA with Docker Compose on the same device, here are some examples.
 
 #### Home Assistant running with host networking
 
-It is not recommended to run Frigate in host networking mode. In this example, you would use `http://172.17.0.1:5000` or `http://172.17.0.1:8971` when configuring the integration.
+It is not recommended to run BIS-IA in host networking mode. In this example, you would use `http://172.17.0.1:5000` or `http://172.17.0.1:8971` when configuring the integration.
 
 ```yaml
 services:
@@ -72,8 +72,8 @@ services:
     network_mode: host
     ...
 
-  frigate:
-    image: ghcr.io/blakeblackshear/frigate:stable
+  bisia:
+    image: ghcr.io/blakeblackshear/bisia:stable
     ...
     ports:
       - "172.17.0.1:5000:5000"
@@ -82,7 +82,7 @@ services:
 
 #### Home Assistant _not_ running with host networking or in a separate compose file
 
-In this example, it is recommended to connect to the authenticated port, for example, `http://frigate:8971` when configuring the integration. There is no need to map the port for the Frigate container.
+In this example, it is recommended to connect to the authenticated port, for example, `http://bisia:8971` when configuring the integration. There is no need to map the port for the BIS-IA container.
 
 ```yaml
 services:
@@ -91,8 +91,8 @@ services:
     # network_mode: host
     ...
 
-  frigate:
-    image: ghcr.io/blakeblackshear/frigate:stable
+  bisia:
+    image: ghcr.io/blakeblackshear/bisia:stable
     ...
     ports:
       # - "172.17.0.1:5000:5000"
@@ -101,35 +101,35 @@ services:
 
 ### Home Assistant App
 
-If you are using Home Assistant App, the URL should be one of the following depending on which App variant you are using. Note that if you are using the Proxy App, you should NOT point the integration at the proxy URL. Just enter the same URL used to access Frigate directly from your network.
+If you are using Home Assistant App, the URL should be one of the following depending on which App variant you are using. Note that if you are using the Proxy App, you should NOT point the integration at the proxy URL. Just enter the same URL used to access BIS-IA directly from your network.
 
 | App Variant                | URL                                    |
 | -------------------------- | -------------------------------------- |
-| Frigate                    | `http://ccab4aaf-frigate:5000`         |
-| Frigate (Full Access)      | `http://ccab4aaf-frigate-fa:5000`      |
-| Frigate Beta               | `http://ccab4aaf-frigate-beta:5000`    |
-| Frigate Beta (Full Access) | `http://ccab4aaf-frigate-fa-beta:5000` |
+| BIS-IA                    | `http://ccab4aaf-bisia:5000`         |
+| BIS-IA (Full Access)      | `http://ccab4aaf-bisia-fa:5000`      |
+| BIS-IA Beta               | `http://ccab4aaf-bisia-beta:5000`    |
+| BIS-IA Beta (Full Access) | `http://ccab4aaf-bisia-fa-beta:5000` |
 
-### Frigate running on a separate machine
+### BIS-IA running on a separate machine
 
-If you run Frigate on a separate device within your local network, Home Assistant will need access to port 8971.
+If you run BIS-IA on a separate device within your local network, Home Assistant will need access to port 8971.
 
 #### Local network
 
-Use `http://<frigate_device_ip>:8971` as the URL for the integration so that authentication is required.
+Use `http://<bisia_device_ip>:8971` as the URL for the integration so that authentication is required.
 
 :::tip
 
 The above URL assumes you have [disabled TLS](../configuration/tls).
-By default, TLS is enabled and Frigate will be using a self-signed certificate. HomeAssistant will fail to connect HTTPS to port 8971 since it fails to verify the self-signed certificate.
-Either disable TLS and use HTTP from HomeAssistant, or configure Frigate to be acessible with a valid certificate.
+By default, TLS is enabled and BIS-IA will be using a self-signed certificate. HomeAssistant will fail to connect HTTPS to port 8971 since it fails to verify the self-signed certificate.
+Either disable TLS and use HTTP from HomeAssistant, or configure BIS-IA to be acessible with a valid certificate.
 
 :::
 
 ```yaml
 services:
-  frigate:
-    image: ghcr.io/blakeblackshear/frigate:stable
+  bisia:
+    image: ghcr.io/blakeblackshear/bisia:stable
     ...
     ports:
       - "8971:8971"
@@ -138,12 +138,12 @@ services:
 
 #### Tailscale or other private networking
 
-Use `http://<frigate_device_tailscale_ip>:5000` as the URL for the integration.
+Use `http://<bisia_device_tailscale_ip>:5000` as the URL for the integration.
 
 ```yaml
 services:
-  frigate:
-    image: ghcr.io/blakeblackshear/frigate:stable
+  bisia:
+    image: ghcr.io/blakeblackshear/bisia:stable
     ...
     ports:
       - "<tailscale_ip>:5000:5000"
@@ -153,7 +153,7 @@ services:
 ## Options
 
 ```
-Home Assistant > Configuration > Integrations > Frigate > Options
+Home Assistant > Configuration > Integrations > BIS-IA > Options
 ```
 
 | Option            | Description                                                                                                                                                                                                                                                                                                                              |
@@ -166,7 +166,7 @@ Home Assistant > Configuration > Integrations > Frigate > Options
 | --------------- | ------------------------------------------------------------------------------- |
 | `camera`        | Live camera stream (requires RTSP).                                             |
 | `image`         | Image of the latest detected object for each camera.                            |
-| `sensor`        | States to monitor Frigate performance, object counts for all zones and cameras. |
+| `sensor`        | States to monitor BIS-IA performance, object counts for all zones and cameras. |
 | `switch`        | Switch entities to toggle detection, recordings and snapshots.                  |
 | `binary_sensor` | A "motion" binary sensor entity per camera/zone/object.                         |
 
@@ -201,7 +201,7 @@ To disable a camera dynamically
 action: camera.turn_off
 data: {}
 target:
-  entity_id: camera.back_deck_cam  # your Frigate camera entity ID
+  entity_id: camera.back_deck_cam  # your BIS-IA camera entity ID
 ```
 
 To enable a camera that has been disabled dynamically
@@ -210,53 +210,53 @@ To enable a camera that has been disabled dynamically
 action: camera.turn_on
 data: {}
 target:
-  entity_id: camera.back_deck_cam  # your Frigate camera entity ID
+  entity_id: camera.back_deck_cam  # your BIS-IA camera entity ID
 ```
 
 ## Notification API
 
-Many people do not want to expose Frigate to the web, so the integration creates some public API endpoints that can be used for notifications.
+Many people do not want to expose BIS-IA to the web, so the integration creates some public API endpoints that can be used for notifications.
 
 To load a thumbnail for a tracked object:
 
 ```
-https://HA_URL/api/frigate/notifications/<event-id>/thumbnail.jpg
+https://HA_URL/api/bisia/notifications/<event-id>/thumbnail.jpg
 ```
 
 To load a snapshot for a tracked object:
 
 ```
-https://HA_URL/api/frigate/notifications/<event-id>/snapshot.jpg
+https://HA_URL/api/bisia/notifications/<event-id>/snapshot.jpg
 ```
 
 To load a video clip of a tracked object using an Android device:
 
 ```
-https://HA_URL/api/frigate/notifications/<event-id>/clip.mp4
+https://HA_URL/api/bisia/notifications/<event-id>/clip.mp4
 ```
 
 To load a video clip of a tracked object using an iOS device:
 
 ```
-https://HA_URL/api/frigate/notifications/<event-id>/master.m3u8
+https://HA_URL/api/bisia/notifications/<event-id>/master.m3u8
 ```
 
 To load a preview gif of a tracked object:
 
 ```
-https://HA_URL/api/frigate/notifications/<event-id>/event_preview.gif
+https://HA_URL/api/bisia/notifications/<event-id>/event_preview.gif
 ```
 
 To load a preview gif of a review item:
 
 ```
-https://HA_URL/api/frigate/notifications/<review-id>/review_preview.gif
+https://HA_URL/api/bisia/notifications/<review-id>/review_preview.gif
 ```
 
 To load the thumbnail of a review item:
 
 ```
-https://HA_URL/api/frigate/notifications/<review-id>/<camera>/review_thumbnail.webp
+https://HA_URL/api/bisia/notifications/<review-id>/<camera>/review_thumbnail.webp
 ```
 
 <a name="streams"></a>
@@ -264,7 +264,7 @@ https://HA_URL/api/frigate/notifications/<review-id>/<camera>/review_thumbnail.w
 ## RTSP stream
 
 In order for the live streams to function they need to be accessible on the RTSP
-port (default: `8554`) at `<frigatehost>:8554`. Home Assistant will directly
+port (default: `8554`) at `<bisiahost>:8554`. Home Assistant will directly
 connect to that streaming port when the live camera is viewed.
 
 #### RTSP URL Template
@@ -273,11 +273,11 @@ For advanced usecases, this behavior can be changed with the [RTSP URL
 template](#options) option. When set, this string will override the default stream
 address that is derived from the default behavior described above. This option supports
 [jinja2 templates](https://jinja.palletsprojects.com/) and has the `camera` dict
-variables from [Frigate API](../integrations/api)
+variables from [BIS-IA API](../integrations/api)
 available for the template. Note that no Home Assistant state is available to the
-template, only the camera dict from Frigate.
+template, only the camera dict from BIS-IA.
 
-This is potentially useful when Frigate is behind a reverse proxy, and/or when
+This is potentially useful when BIS-IA is behind a reverse proxy, and/or when
 the default stream port is otherwise not accessible to Home Assistant (e.g.
 firewall rules).
 
@@ -286,28 +286,28 @@ firewall rules).
 Use a different port number:
 
 ```
-rtsp://<frigate_host>:2000/front_door
+rtsp://<bisia_host>:2000/front_door
 ```
 
 Use the camera name in the stream URL:
 
 ```
-rtsp://<frigate_host>:2000/{{ name }}
+rtsp://<bisia_host>:2000/{{ name }}
 ```
 
 Use the camera name in the stream URL, converting it to lowercase first:
 
 ```
-rtsp://<frigate_host>:2000/{{ name|lower }}
+rtsp://<bisia_host>:2000/{{ name|lower }}
 ```
 
 ## Multiple Instance Support
 
-The Frigate integration seamlessly supports the use of multiple Frigate servers.
+The BIS-IA integration seamlessly supports the use of multiple BIS-IA servers.
 
 ### Requirements for Multiple Instances
 
-In order for multiple Frigate instances to function correctly, the
+In order for multiple BIS-IA instances to function correctly, the
 `topic_prefix` and `client_id` parameters must be set differently per server.
 See [MQTT
 configuration](mqtt)
@@ -315,24 +315,24 @@ for how to set these.
 
 #### API URLs
 
-When multiple Frigate instances are configured, [API](#notification-api) URLs should include an
-identifier to tell Home Assistant which Frigate instance to refer to. The
+When multiple BIS-IA instances are configured, [API](#notification-api) URLs should include an
+identifier to tell Home Assistant which BIS-IA instance to refer to. The
 identifier used is the MQTT `client_id` parameter included in the configuration,
 and is used like so:
 
 ```
-https://HA_URL/api/frigate/<client-id>/notifications/<event-id>/thumbnail.jpg
+https://HA_URL/api/bisia/<client-id>/notifications/<event-id>/thumbnail.jpg
 ```
 
 ```
-https://HA_URL/api/frigate/<client-id>/clips/front_door-1624599978.427826-976jaa.mp4
+https://HA_URL/api/bisia/<client-id>/clips/front_door-1624599978.427826-976jaa.mp4
 ```
 
 #### Default Treatment
 
-When a single Frigate instance is configured, the `client-id` parameter need not
+When a single BIS-IA instance is configured, the `client-id` parameter need not
 be specified in URLs/identifiers -- that single instance is assumed. When
-multiple Frigate instances are configured, the user **must** explicitly specify
+multiple BIS-IA instances are configured, the user **must** explicitly specify
 which server they are referring to.
 
 ## FAQ
@@ -341,6 +341,6 @@ which server they are referring to.
 
 The [HomeKit integration](https://www.home-assistant.io/integrations/homekit/) randomly links one of the binary sensors (motion sensor entities) grouped with the camera device in Home Assistant. You can specify a `linked_motion_sensor` in the Home Assistant [HomeKit configuration](https://www.home-assistant.io/integrations/homekit/#linked_motion_sensor) for each camera.
 
-#### I have set up automations based on the occupancy sensors. Sometimes the automation runs because the sensors are turned on, but then I look at Frigate I can't find the object that triggered the sensor. Is this a bug?
+#### I have set up automations based on the occupancy sensors. Sometimes the automation runs because the sensors are turned on, but then I look at BIS-IA I can't find the object that triggered the sensor. Is this a bug?
 
-No. The occupancy sensors have fewer checks in place because they are often used for things like turning the lights on where latency needs to be as low as possible. So false positives can sometimes trigger these sensors. If you want false positive filtering, you should use an mqtt sensor on the `frigate/events` or `frigate/reviews` topic.
+No. The occupancy sensors have fewer checks in place because they are often used for things like turning the lights on where latency needs to be as low as possible. So false positives can sometimes trigger these sensors. If you want false positive filtering, you should use an mqtt sensor on the `bisia/events` or `bisia/reviews` topic.

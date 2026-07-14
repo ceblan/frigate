@@ -118,7 +118,7 @@ function useHelpfulLinks(content: string | undefined) {
         link: getLocaleDocUrl(
           "configuration/record#will-frigate-delete-old-recordings-if-my-storage-runs-out",
         ),
-        text: "Frigate Automatic Storage Cleanup",
+        text: "BIS-IA Automatic Storage Cleanup",
       });
     }
 
@@ -157,7 +157,7 @@ function useHelpfulLinks(content: string | undefined) {
     if (content.includes("The current SHM size of")) {
       links.push({
         link: getLocaleDocUrl(
-          "frigate/installation/#calculating-required-shm-size",
+          "bisia/installation/#calculating-required-shm-size",
         ),
         text: "Calculate Correct SHM Size",
       });

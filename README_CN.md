@@ -1,14 +1,14 @@
 <p align="center">
-  <img align="center" alt="logo" src="docs/static/img/branding/frigate.png">
+  <img align="center" alt="logo" src="docs/static/img/branding/bisia.png">
 </p>
 
-# Frigate NVR™ - 一个具有实时目标检测的本地 NVR
+# BIS-IA NVR™ - 一个具有实时目标检测的本地 NVR
 
-<a href="https://hosted.weblate.org/engage/frigate-nvr/-/zh_Hans/">
-<img src="https://hosted.weblate.org/widget/frigate-nvr/-/zh_Hans/svg-badge.svg" alt="翻译状态" />
+<a href="https://hosted.weblate.org/engage/bis-ia-nvr/-/zh_Hans/">
+<img src="https://hosted.weblate.org/widget/bis-ia-nvr/-/zh_Hans/svg-badge.svg" alt="翻译状态" />
 </a>
 
-[English](https://github.com/blakeblackshear/frigate) | \[简体中文\]
+[English](https://github.com/blakeblackshear/bisia) | \[简体中文\]
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -16,7 +16,7 @@
 
 强烈推荐使用 GPU 或者 AI 加速器（例如[Google Coral 加速器](https://coral.ai/products/) 或者 [Hailo](https://hailo.ai/)等）。它们的运行效率远远高于现在的顶级 CPU，并且功耗也极低。
 
-- 通过[自定义组件](https://github.com/blakeblackshear/frigate-hass-integration)与 Home Assistant 紧密集成
+- 通过[自定义组件](https://github.com/blakeblackshear/bisia-hass-integration)与 Home Assistant 紧密集成
 - 设计上通过仅在必要时和必要地点寻找目标，最大限度地减少资源使用并最大化性能
 - 大量利用多进程处理，强调实时性而非处理每一帧
 - 使用非常低开销的画面变动检测（也叫运动检测）来确定运行目标检测的位置
@@ -29,7 +29,7 @@
 
 ## 社区中文翻译文档
 
-你可以在这里查看文档 https://docs.frigate-cn.video
+你可以在这里查看文档 https://docs.bisia-cn.video
 
 ## 赞助
 
@@ -41,7 +41,7 @@
 
 **代码部分**：本代码库中的源代码、配置文件和文档均遵循 [MIT 许可证](LICENSE)。您可以自由使用、修改和分发这些代码，但必须保留原始版权声明。
 
-**商标部分**：“Frigate”名称、“Frigate NVR”品牌以及 Frigate 的 Logo 为 **Frigate, Inc. 的商标**，**不在** MIT 许可证覆盖范围内。
+**商标部分**：“BIS-IA”名称、“BIS-IA NVR”品牌以及 BIS-IA 的 Logo 为 **BIS-IA, Inc. 的商标**，**不在** MIT 许可证覆盖范围内。
 有关品牌资产的规范使用详情，请参阅我们的[《商标政策》](TRADEMARK.md)。
 
 ## 截图
@@ -49,30 +49,30 @@
 ### 实时监控面板
 
 <div>
-<img width="800" alt="实时监控面板" src="https://github.com/blakeblackshear/frigate/assets/569905/5e713cb9-9db5-41dc-947a-6937c3bc376e">
+<img width="800" alt="实时监控面板" src="https://github.com/blakeblackshear/bisia/assets/569905/5e713cb9-9db5-41dc-947a-6937c3bc376e">
 </div>
 
 ### 简单的核查工作流程
 
 <div>
-<img width="800" alt="简单的审查工作流程" src="https://github.com/blakeblackshear/frigate/assets/569905/6fed96e8-3b18-40e5-9ddc-31e6f3c9f2ff">
+<img width="800" alt="简单的审查工作流程" src="https://github.com/blakeblackshear/bisia/assets/569905/6fed96e8-3b18-40e5-9ddc-31e6f3c9f2ff">
 </div>
 
 ### 多摄像头可按时间轴查看
 
 <div>
-<img width="800" alt="多摄像头可按时间轴查看" src="https://github.com/blakeblackshear/frigate/assets/569905/d6788a15-0eeb-4427-a8d4-80b93cae3d74">
+<img width="800" alt="多摄像头可按时间轴查看" src="https://github.com/blakeblackshear/bisia/assets/569905/d6788a15-0eeb-4427-a8d4-80b93cae3d74">
 </div>
 
 ### 内置遮罩和区域编辑器
 
 <div>
-<img width="800" alt="内置遮罩和区域编辑器" src="https://github.com/blakeblackshear/frigate/assets/569905/d7885fc3-bfe6-452f-b7d0-d957cb3e31f5">
+<img width="800" alt="内置遮罩和区域编辑器" src="https://github.com/blakeblackshear/bisia/assets/569905/d7885fc3-bfe6-452f-b7d0-d957cb3e31f5">
 </div>
 
 ## 翻译
 
-我们使用 [Weblate](https://hosted.weblate.org/projects/frigate-nvr/) 平台提供翻译支持，欢迎参与进来一起完善。
+我们使用 [Weblate](https://hosted.weblate.org/projects/bis-ia-nvr/) 平台提供翻译支持，欢迎参与进来一起完善。
 
 ## 非官方中文讨论社区
 
@@ -87,4 +87,4 @@ Bilibili：https://space.bilibili.com/3546894915602564
 
 ---
 
-**Copyright © 2026 Frigate, Inc.**
+**Copyright © 2026 BIS-IA, Inc.**

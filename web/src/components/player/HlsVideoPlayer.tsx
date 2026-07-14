@@ -321,11 +321,11 @@ export default function HlsVideoPlayer({
               const resp = await onUploadFrame(frameTime);
 
               if (resp && resp.status == 200) {
-                toast.success(t("toast.success.submittedFrigatePlus"), {
+                toast.success(t("toast.success.submittedBisiaPlus"), {
                   position: "top-center",
                 });
               } else {
-                toast.success(t("toast.error.submitFrigatePlusFailed"), {
+                toast.success(t("toast.error.submitBisiaPlusFailed"), {
                   position: "top-center",
                 });
               }

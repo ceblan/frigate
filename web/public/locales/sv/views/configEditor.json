@@ -10,9 +10,9 @@
       "savingError": "Problem att spara konfiguration"
     }
   },
-  "documentTitle": "Ändra konfiguration - Frigate",
+  "documentTitle": "Ändra konfiguration - BIS-IA",
   "configEditor": "Ändra konfiguration",
   "confirm": "Avsluta utan att spara?",
   "safeConfigEditor": "Konfigurationsredigeraren (felsäkert läge)",
-  "safeModeDescription": "Frigate är i felsäkert läge på grund av ett konfigurationsvalideringsfel."
+  "safeModeDescription": "BIS-IA är i felsäkert läge på grund av ett konfigurationsvalideringsfel."
 }

@@ -2,8 +2,8 @@
   "noRecordingsFoundForThisTime": "Nenhuma gravação encontrada para este horário",
   "noPreviewFound": "Nenhuma pré-visualização encontrada",
   "noPreviewFoundFor": "Nenhuma Pré-Visualização Encontrada em {{cameraName}}",
-  "submitFrigatePlus": {
-    "title": "Enviar esse frame para Frigate+?",
+  "submitBisiaPlus": {
+    "title": "Enviar esse frame para BIS-IA+?",
     "submit": "Enviar"
   },
   "livePlayerRequiredIOSVersion": "iOS 17.1 ou superior é necessário para esse tipo de transmissão ao vivo.",
@@ -42,10 +42,10 @@
   },
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Quadro enviado ao Frigate+ com sucesso"
+      "submittedBisiaPlus": "Quadro enviado ao BIS-IA+ com sucesso"
     },
     "error": {
-      "submitFrigatePlusFailed": "Falha em submeter quadro ao Frigate+"
+      "submitBisiaPlusFailed": "Falha em submeter quadro ao BIS-IA+"
     }
   }
 }

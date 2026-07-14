@@ -1,29 +1,29 @@
 {
   "restart": {
-    "title": "Czy na pewno chcesz ponownie uruchomić Frigate?",
+    "title": "Czy na pewno chcesz ponownie uruchomić BIS-IA?",
     "button": "Uruchom ponownie",
     "restarting": {
-      "title": "Frigate uruchamia się ponownie",
+      "title": "BIS-IA uruchamia się ponownie",
       "content": "Strona odświeży się za {{countdown}} sekund.",
       "button": "Wymuś odświeżenie"
     },
-    "description": "Spowoduje to chwilowe zatrzymanie Frigate i ponowne uruchomienie."
+    "description": "Spowoduje to chwilowe zatrzymanie BIS-IA i ponowne uruchomienie."
   },
   "explore": {
     "plus": {
       "submitToPlus": {
-        "label": "Wyślij do Frigate+",
+        "label": "Wyślij do BIS-IA+",
         "desc": "Obiekty w miejscach, których chcesz unikać, nie są fałszywymi alarmami. Zgłaszanie ich jako fałszywe alarmy zdezorientuje model."
       },
       "review": {
         "true": {
-          "label": "Potwierdź tę etykietę dla Frigate Plus",
+          "label": "Potwierdź tę etykietę dla BIS-IA Plus",
           "true_one": "To jest {{label}}",
           "true_few": "To są {{label}}",
           "true_many": "To są {{label}}"
         },
         "false": {
-          "label": "Nie potwierdzaj tej etykiety dla Frigate Plus",
+          "label": "Nie potwierdzaj tej etykiety dla BIS-IA Plus",
           "false_one": "To nie jest {{label}}",
           "false_few": "To nie są {{label}}",
           "false_many": "To nie są {{label}}"
@@ -35,7 +35,7 @@
           "ask_a": "Czy ten obiekt to <code>{{label}}</code>?",
           "ask_an": "Czy ten obiekt to <code>{{label}}</code>?",
           "ask_full": "Czy ten obiekt to <code>{{untranslatedLabel}}</code> ({{translatedLabel}})?",
-          "label": "Potwierdź tę etykietę dla Frigate Plus"
+          "label": "Potwierdź tę etykietę dla BIS-IA Plus"
         }
       }
     },

@@ -1,18 +1,18 @@
 {
   "documentTitle": {
-    "default": "设置 - Frigate",
-    "authentication": "身份验证设置 - Frigate",
-    "camera": "摄像头设置 - Frigate",
-    "classification": "分类设置 - Frigate",
-    "masksAndZones": "遮罩和区域编辑器 - Frigate",
-    "motionTuner": "画面变动调整 - Frigate",
-    "object": "调试 - Frigate",
-    "general": "页面设置 - Frigate",
-    "frigatePlus": "Frigate+ 设置 - Frigate",
-    "notifications": "通知设置 - Frigate",
-    "enrichments": "增强功能设置 - Frigate",
-    "cameraManagement": "管理摄像头 - Frigate",
-    "cameraReview": "摄像头核查设置 - Frigate"
+    "default": "设置 - BIS-IA",
+    "authentication": "身份验证设置 - BIS-IA",
+    "camera": "摄像头设置 - BIS-IA",
+    "classification": "分类设置 - BIS-IA",
+    "masksAndZones": "遮罩和区域编辑器 - BIS-IA",
+    "motionTuner": "画面变动调整 - BIS-IA",
+    "object": "调试 - BIS-IA",
+    "general": "页面设置 - BIS-IA",
+    "bisiaPlus": "BIS-IA+ 设置 - BIS-IA",
+    "notifications": "通知设置 - BIS-IA",
+    "enrichments": "增强功能设置 - BIS-IA",
+    "cameraManagement": "管理摄像头 - BIS-IA",
+    "cameraReview": "摄像头核查设置 - BIS-IA"
   },
   "menu": {
     "ui": "界面设置",
@@ -23,7 +23,7 @@
     "debug": "调试",
     "users": "用户",
     "notifications": "通知",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "enrichments": "增强功能",
     "triggers": "触发器",
     "roles": "权限组",
@@ -102,7 +102,7 @@
     "title": "分类设置",
     "semanticSearch": {
       "title": "语义搜索",
-      "desc": "Frigate的语义搜索能够让你使用自然语言根据图像本身、自定义的文本描述或自动生成的描述来搜索视频。",
+      "desc": "BIS-IA的语义搜索能够让你使用自然语言根据图像本身、自定义的文本描述或自动生成的描述来搜索视频。",
       "readTheDocumentation": "阅读文档（英文）",
       "reindexNow": {
         "label": "立即重建索引",
@@ -129,7 +129,7 @@
     },
     "faceRecognition": {
       "title": "人脸识别",
-      "desc": "人脸识别功能允许为人物分配名称，当识别到他们的面孔时，Frigate 会将人物的名字作为子标签进行分配。这些信息会显示在界面、过滤器以及通知中。",
+      "desc": "人脸识别功能允许为人物分配名称，当识别到他们的面孔时，BIS-IA 会将人物的名字作为子标签进行分配。这些信息会显示在界面、过滤器以及通知中。",
       "readTheDocumentation": "阅读文档（英文）",
       "modelSize": {
         "label": "模型大小",
@@ -146,11 +146,11 @@
     },
     "licensePlateRecognition": {
       "title": "车牌识别",
-      "desc": "Frigate 可以识别车辆的车牌，并自动将检测到的字符添加到 recognized_license_plate 字段中，或将已知名称作为子标签添加到汽车类型的对象中。常见的使用场景可能是读取驶入车道的汽车车牌或经过街道的汽车车牌。",
+      "desc": "BIS-IA 可以识别车辆的车牌，并自动将检测到的字符添加到 recognized_license_plate 字段中，或将已知名称作为子标签添加到汽车类型的对象中。常见的使用场景可能是读取驶入车道的汽车车牌或经过街道的汽车车牌。",
       "readTheDocumentation": "阅读文档（英文）"
     },
     "toast": {
-      "success": "分类设置已保存，请重启 Frigate 以应用更改。",
+      "success": "分类设置已保存，请重启 BIS-IA 以应用更改。",
       "error": "保存配置更改失败：{{errorMessage}}"
     },
     "birdClassification": {
@@ -164,17 +164,17 @@
     "title": "摄像头设置",
     "streams": {
       "title": "视频流",
-      "desc": "暂时禁用摄像头，除非重启Frigate否则将保持禁用。禁用摄像头将完全停止 Frigate 对该摄像头视频流的处理。检测、录制和调试功能都将不可用。<br /><em>注意：该选项不会禁用 go2rtc 转播。</em>"
+      "desc": "暂时禁用摄像头，除非重启BIS-IA否则将保持禁用。禁用摄像头将完全停止 BIS-IA 对该摄像头视频流的处理。检测、录制和调试功能都将不可用。<br /><em>注意：该选项不会禁用 go2rtc 转播。</em>"
     },
     "review": {
       "title": "核查",
-      "desc": "启用/禁用摄像头的警报和检测。禁用后，除非重启Frigate，否则不会生成新的核查项。 ",
+      "desc": "启用/禁用摄像头的警报和检测。禁用后，除非重启BIS-IA，否则不会生成新的核查项。 ",
       "alerts": "警报 ",
       "detections": "检测 "
     },
     "reviewClassification": {
       "title": "核查分级",
-      "desc": "Frigate 将核查项分为“警报”和“检测”。默认情况下，所有的 <strong>人</strong>、<strong>汽车</strong> 对象都将视为警报。你可以通过修改配置文件配置区域来细分。",
+      "desc": "BIS-IA 将核查项分为“警报”和“检测”。默认情况下，所有的 <strong>人</strong>、<strong>汽车</strong> 对象都将视为警报。你可以通过修改配置文件配置区域来细分。",
       "readTheDocumentation": "阅读文档",
       "noDefinedZones": "该摄像头没有设置区域。",
       "objectAlertsTips": "所有 {{alertsLabels}} 对象在 {{cameraName}} 下都将显示为警报。",
@@ -189,7 +189,7 @@
       "selectDetectionsZones": "选择检测区域",
       "limitDetections": "限制仅在特定区域内进行检测",
       "toast": {
-        "success": "核查分级配置已保存。请重启 Frigate 以应用更改。"
+        "success": "核查分级配置已保存。请重启 BIS-IA 以应用更改。"
       },
       "unsavedChanges": "{{camera}} 的核查分类设置未保存"
     },
@@ -302,7 +302,7 @@
     },
     "zones": {
       "label": "区域",
-      "documentTitle": "编辑区域 - Frigate",
+      "documentTitle": "编辑区域 - BIS-IA",
       "desc": {
         "title": "该功能允许你定义特定区域，以便你可以确定特定目标或物体是否在该区域内。",
         "documentation": "文档"
@@ -354,7 +354,7 @@
     },
     "motionMasks": {
       "label": "画面变动遮罩",
-      "documentTitle": "编辑画面变动遮罩 - Frigate",
+      "documentTitle": "编辑画面变动遮罩 - BIS-IA",
       "desc": {
         "title": "画面变动遮罩用于防止触发不必要的画面变动检测。过度的设置遮罩将使目标更加难以被追踪。",
         "documentation": "文档"
@@ -381,7 +381,7 @@
     },
     "objectMasks": {
       "label": "目标遮罩",
-      "documentTitle": "编辑目标遮罩 - Frigate",
+      "documentTitle": "编辑目标遮罩 - BIS-IA",
       "desc": {
         "title": "目标过滤器用于防止特定位置出现对某个目标/物体的误报。",
         "documentation": "文档"
@@ -410,7 +410,7 @@
   "motionDetectionTuner": {
     "title": "画面变动检测调整",
     "desc": {
-      "title": "Frigate 将首先使用画面变动检测来确认每一帧画面中是否有变动的区域，然后再对该区域使用目标检测。",
+      "title": "BIS-IA 将首先使用画面变动检测来确认每一帧画面中是否有变动的区域，然后再对该区域使用目标检测。",
       "documentation": "阅读有关画面变动检测的文档"
     },
     "Threshold": {
@@ -432,7 +432,7 @@
   },
   "debug": {
     "title": "调试",
-    "detectorDesc": "Frigate 将使用检测器（{{detectors}}）来检测摄像头视频流中的目标或物体。",
+    "detectorDesc": "BIS-IA 将使用检测器（{{detectors}}）来检测摄像头视频流中的目标或物体。",
     "desc": "调试界面将实时显示被追踪的目标以及统计信息，目标列表将显示检测到的目标和延迟显示的概览。",
     "debugging": "调试选项",
     "objectList": "目标列表",
@@ -494,7 +494,7 @@
     "title": "用户",
     "management": {
       "title": "用户管理",
-      "desc": "管理此 Frigate 实例的用户账户。"
+      "desc": "管理此 BIS-IA 实例的用户账户。"
     },
     "addUser": "添加用户",
     "updatePassword": "修改密码",
@@ -570,7 +570,7 @@
       },
       "createUser": {
         "title": "创建新用户",
-        "desc": "创建一个新用户账户，并指定一个角色以控制访问 Frigate UI 的权限。",
+        "desc": "创建一个新用户账户，并指定一个角色以控制访问 BIS-IA UI 的权限。",
         "usernameOnlyInclude": "用户名只能包含字母、数字和 _",
         "confirmPassword": "请确认你的密码"
       },
@@ -610,7 +610,7 @@
     "title": "通知",
     "notificationSettings": {
       "title": "通知设置",
-      "desc": "Frigate 在浏览器中运行或作为 PWA 安装时，可以原生向您的设备发送推送通知。",
+      "desc": "BIS-IA 在浏览器中运行或作为 PWA 安装时，可以原生向您的设备发送推送通知。",
       "documentation": "阅读文档"
     },
     "globalSettings": {
@@ -619,7 +619,7 @@
     },
     "notificationUnavailable": {
       "title": "通知功能不可用",
-      "desc": "网页推送通知需要安全连接（<code>https://…</code>）。这是浏览器的限制。请通过安全方式访问 Frigate 以使用通知功能。",
+      "desc": "网页推送通知需要安全连接（<code>https://…</code>）。这是浏览器的限制。请通过安全方式访问 BIS-IA 以使用通知功能。",
       "documentation": "阅读文档"
     },
     "email": {
@@ -651,7 +651,7 @@
     "cancelSuspension": "取消暂停",
     "toast": {
       "success": {
-        "registered": "已成功注册通知。需要重启 Frigate 才能发送任何通知（包括测试通知）。",
+        "registered": "已成功注册通知。需要重启 BIS-IA 才能发送任何通知（包括测试通知）。",
         "settingSaved": "通知设置已保存。"
       },
       "error": {
@@ -661,20 +661,20 @@
     "unsavedRegistrations": "未保存通知注册",
     "unsavedChanges": "未保存通知设置更改"
   },
-  "frigatePlus": {
-    "title": "Frigate+ 设置",
+  "bisiaPlus": {
+    "title": "BIS-IA+ 设置",
     "apiKey": {
-      "title": "Frigate+ API 密钥",
-      "validated": "Frigate+ API 密钥已检测并验证通过",
-      "notValidated": "未检测到 Frigate+ API 密钥或验证未通过",
-      "desc": "Frigate+ API 密钥用于启用与 Frigate+ 服务的集成。",
-      "plusLink": "了解更多关于 Frigate+"
+      "title": "BIS-IA+ API 密钥",
+      "validated": "BIS-IA+ API 密钥已检测并验证通过",
+      "notValidated": "未检测到 BIS-IA+ API 密钥或验证未通过",
+      "desc": "BIS-IA+ API 密钥用于启用与 BIS-IA+ 服务的集成。",
+      "plusLink": "了解更多关于 BIS-IA+"
     },
     "snapshotConfig": {
       "title": "快照配置",
-      "desc": "提交到 Frigate+ 需要同时在配置中启用快照和 <code>clean_copy</code> 快照。",
+      "desc": "提交到 BIS-IA+ 需要同时在配置中启用快照和 <code>clean_copy</code> 快照。",
       "documentation": "阅读文档",
-      "cleanCopyWarning": "部分摄像头已启用快照但未启用 clean_copy。您需要在快照配置中启用 <code>clean_copy</code>，才能将这些摄像头的图像提交到 Frigate+。",
+      "cleanCopyWarning": "部分摄像头已启用快照但未启用 clean_copy。您需要在快照配置中启用 <code>clean_copy</code>，才能将这些摄像头的图像提交到 BIS-IA+。",
       "table": {
         "camera": "摄像头",
         "snapshots": "快照",
@@ -693,18 +693,18 @@
       "error": "加载模型信息失败",
       "availableModels": "可用模型",
       "loadingAvailableModels": "正在加载可用模型…",
-      "modelSelect": "您可以在Frigate+上选择可用的模型。请注意，只能选择与当前检测器配置兼容的模型。",
+      "modelSelect": "您可以在BIS-IA+上选择可用的模型。请注意，只能选择与当前检测器配置兼容的模型。",
       "plusModelType": {
         "baseModel": "基础模型",
         "userModel": "定向调优"
       }
     },
     "toast": {
-      "success": "Frigate+ 设置已保存。请重启 Frigate 以应用更改。",
+      "success": "BIS-IA+ 设置已保存。请重启 BIS-IA 以应用更改。",
       "error": "配置更改保存失败：{{errorMessage}}"
     },
-    "restart_required": "需要重启（Frigate+模型已修改）",
-    "unsavedChanges": "未保存Frigate+变更设置"
+    "restart_required": "需要重启（BIS-IA+模型已修改）",
+    "unsavedChanges": "未保存BIS-IA+变更设置"
   },
   "enrichments": {
     "title": "增强功能设置",
@@ -736,16 +736,16 @@
         }
       },
       "title": "分类搜索",
-      "desc": "Frigate 中的语义搜索功能将能够让你通过图片、用户自定义的文本描述，或自动生成的文本描述等方式在核查项目中查找目标/物体。",
+      "desc": "BIS-IA 中的语义搜索功能将能够让你通过图片、用户自定义的文本描述，或自动生成的文本描述等方式在核查项目中查找目标/物体。",
       "readTheDocumentation": "阅读文档"
     },
     "licensePlateRecognition": {
-      "desc": "Frigate 可以识别车辆的车牌，并自动将检测到的字符添加到 识别的车牌（recognized_license_plate）字段中，或将已知车牌对应的名称作为子标签添加到该车辆目标中。该功能常用于识别驶入车道的车辆车牌或经过街道的车辆车牌。",
+      "desc": "BIS-IA 可以识别车辆的车牌，并自动将检测到的字符添加到 识别的车牌（recognized_license_plate）字段中，或将已知车牌对应的名称作为子标签添加到该车辆目标中。该功能常用于识别驶入车道的车辆车牌或经过街道的车辆车牌。",
       "title": "车牌识别",
       "readTheDocumentation": "阅读文档"
     },
     "faceRecognition": {
-      "desc": "人脸识别功能允许为人物分配名称，当识别到他们的面孔时，Frigate 会将人物的名字作为子标签进行分配。这些信息会显示在界面、过滤器以及通知中。",
+      "desc": "人脸识别功能允许为人物分配名称，当识别到他们的面孔时，BIS-IA 会将人物的名字作为子标签进行分配。这些信息会显示在界面、过滤器以及通知中。",
       "title": "人脸识别",
       "readTheDocumentation": "阅读文档",
       "modelSize": {
@@ -762,7 +762,7 @@
       }
     },
     "toast": {
-      "success": "增强功能设置已保存。请重启 Frigate 以应用更改。",
+      "success": "增强功能设置已保存。请重启 BIS-IA 以应用更改。",
       "error": "配置更改保存失败：{{errorMessage}}"
     },
     "unsavedChanges": "增强功能设置未保存",
@@ -849,7 +849,7 @@
         },
         "actions": {
           "title": "动作",
-          "desc": "默认情况下，Frigate 会为所有触发器发送 MQTT 消息。子标签会将触发器名称添加到目标标签中。属性是可搜索的元数据，独立存储在追踪目标的元数据中。",
+          "desc": "默认情况下，BIS-IA 会为所有触发器发送 MQTT 消息。子标签会将触发器名称添加到目标标签中。属性是可搜索的元数据，独立存储在追踪目标的元数据中。",
           "error": {
             "min": "必须至少选择一项动作。"
           }
@@ -898,7 +898,7 @@
   "roles": {
     "management": {
       "title": "成员权限组管理",
-      "desc": "管理此 Frigate 实例的自定义权限组及其摄像头访问权限。"
+      "desc": "管理此 BIS-IA 实例的自定义权限组及其摄像头访问权限。"
     },
     "addRole": "添加权限组",
     "table": {
@@ -957,7 +957,7 @@
   },
   "cameraWizard": {
     "title": "添加摄像头",
-    "description": "请按照以下步骤添加摄像头至 Frigate 中。",
+    "description": "请按照以下步骤添加摄像头至 BIS-IA 中。",
     "steps": {
       "nameAndConnection": "名称与连接",
       "streamConfiguration": "视频流配置",
@@ -1014,7 +1014,7 @@
         "customUrlRtspRequired": "自定义URL必须以“rtsp://”开头；对于非 RTSP 协议的摄像头流，需手动添加至配置文件。"
       },
       "docs": {
-        "reolink": "https://docs.frigate-cn.video/configuration/camera_specific.html#reolink-cameras"
+        "reolink": "https://docs.bisia-cn.video/configuration/camera_specific.html#reolink-cameras"
       },
       "testing": {
         "probingMetadata": "正在获取摄像头基本数据……",
@@ -1143,7 +1143,7 @@
         "resolutionLow": "使用 {{resolution}} 分辨率可能过低，难以检测较小的物体。"
       },
       "ffmpegModule": "使用视频流兼容模式",
-      "ffmpegModuleDescription": "如果多次尝试后视频流仍无法加载，可以尝试启用此功能。启用后，Frigate 将使用集成 go2rtc 的 ffmpeg 模块，这可能会提高与某些摄像头视频流的兼容性。",
+      "ffmpegModuleDescription": "如果多次尝试后视频流仍无法加载，可以尝试启用此功能。启用后，BIS-IA 将使用集成 go2rtc 的 ffmpeg 模块，这可能会提高与某些摄像头视频流的兼容性。",
       "streamsTitle": "摄像头视频流",
       "addStream": "添加视频流",
       "addAnotherStream": "添加其他视频流",
@@ -1201,7 +1201,7 @@
       "estimatedBandwidth": "预估带宽",
       "roles": "功能",
       "ffmpegModule": "使用视频流兼容模式",
-      "ffmpegModuleDescription": "若多次尝试后仍无法加载视频流，可尝试启用此功能。启用后，Frigate 将通过 go2rtc 调用 ffmpeg 模块。这可能会提升与部分摄像头视频流的兼容性。",
+      "ffmpegModuleDescription": "若多次尝试后仍无法加载视频流，可尝试启用此功能。启用后，BIS-IA 将通过 go2rtc 调用 ffmpeg 模块。这可能会提升与部分摄像头视频流的兼容性。",
       "none": "无",
       "error": "错误",
       "streamValidated": "视频流 {{number}} 验证成功",
@@ -1239,7 +1239,7 @@
     "backToSettings": "返回摄像头设置",
     "streams": {
       "title": "开启或关闭摄像头",
-      "desc": "将临时禁用摄像头，直到 Frigate 重启。禁用摄像头将完全停止 Frigate 对该摄像头视频流的处理，届时检测、录制及调试功能均不可用。<br /><em>注意：go2rtc 的转流服务不受影响。</em>"
+      "desc": "将临时禁用摄像头，直到 BIS-IA 重启。禁用摄像头将完全停止 BIS-IA 对该摄像头视频流的处理，届时检测、录制及调试功能均不可用。<br /><em>注意：go2rtc 的转流服务不受影响。</em>"
     },
     "cameraConfig": {
       "add": "添加摄像头",
@@ -1275,21 +1275,21 @@
     "title": "摄像头核查设置",
     "object_descriptions": {
       "title": "生成式AI目标描述",
-      "desc": "临时启用或禁用此摄像头的 生成式AI目标描述 功能，直到 Frigate 重启。禁用后，系统将不再请求该摄像头追踪目标和物体的AI生成描述。"
+      "desc": "临时启用或禁用此摄像头的 生成式AI目标描述 功能，直到 BIS-IA 重启。禁用后，系统将不再请求该摄像头追踪目标和物体的AI生成描述。"
     },
     "review_descriptions": {
       "title": "生成式 AI 核查总结",
-      "desc": "临时开关该摄像头的 生成式 AI 核查总结 功能，直到 Frigate 重启。禁用后，系统将不再请求 AI 生成该摄像头核查项目的总结。"
+      "desc": "临时开关该摄像头的 生成式 AI 核查总结 功能，直到 BIS-IA 重启。禁用后，系统将不再请求 AI 生成该摄像头核查项目的总结。"
     },
     "review": {
       "title": "核查",
-      "desc": "临时开关该摄像头的警报与检测项生成功能，直到 Frigate 重启后恢复。禁用期间，系统将不再生成新的核查项目。 ",
+      "desc": "临时开关该摄像头的警报与检测项生成功能，直到 BIS-IA 重启后恢复。禁用期间，系统将不再生成新的核查项目。 ",
       "alerts": "警报 ",
       "detections": "检测 "
     },
     "reviewClassification": {
       "title": "核查分类",
-      "desc": "Frigate 将核查项的严重程度分为“警报”和“检测”两个等级。默认情况下，所有的<strong>人</strong>、<strong>汽车</strong> 目标都将视为警报。你可以通过修改配置文件配置区域来细分。",
+      "desc": "BIS-IA 将核查项的严重程度分为“警报”和“检测”两个等级。默认情况下，所有的<strong>人</strong>、<strong>汽车</strong> 目标都将视为警报。你可以通过修改配置文件配置区域来细分。",
       "noDefinedZones": "此摄像头未设置任何监控区。",
       "objectAlertsTips": "所有 {{alertsLabels}} 类目标或物体在 {{cameraName}} 下都将视为警报。",
       "zoneObjectAlertsTips": "所有 {{alertsLabels}} 类目标或物体在 {{cameraName}} 下的 {{zone}} 区域内都将视为警报。",

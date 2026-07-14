@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Živě - Frigate",
-  "documentTitle.withCamera": "{{camera}}-Živě-Frigate",
+  "documentTitle": "Živě - BIS-IA",
+  "documentTitle.withCamera": "{{camera}}-Živě-BIS-IA",
   "lowBandwidthMode": "Režim nízké šířky pásma",
   "twoWayTalk": {
     "enable": "Povolit obousměrný hovor",

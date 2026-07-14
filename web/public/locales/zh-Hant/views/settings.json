@@ -1,17 +1,17 @@
 {
   "documentTitle": {
-    "default": "設定 - Frigate",
-    "authentication": "認證設定 - Frigate",
-    "camera": "鏡頭設定 - Frigate",
-    "enrichments": "進階功能設定 - Frigate",
-    "general": "使用者介面設定 - Frigate",
-    "frigatePlus": "Frigate+ 設定 - Frigate",
-    "notifications": "通知設定 - Frigate",
-    "masksAndZones": "遮罩與區域編輯器 - Frigate",
-    "motionTuner": "移動偵測調教器 - Frigate",
-    "object": "除錯 - Frigate",
-    "cameraManagement": "管理鏡頭 - Frigate",
-    "cameraReview": "相機預覽設置 - Frigate"
+    "default": "設定 - BIS-IA",
+    "authentication": "認證設定 - BIS-IA",
+    "camera": "鏡頭設定 - BIS-IA",
+    "enrichments": "進階功能設定 - BIS-IA",
+    "general": "使用者介面設定 - BIS-IA",
+    "bisiaPlus": "BIS-IA+ 設定 - BIS-IA",
+    "notifications": "通知設定 - BIS-IA",
+    "masksAndZones": "遮罩與區域編輯器 - BIS-IA",
+    "motionTuner": "移動偵測調教器 - BIS-IA",
+    "object": "除錯 - BIS-IA",
+    "cameraManagement": "管理鏡頭 - BIS-IA",
+    "cameraReview": "相機預覽設置 - BIS-IA"
   },
   "menu": {
     "ui": "使用者介面",
@@ -22,7 +22,7 @@
     "debug": "除錯",
     "users": "使用者",
     "notifications": "通知",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "triggers": "觸發",
     "cameraManagement": "管理",
     "cameraReview": "預覽",
@@ -107,7 +107,7 @@
         }
       },
       "title": "語意搜尋",
-      "desc": "Frigate 中的語意搜尋功能可讓您使用圖像本身、使用者定義的文字描述或自動產生的描述，在審核專案中尋找追蹤物件。",
+      "desc": "BIS-IA 中的語意搜尋功能可讓您使用圖像本身、使用者定義的文字描述或自動產生的描述，在審核專案中尋找追蹤物件。",
       "reindexNow": {
         "label": "立即重新索引",
         "desc": "重新索引會為所有追蹤物件重新產生嵌入向量。此過程在背景運行，可能會佔用大量 CPU 資源，並且耗時較長，具體取決於追蹤物件的數量。"

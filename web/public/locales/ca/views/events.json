@@ -23,9 +23,9 @@
     "aria": "Seleccionar esdeveniments",
     "noFoundForTimePeriod": "No s'han trobat esdeveniments per aquest període de temps."
   },
-  "documentTitle": "Revisió - Frigate",
+  "documentTitle": "Revisió - BIS-IA",
   "recordings": {
-    "documentTitle": "Enregistraments - Frigate"
+    "documentTitle": "Enregistraments - BIS-IA"
   },
   "calendarFilter": {
     "last24Hours": "Últimes 24 hores"

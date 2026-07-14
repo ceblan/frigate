@@ -57,14 +57,14 @@
     "detectIsVerySlow": "{{detect}} ช้ามาก ({{speed}} มิลลิวินาที)"
   },
   "documentTitle": {
-    "cameras": "ข้อมูลกล้อง - Frigate",
-    "storage": "สถิติคลังข้อมูล - Frigate",
-    "general": "สถิติทั่วไป - Frigate",
-    "enrichments": "สถิติเพิ่มเติม - Frigate",
+    "cameras": "ข้อมูลกล้อง - BIS-IA",
+    "storage": "สถิติคลังข้อมูล - BIS-IA",
+    "general": "สถิติทั่วไป - BIS-IA",
+    "enrichments": "สถิติเพิ่มเติม - BIS-IA",
     "logs": {
-      "frigate": "Frigate Logs - Frigate",
-      "go2rtc": "Logs ของ Go2RTC - Frigate",
-      "nginx": "Logs ของ Nginx - Frigate"
+      "bisia": "BIS-IA Logs - BIS-IA",
+      "go2rtc": "Logs ของ Go2RTC - BIS-IA",
+      "nginx": "Logs ของ Nginx - BIS-IA"
     }
   }
 }

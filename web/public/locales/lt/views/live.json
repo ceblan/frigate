@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Gyvai - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Tiesiogiai - Frigate",
+  "documentTitle": "Gyvai - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Tiesiogiai - BIS-IA",
   "lowBandwidthMode": "Mažo-pralaidumo Rėžimas",
   "cameraAudio": {
     "enable": "Įgalinti Kamerų Garsą",
@@ -171,7 +171,7 @@
   },
   "noCameras": {
     "title": "Nėra Sukonfiguruotų Kamerų",
-    "description": "Pradėti nuo kameros prijungimo pire Frigate.",
+    "description": "Pradėti nuo kameros prijungimo pire BIS-IA.",
     "buttonText": "Pridėti Kamerą",
     "restricted": {
       "title": "Nėra Prieinamų Kamerų",
@@ -179,7 +179,7 @@
     },
     "default": {
       "title": "Nėra Sukonfiguruotų Kamerų",
-      "description": "Pradėkite nuo kameros prijungimo prie Frigate.",
+      "description": "Pradėkite nuo kameros prijungimo prie BIS-IA.",
       "buttonText": "Pridėti Kamerą"
     },
     "group": {

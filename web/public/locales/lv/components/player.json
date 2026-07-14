@@ -2,8 +2,8 @@
   "noRecordingsFoundForThisTime": "Šim laika brīdim nav atrasti ieraksti",
   "noPreviewFound": "Priekšskatījums nav atrasts",
   "noPreviewFoundFor": "{{cameraName}} nav atrasts priekšskatījums",
-  "submitFrigatePlus": {
-    "title": "Nosūtīt šo kadru uz Frigate+?",
+  "submitBisiaPlus": {
+    "title": "Nosūtīt šo kadru uz BIS-IA+?",
     "submit": "Iesniegt"
   },
   "livePlayerRequiredIOSVersion": "Šāda veida straumēšanai nepieciešama iOS 17.1 vai jaunāka versija.",
@@ -42,10 +42,10 @@
   },
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Kadrs veiksmīgi iesniegts pakalpojumam Frigate+"
+      "submittedBisiaPlus": "Kadrs veiksmīgi iesniegts pakalpojumam BIS-IA+"
     },
     "error": {
-      "submitFrigatePlusFailed": "Neizdevās iesniegt kadru Frigate+"
+      "submitBisiaPlusFailed": "Neizdevās iesniegt kadru BIS-IA+"
     }
   }
 }

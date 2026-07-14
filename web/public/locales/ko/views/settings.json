@@ -22,18 +22,18 @@
     }
   },
   "documentTitle": {
-    "default": "설정 - Frigate",
-    "authentication": "인증 설정 - Frigate",
-    "camera": "카메라 설정 - Frigate",
-    "enrichments": "고급 설정 - Frigate",
-    "masksAndZones": "마스크와 구역 편집기 - Frigate",
-    "motionTuner": "움직임 감지 조정 - Frigate",
-    "object": "디버그 - Frigate",
-    "general": "일반 설정 - Frigate",
-    "frigatePlus": "Frigate+ 설정 - Frigate",
-    "notifications": "알림 설정 - Frigate",
-    "cameraManagement": "카메라 관리 - Frigate",
-    "cameraReview": "카메라 다시보기 설정 - Frigate"
+    "default": "설정 - BIS-IA",
+    "authentication": "인증 설정 - BIS-IA",
+    "camera": "카메라 설정 - BIS-IA",
+    "enrichments": "고급 설정 - BIS-IA",
+    "masksAndZones": "마스크와 구역 편집기 - BIS-IA",
+    "motionTuner": "움직임 감지 조정 - BIS-IA",
+    "object": "디버그 - BIS-IA",
+    "general": "일반 설정 - BIS-IA",
+    "bisiaPlus": "BIS-IA+ 설정 - BIS-IA",
+    "notifications": "알림 설정 - BIS-IA",
+    "cameraManagement": "카메라 관리 - BIS-IA",
+    "cameraReview": "카메라 다시보기 설정 - BIS-IA"
   },
   "users": {
     "table": {
@@ -51,7 +51,7 @@
     "users": "사용자",
     "roles": "역할",
     "notifications": "알림",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "cameraManagement": "관리",
     "cameraReview": "다시보기"
   },

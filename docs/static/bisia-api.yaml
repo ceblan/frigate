@@ -6,7 +6,7 @@ info:
   version: 0.1.0
 
 servers:
-  - url: https://demo.frigate.video/api
+  - url: https://demo.bisia.video/api
   - url: http://localhost:5001/api
 
 paths:
@@ -33,7 +33,7 @@ paths:
               schema:
                 type: string
             Set-Cookie:
-              description: May include refreshed JWT cookie ("frigate-token") when applicable
+              description: May include refreshed JWT cookie ("bisia-token") when applicable
               schema:
                 type: string
         "401":
@@ -84,7 +84,7 @@ paths:
 
         Example using Bearer token:
         ```
-        curl -H "Authorization: Bearer <token_value>" https://frigate_ip:8971/api/profile
+        curl -H "Authorization: Bearer <token_value>" https://bisia_ip:8971/api/profile
         ```
       operationId: login_login_post
       requestBody:
@@ -1464,7 +1464,7 @@ paths:
         - App
         - Logs
       summary: Logs
-      description: Get logs for the requested service (frigate/nginx/go2rtc)
+      description: Get logs for the requested service (bisia/nginx/go2rtc)
       operationId: logs_logs__service__get
       parameters:
         - name: service
@@ -1473,7 +1473,7 @@ paths:
           schema:
             type: string
             enum:
-              - frigate
+              - bisia
               - nginx
               - go2rtc
             title: Service
@@ -2808,9 +2808,9 @@ paths:
     post:
       tags:
         - Events
-      summary: Send event to Frigate+
+      summary: Send event to BIS-IA+
       description: |-
-        Sends an event to Frigate+.
+        Sends an event to BIS-IA+.
             Returns a success message or an error if the event is not found.
       operationId: send_to_plus_events__event_id__plus_post
       parameters:
@@ -2842,10 +2842,10 @@ paths:
     put:
       tags:
         - Events
-      summary: Submit false positive to Frigate+
+      summary: Submit false positive to BIS-IA+
       description: |-
-        Submit an event as a false positive to Frigate+.
-            This endpoint is the same as the standard Frigate+ submission endpoint,
+        Submit an event as a false positive to BIS-IA+.
+            This endpoint is the same as the standard BIS-IA+ submission endpoint,
             but is specifically for marking an event as a false positive.
       operationId: false_positive_events__event_id__false_positive_put
       parameters:

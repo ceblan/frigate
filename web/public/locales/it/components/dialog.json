@@ -1,29 +1,29 @@
 {
   "restart": {
-    "title": "Sei sicuro di voler riavviare Frigate?",
+    "title": "Sei sicuro di voler riavviare BIS-IA?",
     "button": "Riavvia",
     "restarting": {
-      "title": "Frigate si sta riavviando",
+      "title": "BIS-IA si sta riavviando",
       "content": "Questa pagina si ricaricherà in {{countdown}} secondi.",
       "button": "Forza ricarica ora"
     },
-    "description": "Questo fermerà brevemente Frigate mentre si riavvia."
+    "description": "Questo fermerà brevemente BIS-IA mentre si riavvia."
   },
   "explore": {
     "plus": {
       "submitToPlus": {
-        "label": "Invia a Frigate+",
+        "label": "Invia a BIS-IA+",
         "desc": "Gli oggetti in posizioni che si desidera evitare non sono falsi positivi. Inviarli come falsi positivi confonderà il modello."
       },
       "review": {
         "false": {
-          "label": "Non confermare questa etichetta per Frigate Plus",
+          "label": "Non confermare questa etichetta per BIS-IA Plus",
           "false_one": "Questo non è un {{label}}",
           "false_many": "Questi non sono un {{label}}",
           "false_other": "Questi non sono un {{label}}"
         },
         "true": {
-          "label": "Conferma questa etichetta per Frigate Plus",
+          "label": "Conferma questa etichetta per BIS-IA Plus",
           "true_one": "Questo è un {{label}}",
           "true_many": "Questi sono {{label}}",
           "true_other": "Questi sono {{label}}"
@@ -32,7 +32,7 @@
           "submitted": "Inviato"
         },
         "question": {
-          "label": "Conferma questa etichetta per Frigate Plus",
+          "label": "Conferma questa etichetta per BIS-IA Plus",
           "ask_a": "Questo oggetto è un <code>{{label}}</code>?",
           "ask_an": "Questo oggetto è un <code>{{label}}</code>?",
           "ask_full": "Questo oggetto è un <code>{{untranslatedLabel}}</code> ({{translatedLabel}})?"

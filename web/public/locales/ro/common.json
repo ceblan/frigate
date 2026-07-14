@@ -1,7 +1,7 @@
 {
   "time": {
     "untilForTime": "Până la {{time}}",
-    "untilForRestart": "Până la repornirea Frigate.",
+    "untilForRestart": "Până la repornirea BIS-IA.",
     "untilRestart": "Până la repornire",
     "ago": "{{timeAgo}} în urmă",
     "justNow": "Acum",
@@ -87,7 +87,7 @@
   "menu": {
     "documentation": {
       "title": "Documentație",
-      "label": "Documentație Frigate"
+      "label": "Documentație BIS-IA"
     },
     "explore": "Căutare",
     "uiPlayground": "UI Playground",
@@ -183,7 +183,7 @@
       }
     },
     "withSystem": "Modul sistemului",
-    "restart": "Repornește Frigate",
+    "restart": "Repornește BIS-IA",
     "review": "Revizuire",
     "classification": "Clasificare"
   },
@@ -267,7 +267,7 @@
   },
   "role": {
     "viewer": "Vizualizator",
-    "desc": "Administratorii au acces complet la toate funcționalitățile din interfața Frigate. Vizualizatorii sunt limitați la vizualizarea camerelor, a elementelor de revizuire și a înregistrărilor istorice în interfață.",
+    "desc": "Administratorii au acces complet la toate funcționalitățile din interfața BIS-IA. Vizualizatorii sunt limitați la vizualizarea camerelor, a elementelor de revizuire și a înregistrărilor istorice în interfață.",
     "admin": "Administrator",
     "title": "Rol"
   },
@@ -284,10 +284,10 @@
   "accessDenied": {
     "title": "Acces refuzat",
     "desc": "Nu ai permisiunea să vizualizezi această pagină.",
-    "documentTitle": "Acces refuzat - Frigate"
+    "documentTitle": "Acces refuzat - BIS-IA"
   },
   "notFound": {
-    "documentTitle": "Nu a fost găsit - Frigate",
+    "documentTitle": "Nu a fost găsit - BIS-IA",
     "title": "404",
     "desc": "Pagină negăsită"
   },
@@ -302,6 +302,6 @@
   },
   "field": {
     "optional": "Opțional",
-    "internalID": "ID-ul Intern pe care Frigate îl folosește în configurație și în baza de date"
+    "internalID": "ID-ul Intern pe care BIS-IA îl folosește în configurație și în baza de date"
   }
 }

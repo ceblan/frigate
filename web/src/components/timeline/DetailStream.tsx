@@ -20,7 +20,7 @@ import { REVIEW_PADDING, ReviewSegment } from "@/types/review";
 import { LuChevronDown, LuCircle, LuChevronRight } from "react-icons/lu";
 import { getTranslatedLabel } from "@/utils/i18n";
 import EventMenu from "@/components/timeline/EventMenu";
-import { FrigatePlusDialog } from "@/components/overlay/dialog/FrigatePlusDialog";
+import { BisiaPlusDialog } from "@/components/overlay/dialog/BisiaPlusDialog";
 import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { Link } from "react-router-dom";
@@ -203,7 +203,7 @@ export default function DetailStream({
 
   return (
     <>
-      <FrigatePlusDialog
+      <BisiaPlusDialog
         upload={upload}
         onClose={() => setUpload(undefined)}
         onEventUploaded={() => {

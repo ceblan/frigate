@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Live - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Live - Frigate",
+  "documentTitle": "Live - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Live - BIS-IA",
   "twoWayTalk": {
     "enable": "Aktivera tvåvägssamtal",
     "disable": "Avaktivera tvåvägssamtal"
@@ -173,7 +173,7 @@
   },
   "noCameras": {
     "title": "Inga kameror konfigurerade",
-    "description": "Börja med att ansluta en kamera till Frigate.",
+    "description": "Börja med att ansluta en kamera till BIS-IA.",
     "buttonText": "Lägg till kamera",
     "restricted": {
       "title": "Inga kameror tillgängliga",
@@ -181,7 +181,7 @@
     },
     "default": {
       "title": "Ingen kamera konfigurerad",
-      "description": "Börja med att ansluta en kamera till Frigate.",
+      "description": "Börja med att ansluta en kamera till BIS-IA.",
       "buttonText": "Lägg till kamera"
     },
     "group": {

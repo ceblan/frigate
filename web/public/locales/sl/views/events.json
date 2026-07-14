@@ -16,10 +16,10 @@
     }
   },
   "recordings": {
-    "documentTitle": "Posnetki - Frigate"
+    "documentTitle": "Posnetki - BIS-IA"
   },
   "camera": "Kamera",
-  "documentTitle": "Pregled - Frigate",
+  "documentTitle": "Pregled - BIS-IA",
   "alerts": "Opozorila",
   "detections": "Zaznavanja",
   "motion": {

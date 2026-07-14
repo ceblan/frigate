@@ -7,7 +7,7 @@ import CommunityBadge from '@site/src/components/CommunityBadge';
 
 ## Cameras
 
-Cameras that output H.264 video and AAC audio will offer the most compatibility with all features of Frigate and Home Assistant. It is also helpful if your camera supports multiple substreams to allow different resolutions to be used for detection, streaming, and recordings without re-encoding.
+Cameras that output H.264 video and AAC audio will offer the most compatibility with all features of BIS-IA and Home Assistant. It is also helpful if your camera supports multiple substreams to allow different resolutions to be used for detection, streaming, and recordings without re-encoding.
 
 I recommend Dahua, Hikvision, and Amcrest in that order. Dahua edges out Hikvision because they are easier to find and order, not because they are better cameras. I personally use Dahua cameras because they are easier to purchase directly. In my experience Dahua and Hikvision both have multiple streams with configurable resolutions and frame rates and rock solid streams. They also both have models with large sensors well known for excellent image quality at night. Not all the models are equal. Larger sensors are better than higher resolutions; especially at night. Amcrest is the fallback recommendation because they are rebranded Dahuas. They are rebranding the lower end models with smaller sensors or less configuration options.
 
@@ -46,11 +46,11 @@ If the EQ13 is out of stock, the link below may take you to a suggested alternat
 
 ## Detectors
 
-A detector is a device which is optimized for running inferences efficiently to detect objects. Using a recommended detector means there will be less latency between detections and more detections can be run per second. Frigate is designed around the expectation that a detector is used to achieve very low inference speeds. Offloading TensorFlow to a detector is an order of magnitude faster and will reduce your CPU load dramatically.
+A detector is a device which is optimized for running inferences efficiently to detect objects. Using a recommended detector means there will be less latency between detections and more detections can be run per second. BIS-IA is designed around the expectation that a detector is used to achieve very low inference speeds. Offloading TensorFlow to a detector is an order of magnitude faster and will reduce your CPU load dramatically.
 
 :::info
 
-Frigate supports multiple different detectors that work on different types of hardware:
+BIS-IA supports multiple different detectors that work on different types of hardware:
 
 **Most Hardware**
 
@@ -107,14 +107,14 @@ Frigate supports multiple different detectors that work on different types of ha
 
 ### Hailo-8
 
-Frigate supports both the Hailo-8 and Hailo-8L AI Acceleration Modules on compatible hardware platforms—including the Raspberry Pi 5 with the PCIe hat from the AI kit. The Hailo detector integration in Frigate automatically identifies your hardware type and selects the appropriate default model when a custom model isn’t provided.
+BIS-IA supports both the Hailo-8 and Hailo-8L AI Acceleration Modules on compatible hardware platforms—including the Raspberry Pi 5 with the PCIe hat from the AI kit. The Hailo detector integration in BIS-IA automatically identifies your hardware type and selects the appropriate default model when a custom model isn’t provided.
 
 **Default Model Configuration:**
 
 - **Hailo-8L:** Default model is **YOLOv6n**.
 - **Hailo-8:** Default model is **YOLOv6n**.
 
-In real-world deployments, even with multiple cameras running concurrently, Frigate has demonstrated consistent performance. Testing on x86 platforms—with dual PCIe lanes—yields further improvements in FPS, throughput, and latency compared to the Raspberry Pi setup.
+In real-world deployments, even with multiple cameras running concurrently, BIS-IA has demonstrated consistent performance. Testing on x86 platforms—with dual PCIe lanes—yields further improvements in FPS, throughput, and latency compared to the Raspberry Pi setup.
 
 | Name             | Hailo‑8 Inference Time | Hailo‑8L Inference Time |
 | ---------------- | ---------------------- | ----------------------- |
@@ -126,16 +126,16 @@ In real-world deployments, even with multiple cameras running concurrently, Frig
 
 :::warning
 
-The Coral is no longer recommended for new Frigate installations, except in deployments with particularly low power requirements or hardware incapable of utilizing alternative AI accelerators for object detection. Instead, we suggest using one of the numerous other supported object detectors. Frigate will continue to provide support for the Coral TPU for as long as practicably possible given its still one of the most power-efficient devices for executing object detection models.
+The Coral is no longer recommended for new BIS-IA installations, except in deployments with particularly low power requirements or hardware incapable of utilizing alternative AI accelerators for object detection. Instead, we suggest using one of the numerous other supported object detectors. BIS-IA will continue to provide support for the Coral TPU for as long as practicably possible given its still one of the most power-efficient devices for executing object detection models.
 
 :::
 
-Frigate supports both the USB and M.2 versions of the Google Coral.
+BIS-IA supports both the USB and M.2 versions of the Google Coral.
 
 - The USB version is compatible with the widest variety of hardware and does not require a driver on the host machine. However, it does lack the automatic throttling features of the other versions.
 - The PCIe and M.2 versions require installation of a driver on the host. https://github.com/jnicolson/gasket-builder should be used.
 
-A single Coral can handle many cameras using the default model and will be sufficient for the majority of users. You can calculate the maximum performance of your Coral based on the inference speed reported by Frigate. With an inference speed of 10, your Coral will top out at `1000/10=100`, or 100 frames per second. If your detection fps is regularly getting close to that, you should first consider tuning motion masks. If those are already properly configured, a second Coral may be needed.
+A single Coral can handle many cameras using the default model and will be sufficient for the majority of users. You can calculate the maximum performance of your Coral based on the inference speed reported by BIS-IA. With an inference speed of 10, your Coral will top out at `1000/10=100`, or 100 frames per second. If your detection fps is regularly getting close to that, you should first consider tuning motion masks. If those are already properly configured, a second Coral may be needed.
 
 ### OpenVINO - Intel
 
@@ -149,7 +149,7 @@ The OpenVINO detector type is able to run on:
 
 :::note
 
-Intel B-series (Battlemage) GPUs are not officially supported with Frigate 0.17, though a user has [provided steps to rebuild the Frigate container](https://github.com/blakeblackshear/frigate/discussions/21257) with support for them.
+Intel B-series (Battlemage) GPUs are not officially supported with BIS-IA 0.17, though a user has [provided steps to rebuild the BIS-IA container](https://github.com/blakeblackshear/bisia/discussions/21257) with support for them.
 
 :::
 
@@ -174,7 +174,7 @@ Inference speeds vary greatly depending on the CPU or GPU used, some known examp
 
 ### Nvidia GPUs
 
-Frigate is able to utilize an Nvidia GPU which supports the 12.x series of CUDA libraries.
+BIS-IA is able to utilize an Nvidia GPU which supports the 12.x series of CUDA libraries.
 
 #### Minimum Hardware Support
 
@@ -206,11 +206,11 @@ Inference is done with the `onnx` detector type. Speeds will vary greatly depend
 
 ### Apple Silicon
 
-With the [Apple Silicon](../configuration/object_detectors.md#apple-silicon-detector) detector Frigate can take advantage of the NPU in M1 and newer Apple Silicon.
+With the [Apple Silicon](../configuration/object_detectors.md#apple-silicon-detector) detector BIS-IA can take advantage of the NPU in M1 and newer Apple Silicon.
 
 :::warning
 
-Apple Silicon can not run within a container, so a ZMQ proxy is utilized to communicate with [the Apple Silicon Frigate detector](https://github.com/frigate-nvr/apple-silicon-detector) which runs on the host. This should add minimal latency when run on the same device.
+Apple Silicon can not run within a container, so a ZMQ proxy is utilized to communicate with [the Apple Silicon BIS-IA detector](https://github.com/bis-ia-nvr/apple-silicon-detector) which runs on the host. This should add minimal latency when run on the same device.
 
 :::
 
@@ -222,7 +222,7 @@ Apple Silicon can not run within a container, so a ZMQ proxy is utilized to comm
 
 ### ROCm - AMD GPU
 
-With the [ROCm](../configuration/object_detectors.md#amdrocm-gpu-detector) detector Frigate can take advantage of many discrete AMD GPUs.
+With the [ROCm](../configuration/object_detectors.md#amdrocm-gpu-detector) detector BIS-IA can take advantage of many discrete AMD GPUs.
 
 | Name      | YOLOv9 Inference Time       | YOLO-NAS Inference Time   |
 | --------- | --------------------------- | ------------------------- |
@@ -233,9 +233,9 @@ With the [ROCm](../configuration/object_detectors.md#amdrocm-gpu-detector) detec
 
 ### MemryX MX3
 
-Frigate supports the MemryX MX3 M.2 AI Acceleration Module on compatible hardware platforms, including both x86 (Intel/AMD) and ARM-based SBCs such as Raspberry Pi 5.
+BIS-IA supports the MemryX MX3 M.2 AI Acceleration Module on compatible hardware platforms, including both x86 (Intel/AMD) and ARM-based SBCs such as Raspberry Pi 5.
 
-A single MemryX MX3 module is capable of handling multiple camera streams using the default models, making it sufficient for most users. For larger deployments with more cameras or bigger models, multiple MX3 modules can be used. Frigate supports multi-detector configurations, allowing you to connect multiple MX3 modules to scale inference capacity.
+A single MemryX MX3 module is capable of handling multiple camera streams using the default models, making it sufficient for most users. For larger deployments with more cameras or bigger models, multiple MX3 modules can be used. BIS-IA supports multi-detector configurations, allowing you to connect multiple MX3 modules to scale inference capacity.
 
 Detailed information is available [in the detector docs](/configuration/object_detectors#memryx-mx3).
 
@@ -264,7 +264,7 @@ Inference speed will vary depending on the YOLO model, jetson platform and jetso
 
 ### Rockchip platform
 
-Frigate supports hardware video processing on all Rockchip boards. However, hardware object detection is only supported on these boards:
+BIS-IA supports hardware video processing on all Rockchip boards. However, hardware object detection is only supported on these boards:
 
 - RK3562
 - RK3566
@@ -288,7 +288,7 @@ The inference time of a rk3588 with all 3 cores enabled is typically 25-30 ms fo
 | ssd mobilenet | ~ 25 ms                         |
 | yolov5m       | ~ 118 ms                        |
 
-## What does Frigate use the CPU for and what does it use a detector for? (ELI5 Version)
+## What does BIS-IA use the CPU for and what does it use a detector for? (ELI5 Version)
 
 This is taken from a [user question on reddit](https://www.reddit.com/r/homeassistant/comments/q8mgau/comment/hgqbxh5/?utm_source=share&utm_medium=web2x&context=3). Modified slightly for clarity.
 
@@ -302,7 +302,7 @@ _What happens when I increase the resolution of my camera?_
 
 However we realize that there is a problem. There is still booby poop all over the yard. How could we miss that! I've been watching all day! My parents check the window and realize its dirty and a bit small to see the entire yard so they clean it and put a bigger one in there. Now there is so much more to see! However I now have a much bigger area to scan for movement and have to work a lot harder! Even my buddy Mendel has to work harder, as now the pictures have a lot more detail in them that he has to look at to see if it is our sneaky booby.
 
-Basically - When you increase the resolution and/or the frame rate of the stream there is now significantly more data for the CPU to parse. That takes additional computing power. The Google Coral is really good at doing object detection, but it doesn't have time to look everywhere all the time (especially when there are many windows to check). To balance it, Frigate uses the CPU to look for movement, then sends those frames to the Coral to do object detection. This allows the Coral to be available to a large number of cameras and not overload it.
+Basically - When you increase the resolution and/or the frame rate of the stream there is now significantly more data for the CPU to parse. That takes additional computing power. The Google Coral is really good at doing object detection, but it doesn't have time to look everywhere all the time (especially when there are many windows to check). To balance it, BIS-IA uses the CPU to look for movement, then sends those frames to the Coral to do object detection. This allows the Coral to be available to a large number of cameras and not overload it.
 
 ## Do hwaccel args help if I am using a Coral?
 

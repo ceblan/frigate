@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Live - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Live - Frigate",
+  "documentTitle": "Live - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Live - BIS-IA",
   "lowBandwidthMode": "Low-bandwidth Mode",
   "twoWayTalk": {
     "enable": "Enable Two Way Talk",
@@ -176,7 +176,7 @@
   },
   "noCameras": {
     "title": "No Cameras Configured",
-    "description": "Get started by connecting a camera to Frigate.",
+    "description": "Get started by connecting a camera to BIS-IA.",
     "buttonText": "Add Camera",
     "restricted": {
       "title": "No Cameras Available",
@@ -184,7 +184,7 @@
     },
     "default": {
       "title": "No Cameras Configured",
-      "description": "Get started by connecting a camera to Frigate.",
+      "description": "Get started by connecting a camera to BIS-IA.",
       "buttonText": "Add Camera"
     },
     "group": {

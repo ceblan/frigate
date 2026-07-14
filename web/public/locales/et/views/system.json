@@ -1,8 +1,8 @@
 {
   "documentTitle": {
-    "general": "Üldine statistika - Frigate",
-    "cameras": "Kaamerate statistika - Frigate",
-    "storage": "Andmeruumi statistika - Frigate"
+    "general": "Üldine statistika - BIS-IA",
+    "cameras": "Kaamerate statistika - BIS-IA",
+    "storage": "Andmeruumi statistika - BIS-IA"
   },
   "logs": {
     "download": {

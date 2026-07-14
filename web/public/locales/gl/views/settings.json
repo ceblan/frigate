@@ -1,11 +1,11 @@
 {
   "documentTitle": {
-    "default": "Preferencias - Frigate",
-    "authentication": "Configuracións de Autenticación - Frigate",
-    "camera": "Configuracións da Cámara - Frigate",
-    "general": "Configuracións xerais - Frigate",
-    "notifications": "Configuración de Notificacións - Frigate",
-    "enrichments": "Configuración complementarias - Frigate",
-    "masksAndZones": "Editor de máscaras e zonas - Frigate"
+    "default": "Preferencias - BIS-IA",
+    "authentication": "Configuracións de Autenticación - BIS-IA",
+    "camera": "Configuracións da Cámara - BIS-IA",
+    "general": "Configuracións xerais - BIS-IA",
+    "notifications": "Configuración de Notificacións - BIS-IA",
+    "enrichments": "Configuración complementarias - BIS-IA",
+    "masksAndZones": "Editor de máscaras e zonas - BIS-IA"
   }
 }

@@ -9,22 +9,22 @@ Face recognition identifies known individuals by matching detected faces with pr
 
 ### Face Detection
 
-When running a Frigate+ model (or any custom model that natively detects faces) should ensure that `face` is added to the [list of objects to track](../plus/#available-label-types) either globally or for a specific camera. This will allow face detection to run at the same time as object detection and be more efficient.
+When running a BIS-IA+ model (or any custom model that natively detects faces) should ensure that `face` is added to the [list of objects to track](../plus/#available-label-types) either globally or for a specific camera. This will allow face detection to run at the same time as object detection and be more efficient.
 
 When running a default COCO model or another model that does not include `face` as a detectable label, face detection will run via CV2 using a lightweight DNN model that runs on the CPU. In this case, you should _not_ define `face` in your list of objects to track.
 
 :::note
 
-Frigate needs to first detect a `person` before it can detect and recognize a face.
+BIS-IA needs to first detect a `person` before it can detect and recognize a face.
 
 :::
 
 ### Face Recognition
 
-Frigate has support for two face recognition model types:
+BIS-IA has support for two face recognition model types:
 
-- **small**: Frigate will run a FaceNet embedding model to recognize faces, which runs locally on the CPU. This model is optimized for efficiency and is not as accurate.
-- **large**: Frigate will run a large ArcFace embedding model that is optimized for accuracy. It is only recommended to be run when an integrated or dedicated GPU / NPU is available.
+- **small**: BIS-IA will run a FaceNet embedding model to recognize faces, which runs locally on the CPU. This model is optimized for efficiency and is not as accurate.
+- **large**: BIS-IA will run a large ArcFace embedding model that is optimized for accuracy. It is only recommended to be run when an integrated or dedicated GPU / NPU is available.
 
 In both cases, a lightweight face landmark detection model is also used to align faces before running recognition.
 
@@ -47,7 +47,7 @@ face_recognition:
   enabled: true
 ```
 
-Like the other real-time processors in Frigate, face recognition runs on the camera stream defined by the `detect` role in your config. To ensure optimal performance, select a suitable resolution for this stream in your camera's firmware that fits your specific scene and requirements.
+Like the other real-time processors in BIS-IA, face recognition runs on the camera stream defined by the `detect` role in your config. To ensure optimal performance, select a suitable resolution for this stream in your camera's firmware that fits your specific scene and requirements.
 
 ## Advanced Configuration
 
@@ -83,9 +83,9 @@ Fine-tune face recognition with these optional parameters at the global level of
 
 Follow these steps to begin:
 
-1. **Enable face recognition** in your configuration file and restart Frigate.
-2. **Upload one face** using the **Add Face** button's wizard in the Face Library section of the Frigate UI. Read below for the best practices on expanding your training set.
-3. When Frigate detects and attempts to recognize a face, it will appear in the **Train** tab of the Face Library, along with its associated recognition confidence.
+1. **Enable face recognition** in your configuration file and restart BIS-IA.
+2. **Upload one face** using the **Add Face** button's wizard in the Face Library section of the BIS-IA UI. Read below for the best practices on expanding your training set.
+3. When BIS-IA detects and attempts to recognize a face, it will appear in the **Train** tab of the Face Library, along with its associated recognition confidence.
 4. From the **Train** tab, you can **assign the face** to a new or existing person to improve recognition accuracy for the future.
 
 ## Creating a Robust Training Set
@@ -128,7 +128,7 @@ Refer to the guidelines below for best practices on selecting images for trainin
 
 When first enabling face recognition it is important to build a foundation of strong images. It is recommended to start by uploading 1-5 photos containing just this person's face. It is important that the person's face in the photo is front-facing and not turned, this will ensure a good starting point.
 
-Then it is recommended to use the `Face Library` tab in Frigate to select and train images for each person as they are detected. When building a strong foundation it is strongly recommended to only train on images that are front-facing. Ignore images from cameras that recognize faces from an angle. Aim to strike a balance between the quality of images while also having a range of conditions (day / night, different weather conditions, different times of day, etc.) in order to have diversity in the images used for each person and not have over-fitting.
+Then it is recommended to use the `Face Library` tab in BIS-IA to select and train images for each person as they are detected. When building a strong foundation it is strongly recommended to only train on images that are front-facing. Ignore images from cameras that recognize faces from an angle. Aim to strike a balance between the quality of images while also having a range of conditions (day / night, different weather conditions, different times of day, etc.) in order to have diversity in the images used for each person and not have over-fitting.
 
 You do not want to train images that are 90%+ as these are already being confidently recognized. In this step the goal is to train on clear, lower scoring front-facing images until the majority of front-facing images for a given person are consistently recognized correctly. Then it is time to move on to step 2.
 
@@ -142,13 +142,13 @@ Once front-facing images are performing well, start choosing slightly off-angle 
 
 Start with the [Usage](#usage) section and re-read the [Model Requirements](#model-requirements) above.
 
-1. Ensure `person` is being _detected_. A `person` will automatically be scanned by Frigate for a face. Any detected faces will appear in the Recent Recognitions tab in the Frigate UI's Face Library.
+1. Ensure `person` is being _detected_. A `person` will automatically be scanned by BIS-IA for a face. Any detected faces will appear in the Recent Recognitions tab in the BIS-IA UI's Face Library.
 
-   If you are using a Frigate+ or `face` detecting model:
+   If you are using a BIS-IA+ or `face` detecting model:
    - Watch the debug view (Settings --> Debug) to ensure that `face` is being detected along with `person`.
    - You may need to adjust the `min_score` for the `face` object if faces are not being detected.
 
-   If you are **not** using a Frigate+ or `face` detecting model:
+   If you are **not** using a BIS-IA+ or `face` detecting model:
    - Check your `detect` stream resolution and ensure it is sufficiently high enough to capture face details on `person` objects.
    - You may need to lower your `detection_threshold` if faces are not being detected.
 
@@ -182,18 +182,18 @@ Review your face collections and remove most of the unclear or low-quality image
 
 Avoid training on images that already score highly, as this can lead to over-fitting. Instead, focus on relatively clear images that score lower - ideally with different lighting, angles, and conditions—to help the model generalize more effectively.
 
-### Frigate misidentified a face. Can I tell it that a face is "not" a specific person?
+### BIS-IA misidentified a face. Can I tell it that a face is "not" a specific person?
 
 No, face recognition does not support negative training (i.e., explicitly telling it who someone is _not_). Instead, the best approach is to improve the training data by using a more diverse and representative set of images for each person.
 For more guidance, refer to the section above on improving recognition accuracy.
 
 ### I see scores above the threshold in the Recent Recognitions tab, but a sub label wasn't assigned?
 
-The Frigate considers the recognition scores across all recognition attempts for each person object. The scores are continually weighted based on the area of the face, and a sub label will only be assigned to person if a person is confidently recognized consistently. This avoids cases where a single high confidence recognition would throw off the results.
+The BIS-IA considers the recognition scores across all recognition attempts for each person object. The scores are continually weighted based on the area of the face, and a sub label will only be assigned to person if a person is confidently recognized consistently. This avoids cases where a single high confidence recognition would throw off the results.
 
 ### Can I use other face recognition software like DoubleTake at the same time as the built in face recognition?
 
-No, using another face recognition service will interfere with Frigate's built in face recognition. When using double-take the sub_label feature must be disabled if the built in face recognition is also desired.
+No, using another face recognition service will interfere with BIS-IA's built in face recognition. When using double-take the sub_label feature must be disabled if the built in face recognition is also desired.
 
 ### Does face recognition run on the recording stream?
 
@@ -209,4 +209,4 @@ By default iOS devices will use HEIC (High Efficiency Image Container) for image
 
 ### How can I delete the face database and start over?
 
-Frigate does not store anything in its database related to face recognition. You can simply delete all of your faces through the Frigate UI or remove the contents of the `/media/frigate/clips/faces` directory.
+BIS-IA does not store anything in its database related to face recognition. You can simply delete all of your faces through the BIS-IA UI or remove the contents of the `/media/bisia/clips/faces` directory.

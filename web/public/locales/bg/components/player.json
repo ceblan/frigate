@@ -32,8 +32,8 @@
     "desc": "Не са получени кадри в потока за <code>разпознаване</code> на {{cameraName}}, проверете лог файловете за грешки",
     "title": "Потокът е офлайн"
   },
-  "submitFrigatePlus": {
-    "title": "Да се изпрати ли този кадър към Frigate+?",
+  "submitBisiaPlus": {
+    "title": "Да се изпрати ли този кадър към BIS-IA+?",
     "submit": "Изпрати"
   },
   "noPreviewFound": "Не е намерен предварителен преглед",
@@ -42,10 +42,10 @@
   "cameraDisabled": "Камерата е изключена",
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Успешно изпратен кадър към Frigate+"
+      "submittedBisiaPlus": "Успешно изпратен кадър към BIS-IA+"
     },
     "error": {
-      "submitFrigatePlusFailed": "Неуспешно изпратен кадър към Frigate+"
+      "submitBisiaPlusFailed": "Неуспешно изпратен кадър към BIS-IA+"
     }
   }
 }

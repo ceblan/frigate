@@ -1,7 +1,7 @@
 {
   "time": {
     "untilForTime": "Totdat {{time}}",
-    "untilForRestart": "Totdat Frigate herstart.",
+    "untilForRestart": "Totdat BIS-IA herstart.",
     "untilRestart": "Tot herstart",
     "12hours": "12 uur",
     "lastWeek": "Vorige week",
@@ -235,10 +235,10 @@
         "count_other": "{{count}} Camera's"
       }
     },
-    "restart": "Herstart Frigate",
+    "restart": "Herstart BIS-IA",
     "documentation": {
       "title": "Documentatie",
-      "label": "Frigate documentatie"
+      "label": "BIS-IA documentatie"
     },
     "review": "Beoordelen",
     "explore": "Verkennen",
@@ -269,7 +269,7 @@
     "title": "Rol",
     "admin": "Beheerder",
     "viewer": "Kijker",
-    "desc": "Beheerders hebben volledige toegang tot alle functies in de Frigate-interface. Kijkers kunnen alleen camera’s bekijken, items beoordelen en historische beelden terugkijken."
+    "desc": "Beheerders hebben volledige toegang tot alle functies in de BIS-IA-interface. Kijkers kunnen alleen camera’s bekijken, items beoordelen en historische beelden terugkijken."
   },
   "pagination": {
     "previous": {
@@ -284,14 +284,14 @@
     }
   },
   "accessDenied": {
-    "documentTitle": "Toegang geweigerd - Frigate",
+    "documentTitle": "Toegang geweigerd - BIS-IA",
     "desc": "Je hebt geen toestemming om deze pagina te bekijken.",
     "title": "Toegang geweigerd"
   },
   "notFound": {
     "desc": "Pagina niet gevonden",
     "title": "404",
-    "documentTitle": "Niet gevonden - Frigate"
+    "documentTitle": "Niet gevonden - BIS-IA"
   },
   "selectItem": "Selecteer {{item}}",
   "readTheDocumentation": "Lees de documentatie",
@@ -305,6 +305,6 @@
   },
   "field": {
     "optional": "Optioneel",
-    "internalID": "De interne ID die Frigate gebruikt in de configuratie en database"
+    "internalID": "De interne ID die BIS-IA gebruikt in de configuratie en database"
   }
 }

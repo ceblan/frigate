@@ -3,7 +3,7 @@ id: record
 title: Recording
 ---
 
-Recordings can be enabled and are stored at `/media/frigate/recordings`. The folder structure for the recordings is `YYYY-MM-DD/HH/<camera_name>/MM.SS.mp4` in **UTC time**. These recordings are written directly from your camera stream without re-encoding. Each camera supports a configurable retention policy in the config. Frigate chooses the largest matching retention value between the recording retention and the tracked object retention when determining if a recording should be removed.
+Recordings can be enabled and are stored at `/media/bisia/recordings`. The folder structure for the recordings is `YYYY-MM-DD/HH/<camera_name>/MM.SS.mp4` in **UTC time**. These recordings are written directly from your camera stream without re-encoding. Each camera supports a configurable retention policy in the config. BIS-IA chooses the largest matching retention value between the recording retention and the tracked object retention when determining if a recording should be removed.
 
 New recording segments are written from the camera stream to cache, they are only moved to disk if they match the setup recording retention policy.
 
@@ -13,7 +13,7 @@ H265 recordings can be viewed in Chrome 108+, Edge and Safari only. All other br
 
 ### Most conservative: Ensure all video is saved
 
-For users deploying Frigate in environments where it is important to have contiguous video stored even if there was no detectable motion, the following config will store all video for 3 days. After 3 days, only video containing motion will be saved for 7 days. After 7 days, only video containing motion and overlapping with alerts or detections will be retained until 30 days have passed.
+For users deploying BIS-IA in environments where it is important to have contiguous video stored even if there was no detectable motion, the following config will store all video for 3 days. After 3 days, only video containing motion will be saved for 7 days. After 7 days, only video containing motion and overlapping with alerts or detections will be retained until 30 days have passed.
 
 ```yaml
 record:
@@ -66,13 +66,13 @@ record:
       mode: motion
 ```
 
-## Will Frigate delete old recordings if my storage runs out?
+## Will BIS-IA delete old recordings if my storage runs out?
 
-As of Frigate 0.12 if there is less than an hour left of storage, the oldest 2 hours of recordings will be deleted.
+As of BIS-IA 0.12 if there is less than an hour left of storage, the oldest 2 hours of recordings will be deleted.
 
 ## Configuring Recording Retention
 
-Frigate supports both continuous and tracked object based recordings with separate retention modes and retention periods.
+BIS-IA supports both continuous and tracked object based recordings with separate retention modes and retention periods.
 
 :::tip
 
@@ -116,11 +116,11 @@ This configuration will retain recording segments that overlap with alerts and d
 
 ## Can I have "continuous" recordings, but only at certain times?
 
-Using Frigate UI, Home Assistant, or MQTT, cameras can be automated to only record in certain situations or at certain times.
+Using BIS-IA UI, Home Assistant, or MQTT, cameras can be automated to only record in certain situations or at certain times.
 
 ## How do I export recordings?
 
-Footage can be exported from Frigate by right-clicking (desktop) or long pressing (mobile) on a review item in the Review pane or by clicking the Export button in the History view. Exported footage is then organized and searchable through the Export view, accessible from the main navigation bar.
+Footage can be exported from BIS-IA by right-clicking (desktop) or long pressing (mobile) on a review item in the Review pane or by clicking the Export button in the History view. Exported footage is then organized and searchable through the Export view, accessible from the main navigation bar.
 
 ### Time-lapse export
 
@@ -150,14 +150,14 @@ Apple devices running the Safari browser may fail to playback h.265 recordings. 
 
 ## Syncing Recordings With Disk
 
-In some cases the recordings files may be deleted but Frigate will not know this has happened. Recordings sync can be enabled which will tell Frigate to check the file system and delete any db entries for files which don't exist.
+In some cases the recordings files may be deleted but BIS-IA will not know this has happened. Recordings sync can be enabled which will tell BIS-IA to check the file system and delete any db entries for files which don't exist.
 
 ```yaml
 record:
   sync_recordings: True
 ```
 
-This feature is meant to fix variations in files, not completely delete entries in the database. If you delete all of your media, don't use `sync_recordings`, just stop Frigate, delete the `frigate.db` database, and restart.
+This feature is meant to fix variations in files, not completely delete entries in the database. If you delete all of your media, don't use `sync_recordings`, just stop BIS-IA, delete the `bisia.db` database, and restart.
 
 :::warning
 

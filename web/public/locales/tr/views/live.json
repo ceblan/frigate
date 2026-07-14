@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Canlı - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Canlı - Frigate",
+  "documentTitle": "Canlı - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Canlı - BIS-IA",
   "muteCameras": {
     "disable": "Tüm Kameraların Sesini Aç",
     "enable": "Tüm Kameraları Sustur"
@@ -179,7 +179,7 @@
   },
   "noCameras": {
     "title": "Yapılandırılmış Kamera Yok",
-    "description": "Frigate’e bir kamera bağlayarak başlayın.",
+    "description": "BIS-IA’e bir kamera bağlayarak başlayın.",
     "buttonText": "Kamera Ekle",
     "restricted": {
       "title": "Kullanılabilir Kamera Yok",
@@ -187,7 +187,7 @@
     },
     "default": {
       "title": "Hiçbir kamera yapılandırılmamış",
-      "description": "Öncelikle bir kamerayı Frigate'e bağlayarak başlayın.",
+      "description": "Öncelikle bir kamerayı BIS-IA'e bağlayarak başlayın.",
       "buttonText": "Kamera Ekle"
     },
     "group": {

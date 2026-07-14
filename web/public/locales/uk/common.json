@@ -44,7 +44,7 @@
     "m": "{{time}}хв",
     "s": "{{time}}сек",
     "untilForTime": "До {{time}}",
-    "untilForRestart": "Доки Frigate не перезавантажиться.",
+    "untilForRestart": "Доки BIS-IA не перезавантажиться.",
     "untilRestart": "До перезавантаження",
     "formattedTimestamp": {
       "12hour": "MMM d, h:mm:ss aaa",
@@ -187,9 +187,9 @@
     "help": "Допомогти",
     "documentation": {
       "title": "Документація",
-      "label": "Frigate документація"
+      "label": "BIS-IA документація"
     },
-    "restart": "Перезапустити Frigate",
+    "restart": "Перезапустити BIS-IA",
     "live": {
       "title": "Пряма трансляція",
       "allCameras": "Всi камери",
@@ -281,12 +281,12 @@
     "label": "Пагінація"
   },
   "accessDenied": {
-    "documentTitle": "Доступ заборонений - Frigate",
+    "documentTitle": "Доступ заборонений - BIS-IA",
     "title": "Доступ заборонений",
     "desc": "У вас немає дозволу на перегляд цієї сторінки."
   },
   "notFound": {
-    "documentTitle": "Не знайдено - Frigate",
+    "documentTitle": "Не знайдено - BIS-IA",
     "desc": "Сторінка не знайдена",
     "title": "404"
   },
@@ -302,6 +302,6 @@
   },
   "field": {
     "optional": "Необов'язково",
-    "internalID": "Внутрішній ідентифікатор, який Frigate використовує в конфігурації та базі даних"
+    "internalID": "Внутрішній ідентифікатор, який BIS-IA використовує в конфігурації та базі даних"
   }
 }

@@ -4,7 +4,7 @@
     "untilRestart": "Do ponovnega zagona",
     "ago": "{{timeAgo}} nazaj",
     "justNow": "Zdaj",
-    "untilForRestart": "Dokler se Frigate ne zažene ponovno.",
+    "untilForRestart": "Dokler se BIS-IA ne zažene ponovno.",
     "thisWeek": "Ta teden",
     "lastWeek": "Prejšnji teden",
     "thisMonth": "Ta mesec",
@@ -177,9 +177,9 @@
     "help": "Pomoč",
     "documentation": {
       "title": "Dokumentacija",
-      "label": "Frigate dokumentacija"
+      "label": "BIS-IA dokumentacija"
     },
-    "restart": "Znova Zaženi Frigate",
+    "restart": "Znova Zaženi BIS-IA",
     "export": "Izvoz",
     "faceLibrary": "Zbirka Obrazov",
     "user": {
@@ -285,15 +285,15 @@
     "title": "Vloga",
     "admin": "Administrator",
     "viewer": "Gledalec",
-    "desc": "Administratorji imajo poln dostop do vseh funkcij Frigate uporabniškega vmesnika. Gledalci so omejeni na gledanje kamer, zgodovine posnetkov in pregledovanje dogodkov."
+    "desc": "Administratorji imajo poln dostop do vseh funkcij BIS-IA uporabniškega vmesnika. Gledalci so omejeni na gledanje kamer, zgodovine posnetkov in pregledovanje dogodkov."
   },
   "accessDenied": {
-    "documentTitle": "Dostop zavrnjen - Frigate",
+    "documentTitle": "Dostop zavrnjen - BIS-IA",
     "title": "Dostop Zavrnjen",
     "desc": "Nimate pravic za ogled te strani."
   },
   "notFound": {
-    "documentTitle": "Ni Najdeno - Frigate",
+    "documentTitle": "Ni Najdeno - BIS-IA",
     "title": "404",
     "desc": "Stran ni najdena"
   },
@@ -305,7 +305,7 @@
   },
   "field": {
     "optional": "Izbirno",
-    "internalID": "Interni ID, ki ga Frigate uporablja v konfiguraciji in podatkovni bazi"
+    "internalID": "Interni ID, ki ga BIS-IA uporablja v konfiguraciji in podatkovni bazi"
   },
   "information": {
     "pixels": "{{area}}px"

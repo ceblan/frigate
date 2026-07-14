@@ -1,11 +1,11 @@
 {
   "documentTitle": {
-    "cameras": "Estatísticas de cámaras - Frigate",
-    "storage": "Estatísticas de Almacenamento - Frigate",
-    "general": "Estatísticas Xerais - Frigate",
-    "enrichments": "Estatísticas complementarias - Frigate",
+    "cameras": "Estatísticas de cámaras - BIS-IA",
+    "storage": "Estatísticas de Almacenamento - BIS-IA",
+    "general": "Estatísticas Xerais - BIS-IA",
+    "enrichments": "Estatísticas complementarias - BIS-IA",
     "logs": {
-      "frigate": "Rexistros de Frigate - Frigate"
+      "bisia": "Rexistros de BIS-IA - BIS-IA"
     }
   },
   "title": "Sistema",

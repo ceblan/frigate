@@ -2,7 +2,7 @@
   "time": {
     "untilForTime": "{{time}} ideig",
     "s": "{{time}} másodperc",
-    "untilForRestart": "Amíg a Frigate újraindul.",
+    "untilForRestart": "Amíg a BIS-IA újraindul.",
     "untilRestart": "Amíg újraindul",
     "justNow": "Most",
     "ago": "Ennyi ideje: {{timeAgo}}",
@@ -99,7 +99,7 @@
     },
     "documentation": {
       "title": "Dokumentáció",
-      "label": "Frigate dokumentáció"
+      "label": "BIS-IA dokumentáció"
     },
     "help": "Segítség",
     "explore": "Felfedezés",
@@ -159,7 +159,7 @@
     },
     "uiPlayground": "UI játszótér",
     "faceLibrary": "Arc Könyvtár",
-    "restart": "Frigate Újraindítása",
+    "restart": "BIS-IA Újraindítása",
     "live": {
       "title": "Élő",
       "allCameras": "Minden Kamera",
@@ -199,14 +199,14 @@
     "label": "lapozás"
   },
   "accessDenied": {
-    "documentTitle": "Belépés Megtagadva - Frigate",
+    "documentTitle": "Belépés Megtagadva - BIS-IA",
     "title": "Belépés Megtagadva",
     "desc": "Nincs jogolultsága ehhez az oldalhoz."
   },
   "notFound": {
     "title": "404",
     "desc": "Oldal nem található",
-    "documentTitle": "Nem található - Frigate"
+    "documentTitle": "Nem található - BIS-IA"
   },
   "toast": {
     "copyUrlToClipboard": "URL kimásolva a vágólapra.",
@@ -295,6 +295,6 @@
   },
   "field": {
     "optional": "Opcionális",
-    "internalID": "A belső ID, amelyet a Frigate használ a konfigurációban és az adatbázisban"
+    "internalID": "A belső ID, amelyet a BIS-IA használ a konfigurációban és az adatbázisban"
   }
 }

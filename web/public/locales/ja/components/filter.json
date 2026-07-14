@@ -46,9 +46,9 @@
     "label": "機能",
     "hasSnapshot": "スナップショットあり",
     "hasVideoClip": "ビデオクリップあり",
-    "submittedToFrigatePlus": {
-      "label": "Frigate+ に送信済み",
-      "tips": "まずスナップショットのある追跡オブジェクトでフィルターしてください。<br /><br />スナップショットのない追跡オブジェクトは Frigate+ に送信できません。"
+    "submittedToBisiaPlus": {
+      "label": "BIS-IA+ に送信済み",
+      "tips": "まずスナップショットのある追跡オブジェクトでフィルターしてください。<br /><br />スナップショットのない追跡オブジェクトは BIS-IA+ に送信できません。"
     }
   },
   "sort": {

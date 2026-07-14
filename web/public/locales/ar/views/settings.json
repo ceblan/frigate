@@ -4,11 +4,11 @@
     "default": "الإعدادات - فرايجيت",
     "authentication": "إعدادات المصادقة - فرايجيت",
     "enrichments": "إحصاء الاعدادات",
-    "masksAndZones": "القناع ومحرر المنطقة - Frigate",
+    "masksAndZones": "القناع ومحرر المنطقة - BIS-IA",
     "motionTuner": "مضبط الحركة - Firgate",
-    "object": "تصحيح الأخطاء - Frigate",
-    "general": "الإعدادات العامة - Frigate",
-    "notifications": "إعدادات الإشعارات - Frigate"
+    "object": "تصحيح الأخطاء - BIS-IA",
+    "general": "الإعدادات العامة - BIS-IA",
+    "notifications": "إعدادات الإشعارات - BIS-IA"
   },
   "menu": {
     "ui": "واجهة المستخدم",

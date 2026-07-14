@@ -2,8 +2,8 @@
   "noRecordingsFoundForThisTime": "V danom čase nenájdená žiadna nahrávka",
   "noPreviewFound": "Náhľad nenájdený",
   "noPreviewFoundFor": "Žiadný náhľad nájdený pre {{cameraName}}",
-  "submitFrigatePlus": {
-    "title": "Odoslať tento rám na Frigate+?",
+  "submitBisiaPlus": {
+    "title": "Odoslať tento rám na BIS-IA+?",
     "submit": "Odoslať"
   },
   "livePlayerRequiredIOSVersion": "Pre tento typ živého vysielania je potrebný systém iOS 17.1 alebo novší.",
@@ -42,10 +42,10 @@
   },
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Snímok bol úspešne odoslaný službe Frigate+"
+      "submittedBisiaPlus": "Snímok bol úspešne odoslaný službe BIS-IA+"
     },
     "error": {
-      "submitFrigatePlusFailed": "Nepodarilo sa odoslať snímku službe Frigate+"
+      "submitBisiaPlusFailed": "Nepodarilo sa odoslať snímku službe BIS-IA+"
     }
   }
 }

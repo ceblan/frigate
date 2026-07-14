@@ -1,16 +1,16 @@
 {
   "documentTitle": {
-    "default": "Podešavanja - Frigate",
+    "default": "Podešavanja - BIS-IA",
     "authentication": "Podešavanja autentifikacije - Fregate",
-    "camera": "Podešavanje kamera - Frigate",
-    "enrichments": "Podešavanja obogaćivanja - Frigate",
-    "masksAndZones": "Uređivač maski i zona - Frigate",
-    "motionTuner": "Tjuner pokreta - Frigate",
+    "camera": "Podešavanje kamera - BIS-IA",
+    "enrichments": "Podešavanja obogaćivanja - BIS-IA",
+    "masksAndZones": "Uređivač maski i zona - BIS-IA",
+    "motionTuner": "Tjuner pokreta - BIS-IA",
     "general": "Подењавања UI - Фригејт",
     "cameraManagement": "Управљање камерама - Фригејт",
     "cameraReview": "Преглед подешавања камере - Фригејт",
     "object": "Дебаговање - Фригејт",
-    "frigatePlus": "Подешавања за Фригејт+ - Фригејт",
+    "bisiaPlus": "Подешавања за Фригејт+ - Фригејт",
     "notifications": "Подешавања обавештавања - Фригејт"
   },
   "menu": {
@@ -25,7 +25,7 @@
     "users": "Корисници",
     "roles": "Улоге",
     "notifications": "Нотификације",
-    "frigateplus": "Фригејт+"
+    "bisiaPlus": "Фригејт+"
   },
   "dialog": {
     "unsavedChanges": {

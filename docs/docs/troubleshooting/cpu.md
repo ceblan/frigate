@@ -3,13 +3,13 @@ id: cpu
 title: High CPU Usage
 ---
 
-High CPU usage can impact Frigate's performance and responsiveness. This guide outlines the most effective configuration changes to help reduce CPU consumption and optimize resource usage.
+High CPU usage can impact BIS-IA's performance and responsiveness. This guide outlines the most effective configuration changes to help reduce CPU consumption and optimize resource usage.
 
 ## 1. Hardware Acceleration for Video Decoding
 
 **Priority: Critical**
 
-Video decoding is one of the most CPU-intensive tasks in Frigate. While an AI accelerator handles object detection, it does not assist with decoding video streams. Hardware acceleration (hwaccel) offloads this work to your GPU or specialized video decode hardware, significantly reducing CPU usage and enabling you to support more cameras on the same hardware.
+Video decoding is one of the most CPU-intensive tasks in BIS-IA. While an AI accelerator handles object detection, it does not assist with decoding video streams. Hardware acceleration (hwaccel) offloads this work to your GPU or specialized video decode hardware, significantly reducing CPU usage and enabling you to support more cameras on the same hardware.
 
 ### Key Concepts
 
@@ -19,18 +19,18 @@ Video decoding is one of the most CPU-intensive tasks in Frigate. While an AI ac
 
 - Significantly reduce CPU usage per camera stream
 - Support 2-3x more cameras on the same hardware
-- Free up CPU resources for motion detection and other Frigate processes
+- Free up CPU resources for motion detection and other BIS-IA processes
 - Reduce system heat and power consumption
 
 ### Configuration
 
-Frigate provides preset configurations for common hardware acceleration scenarios. Set up `hwaccel_args` based on your hardware in your [configuration](../configuration/reference) as described in the [getting started guide](../guides/getting_started).
+BIS-IA provides preset configurations for common hardware acceleration scenarios. Set up `hwaccel_args` based on your hardware in your [configuration](../configuration/reference) as described in the [getting started guide](../guides/getting_started).
 
 ### Troubleshooting Hardware Acceleration
 
 If hardware acceleration isn't working:
 
-1. Check Frigate logs for FFmpeg errors related to hwaccel
+1. Check BIS-IA logs for FFmpeg errors related to hwaccel
 2. Verify the hardware device is accessible inside the container
 3. Ensure your camera streams use H.264 or H.265 codecs (most common)
 4. Try different presets if the automatic detection fails
@@ -40,17 +40,17 @@ If hardware acceleration isn't working:
 
 **Priority: Critical**
 
-Choosing the right detector for your hardware is the single most important factor for detection performance. The detector is responsible for running the AI model that identifies objects in video frames. Different detector types have vastly different performance characteristics and hardware requirements, as detailed in the [hardware documentation](../frigate/hardware).
+Choosing the right detector for your hardware is the single most important factor for detection performance. The detector is responsible for running the AI model that identifies objects in video frames. Different detector types have vastly different performance characteristics and hardware requirements, as detailed in the [hardware documentation](../bisia/hardware).
 
 ### Understanding Detector Performance
 
-Frigate uses motion detection as a first-line check before running expensive object detection, as explained in the [motion detection documentation](../configuration/motion_detection). When motion is detected, Frigate creates a "region" (the green boxes in the debug viewer) and sends it to the detector. The detector's inference speed determines how many detections per second your system can handle.
+BIS-IA uses motion detection as a first-line check before running expensive object detection, as explained in the [motion detection documentation](../configuration/motion_detection). When motion is detected, BIS-IA creates a "region" (the green boxes in the debug viewer) and sends it to the detector. The detector's inference speed determines how many detections per second your system can handle.
 
 **Calculating Detector Capacity:** Your detector has a finite capacity measured in detections per second. With an inference speed of 10ms, your detector can handle approximately 100 detections per second (1000ms / 10ms = 100).If your cameras collectively require more than this capacity, you'll experience delays, missed detections, or the system will fall behind.
 
 ### Choosing the Right Detector
 
-Different detectors have vastly different performance characteristics, see the expected performance for object detectors in [the hardware docs](../frigate/hardware)
+Different detectors have vastly different performance characteristics, see the expected performance for object detectors in [the hardware docs](../bisia/hardware)
 
 ### Multiple Detector Instances
 
@@ -65,9 +65,9 @@ For detailed instructions on configuring multiple detectors, see the [Object Det
 
 ### Model Selection and Optimization
 
-The model you use significantly impacts detector performance. Frigate provides default models optimized for each detector type, but you can customize them as described in the [detector documentation](../configuration/object_detectors).
+The model you use significantly impacts detector performance. BIS-IA provides default models optimized for each detector type, but you can customize them as described in the [detector documentation](../configuration/object_detectors).
 
 **Model Size Trade-offs:**
 
-- Smaller models (320x320): Faster inference, Frigate is specifically optimized for a 320x320 size model.
+- Smaller models (320x320): Faster inference, BIS-IA is specifically optimized for a 320x320 size model.
 - Larger models (640x640): Slower inference, can sometimes have higher accuracy on very large objects that take up a majority of the frame.

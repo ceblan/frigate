@@ -11,8 +11,8 @@
       "savingError": "Error al guardar la configuración"
     }
   },
-  "documentTitle": "Editor de Configuración - Frigate",
+  "documentTitle": "Editor de Configuración - BIS-IA",
   "confirm": "¿Salir sin guardar?",
   "safeConfigEditor": "Editor de Configuración (Modo Seguro)",
-  "safeModeDescription": "Frigate esta en modo seguro debido a un error en la validación de la configuración."
+  "safeModeDescription": "BIS-IA esta en modo seguro debido a un error en la validación de la configuración."
 }

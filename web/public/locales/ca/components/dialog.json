@@ -1,23 +1,23 @@
 {
   "restart": {
-    "title": "Estàs segur que vols reiniciar Frigate?",
+    "title": "Estàs segur que vols reiniciar BIS-IA?",
     "button": "Reiniciar",
     "restarting": {
-      "title": "Frigate s'està reiniciant",
+      "title": "BIS-IA s'està reiniciant",
       "content": "Aquesta pàgina es tornarà a carregar d'aquí a {{countdown}} segons.",
       "button": "Forçar la recàrrega ara"
     },
-    "description": "Això aturarà breument Frigate mentre es reinicia."
+    "description": "Això aturarà breument BIS-IA mentre es reinicia."
   },
   "explore": {
     "plus": {
       "submitToPlus": {
-        "label": "Enviar a Frigate+",
+        "label": "Enviar a BIS-IA+",
         "desc": "Els objectes a les ubicacions que voleu evitar no són falsos positius. Enviar-los com a falsos positius confondrà el model."
       },
       "review": {
         "question": {
-          "label": "Confirmar aquesta etiqueta per a Frigate Plus",
+          "label": "Confirmar aquesta etiqueta per a BIS-IA Plus",
           "ask_a": "Aquest objecte és un <code>{{label}}</code>?",
           "ask_an": "Aquest objecte és un <code>{{label}}</code>?",
           "ask_full": "Aquest objecte és un <code>{{untranslatedLabel}}</code> ({{translatedLabel}})?"

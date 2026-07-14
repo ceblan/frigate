@@ -12,9 +12,9 @@
   },
   "features": {
     "hasVideoClip": "Har et videoklipp",
-    "submittedToFrigatePlus": {
-      "label": "Sendt til Frigate+",
-      "tips": "Du må først filtrere på sporede objekter som har et stillbilde.<br /><br />Sporede objekter uten et stillbilde kan ikke sendes til Frigate+."
+    "submittedToBisiaPlus": {
+      "label": "Sendt til BIS-IA+",
+      "tips": "Du må først filtrere på sporede objekter som har et stillbilde.<br /><br />Sporede objekter uten et stillbilde kan ikke sendes til BIS-IA+."
     },
     "label": "Funksjoner",
     "hasSnapshot": "Har et stillbilde"

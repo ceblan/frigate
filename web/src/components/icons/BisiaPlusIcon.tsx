@@ -3,12 +3,12 @@ import { LuPlus } from "react-icons/lu";
 import Logo from "../Logo";
 import { cn } from "@/lib/utils";
 
-type FrigatePlusIconProps = {
+type BisiaPlusIconProps = {
   className?: string;
   onClick?: () => void;
 };
 
-const FrigatePlusIcon = forwardRef<HTMLDivElement, FrigatePlusIconProps>(
+const BisiaPlusIcon = forwardRef<HTMLDivElement, BisiaPlusIconProps>(
   ({ className, onClick }, ref) => {
     return (
       <div
@@ -23,4 +23,4 @@ const FrigatePlusIcon = forwardRef<HTMLDivElement, FrigatePlusIconProps>(
   },
 );
 
-export default FrigatePlusIcon;
+export default BisiaPlusIcon;

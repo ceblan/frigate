@@ -51,8 +51,8 @@
       }
     }
   },
-  "documentTitle": "Live - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Live - Frigate",
+  "documentTitle": "Live - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Live - BIS-IA",
   "muteCameras": {
     "disable": "Stumm aller Kameras aufheben",
     "enable": "Alle Kameras auf stumm"
@@ -181,7 +181,7 @@
     },
     "default": {
       "title": "Keine Kameras konfiguriert",
-      "description": "Zum Start eine Kamera mit Frigate verbinden.",
+      "description": "Zum Start eine Kamera mit BIS-IA verbinden.",
       "buttonText": "Kamera hinzufügen"
     },
     "group": {

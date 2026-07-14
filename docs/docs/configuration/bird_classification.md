@@ -7,7 +7,7 @@ Bird classification identifies known birds using a quantized Tensorflow model. W
 
 ## Minimum System Requirements
 
-Bird classification runs a lightweight tflite model on the CPU, there are no significantly different system requirements than running Frigate itself.
+Bird classification runs a lightweight tflite model on the CPU, there are no significantly different system requirements than running BIS-IA itself.
 
 ## Model
 

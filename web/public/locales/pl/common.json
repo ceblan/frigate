@@ -14,7 +14,7 @@
     "10minutes": "10 minut",
     "30minutes": "30 minut",
     "untilForTime": "Do {{time}}",
-    "untilForRestart": "Do czasu restartu Frigate.",
+    "untilForRestart": "Do czasu restartu BIS-IA.",
     "untilRestart": "Do restartu",
     "ago": "{{timeAgo}} temu",
     "justNow": "W tej chwili",
@@ -229,7 +229,7 @@
       "nord": "Nordycki",
       "highcontrast": "Wysoki kontrast"
     },
-    "restart": "Uruchom ponownie Frigate",
+    "restart": "Uruchom ponownie BIS-IA",
     "live": {
       "title": "Na żywo",
       "allCameras": "Wszystkie kamery",
@@ -253,7 +253,7 @@
     },
     "documentation": {
       "title": "Dokumentacja",
-      "label": "Dokumentacja Frigate"
+      "label": "Dokumentacja BIS-IA"
     },
     "explore": "Przeglądaj",
     "configurationEditor": "Edytor konfiguracji",
@@ -264,7 +264,7 @@
   },
   "role": {
     "viewer": "Przeglądający",
-    "desc": "Administratorzy mają pełny dostęp do wszystkich funkcji w interfejsie Frigate. Przeglądający mają ograniczony dostęp tylko do podglądu kamer, przeglądania nagrań i historycznych materiałów w interfejsie.",
+    "desc": "Administratorzy mają pełny dostęp do wszystkich funkcji w interfejsie BIS-IA. Przeglądający mają ograniczony dostęp tylko do podglądu kamer, przeglądania nagrań i historycznych materiałów w interfejsie.",
     "title": "Rola",
     "admin": "Administrator"
   },
@@ -283,12 +283,12 @@
   "accessDenied": {
     "title": "Dostęp Zabroniony",
     "desc": "Nie masz uprawnień do wyświetlenia tej strony.",
-    "documentTitle": "Dostęp Zabroniony - Frigate"
+    "documentTitle": "Dostęp Zabroniony - BIS-IA"
   },
   "notFound": {
     "title": "404",
     "desc": "Strona nie znaleziona",
-    "documentTitle": "Nie Znaleziono - Frigate"
+    "documentTitle": "Nie Znaleziono - BIS-IA"
   },
   "selectItem": "Wybierz {{item}}",
   "toast": {
@@ -312,6 +312,6 @@
   },
   "field": {
     "optional": "Opcjonalny",
-    "internalID": "Wewnętrzny identyfikator używany przez Frigate w konfiguracji i bazie danych"
+    "internalID": "Wewnętrzny identyfikator używany przez BIS-IA w konfiguracji i bazie danych"
   }
 }

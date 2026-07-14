@@ -32,14 +32,14 @@
   },
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Đã gửi thành công khung hình tới Frigate+"
+      "submittedBisiaPlus": "Đã gửi thành công khung hình tới BIS-IA+"
     },
     "error": {
-      "submitFrigatePlusFailed": "Không gửi được khung hình tới Frigate+"
+      "submitBisiaPlusFailed": "Không gửi được khung hình tới BIS-IA+"
     }
   },
-  "submitFrigatePlus": {
-    "title": "Gửi khung hình này tới Frigate+?",
+  "submitBisiaPlus": {
+    "title": "Gửi khung hình này tới BIS-IA+?",
     "submit": "Gửi"
   },
   "livePlayerRequiredIOSVersion": "Yêu cầu iOS 17.1 trở lên cho loại luồng trực tiếp này.",

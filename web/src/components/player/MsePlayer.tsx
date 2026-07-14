@@ -98,7 +98,7 @@ function MSEPlayer({
     (error: LivePlayerError, description: string = "Unknown error") => {
       // eslint-disable-next-line no-console
       console.error(
-        `${camera} - MSE error '${error}': ${description} See the documentation: https://docs.frigate.video/configuration/live/#live-player-error-messages`,
+        `${camera} - MSE error '${error}': ${description} See the documentation: https://docs.bisia.video/configuration/live/#live-player-error-messages`,
       );
 
       if (mseCodecRef.current) {

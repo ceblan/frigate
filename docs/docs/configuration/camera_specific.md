@@ -108,8 +108,8 @@ cameras:
             - detect
             - record
     detect:
-      width: # <- optional, by default Frigate tries to automatically detect resolution
-      height: # <- optional, by default Frigate tries to automatically detect resolution
+      width: # <- optional, by default BIS-IA tries to automatically detect resolution
+      height: # <- optional, by default BIS-IA tries to automatically detect resolution
 ```
 
 ### Blue Iris RTSP Cameras
@@ -133,7 +133,7 @@ rtsp://USERNAME:PASSWORD@CAMERA-IP/streaming/channels/103 # higher end cameras s
 
 :::note
 
-[Some users have reported](https://www.reddit.com/r/frigate_nvr/comments/1hg4ze7/hikvision_security_settings) that newer Hikvision cameras require adjustments to the security settings:
+[Some users have reported](https://www.reddit.com/r/bisia_nvr/comments/1hg4ze7/hikvision_security_settings) that newer Hikvision cameras require adjustments to the security settings:
 
 ```
 RTSP Authentication - digest/basic
@@ -154,14 +154,14 @@ Reolink has many different camera models with inconsistently supported features 
 | 6MP or higher     | Latest (ex: Duo3, CX-8##) | http-flv with ffmpeg 8.0, or rtsp | This uses the new http-flv-enhanced over H265 which requires ffmpeg 8.0 |
 | 6MP or higher     | Older (ex: RLC-8##)       | rtsp                              |                                                                         |
 
-Frigate works much better with newer reolink cameras that are setup with the below options:
+BIS-IA works much better with newer reolink cameras that are setup with the below options:
 
 If available, recommended settings are:
 
 - `On, fluency first` this sets the camera to CBR (constant bit rate)
 - `Interframe Space 1x` this sets the iframe interval to the same as the frame rate
 
-According to [this discussion](https://github.com/blakeblackshear/frigate/issues/3235#issuecomment-1135876973), the http video streams seem to be the most reliable for Reolink.
+According to [this discussion](https://github.com/blakeblackshear/bisia/issues/3235#issuecomment-1135876973), the http video streams seem to be the most reliable for Reolink.
 
 Cameras connected via a Reolink NVR can be connected with the http stream, use `channel[0..15]` in the stream url for the additional channels.
 The setup of main stream can be also done via RTSP, but isn't always reliable on all hardware versions. The example configuration is working with the oldest HW version RLN16-410 device with multiple types of cameras.
@@ -175,7 +175,7 @@ Reolink's latest cameras support two way audio via go2rtc and other applications
 
 NOTE: The RTSP stream can not be prefixed with `ffmpeg:`, as go2rtc needs to handle the stream to support two way audio.
 
-Ensure HTTP is enabled in the camera's advanced network settings. To use two way talk with Frigate, see the [Live view documentation](/configuration/live#two-way-talk).
+Ensure HTTP is enabled in the camera's advanced network settings. To use two way talk with BIS-IA, see the [Live view documentation](/configuration/live#two-way-talk).
 
 :::
 
@@ -266,15 +266,15 @@ Some community members have found better performance on Wyze cameras by using an
 
 ## USB Cameras (aka Webcams)
 
-To use a USB camera (webcam) with Frigate, the recommendation is to use go2rtc's [FFmpeg Device](https://github.com/AlexxIT/go2rtc?tab=readme-ov-file#source-ffmpeg-device) support:
+To use a USB camera (webcam) with BIS-IA, the recommendation is to use go2rtc's [FFmpeg Device](https://github.com/AlexxIT/go2rtc?tab=readme-ov-file#source-ffmpeg-device) support:
 
-- Preparation outside of Frigate:
+- Preparation outside of BIS-IA:
 
   - Get USB camera path. Run `v4l2-ctl --list-devices` to get a listing of locally-connected cameras available. (You may need to install `v4l-utils` in a way appropriate for your Linux distribution). In the sample configuration below, we use `video=0` to correlate with a detected device path of `/dev/video0`
   - Get USB camera formats & resolutions. Run `ffmpeg -f v4l2 -list_formats all -i /dev/video0` to get an idea of what formats and resolutions the USB Camera supports. In the sample configuration below, we use a width of 1024 and height of 576 in the stream and detection settings based on what was reported back.
-  - If using Frigate in a container (e.g. Docker on TrueNAS), ensure you have USB Passthrough support enabled, along with a specific Host Device (`/dev/video0`) + Container Device (`/dev/video0`) listed.
+  - If using BIS-IA in a container (e.g. Docker on TrueNAS), ensure you have USB Passthrough support enabled, along with a specific Host Device (`/dev/video0`) + Container Device (`/dev/video0`) listed.
 
-- In your Frigate Configuration File, add the go2rtc stream and roles as appropriate:
+- In your BIS-IA Configuration File, add the go2rtc stream and roles as appropriate:
 
 ```yaml {4,11-12}
 go2rtc:

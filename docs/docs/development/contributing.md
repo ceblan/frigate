@@ -7,9 +7,9 @@ title: Contributing To The Main Code Base
 
 ### Core, Web, Docker, and Documentation
 
-This repository holds the main Frigate application and all of its dependencies.
+This repository holds the main BIS-IA application and all of its dependencies.
 
-Fork [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate.git) to your own GitHub profile, then clone the forked repo to your local machine.
+Fork [blakeblackshear/bisia](https://github.com/blakeblackshear/bisia.git) to your own GitHub profile, then clone the forked repo to your local machine.
 
 From here, follow the guides for:
 
@@ -17,17 +17,17 @@ From here, follow the guides for:
 - [Web Interface](#web-interface)
 - [Documentation](#documentation)
 
-### Frigate Home Assistant App
+### BIS-IA Home Assistant App
 
-This repository holds the Home Assistant App, for use with Home Assistant OS and compatible installations. It is the piece that allows you to run Frigate from your Home Assistant Supervisor tab.
+This repository holds the Home Assistant App, for use with Home Assistant OS and compatible installations. It is the piece that allows you to run BIS-IA from your Home Assistant Supervisor tab.
 
-Fork [blakeblackshear/frigate-hass-addons](https://github.com/blakeblackshear/frigate-hass-addons) to your own Github profile, then clone the forked repo to your local machine.
+Fork [blakeblackshear/bisia-hass-addons](https://github.com/blakeblackshear/bisia-hass-addons) to your own Github profile, then clone the forked repo to your local machine.
 
-### Frigate Home Assistant Integration
+### BIS-IA Home Assistant Integration
 
-This repository holds the custom integration that allows your Home Assistant installation to automatically create entities for your Frigate instance, whether you are running Frigate as a standalone Docker container or as a [Home Assistant App](#frigate-home-assistant-app).
+This repository holds the custom integration that allows your Home Assistant installation to automatically create entities for your BIS-IA instance, whether you are running BIS-IA as a standalone Docker container or as a [Home Assistant App](#bisia-home-assistant-app).
 
-Fork [blakeblackshear/frigate-hass-integration](https://github.com/blakeblackshear/frigate-hass-integration) to your own GitHub profile, then clone the forked repo to your local machine.
+Fork [blakeblackshear/bisia-hass-integration](https://github.com/blakeblackshear/bisia-hass-integration) to your own GitHub profile, then clone the forked repo to your local machine.
 
 ## Core
 
@@ -47,7 +47,7 @@ A Coral device can only be used by a single process at a time, so an extra Coral
 
 #### 1. Open the repo with Visual Studio Code
 
-Upon opening, you should be prompted to open the project in a remote container. This will build a container on top of the base Frigate container with all the development dependencies installed. This ensures everyone uses a consistent development environment without the need to install any dependencies on your host machine.
+Upon opening, you should be prompted to open the project in a remote container. This will build a container on top of the base BIS-IA container with all the development dependencies installed. This ensures everyone uses a consistent development environment without the need to install any dependencies on your host machine.
 
 #### 2. Modify your local config file for testing
 
@@ -63,7 +63,7 @@ cameras:
   test:
     ffmpeg:
       inputs:
-        - path: /media/frigate/car-stopping.mp4
+        - path: /media/bisia/car-stopping.mp4
           input_args: -re -stream_loop -1 -fflags +genpts
           roles:
             - detect
@@ -75,12 +75,12 @@ These input args tell ffmpeg to read the mp4 file in an infinite loop. You can u
 
 Create and place these files in a `debug` folder in the root of the repo. This is also where recordings will be created if you enable them in your test config. Update your config from step 2 above to point at the right file. You can check the `docker-compose.yml` file in the repo to see how the volumes are mapped.
 
-#### 4. Run Frigate from the command line
+#### 4. Run BIS-IA from the command line
 
-VS Code will start the Docker Compose file for you and open a terminal window connected to `frigate-dev`.
+VS Code will start the Docker Compose file for you and open a terminal window connected to `bisia-dev`.
 
 - Depending on what hardware you're developing on, you may need to amend `docker-compose.yml` in the project root to pass through a USB Coral or GPU for hardware acceleration.
-- Run `python3 -m frigate` to start the backend.
+- Run `python3 -m bisia` to start the backend.
 - In a separate terminal window inside VS Code, change into the `web` directory and run `npm install && npm run dev` to start the frontend.
 
 #### 5. Teardown
@@ -140,37 +140,37 @@ Code must be formatted, linted and type-tested. GitHub will run these checks on 
 **Formatting**
 
 ```shell
-ruff format frigate migrations docker *.py
+ruff format bisia migrations docker *.py
 ```
 
 **Linting**
 
 ```shell
-ruff check frigate migrations docker *.py
+ruff check bisia migrations docker *.py
 ```
 
 **MyPy Static Typing**
 
 ```shell
-python3 -u -m mypy --config-file frigate/mypy.ini frigate
+python3 -u -m mypy --config-file bisia/mypy.ini bisia
 ```
 
 ## Web Interface
 
 ### Prerequisites
 
-- All [core](#core) prerequisites _or_ another running Frigate instance locally available
+- All [core](#core) prerequisites _or_ another running BIS-IA instance locally available
 - Node.js 20
 
 ### Making changes
 
-#### 1. Set up a Frigate instance
+#### 1. Set up a BIS-IA instance
 
-The Web UI requires an instance of Frigate to interact with for all of its data. You can either run an instance locally (recommended) or attach to a separate instance accessible on your network.
+The Web UI requires an instance of BIS-IA to interact with for all of its data. You can either run an instance locally (recommended) or attach to a separate instance accessible on your network.
 
 To run the local instance, follow the [core](#core) development instructions.
 
-If you won't be making any changes to the Frigate HTTP API, you can attach the web development server to any Frigate instance on your network. Skip this step and go to [3a](#3a-run-the-development-server-against-a-non-local-instance).
+If you won't be making any changes to the BIS-IA HTTP API, you can attach the web development server to any BIS-IA instance on your network. Skip this step and go to [3a](#3a-run-the-development-server-against-a-non-local-instance).
 
 #### 2. Install dependencies
 
@@ -197,7 +197,7 @@ The Web UI is built using [Vite](https://vitejs.dev/), [Preact](https://preactjs
 Light guidelines and advice:
 
 - Avoid adding more dependencies. The web UI intends to be lightweight and fast to load.
-- Do not make large sweeping changes. [Open a discussion on GitHub](https://github.com/blakeblackshear/frigate/discussions/new) for any large or architectural ideas.
+- Do not make large sweeping changes. [Open a discussion on GitHub](https://github.com/blakeblackshear/bisia/discussions/new) for any large or architectural ideas.
 - Ensure `lint` passes. This command will ensure basic conformance to styles, applying as many automatic fixes as possible, including Prettier formatting.
 
 ```console
@@ -235,7 +235,7 @@ npm run start
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
-The docs are built using [Docusaurus v3](https://docusaurus.io). Please refer to the Docusaurus docs for more information on how to modify Frigate's documentation.
+The docs are built using [Docusaurus v3](https://docusaurus.io). Please refer to the Docusaurus docs for more information on how to modify BIS-IA's documentation.
 
 #### 3. Build (optional)
 
@@ -269,8 +269,8 @@ sudo cp docker/main/rootfs/usr/local/nginx/conf/* /usr/local/nginx/conf/ && sudo
 
 ## Contributing translations of the Web UI
 
-Frigate uses [Weblate](https://weblate.org) to manage translations of the Web UI. To contribute translation, sign up for an account at Weblate and navigate to the Frigate NVR project:
+BIS-IA uses [Weblate](https://weblate.org) to manage translations of the Web UI. To contribute translation, sign up for an account at Weblate and navigate to the BIS-IA NVR project:
 
-https://hosted.weblate.org/projects/frigate-nvr/
+https://hosted.weblate.org/projects/bis-ia-nvr/
 
 When translating, maintain the existing key structure while translating only the values. Ensure your translations maintain proper formatting, including any placeholder variables (like `{{example}}`).

@@ -2,7 +2,7 @@
   "time": {
     "untilForTime": "Bis {{time}}",
     "last7": "Letzte 7 Tage",
-    "untilForRestart": "Bis Frigate neu startet.",
+    "untilForRestart": "Bis BIS-IA neu startet.",
     "today": "Heute",
     "yesterday": "Gestern",
     "thisWeek": "Diese Woche",
@@ -196,7 +196,7 @@
     "help": "Hilfe",
     "documentation": {
       "title": "Dokumentation",
-      "label": "Frigate Dokumentation"
+      "label": "BIS-IA Dokumentation"
     },
     "live": {
       "allCameras": "Alle Kameras",
@@ -208,7 +208,7 @@
       "title": "Live"
     },
     "review": "Überprüfen",
-    "restart": "Frigate neu starten",
+    "restart": "BIS-IA neu starten",
     "darkMode": {
       "light": "Hell",
       "label": "Dunkler Modus",
@@ -269,7 +269,7 @@
     "title": "Rolle",
     "admin": "Administrator",
     "viewer": "Zuschauer",
-    "desc": "Administratoren haben vollen Zugang zu allen Funktionen der Frigate Benutzeroberfläche. Zuschauer können nur Kameras betrachten, erkannte Objekte überprüfen und historische Aufnahmen durchsehen."
+    "desc": "Administratoren haben vollen Zugang zu allen Funktionen der BIS-IA Benutzeroberfläche. Zuschauer können nur Kameras betrachten, erkannte Objekte überprüfen und historische Aufnahmen durchsehen."
   },
   "pagination": {
     "previous": {
@@ -286,13 +286,13 @@
   "notFound": {
     "title": "404",
     "desc": "Seite nicht gefunden",
-    "documentTitle": "Nicht gefunden - Frigate"
+    "documentTitle": "Nicht gefunden - BIS-IA"
   },
   "selectItem": "Wähle {{item}}",
   "readTheDocumentation": "Dokumentation lesen",
   "accessDenied": {
     "desc": "Du hast keine Berechtigung diese Seite anzuzeigen.",
-    "documentTitle": "Zugang verweigert - Frigate",
+    "documentTitle": "Zugang verweigert - BIS-IA",
     "title": "Zugang verweigert"
   },
   "information": {
@@ -300,7 +300,7 @@
   },
   "field": {
     "optional": "Optional",
-    "internalID": "Die interne ID, die Frigate in der Konfiguration und Datenbank verwendet"
+    "internalID": "Die interne ID, die BIS-IA in der Konfiguration und Datenbank verwendet"
   },
   "list": {
     "two": "{{0}} und {{1}}",

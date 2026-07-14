@@ -30,16 +30,16 @@
   },
   "toast": {
     "success": {
-      "submittedFrigatePlus": "הפריים נשלח בהצלחה ל-Frigate+"
+      "submittedBisiaPlus": "הפריים נשלח בהצלחה ל-BIS-IA+"
     },
     "error": {
-      "submitFrigatePlusFailed": "שליחת הפריים ל-Frigate+ נכשלה"
+      "submitBisiaPlusFailed": "שליחת הפריים ל-BIS-IA+ נכשלה"
     }
   },
   "noPreviewFound": "לא נמצאה תצוגה מקדימה",
   "noPreviewFoundFor": "לא נמצאה תצוגה מקדימה עבור {{cameraName}}",
-  "submitFrigatePlus": {
-    "title": "לשלוח את הפריים הזה ל-Frigate+?",
+  "submitBisiaPlus": {
+    "title": "לשלוח את הפריים הזה ל-BIS-IA+?",
     "submit": "אישור"
   },
   "livePlayerRequiredIOSVersion": "נדרשת iOS 17.1 ומעלה עבור סוג השידור החי הזה.",

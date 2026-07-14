@@ -1,7 +1,7 @@
 {
   "time": {
     "untilForTime": "Até {{time}}",
-    "untilForRestart": "Até o Frigate reiniciar.",
+    "untilForRestart": "Até o BIS-IA reiniciar.",
     "untilRestart": "Até reiniciar",
     "ago": "{{timeAgo}} atrás",
     "justNow": "Agora mesmo",
@@ -214,9 +214,9 @@
     "help": "Ajuda",
     "documentation": {
       "title": "Documentação",
-      "label": "Documentação do Frigate"
+      "label": "Documentação do BIS-IA"
     },
-    "restart": "Reiniciar o Frigate",
+    "restart": "Reiniciar o BIS-IA",
     "live": {
       "title": "Ao Vivo",
       "allCameras": "Todas as câmeras",
@@ -255,7 +255,7 @@
     "title": "Papel",
     "admin": "Administrador",
     "viewer": "Espectador",
-    "desc": "Administradores possuem acesso total a todos os recursos da interface do Frigate. Espectadores são limitados a ver as câmeras, revisar itens, e filmagens históricas na interface."
+    "desc": "Administradores possuem acesso total a todos os recursos da interface do BIS-IA. Espectadores são limitados a ver as câmeras, revisar itens, e filmagens históricas na interface."
   },
   "pagination": {
     "label": "paginação",
@@ -270,12 +270,12 @@
     "more": "Mais páginas"
   },
   "accessDenied": {
-    "documentTitle": "Acesso Negado - Frigate",
+    "documentTitle": "Acesso Negado - BIS-IA",
     "title": "Acesso Negado",
     "desc": "Você não possui permissão para visualizar essa página."
   },
   "notFound": {
-    "documentTitle": "Não Encontrado - Frigate",
+    "documentTitle": "Não Encontrado - BIS-IA",
     "title": "404",
     "desc": "Página não encontrada"
   },

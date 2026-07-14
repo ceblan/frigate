@@ -23,7 +23,7 @@
     "day_many": "{{time}} días",
     "day_other": "{{time}} días",
     "untilForTime": "Hasta {{time}}",
-    "untilForRestart": "Hasta que Frigate se reinicie.",
+    "untilForRestart": "Hasta que BIS-IA se reinicie.",
     "untilRestart": "Hasta que se reinicie",
     "ago": "Hace {{timeAgo}}",
     "justNow": "Ahora mismo",
@@ -178,9 +178,9 @@
     },
     "documentation": {
       "title": "Documentación",
-      "label": "Documentación de Frigate"
+      "label": "Documentación de BIS-IA"
     },
-    "restart": "Reiniciar Frigate",
+    "restart": "Reiniciar BIS-IA",
     "live": {
       "title": "Directo",
       "cameras": {
@@ -276,7 +276,7 @@
     "title": "Rol",
     "admin": "Administrador",
     "viewer": "Espectador",
-    "desc": "Los administradores tienen acceso completo a todas las funciones en la interfaz de usuario de Frigate. Los espectadores están limitados a ver cámaras, elementos de revisión y grabaciones históricas en la interfaz de usuario."
+    "desc": "Los administradores tienen acceso completo a todas las funciones en la interfaz de usuario de BIS-IA. Los espectadores están limitados a ver cámaras, elementos de revisión y grabaciones históricas en la interfaz de usuario."
   },
   "pagination": {
     "label": "paginación",
@@ -291,12 +291,12 @@
     "more": "Más páginas"
   },
   "accessDenied": {
-    "documentTitle": "Acceso denegado - Frigate",
+    "documentTitle": "Acceso denegado - BIS-IA",
     "desc": "No tienes permiso para ver esta página.",
     "title": "Acceso denegado"
   },
   "notFound": {
-    "documentTitle": "No se ha encontrado - Frigate",
+    "documentTitle": "No se ha encontrado - BIS-IA",
     "title": "404",
     "desc": "Página no encontrada"
   },
@@ -312,6 +312,6 @@
   },
   "field": {
     "optional": "Opcional",
-    "internalID": "La ID interna que usa Frigate en la configuración y en la base de datos"
+    "internalID": "La ID interna que usa BIS-IA en la configuración y en la base de datos"
   }
 }

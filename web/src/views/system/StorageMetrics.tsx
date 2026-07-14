@@ -171,7 +171,7 @@ export default function StorageMetrics({
                     <div className="mt-2 flex items-center text-primary">
                       <Link
                         to={getLocaleDocUrl(
-                          "frigate/installation#calculating-required-shm-size",
+                          "bisia/installation#calculating-required-shm-size",
                         )}
                         target="_blank"
                         rel="noopener noreferrer"

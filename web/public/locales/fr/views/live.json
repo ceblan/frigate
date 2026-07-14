@@ -1,7 +1,7 @@
 {
-  "documentTitle": "Direct - Frigate",
+  "documentTitle": "Direct - BIS-IA",
   "lowBandwidthMode": "Mode bande passante faible",
-  "documentTitle.withCamera": "{{camera}} - Direct - Frigate",
+  "documentTitle.withCamera": "{{camera}} - Direct - BIS-IA",
   "twoWayTalk": {
     "disable": "Désactiver la conversation bidirectionnelle",
     "enable": "Activer la conversation bidirectionnelle"
@@ -173,7 +173,7 @@
   },
   "noCameras": {
     "title": "Aucune caméra n'est configurée",
-    "description": "Pour commencer, connectez une caméra à Frigate.",
+    "description": "Pour commencer, connectez une caméra à BIS-IA.",
     "buttonText": "Ajouter une caméra",
     "restricted": {
       "title": "Aucune caméra disponible",
@@ -181,7 +181,7 @@
     },
     "default": {
       "title": "Aucune caméra configurée",
-      "description": "Pour commencer, connectez une caméra à Frigate.",
+      "description": "Pour commencer, connectez une caméra à BIS-IA.",
       "buttonText": "Ajouter une caméra"
     },
     "group": {

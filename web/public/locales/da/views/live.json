@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Live - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Live - Frigate",
+  "documentTitle": "Live - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Live - BIS-IA",
   "twoWayTalk": {
     "enable": "Aktivér tovejskommunikation",
     "disable": "Deaktiver tovejskommunikation"

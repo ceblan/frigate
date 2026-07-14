@@ -11,11 +11,11 @@ Use of the bundled go2rtc is optional. You can still configure FFmpeg to connect
 
 ## Setup a go2rtc stream
 
-First, you will want to configure go2rtc to connect to your camera stream by adding the stream you want to use for live view in your Frigate config file. Avoid changing any other parts of your config at this step. Note that go2rtc supports [many different stream types](https://github.com/AlexxIT/go2rtc/tree/v1.9.10#module-streams), not just rtsp.
+First, you will want to configure go2rtc to connect to your camera stream by adding the stream you want to use for live view in your BIS-IA config file. Avoid changing any other parts of your config at this step. Note that go2rtc supports [many different stream types](https://github.com/AlexxIT/go2rtc/tree/v1.9.10#module-streams), not just rtsp.
 
 :::tip
 
-For the best experience, you should set the stream name under `go2rtc` to match the name of your camera so that Frigate will automatically map it and be able to use better live view options for the camera.
+For the best experience, you should set the stream name under `go2rtc` to match the name of your camera so that BIS-IA will automatically map it and be able to use better live view options for the camera.
 
 See [the live view docs](../configuration/live.md#setting-stream-for-live-ui) for more information.
 
@@ -28,17 +28,17 @@ go2rtc:
       - rtsp://user:password@10.0.10.10:554/cam/realmonitor?channel=1&subtype=2
 ```
 
-After adding this to the config, restart Frigate and try to watch the live stream for a single camera by clicking on it from the dashboard. It should look much clearer and more fluent than the original jsmpeg stream.
+After adding this to the config, restart BIS-IA and try to watch the live stream for a single camera by clicking on it from the dashboard. It should look much clearer and more fluent than the original jsmpeg stream.
 
 ### What if my video doesn't play?
 
 - Check Logs:
-  - Access the go2rtc logs in the Frigate UI under Logs in the sidebar.
+  - Access the go2rtc logs in the BIS-IA UI under Logs in the sidebar.
   - If go2rtc is having difficulty connecting to your camera, you should see some error messages in the log.
 
 - Check go2rtc Web Interface: if you don't see any errors in the logs, try viewing the camera through go2rtc's web interface.
   - Navigate to port 1984 in your browser to access go2rtc's web interface.
-    - If using Frigate through Home Assistant, enable the web interface at port 1984.
+    - If using BIS-IA through Home Assistant, enable the web interface at port 1984.
     - If using Docker, forward port 1984 before accessing the web interface.
   - Click `stream` for the specific camera to see if the camera's stream is being received.
 
@@ -97,9 +97,9 @@ After adding this to the config, restart Frigate and try to watch the live strea
 
 :::warning
 
-To access the go2rtc stream externally when utilizing the Frigate App (for
+To access the go2rtc stream externally when utilizing the BIS-IA App (for
 instance through VLC), you must first enable the RTSP Restream port.
-You can do this by visiting the Frigate App configuration page within Home
+You can do this by visiting the BIS-IA App configuration page within Home
 Assistant and revealing the hidden options under the "Show disabled ports"
 section.
 
@@ -107,10 +107,10 @@ section.
 
 ### Next steps
 
-1. If the stream you added to go2rtc is also used by Frigate for the `record` or `detect` role, you can migrate your config to pull from the RTSP restream to reduce the number of connections to your camera as shown [here](/configuration/restream#reduce-connections-to-camera).
+1. If the stream you added to go2rtc is also used by BIS-IA for the `record` or `detect` role, you can migrate your config to pull from the RTSP restream to reduce the number of connections to your camera as shown [here](/configuration/restream#reduce-connections-to-camera).
 2. You can [set up WebRTC](/configuration/live#webrtc-extra-configuration) if your camera supports two-way talk. Note that WebRTC only supports specific audio formats and may require opening ports on your router.
 3. If your camera supports two-way talk, you must configure your stream with `#backchannel=0` to prevent go2rtc from blocking other applications from accessing the camera's audio output. See [preventing go2rtc from blocking two-way audio](/configuration/restream#two-way-talk-restream) in the restream documentation.
 
 ## Homekit Configuration
 
-To add camera streams to Homekit Frigate must be configured in docker to use `host` networking mode. Once that is done, you can use the go2rtc WebUI (accessed via port 1984, which is disabled by default) to share export a camera to Homekit. Any changes made will automatically be saved to `/config/go2rtc_homekit.yml`.
+To add camera streams to Homekit BIS-IA must be configured in docker to use `host` networking mode. Once that is done, you can use the go2rtc WebUI (accessed via port 1984, which is disabled by default) to share export a camera to Homekit. Any changes made will automatically be saved to `/config/go2rtc_homekit.yml`.

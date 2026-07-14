@@ -28,8 +28,8 @@
     },
     "decodedFrames": "Gedecodeerde frames:"
   },
-  "submitFrigatePlus": {
-    "title": "Dit frame indienen bij Frigate+?",
+  "submitBisiaPlus": {
+    "title": "Dit frame indienen bij BIS-IA+?",
     "submit": "Indienen"
   },
   "streamOffline": {
@@ -42,10 +42,10 @@
   "cameraDisabled": "Camera is uitgeschakeld",
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Frame succesvol ingediend bij Frigate+"
+      "submittedBisiaPlus": "Frame succesvol ingediend bij BIS-IA+"
     },
     "error": {
-      "submitFrigatePlusFailed": "Het is niet gelukt om een frame naar Frigate+ te sturen"
+      "submitBisiaPlusFailed": "Het is niet gelukt om een frame naar BIS-IA+ te sturen"
     }
   }
 }

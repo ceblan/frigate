@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Directo - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Directo - Frigate",
+  "documentTitle": "Directo - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Directo - BIS-IA",
   "twoWayTalk": {
     "enable": "Habilitar conversación bidireccional",
     "disable": "Deshabilitar conversación bidireccional"
@@ -173,7 +173,7 @@
   },
   "noCameras": {
     "title": "No hay cámaras configuradas",
-    "description": "Comienza conectando una cámara a Frigate.",
+    "description": "Comienza conectando una cámara a BIS-IA.",
     "buttonText": "Añade Cámara",
     "restricted": {
       "title": "No hay cámaras disponibles",
@@ -181,7 +181,7 @@
     },
     "default": {
       "title": "No hay Cámaras Configuradas",
-      "description": "Comienza conectando una cámara a Frigate.",
+      "description": "Comienza conectando una cámara a BIS-IA.",
       "buttonText": "Añadir Cámara"
     },
     "group": {

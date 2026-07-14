@@ -1,17 +1,17 @@
 {
   "documentTitle": {
-    "default": "Ρυθμίσεις - Frigate",
-    "authentication": "Ρυθμίσεις ελέγχου ταυτοποίησης - Frigate",
-    "camera": "Ρυθμίσεις Κάμερας - Frigate",
-    "enrichments": "Ρυθμίσεις εμπλουτισμού - Frigate",
-    "masksAndZones": "Ρυθμίσεις Μασκών και Ζωνών - Frigate",
-    "motionTuner": "Ρύθμιση Κίνησης - Frigate",
-    "object": "Επίλυση σφαλμάτων - Frigate",
-    "general": "Ρυθμίσεις UI - Frigate",
-    "frigatePlus": "Ρυθμίσεις Frigate+ - Frigate",
+    "default": "Ρυθμίσεις - BIS-IA",
+    "authentication": "Ρυθμίσεις ελέγχου ταυτοποίησης - BIS-IA",
+    "camera": "Ρυθμίσεις Κάμερας - BIS-IA",
+    "enrichments": "Ρυθμίσεις εμπλουτισμού - BIS-IA",
+    "masksAndZones": "Ρυθμίσεις Μασκών και Ζωνών - BIS-IA",
+    "motionTuner": "Ρύθμιση Κίνησης - BIS-IA",
+    "object": "Επίλυση σφαλμάτων - BIS-IA",
+    "general": "Ρυθμίσεις UI - BIS-IA",
+    "bisiaPlus": "Ρυθμίσεις BIS-IA+ - BIS-IA",
     "notifications": "Ρυθμίσεις Ειδοποιήσεων",
-    "cameraManagement": "Διαχείριση καμερών - Frigate",
-    "cameraReview": "Ρυθμίσεις αξιολόγησης κάμερας - Frigate"
+    "cameraManagement": "Διαχείριση καμερών - BIS-IA",
+    "cameraReview": "Ρυθμίσεις αξιολόγησης κάμερας - BIS-IA"
   },
   "masksAndZones": {
     "zones": {

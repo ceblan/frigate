@@ -1,18 +1,18 @@
 {
   "documentTitle": {
-    "default": "Innstillinger - Frigate",
-    "authentication": "Autentiseringsinnstillinger - Frigate",
-    "camera": "Kamerainnstillinger - Frigate",
-    "masksAndZones": "Maske- og soneeditor - Frigate",
-    "motionTuner": "Bevegelsesjustering - Frigate",
-    "object": "Test og feilsøk - Frigate",
-    "general": "Innstillinger for brukergrensesnitt - Frigate",
-    "classification": "Klassifiseringsinnstillinger - Frigate",
-    "frigatePlus": "Frigate+ innstillinger - Frigate",
-    "notifications": "Innstillinger for meldingsvarsler - Frigate",
-    "enrichments": "Innstillinger for utvidelser - Frigate",
-    "cameraManagement": "Administrer kameraer - Frigate",
-    "cameraReview": "Innstillinger for kamerainspeksjon - Frigate"
+    "default": "Innstillinger - BIS-IA",
+    "authentication": "Autentiseringsinnstillinger - BIS-IA",
+    "camera": "Kamerainnstillinger - BIS-IA",
+    "masksAndZones": "Maske- og soneeditor - BIS-IA",
+    "motionTuner": "Bevegelsesjustering - BIS-IA",
+    "object": "Test og feilsøk - BIS-IA",
+    "general": "Innstillinger for brukergrensesnitt - BIS-IA",
+    "classification": "Klassifiseringsinnstillinger - BIS-IA",
+    "bisiaPlus": "BIS-IA+ innstillinger - BIS-IA",
+    "notifications": "Innstillinger for meldingsvarsler - BIS-IA",
+    "enrichments": "Innstillinger for utvidelser - BIS-IA",
+    "cameraManagement": "Administrer kameraer - BIS-IA",
+    "cameraReview": "Innstillinger for kamerainspeksjon - BIS-IA"
   },
   "menu": {
     "classification": "Klassifisering",
@@ -21,7 +21,7 @@
     "motionTuner": "Finjustering av bevegelse",
     "debug": "Test og feilsøk",
     "users": "Brukere",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "ui": "Brukergrensesnitt",
     "notifications": "Meldingsvarsler",
     "enrichments": "Utvidelser",
@@ -101,7 +101,7 @@
   "classification": {
     "semanticSearch": {
       "title": "Semantisk søk",
-      "desc": "Semantisk søk i Frigate lar deg finne sporede objekter i inspeksjonselementene ved hjelp av enten bildet, en egendefinert tekstbeskrivelse eller en automatisk generert beskrivelse.",
+      "desc": "Semantisk søk i BIS-IA lar deg finne sporede objekter i inspeksjonselementene ved hjelp av enten bildet, en egendefinert tekstbeskrivelse eller en automatisk generert beskrivelse.",
       "reindexNow": {
         "confirmTitle": "Bekreft reindeksering",
         "error": "Kunne ikke starte reindeksering: {{errorMessage}}",
@@ -146,11 +146,11 @@
     "licensePlateRecognition": {
       "title": "Gjenkjenning av kjennemerker",
       "readTheDocumentation": "Les dokumentasjonen",
-      "desc": "Frigate kan gjenkjenne kjennemerker og automatisk legge inn tall/bokstaver i 'recognized_license_plate'-feltet, eller et kjent navn som under-merkelapp til objekter av typen bil. Vanlig bruk er å lese kjennemerker ved innkjørsel eller på vei."
+      "desc": "BIS-IA kan gjenkjenne kjennemerker og automatisk legge inn tall/bokstaver i 'recognized_license_plate'-feltet, eller et kjent navn som under-merkelapp til objekter av typen bil. Vanlig bruk er å lese kjennemerker ved innkjørsel eller på vei."
     },
     "title": "Klassifiseringsinnstillinger",
     "toast": {
-      "success": "Klassifiseringsinnstillinger lagret. Start Frigate på nytt for å bruke endringene.",
+      "success": "Klassifiseringsinnstillinger lagret. Start BIS-IA på nytt for å bruke endringene.",
       "error": "Kunne ikke lagre konfigurasjonsendringer: {{errorMessage}}"
     },
     "birdClassification": {
@@ -162,7 +162,7 @@
   },
   "camera": {
     "streams": {
-      "desc": "Midlertidig deaktiver et kamera til Frigate startes på nytt. Deaktivering av et kamera stopper Frigates behandling av dette kameraets strømmer fullstendig. Deteksjon, opptak og feilsøking vil være utilgjengelig.<br /> <em>Merk: Dette deaktiverer ikke go2rtc-restrømming.</em>",
+      "desc": "Midlertidig deaktiver et kamera til BIS-IA startes på nytt. Deaktivering av et kamera stopper BIS-IAs behandling av dette kameraets strømmer fullstendig. Deteksjon, opptak og feilsøking vil være utilgjengelig.<br /> <em>Merk: Dette deaktiverer ikke go2rtc-restrømming.</em>",
       "title": "Strømmer"
     },
     "reviewClassification": {
@@ -174,7 +174,7 @@
         "notSelectDetections": "Alle {{detectionsLabels}}-objekter oppdaget i {{zone}} på {{cameraName}} som ikke er kategorisert som Varsler, vises som deteksjoner uavhengig av sone."
       },
       "selectAlertsZones": "Velg soner for varsler",
-      "desc": "Frigate kategoriserer inspeksjonselementer som Varsler og Deteksjoner. Som standard regnes alle <em>person</em>- og <em>bil</em>-objekter som Varsler. Du kan finjustere klassifiseringen ved å konfigurere nødvendige soner.",
+      "desc": "BIS-IA kategoriserer inspeksjonselementer som Varsler og Deteksjoner. Som standard regnes alle <em>person</em>- og <em>bil</em>-objekter som Varsler. Du kan finjustere klassifiseringen ved å konfigurere nødvendige soner.",
       "readTheDocumentation": "Se dokumentasjonen",
       "noDefinedZones": "Ingen soner er definert for dette kameraet.",
       "objectAlertsTips": "Alle {{alertsLabels}}-objekter på {{cameraName}} vises som varsler.",
@@ -182,14 +182,14 @@
       "selectDetectionsZones": "Velg soner for deteksjoner",
       "limitDetections": "Avgrens deteksjoner til bestemte soner",
       "toast": {
-        "success": "Konfigurasjonen for inspeksjonsklassifisering er lagret. Start Frigate på nytt for å bruke endringer."
+        "success": "Konfigurasjonen for inspeksjonsklassifisering er lagret. Start BIS-IA på nytt for å bruke endringer."
       },
       "unsavedChanges": "Ulagrede innstillinger for inspeksjonsklassifisering for {{camera}}"
     },
     "title": "Kamerainnstillinger",
     "review": {
       "title": "Inspeksjon",
-      "desc": "Aktiver/deaktiver varsler og deteksjoner midlertidig for dette kameraet til Frigate startes på nytt. Når deaktivert, vil det ikke genereres nye inspeksjonselementer. ",
+      "desc": "Aktiver/deaktiver varsler og deteksjoner midlertidig for dette kameraet til BIS-IA startes på nytt. Når deaktivert, vil det ikke genereres nye inspeksjonselementer. ",
       "alerts": "Varsler ",
       "detections": "Deteksjoner "
     },
@@ -302,7 +302,7 @@
     },
     "zones": {
       "label": "Soner",
-      "documentTitle": "Rediger sone - Frigate",
+      "documentTitle": "Rediger sone - BIS-IA",
       "edit": "Rediger sone",
       "point_one": "{{count}} punkt",
       "point_other": "{{count}} punkter",
@@ -360,7 +360,7 @@
         "title": "Bevegelsesmasker brukes til å hindre uønsket type bevegelse fra å utløse deteksjon. For mye maskering kan gjøre det vanskeligere å spore objekter."
       },
       "add": "Ny bevegelsesmaske",
-      "documentTitle": "Rediger bevegelsesmaske - Frigate",
+      "documentTitle": "Rediger bevegelsesmaske - BIS-IA",
       "edit": "Rediger bevegelsesmaske",
       "context": {
         "title": "Bevegelsesmasker brukes til å hindre uønsket type bevegelse fra å utløse deteksjon (eksempel: tregrener, kameratidsstempler). Bevegelsesmasker bør brukes <em>svært sparsomt</em>. For mye maskering vil gjøre det vanskeligere å spore objekter.",
@@ -386,7 +386,7 @@
       "point_one": "{{count}} punkt",
       "point_other": "{{count}} punkter",
       "label": "Objektmasker",
-      "documentTitle": "Rediger objektmaske - Frigate",
+      "documentTitle": "Rediger objektmaske - BIS-IA",
       "desc": {
         "title": "Objektfiltermasker brukes for å filtrere ut falske positiver for en gitt objekttype basert på plassering.",
         "documentation": "Dokumentasjon"
@@ -425,7 +425,7 @@
       "title": "Forbedre kontrast"
     },
     "desc": {
-      "title": "Frigate bruker bevegelsesdeteksjon som en første sjekk for å se om det skjer noe i bildet som er verdt å sjekke med objektdeteksjon.",
+      "title": "BIS-IA bruker bevegelsesdeteksjon som en første sjekk for å se om det skjer noe i bildet som er verdt å sjekke med objektdeteksjon.",
       "documentation": "Les guiden for bevegelsesjustering"
     },
     "toast": {
@@ -472,7 +472,7 @@
       "desc": "Tegn et rektangel på bildet for å vise areal- og størrelsesforhold",
       "tips": "Aktiver dette alternativet for å tegne et rektangel på kamerabildet for å vise areal og størrelsesforholdet. Disse verdiene kan deretter brukes til å sette filterparametere for objektform i konfigurasjonen."
     },
-    "detectorDesc": "Frigate bruker dine detektorer ({{detectors}}) for å oppdage objekter i kameraets videostrøm.",
+    "detectorDesc": "BIS-IA bruker dine detektorer ({{detectors}}) for å oppdage objekter i kameraets videostrøm.",
     "desc": "Test og feilsøk viser sporede objekter i sanntid og deres statistikk. Objektlisten viser en tidsforsinket oppsummering av detekterte objekter.",
     "debugging": "Test og feilsøk",
     "mask": {
@@ -497,7 +497,7 @@
     "title": "Brukere",
     "management": {
       "title": "Brukeradministrasjon",
-      "desc": "Administrer brukerprofiler for denne Frigate-instansen."
+      "desc": "Administrer brukerprofiler for denne BIS-IA-instansen."
     },
     "addUser": "Legg til bruker",
     "updatePassword": "Nullstill passord",
@@ -577,7 +577,7 @@
       },
       "createUser": {
         "title": "Opprett ny bruker",
-        "desc": "Legg til en ny brukerkonto og spesifiser en rolle for tilgang til Frigate-brukergrensesnittet.",
+        "desc": "Legg til en ny brukerkonto og spesifiser en rolle for tilgang til BIS-IA-brukergrensesnittet.",
         "usernameOnlyInclude": "Brukernavn kan bare inneholde bokstaver, tall, punktum eller _",
         "confirmPassword": "Vennligst bekreft ditt passord"
       },
@@ -611,14 +611,14 @@
   },
   "notification": {
     "notificationSettings": {
-      "desc": "Frigate kan sende push-varsler til enheten din når den kjører i nettleseren eller er installert som en progressiv webapplikasjon (PWA).",
+      "desc": "BIS-IA kan sende push-varsler til enheten din når den kjører i nettleseren eller er installert som en progressiv webapplikasjon (PWA).",
       "documentation": "Se dokumentasjonen",
       "title": "Innstillinger for meldingsvarsler"
     },
     "notificationUnavailable": {
       "documentation": "Se dokumentasjonen",
       "title": "Meldingsvarsler utilgjengelig",
-      "desc": "Nettleser push-varsler krever et sikkert miljø (<code>https://…</code>). Dette er en nettleserbegrensning. Få tilgang til Frigate på en sikker måte for å bruke meldingsvarsler."
+      "desc": "Nettleser push-varsler krever et sikkert miljø (<code>https://…</code>). Dette er en nettleserbegrensning. Få tilgang til BIS-IA på en sikker måte for å bruke meldingsvarsler."
     },
     "email": {
       "title": "E-post",
@@ -646,7 +646,7 @@
     "suspended": "Meldingsvarsler suspendert {{time}}",
     "toast": {
       "success": {
-        "registered": "Registrering for meldingsvarsler var vellykket. En omstart av Frigate er nødvendig før noen meldingsvarsler (inkludert et testvarsel) kan sendes.",
+        "registered": "Registrering for meldingsvarsler var vellykket. En omstart av BIS-IA er nødvendig før noen meldingsvarsler (inkludert et testvarsel) kan sendes.",
         "settingSaved": "Innstillinger for meldingsvarsler er lagret."
       },
       "error": {
@@ -664,13 +664,13 @@
     "unsavedChanges": "Ulagrede endringer for meldingsvarsler",
     "unsavedRegistrations": "Ulagrede registreringer for meldingsvarsler"
   },
-  "frigatePlus": {
+  "bisiaPlus": {
     "apiKey": {
-      "notValidated": "Frigate+ API-nøkkel er ikke detektert eller validert",
-      "title": "Frigate+ API-nøkkel",
-      "validated": "Frigate+ API-nøkkel er detektert og validert",
-      "desc": "Frigate+ API-nøkkelen muliggjør integrasjon med Frigate+ tjenesten.",
-      "plusLink": "Les mer om Frigate+"
+      "notValidated": "BIS-IA+ API-nøkkel er ikke detektert eller validert",
+      "title": "BIS-IA+ API-nøkkel",
+      "validated": "BIS-IA+ API-nøkkel er detektert og validert",
+      "desc": "BIS-IA+ API-nøkkelen muliggjør integrasjon med BIS-IA+ tjenesten.",
+      "plusLink": "Les mer om BIS-IA+"
     },
     "modelInfo": {
       "trainDate": "Treningsdato",
@@ -684,35 +684,35 @@
       "dimensions": "Dimensjoner",
       "cameras": "Kameraer",
       "availableModels": "Tilgjengelige modeller",
-      "modelSelect": "Dine tilgjengelige modeller på Frigate+ kan velges her. Merk at bare modeller som er kompatible med din nåværende detektorkonfigurasjon kan velges.",
+      "modelSelect": "Dine tilgjengelige modeller på BIS-IA+ kan velges her. Merk at bare modeller som er kompatible med din nåværende detektorkonfigurasjon kan velges.",
       "plusModelType": {
         "userModel": "Finjustert",
         "baseModel": "Basismodell"
       }
     },
-    "title": "Frigate+ Innstillinger",
+    "title": "BIS-IA+ Innstillinger",
     "snapshotConfig": {
       "title": "Konfigurasjon av stillbilde",
-      "desc": "Innsending til Frigate+ krever at både stillbilder og <code>clean_copy</code>-stillbilder er aktivert i konfigurasjonen din.",
+      "desc": "Innsending til BIS-IA+ krever at både stillbilder og <code>clean_copy</code>-stillbilder er aktivert i konfigurasjonen din.",
       "documentation": "Se dokumentasjonen",
       "table": {
         "camera": "Kamera",
         "snapshots": "Stillbilder",
         "cleanCopySnapshots": "<code>clean_copy</code>-stillbilder"
       },
-      "cleanCopyWarning": "Noen kameraer har stillbilder aktivert, men ren kopi er deaktivert. Du må aktivere <code>clean_copy</code> i stillbilde-konfigurasjonen for å kunne sende bilder fra disse kameraene til Frigate+."
+      "cleanCopyWarning": "Noen kameraer har stillbilder aktivert, men ren kopi er deaktivert. Du må aktivere <code>clean_copy</code> i stillbilde-konfigurasjonen for å kunne sende bilder fra disse kameraene til BIS-IA+."
     },
     "toast": {
-      "success": "Frigate+ innstillingene er lagret. Start Frigate på nytt for å aktivere endringene.",
+      "success": "BIS-IA+ innstillingene er lagret. Start BIS-IA på nytt for å aktivere endringene.",
       "error": "Kunne ikke lagre konfigurasjonsendringer: {{errorMessage}}"
     },
-    "restart_required": "Omstart påkrevd (Frigate+ modell endret)",
-    "unsavedChanges": "Ulagrede endringer for Frigate+ innstillinger"
+    "restart_required": "Omstart påkrevd (BIS-IA+ modell endret)",
+    "unsavedChanges": "Ulagrede endringer for BIS-IA+ innstillinger"
   },
   "enrichments": {
     "title": "Innstillinger for utvidelser",
     "licensePlateRecognition": {
-      "desc": "Frigate kan gjenkjenne kjennemerker på kjøretøy og automatisk legge til de oppdagede tegnene i feltet \"recognized_license_plate\", eller et kjent navn som en underetikett på objekter av typen bil. Et vanlig brukstilfelle kan være å lese kjennemerker på biler som kjører inn i en innkjørsel eller biler som passerer på en gate.",
+      "desc": "BIS-IA kan gjenkjenne kjennemerker på kjøretøy og automatisk legge til de oppdagede tegnene i feltet \"recognized_license_plate\", eller et kjent navn som en underetikett på objekter av typen bil. Et vanlig brukstilfelle kan være å lese kjennemerker på biler som kjører inn i en innkjørsel eller biler som passerer på en gate.",
       "title": "Kjennemerke gjenkjenning",
       "readTheDocumentation": "Se dokumentasjonen"
     },
@@ -744,7 +744,7 @@
         }
       },
       "title": "Semantisk søk",
-      "desc": "Semantisk søk i Frigate lar deg finne sporede objekter i inspeksjonsselementene dine ved å bruke enten selve bildet, en brukerdefinert tekstbeskrivelse eller en automatisk generert beskrivelse.",
+      "desc": "Semantisk søk i BIS-IA lar deg finne sporede objekter i inspeksjonsselementene dine ved å bruke enten selve bildet, en brukerdefinert tekstbeskrivelse eller en automatisk generert beskrivelse.",
       "readTheDocumentation": "Se dokumentasjonen"
     },
     "faceRecognition": {
@@ -761,13 +761,13 @@
         }
       },
       "title": "Ansiktsgjenkjenning",
-      "desc": "Ansiktsgjenkjenning gjør det mulig å tildele navn til personer, og når ansiktet deres gjenkjennes, vil Frigate tildele personens navn som en underetikett. Denne informasjonen vises i brukergrensesnittet, filtre, samt i meldingsvarsler.",
+      "desc": "Ansiktsgjenkjenning gjør det mulig å tildele navn til personer, og når ansiktet deres gjenkjennes, vil BIS-IA tildele personens navn som en underetikett. Denne informasjonen vises i brukergrensesnittet, filtre, samt i meldingsvarsler.",
       "readTheDocumentation": "Se dokumentasjonen"
     },
     "unsavedChanges": "Ulagrede endringer i innstillinger for utvidelser",
     "restart_required": "Omstart påkrevd (Innstillinger for utvidelser er endret)",
     "toast": {
-      "success": "Innstillinger for utvidelser har blitt lagret. Start Frigate på nytt for å aktivere endringene.",
+      "success": "Innstillinger for utvidelser har blitt lagret. Start BIS-IA på nytt for å aktivere endringene.",
       "error": "Kunne ikke lagre konfigurasjonsendringer: {{errorMessage}}"
     }
   },
@@ -852,7 +852,7 @@
         },
         "actions": {
           "title": "Handlinger",
-          "desc": "Som standard sender Frigate en MQTT-melding for alle utløsere. Underetiketter legger til navnet på utløseren i objektetiketten. Attributter er søkbare metadata som lagres separat i objektets sporingsmetadata.",
+          "desc": "Som standard sender BIS-IA en MQTT-melding for alle utløsere. Underetiketter legger til navnet på utløseren i objektetiketten. Attributter er søkbare metadata som lagres separat i objektets sporingsmetadata.",
           "error": {
             "min": "Minst én handling må velges."
           }
@@ -901,7 +901,7 @@
   "roles": {
     "management": {
       "title": "Administrasjon av visningsrolle",
-      "desc": "Administrer tilpassede visningsroller og deres kameratilgangstillatelser for denne Frigate-instansen."
+      "desc": "Administrer tilpassede visningsroller og deres kameratilgangstillatelser for denne BIS-IA-instansen."
     },
     "addRole": "Legg til rolle",
     "table": {
@@ -961,7 +961,7 @@
   },
   "cameraWizard": {
     "title": "Legg til kamera",
-    "description": "Følg trinnene nedenfor for å legge til et nytt kamera i din Frigate-installasjon.",
+    "description": "Følg trinnene nedenfor for å legge til et nytt kamera i din BIS-IA-installasjon.",
     "steps": {
       "nameAndConnection": "Navn og tilkobling",
       "streamConfiguration": "Strømkonfigurasjon",
@@ -1018,7 +1018,7 @@
         "customUrlRtspRequired": "Egendefinerte URL-er må begynne med \"rtsp://\". Manuell konfigurering kreves for kamera­strømmer som ikke bruker RTSP."
       },
       "docs": {
-        "reolink": "https://docs.frigate.video/configuration/camera_specific.html#reolink-cameras"
+        "reolink": "https://docs.bisia.video/configuration/camera_specific.html#reolink-cameras"
       },
       "testing": {
         "probingMetadata": "Henter kamerametadata…",
@@ -1146,7 +1146,7 @@
         "resolutionHigh": "En oppløsning på {{resolution}} kan føre til økt ressursbruk.",
         "resolutionLow": "En oppløsning på {{resolution}} kan være for lav for pålitelig deteksjon av små objekter."
       },
-      "ffmpegModuleDescription": "Hvis strømmen ikke lastes inn etter flere forsøk, kan du prøve å aktivere dette. Når det er aktivert, vil Frigate bruke ffmpeg-modulen sammen med go2rtc. Dette kan gi bedre kompatibilitet med enkelte kamerastrømmer.",
+      "ffmpegModuleDescription": "Hvis strømmen ikke lastes inn etter flere forsøk, kan du prøve å aktivere dette. Når det er aktivert, vil BIS-IA bruke ffmpeg-modulen sammen med go2rtc. Dette kan gi bedre kompatibilitet med enkelte kamerastrømmer.",
       "ffmpegModule": "Bruk kompatibilitetsmodus for strøm",
       "streamsTitle": "Kamerastrømmer",
       "addStream": "Legg til strøm",
@@ -1205,7 +1205,7 @@
       "estimatedBandwidth": "Estimert båndbredde",
       "roles": "Roller",
       "ffmpegModule": "Bruk kompatibilitetsmodus for strøm",
-      "ffmpegModuleDescription": "Hvis strømmen ikke lastes etter flere forsøk, prøv å aktivere dette. Når aktivert, vil Frigate bruke ffmpeg-modulen med go2rtc. Dette kan gi bedre kompatibilitet med noen kamerastrømmer.",
+      "ffmpegModuleDescription": "Hvis strømmen ikke lastes etter flere forsøk, prøv å aktivere dette. Når aktivert, vil BIS-IA bruke ffmpeg-modulen med go2rtc. Dette kan gi bedre kompatibilitet med noen kamerastrømmer.",
       "none": "Ingen",
       "error": "Feil",
       "streamValidated": "Strøm {{number}} validert",
@@ -1243,7 +1243,7 @@
     "backToSettings": "Tilbake til kamerainnstillinger",
     "streams": {
       "title": "Aktiver / Deaktiver kameraer",
-      "desc": "Midlertidig deaktiver et kamera til Frigate startes på nytt. Deaktivering av et kamera stopper Frigates behandling av dette kameraets strømmer fullstendig. Deteksjon, opptak og feilsøking vil være utilgjengelig.<br /> <em>Merk: Dette deaktiverer ikke go2rtc-restrømming.</em>"
+      "desc": "Midlertidig deaktiver et kamera til BIS-IA startes på nytt. Deaktivering av et kamera stopper BIS-IAs behandling av dette kameraets strømmer fullstendig. Deteksjon, opptak og feilsøking vil være utilgjengelig.<br /> <em>Merk: Dette deaktiverer ikke go2rtc-restrømming.</em>"
     },
     "cameraConfig": {
       "add": "Legg til kamera",
@@ -1279,21 +1279,21 @@
     "title": "Innstillinger for kamerainspeksjon",
     "object_descriptions": {
       "title": "Generative KI-objektbeskrivelser",
-      "desc": "Midlertidig aktiver/deaktiver generative KI-objektbeskrivelser for dette kameraet til Frigate starter på nytt. Når deaktivert, vil KI-genererte beskrivelser ikke bli forespurt for sporede objekter på dette kameraet."
+      "desc": "Midlertidig aktiver/deaktiver generative KI-objektbeskrivelser for dette kameraet til BIS-IA starter på nytt. Når deaktivert, vil KI-genererte beskrivelser ikke bli forespurt for sporede objekter på dette kameraet."
     },
     "review_descriptions": {
       "title": "Generative KI beskrivelser for inspeksjon",
-      "desc": "Midlertidig aktiver/deaktiver inspeksjonsbeskrivelser med generativ KI for dette kameraet til Frigate startes på nytt. Når deaktivert, vil det ikke bli bedt om KI-genererte beskrivelser for inspeksjonselementer på dette kameraet."
+      "desc": "Midlertidig aktiver/deaktiver inspeksjonsbeskrivelser med generativ KI for dette kameraet til BIS-IA startes på nytt. Når deaktivert, vil det ikke bli bedt om KI-genererte beskrivelser for inspeksjonselementer på dette kameraet."
     },
     "review": {
       "title": "Inspiser",
-      "desc": "Aktiver/deaktiver varsler og deteksjoner midlertidig for dette kameraet til Frigate startes på nytt. Når deaktivert, vil det ikke genereres nye inspeksjonselementer. ",
+      "desc": "Aktiver/deaktiver varsler og deteksjoner midlertidig for dette kameraet til BIS-IA startes på nytt. Når deaktivert, vil det ikke genereres nye inspeksjonselementer. ",
       "alerts": "Varsler ",
       "detections": "Deteksjoner "
     },
     "reviewClassification": {
       "title": "Inspeksjonsklassifisering",
-      "desc": "Frigate kategoriserer inspeksjonselementer som Varsler og Deteksjoner. Som standard regnes alle <em>person</em>- og <em>bil</em>-objekter som Varsler. Du kan finjustere klassifiseringen ved å konfigurere nødvendige soner.",
+      "desc": "BIS-IA kategoriserer inspeksjonselementer som Varsler og Deteksjoner. Som standard regnes alle <em>person</em>- og <em>bil</em>-objekter som Varsler. Du kan finjustere klassifiseringen ved å konfigurere nødvendige soner.",
       "noDefinedZones": "Ingen soner er definert for dette kameraet.",
       "objectAlertsTips": "Alle {{alertsLabels}}-objekter på {{cameraName}} vil bli vist som varsler.",
       "zoneObjectAlertsTips": "Alle {{alertsLabels}}-objekter oppdaget i {{zone}} på {{cameraName}} vil bli vist som varsler.",
@@ -1308,7 +1308,7 @@
       "selectDetectionsZones": "Velg soner for deteksjoner",
       "limitDetections": "Avgrens deteksjoner til bestemte soner",
       "toast": {
-        "success": "Konfigurasjonen for inspeksjonsklassifisering er lagret. Start Frigate på nytt for å aktivere endringer."
+        "success": "Konfigurasjonen for inspeksjonsklassifisering er lagret. Start BIS-IA på nytt for å aktivere endringer."
       }
     }
   }

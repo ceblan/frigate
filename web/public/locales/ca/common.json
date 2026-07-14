@@ -3,7 +3,7 @@
     "title": "Rol",
     "viewer": "Visualitzador",
     "admin": "Administrador",
-    "desc": "Els administradors tenen accés complet a totes les característiques de la interfície d'usuari de Frigate. Els visualitzadors es limiten a visualitzar càmeres, articles de revisió i imatges històriques a la interfície d'usuari."
+    "desc": "Els administradors tenen accés complet a totes les característiques de la interfície d'usuari de BIS-IA. Els visualitzadors es limiten a visualitzar càmeres, articles de revisió i imatges històriques a la interfície d'usuari."
   },
   "menu": {
     "language": {
@@ -80,9 +80,9 @@
     "help": "Ajuda",
     "documentation": {
       "title": "Documentació",
-      "label": "Documentació de Frigate"
+      "label": "Documentació de BIS-IA"
     },
-    "restart": "Reinicia Frigate",
+    "restart": "Reinicia BIS-IA",
     "live": {
       "title": "Directe",
       "allCameras": "Totes les càmeres",
@@ -122,7 +122,7 @@
   },
   "time": {
     "untilForTime": "Fins les {{time}}",
-    "untilForRestart": "Fins que Frigate es reiniciï.",
+    "untilForRestart": "Fins que BIS-IA es reiniciï.",
     "untilRestart": "Fins que es reiniciï",
     "ago": "Fa {{timeAgo}}",
     "justNow": "Ara mateix",
@@ -282,11 +282,11 @@
   },
   "accessDenied": {
     "desc": "No teniu permís per veure aquesta pàgina.",
-    "documentTitle": "Accés Denegat - Frigate",
+    "documentTitle": "Accés Denegat - BIS-IA",
     "title": "Accés Denegat"
   },
   "notFound": {
-    "documentTitle": "No s'ha trobat - Frigate",
+    "documentTitle": "No s'ha trobat - BIS-IA",
     "title": "404",
     "desc": "Pàgina no trobada"
   },
@@ -302,6 +302,6 @@
   },
   "field": {
     "optional": "Opcional",
-    "internalID": "L'ID intern que Frigate s'utilitza a la configuració i a la base de dades"
+    "internalID": "L'ID intern que BIS-IA s'utilitza a la configuració i a la base de dades"
   }
 }

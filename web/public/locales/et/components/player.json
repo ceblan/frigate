@@ -2,9 +2,9 @@
   "noRecordingsFoundForThisTime": "Hetkel ei leidu ühtegi salvestust",
   "noPreviewFound": "Eelvaadet ei leidu",
   "noPreviewFoundFor": "{{cameraName}} kaamera eelvaadet ei leidu",
-  "submitFrigatePlus": {
+  "submitBisiaPlus": {
     "submit": "Saada",
-    "title": "Kas saadad selle kaadri Frigate+ teenusesse?"
+    "title": "Kas saadad selle kaadri BIS-IA+ teenusesse?"
   },
   "cameraDisabled": "Kaamera on kasutuselt eemaldatud",
   "stats": {
@@ -42,10 +42,10 @@
   },
   "toast": {
     "success": {
-      "submittedFrigatePlus": "Kaadri saatmine Frigate+ teenusesse õnnestus"
+      "submittedBisiaPlus": "Kaadri saatmine BIS-IA+ teenusesse õnnestus"
     },
     "error": {
-      "submitFrigatePlusFailed": "Kaadri saatmine Frigate+ teenusesse ei õnnestunud"
+      "submitBisiaPlusFailed": "Kaadri saatmine BIS-IA+ teenusesse ei õnnestunud"
     }
   }
 }

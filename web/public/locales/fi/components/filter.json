@@ -37,9 +37,9 @@
   "features": {
     "label": "Piirteet",
     "hasVideoClip": "Videoleike löytyy",
-    "submittedToFrigatePlus": {
-      "label": "Lähetetty Frigate+:aan",
-      "tips": "Sinun on ensin suodatettava seuratut kohteet, joilla on tilannekuva.<br /><br />Kohteita, joilla ei ole tilannekuvaa, ei voida lähettää Frigate+:aan."
+    "submittedToBisiaPlus": {
+      "label": "Lähetetty BIS-IA+:aan",
+      "tips": "Sinun on ensin suodatettava seuratut kohteet, joilla on tilannekuva.<br /><br />Kohteita, joilla ei ole tilannekuvaa, ei voida lähettää BIS-IA+:aan."
     },
     "hasSnapshot": "Tilannekuva löytyy"
   },

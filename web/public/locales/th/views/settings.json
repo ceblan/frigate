@@ -66,7 +66,7 @@
     },
     "management": {
       "title": "จัดการผู้ใช้",
-      "desc": "จัดการบัญชีของ Frigate นี้."
+      "desc": "จัดการบัญชีของ BIS-IA นี้."
     },
     "addUser": "แก้ไขผู้ใช้",
     "title": "ผู้ใช้",
@@ -98,22 +98,22 @@
     }
   },
   "documentTitle": {
-    "default": "ตั้งค่า - Frigate",
-    "authentication": "การตั้งค่าการตรวจสอบสิทธิ์ - Frigate",
-    "camera": "การตั้งค่ากล้อง - Frigate",
-    "classification": "การตั้งค่าการจำแนกประเภท - Frigate",
-    "masksAndZones": "ตัวแก้ไขแมสและโซน - Frigate",
-    "general": "การตั้งค่าทั่วไป - Frigate",
-    "frigatePlus": "การตั้งค่า Frigate+ - Frigate",
-    "notifications": "การตั้งค่าการแจ้งเตือน - Frigate",
-    "cameraManagement": "จัดการกล้อง - Frigate",
-    "enrichments": "การตั้งค่าของเพิ่มเติม - Frigate",
-    "motionTuner": "ปรับแต่งการเคลื่อนไหว - Frigate",
-    "object": "ดีบั๊ก - Frigate"
+    "default": "ตั้งค่า - BIS-IA",
+    "authentication": "การตั้งค่าการตรวจสอบสิทธิ์ - BIS-IA",
+    "camera": "การตั้งค่ากล้อง - BIS-IA",
+    "classification": "การตั้งค่าการจำแนกประเภท - BIS-IA",
+    "masksAndZones": "ตัวแก้ไขแมสและโซน - BIS-IA",
+    "general": "การตั้งค่าทั่วไป - BIS-IA",
+    "bisiaPlus": "การตั้งค่า BIS-IA+ - BIS-IA",
+    "notifications": "การตั้งค่าการแจ้งเตือน - BIS-IA",
+    "cameraManagement": "จัดการกล้อง - BIS-IA",
+    "enrichments": "การตั้งค่าของเพิ่มเติม - BIS-IA",
+    "motionTuner": "ปรับแต่งการเคลื่อนไหว - BIS-IA",
+    "object": "ดีบั๊ก - BIS-IA"
   },
   "menu": {
     "notifications": "การแจ้งเตือน",
-    "frigateplus": "Frigate+",
+    "bisiaPlus": "BIS-IA+",
     "cameras": "ตั้งค่ากล้อง",
     "users": "ผู้ใช้",
     "classification": "การจําแนกประเภท",
@@ -221,8 +221,8 @@
       "point_other": "{{count}} จุด"
     }
   },
-  "frigatePlus": {
-    "title": "การตั้งค่า Frigate+",
+  "bisiaPlus": {
+    "title": "การตั้งค่า BIS-IA+",
     "modelInfo": {
       "cameras": "กล้อง"
     },

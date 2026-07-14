@@ -1,6 +1,6 @@
 {
-  "documentTitle": "Dal vivo - Frigate",
-  "documentTitle.withCamera": "{{camera}} - Dal vivo - Frigate",
+  "documentTitle": "Dal vivo - BIS-IA",
+  "documentTitle.withCamera": "{{camera}} - Dal vivo - BIS-IA",
   "lowBandwidthMode": "Modalità a bassa larghezza di banda",
   "twoWayTalk": {
     "enable": "Abilita audio bidirezionale",
@@ -174,14 +174,14 @@
   "noCameras": {
     "buttonText": "Aggiungi telecamera",
     "title": "Nessuna telecamera configurata",
-    "description": "Per iniziare, collega una telecamera a Frigate.",
+    "description": "Per iniziare, collega una telecamera a BIS-IA.",
     "restricted": {
       "title": "Nessuna telecamera disponibile",
       "description": "Non hai l'autorizzazione per visualizzare alcuna telecamera in questo gruppo."
     },
     "default": {
       "title": "Nessuna telecamera configurata",
-      "description": "Per iniziare, collega una telecamera a Frigate.",
+      "description": "Per iniziare, collega una telecamera a BIS-IA.",
       "buttonText": "Aggiungi telecamera"
     },
     "group": {

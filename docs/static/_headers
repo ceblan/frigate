@@ -4,5 +4,5 @@ https://:project.pages.dev/*
 https://:version.:project.pages.dev/*
   X-Robots-Tag: noindex
 
-https://docs-dev.frigate.video/*
+https://docs-dev.bisia.video/*
   X-Robots-Tag: noindex

@@ -1,14 +1,14 @@
 {
   "documentTitle": {
-    "storage": "Statistici Stocare - Frigate",
-    "cameras": "Statistici Camere - Frigate",
-    "general": "Statistici Generale - Frigate",
+    "storage": "Statistici Stocare - BIS-IA",
+    "cameras": "Statistici Camere - BIS-IA",
+    "general": "Statistici Generale - BIS-IA",
     "logs": {
-      "go2rtc": "Jurnal Go2RTC - Frigate",
-      "nginx": "Jurnal Nginx - Frigate",
-      "frigate": "Jurnal Frigate - Frigate"
+      "go2rtc": "Jurnal Go2RTC - BIS-IA",
+      "nginx": "Jurnal Nginx - BIS-IA",
+      "bisia": "Jurnal BIS-IA - BIS-IA"
     },
-    "enrichments": "Statistici îmbogățiri - Frigate"
+    "enrichments": "Statistici îmbogățiri - BIS-IA"
   },
   "general": {
     "hardwareInfo": {
@@ -46,7 +46,7 @@
       "intelGpuWarning": {
         "title": "Avertisment statistici GPU Intel",
         "message": "Statistici GPU indisponibile",
-        "description": "Aceasta este o eroare cunoscută în instrumentele Intel pentru raportarea statisticilor GPU (intel_gpu_top), unde acestea se blochează și returnează repetat o utilizare GPU de 0%, chiar și în cazurile în care accelerarea hardware și detectarea obiectelor rulează corect pe (i)GPU. Aceasta nu este o eroare Frigate. Poți reporni gazda pentru a remedia temporar problema și pentru a confirma că GPU-ul funcționează corect. Aceasta nu afectează performanța."
+        "description": "Aceasta este o eroare cunoscută în instrumentele Intel pentru raportarea statisticilor GPU (intel_gpu_top), unde acestea se blochează și returnează repetat o utilizare GPU de 0%, chiar și în cazurile în care accelerarea hardware și detectarea obiectelor rulează corect pe (i)GPU. Aceasta nu este o eroare BIS-IA. Poți reporni gazda pentru a remedia temporar problema și pentru a confirma că GPU-ul funcționează corect. Aceasta nu afectează performanța."
       }
     },
     "detector": {
@@ -75,7 +75,7 @@
     "recordings": {
       "title": "Înregistrări",
       "earliestRecording": "Prima înregistrare disponibilă:",
-      "tips": "Această valoare reprezintă spațiul total de stocare utilizat de înregistrările din baza de date a Frigate. Frigate nu urmărește utilizarea spațiului pentru toate fișierele de pe discul tău."
+      "tips": "Această valoare reprezintă spațiul total de stocare utilizat de înregistrările din baza de date a BIS-IA. BIS-IA nu urmărește utilizarea spațiului pentru toate fișierele de pe discul tău."
     },
     "title": "Spațiu stocare",
     "cameraStorage": {
@@ -86,7 +86,7 @@
       "percentageOfTotalUsed": "Procent din total",
       "unused": {
         "title": "Nefolosit",
-        "tips": "Această valoare este posibil să nu reprezinte cu acuratețe spațiul liber disponibil pentru Frigate dacă ai și alte fișiere stocate pe disc, în afara înregistrărilor Frigate. Frigate nu monitorizează utilizarea spațiului pentru fișiere din afara propriilor sale înregistrări."
+        "tips": "Această valoare este posibil să nu reprezinte cu acuratețe spațiul liber disponibil pentru BIS-IA dacă ai și alte fișiere stocate pe disc, în afara înregistrărilor BIS-IA. BIS-IA nu monitorizează utilizarea spațiului pentru fișiere din afara propriilor sale înregistrări."
       },
       "bandwidth": "Lățime de bandă"
     },

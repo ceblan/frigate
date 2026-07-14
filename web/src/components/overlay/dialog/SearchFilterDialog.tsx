@@ -188,7 +188,7 @@ export default function SearchFilterDialog({
             ? currentFilter.has_clip === 1
             : undefined
         }
-        submittedToFrigatePlus={
+        submittedToBisiaPlus={
           currentFilter.is_submitted !== undefined
             ? currentFilter.is_submitted === 1
             : undefined
@@ -664,7 +664,7 @@ type SnapshotClipContentProps = {
   config?: FrigateConfig;
   hasSnapshot: boolean | undefined;
   hasClip: boolean | undefined;
-  submittedToFrigatePlus: boolean | undefined;
+  submittedToBisiaPlus: boolean | undefined;
   setSnapshotClip: (
     snapshot: boolean | undefined,
     clip: boolean | undefined,
@@ -676,7 +676,7 @@ export function SnapshotClipFilterContent({
   config,
   hasSnapshot,
   hasClip,
-  submittedToFrigatePlus,
+  submittedToBisiaPlus,
   setSnapshotClip,
 }: SnapshotClipContentProps) {
   const { t } = useTranslation(["components/filter"]);
@@ -686,8 +686,8 @@ export function SnapshotClipFilterContent({
   const [isClipFilterActive, setIsClipFilterActive] = useState(
     hasClip !== undefined,
   );
-  const [isFrigatePlusFilterActive, setIsFrigatePlusFilterActive] = useState(
-    submittedToFrigatePlus !== undefined,
+  const [isBisiaPlusFilterActive, setIsBisiaPlusFilterActive] = useState(
+    submittedToBisiaPlus !== undefined,
   );
 
   useEffect(() => {
@@ -699,10 +699,10 @@ export function SnapshotClipFilterContent({
   }, [hasClip]);
 
   useEffect(() => {
-    setIsFrigatePlusFilterActive(submittedToFrigatePlus !== undefined);
-  }, [submittedToFrigatePlus]);
+    setIsBisiaPlusFilterActive(submittedToBisiaPlus !== undefined);
+  }, [submittedToBisiaPlus]);
 
-  const isFrigatePlusFilterDisabled =
+  const isBisiaPlusFilterDisabled =
     !isSnapshotFilterActive || hasSnapshot !== true;
 
   return (
@@ -720,7 +720,7 @@ export function SnapshotClipFilterContent({
               onCheckedChange={(checked) => {
                 setIsSnapshotFilterActive(checked as boolean);
                 if (checked) {
-                  setSnapshotClip(true, hasClip, submittedToFrigatePlus);
+                  setSnapshotClip(true, hasClip, submittedToBisiaPlus);
                 } else {
                   setSnapshotClip(undefined, hasClip, undefined);
                 }
@@ -740,7 +740,7 @@ export function SnapshotClipFilterContent({
             }
             onValueChange={(value) => {
               if (value === "yes")
-                setSnapshotClip(true, hasClip, submittedToFrigatePlus);
+                setSnapshotClip(true, hasClip, submittedToBisiaPlus);
               else if (value === "no")
                 setSnapshotClip(false, hasClip, undefined);
             }}
@@ -773,10 +773,10 @@ export function SnapshotClipFilterContent({
                       <Checkbox
                         id="plus-filter"
                         className="size-5 text-white accent-white data-[state=checked]:bg-selected data-[state=checked]:text-white"
-                        checked={isFrigatePlusFilterActive}
-                        disabled={isFrigatePlusFilterDisabled}
+                        checked={isBisiaPlusFilterActive}
+                        disabled={isBisiaPlusFilterDisabled}
                         onCheckedChange={(checked) => {
-                          setIsFrigatePlusFilterActive(checked as boolean);
+                          setIsBisiaPlusFilterActive(checked as boolean);
                           if (checked) {
                             setSnapshotClip(hasSnapshot, hasClip, false);
                           } else {
@@ -786,14 +786,14 @@ export function SnapshotClipFilterContent({
                       />
                     </div>
                   </TooltipTrigger>
-                  {isFrigatePlusFilterDisabled && (
+                  {isBisiaPlusFilterDisabled && (
                     <TooltipContent
                       className="max-w-60"
                       side="left"
                       sideOffset={5}
                     >
                       <Trans ns="components/filter">
-                        features.submittedToFrigatePlus.tips
+                        features.submittedToBisiaPlus.tips
                       </Trans>
                     </TooltipContent>
                   )}
@@ -803,15 +803,15 @@ export function SnapshotClipFilterContent({
                 htmlFor="plus-filter"
                 className="cursor-pointer text-sm font-medium leading-none"
               >
-                {t("features.submittedToFrigatePlus.label")}
+                {t("features.submittedToBisiaPlus.label")}
               </Label>
             </div>
             <ToggleGroup
               type="single"
               value={
-                submittedToFrigatePlus === undefined
+                submittedToBisiaPlus === undefined
                   ? undefined
-                  : submittedToFrigatePlus
+                  : submittedToBisiaPlus
                     ? "yes"
                     : "no"
               }
@@ -822,7 +822,7 @@ export function SnapshotClipFilterContent({
                   setSnapshotClip(hasSnapshot, hasClip, false);
                 else setSnapshotClip(hasSnapshot, hasClip, undefined);
               }}
-              disabled={!isFrigatePlusFilterActive}
+              disabled={!isBisiaPlusFilterActive}
             >
               <ToggleGroupItem
                 value="yes"
@@ -851,12 +851,12 @@ export function SnapshotClipFilterContent({
               onCheckedChange={(checked) => {
                 setIsClipFilterActive(checked as boolean);
                 if (checked) {
-                  setSnapshotClip(hasSnapshot, true, submittedToFrigatePlus);
+                  setSnapshotClip(hasSnapshot, true, submittedToBisiaPlus);
                 } else {
                   setSnapshotClip(
                     hasSnapshot,
                     undefined,
-                    submittedToFrigatePlus,
+                    submittedToBisiaPlus,
                   );
                 }
               }}
@@ -873,9 +873,9 @@ export function SnapshotClipFilterContent({
             value={hasClip === undefined ? undefined : hasClip ? "yes" : "no"}
             onValueChange={(value) => {
               if (value === "yes")
-                setSnapshotClip(hasSnapshot, true, submittedToFrigatePlus);
+                setSnapshotClip(hasSnapshot, true, submittedToBisiaPlus);
               else if (value === "no")
-                setSnapshotClip(hasSnapshot, false, submittedToFrigatePlus);
+                setSnapshotClip(hasSnapshot, false, submittedToBisiaPlus);
             }}
             disabled={!isClipFilterActive}
           >

@@ -1,7 +1,7 @@
 {
-  "documentTitle": "Direkte - Frigate",
+  "documentTitle": "Direkte - BIS-IA",
   "lowBandwidthMode": "Lav båndbreddemodus",
-  "documentTitle.withCamera": "{{camera}} - Direkte - Frigate",
+  "documentTitle.withCamera": "{{camera}} - Direkte - BIS-IA",
   "ptz": {
     "move": {
       "clickMove": {
@@ -179,7 +179,7 @@
   },
   "noCameras": {
     "title": "Ingen kameraer konfigurert",
-    "description": "Kom i gang ved å koble et kamera til Frigate.",
+    "description": "Kom i gang ved å koble et kamera til BIS-IA.",
     "buttonText": "Legg til kamera",
     "restricted": {
       "title": "Ingen kameraer tilgjengelig",
@@ -187,7 +187,7 @@
     },
     "default": {
       "title": "Ingen kameraer konfigurert",
-      "description": "Kom i gang ved å koble et kamera til Frigate.",
+      "description": "Kom i gang ved å koble et kamera til BIS-IA.",
       "buttonText": "Legg til kamera"
     },
     "group": {

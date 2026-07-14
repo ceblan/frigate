@@ -6,8 +6,8 @@
     "title": "ストリームオフライン",
     "desc": "{{cameraName}} の <code>detect</code> ストリームでフレームが受信されていません。エラーログを確認してください"
   },
-  "submitFrigatePlus": {
-    "title": "このフレームを Frigate+ に送信しますか？",
+  "submitBisiaPlus": {
+    "title": "このフレームを BIS-IA+ に送信しますか？",
     "submit": "送信"
   },
   "livePlayerRequiredIOSVersion": "このライブストリームタイプには iOS 17.1 以上が必要です。",
@@ -42,10 +42,10 @@
   },
   "toast": {
     "success": {
-      "submittedFrigatePlus": "フレームを Frigate+ に送信しました"
+      "submittedBisiaPlus": "フレームを BIS-IA+ に送信しました"
     },
     "error": {
-      "submitFrigatePlusFailed": "フレームの Frigate+ への送信に失敗しました"
+      "submitBisiaPlusFailed": "フレームの BIS-IA+ への送信に失敗しました"
     }
   }
 }

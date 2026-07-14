@@ -1072,7 +1072,7 @@ function LifecycleIconRow({
 
                           if (resp && resp.status == 200) {
                             toast.success(
-                              t("toast.success.submittedFrigatePlus", {
+                              t("toast.success.submittedBisiaPlus", {
                                 ns: "components/player",
                               }),
                               {
@@ -1081,7 +1081,7 @@ function LifecycleIconRow({
                             );
                           } else {
                             toast.success(
-                              t("toast.error.submitFrigatePlusFailed", {
+                              t("toast.error.submitBisiaPlusFailed", {
                                 ns: "components/player",
                               }),
                               {
